@@ -1,11 +1,194 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Trivgar</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0B1220" />
+  <title>Travis | trivgar.com</title>
+
+  <meta name="description" content="Travis: longshoreman in Tacoma. I build tools, apps, websites, and home automation projects." />
+
+  <meta property="og:title" content="Travis | trivgar.com" />
+  <meta property="og:description" content="Longshoreman in Tacoma. I build tools, apps, and websites." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://trivgar.com/" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --muted:#93a4c7;
+      --text:#e9eefc;
+      --border:rgba(255,255,255,.08);
+      --link:#b7c6ff;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 860px;
+      --pad: 24px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f8fc;
+        --card:#ffffff;
+        --muted:#4a5a7a;
+        --text:#0b1220;
+        --border:rgba(11,18,32,.10);
+        --link:#2f4bff;
+        --shadow: 0 12px 30px rgba(11,18,32,.10);
+      }
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 56px 18px 72px;
+    }
+
+    header{
+      margin-bottom: 24px;
+    }
+
+    .name{
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 800;
+    }
+
+    .tagline{
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 70ch;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--pad);
+      box-shadow: var(--shadow);
+    }
+
+    .projects{
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .proj{
+      display:flex;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .proj:hover{
+      border-color: rgba(120,140,255,.35);
+      background: rgba(120,140,255,.06);
+    }
+
+    .icon{
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display:grid;
+      place-items:center;
+      font-family: var(--mono);
+      font-weight: 700;
+    }
+
+    .proj-title{
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .proj-desc{
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer{
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
 </head>
-<body style="background-color: #222; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px;">
-    <h1>Welcome to Trivgar.com</h1>
-    <p>Site is currently under construction.</p>
-    <p>Hosted on GitHub Pages + Cloudflare.</p>
+
+<body>
+  <main class="wrap">
+    <header>
+      <div class="name">Travis</div>
+      <div class="tagline">
+        Longshoreman in Tacoma. I build tools, apps, websites, and home automation projects that make life less annoying.
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <!-- Dispatch Companion (merged) -->
+        <a class="proj" href="https://dispatchcompanion.com/" target="_blank" rel="noreferrer">
+          <div class="icon">DC</div>
+          <div>
+            <div class="proj-title">Dispatch Companion</div>
+            <div class="proj-desc">
+              Web app for longshore dispatch info, announcements, spins, and job utilities.
+              Formerly known as “Local 23 Companion.”
+            </div>
+          </div>
+        </a>
+
+        <!-- Roberta Cutright -->
+        <a class="proj" href="https://robertacutright.com/" target="_blank" rel="noreferrer">
+          <div class="icon">RC</div>
+          <div>
+            <div class="proj-title">Roberta Cutright</div>
+            <div class="proj-desc">
+              Client-facing salon website. Design, layout, pricing structure, and hosting.
+            </div>
+          </div>
+        </a>
+
+        <!-- Smart Home -->
+        <div class="proj">
+          <div class="icon">HA</div>
+          <div>
+            <div class="proj-title">Smart Home Mk 1.2</div>
+            <div class="proj-desc">
+              Extensive Home Assistant automations for HVAC, security, and daily routines. Private.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> trivgar.com
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
