@@ -15,40 +15,34 @@
 
   <style>
     :root{
-      /* --- NEW PALETTE --- */
-      --bg: #050a14; /* Deeper, darker blue-black */
-      --card: #0a1120; /* Slightly lighter card bg */
+      --bg: #050a14;
+      --card: #0a1120;
       --text-main: #ffffff;
       --text-muted: #94a3b8;
-      /* The "Sick" Accent Color: Electric Cyan */
       --accent: #00f2ff;
-      /* A glow version of the accent for shadows */
       --accent-glow: rgba(0, 242, 255, 0.4);
-      
       --border: rgba(255,255,255,.05);
       --radius: 16px;
       --max: 860px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      /* Using system-ui font stack, but bolder */
-      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     *{ box-sizing:border-box; }
-    
+
     body{
       margin:0;
       font-family: var(--sans);
       color: var(--text-main);
       background-color: var(--bg);
-      /* Adding a subtle noise texture for a premium feel */
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
-    a{ 
-      color: var(--text-main); 
-      text-decoration: none; 
+    a{
+      color: var(--text-main);
+      text-decoration: none;
       transition: color 0.2s ease;
     }
     a:hover{ color: var(--accent); }
@@ -56,7 +50,7 @@
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 80px 24px 72px; /* More top padding for drama */
+      padding: 80px 24px 72px;
     }
 
     header{
@@ -64,12 +58,10 @@
     }
 
     .name{
-      /* Bigger, bolder, tighter spacing */
       font-size: clamp(40px, 8vw, 72px);
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.1;
-      /* Subtle gradient on text */
       background: linear-gradient(to bottom right, #ffffff, #a5b4fc);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -80,32 +72,28 @@
       margin-top: 16px;
       font-size: 18px;
       max-width: 60ch;
-      font-weight: 400;
     }
 
     .card{
-      /* Glassmorphism effect */
       background: rgba(10, 17, 32, 0.8);
       backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 32px;
-      /* Layered shadows for depth and a subtle accent glow */
-      box-shadow: 
+      box-shadow:
         0 0 0 1px rgba(0,0,0,0.3),
         0 20px 40px -20px rgba(0,0,0,0.8),
-        0 0 40px -10px var(--accent-glow) /* The radioactive glow */
-      ;
+        0 0 40px -10px var(--accent-glow);
     }
-    
-    h2 {
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        color: var(--accent);
-        margin-top: 0;
-        margin-bottom: 24px;
-        font-weight: 700;
+
+    h2{
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-weight: 700;
     }
 
     .projects{
@@ -121,26 +109,23 @@
       border-radius: 12px;
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.05);
-      /* Snappy transition */
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
-    /* The Sick Hover State */
     .proj:hover{
       border-color: var(--accent);
       background: rgba(0, 242, 255, 0.05);
       transform: translateY(-2px) scale(1.01);
       box-shadow: 0 10px 20px -10px var(--accent-glow);
     }
-    
-    .proj:hover .proj-title {
-        color: var(--accent);
+
+    .proj:hover .proj-title{
+      color: var(--accent);
     }
 
     .icon{
       width: 48px;
       height: 48px;
-      /* Cool gradient background for icons */
       background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
@@ -152,11 +137,11 @@
       font-size: 18px;
       flex-shrink: 0;
     }
-    
-    .proj-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+    .proj-details{
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
     }
 
     .proj-title{
@@ -214,11 +199,21 @@
             </div>
           </div>
         </a>
+
+        <a class="proj" href="/pihole.html">
+          <div class="icon">PH</div>
+          <div class="proj-details">
+            <div class="proj-title">Pi-hole + Unbound</div>
+            <div class="proj-desc">
+              Network-wide ad blocking and private DNS. Setup guide for sane households.
+            </div>
+          </div>
+        </a>
       </div>
     </section>
 
     <footer>
-      Let's build something.
+      Let’s build something.
     </footer>
   </main>
 </body>
