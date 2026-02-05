@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui;
+            max-width: 600px; margin: 0 auto; padding: 20px;
+            background: #f8f9fa; color: #333;
+        }
+        .auth { text-align: center; margin-top: 100px; }
+        .hidden { display: none !important; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .med-card { 
+            background: white; border-radius: 8px; padding: 20px; 
+            margin: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .med-name { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+        .med-time { color: #666; margin-bottom: 15px; }
+        .btn {
+            padding: 8px 16px; border: none; border-radius: 4px;
+            font-size: 14px; cursor: pointer; margin-right: 10px;
+        }
+        .btn-taken { background: #28a745; color: white; }
+        .btn-skip { background: #ffc107; color: black; }
+        .status-taken { color: #28a745; font-weight: 600; }
+        .status-skip { color: #ffc107; font-weight: 600; }
+        .status-pending { color: #6c757d; }
+        .log { background: white; border-radius: 8px; padding: 20px; margin-top: 30px; }
+        input[type="password"] { 
+            padding: 10px; border: 1px solid #ddd; border-radius: 4px; 
+            font-size: 16px; width: 200px;
+        }
+        input[type="password"]:focus { outline: none; border-color: #007bff; }
+        .btn-primary { background: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <div id="auth" class="auth">
+        <h2>🔒 Health Dashboard</h2>
+        <input type="password" id="password" placeholder="Enter access code">
+        <br><br>
+        <button onclick="checkAuth()" class="btn btn-primary">Access</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <div class="header">
+            <h1>💊 Medication Dashboard</h1>
+            <p id="date"></p>
+        </div>
+
+        <div class="med-card">
+            <div class="med-name">Percocet</div>
+            <div class="med-time">Next: 7:30 PM</div>
+            <span id="percocet-status" class="status-pending">⏳ Pending</span>
+            <br><br>
+            <button onclick="markTaken('percocet')" class="btn btn-taken">✅ Taken</button>
+            <button onclick="markSkip('percocet')" class="btn btn-skip">⏭️ Skip</button>
+        </div>
+
+        <div class="med-card">
+            <div class="med-name">Cyclobenzaprine</div>
+            <div class="med-time">Next: 11:30 PM</div>
+            <span id="cyclobenzaprine-status" class="status-pending">⏳ Pending</span>
+            <br><br>
+            <button onclick="markTaken('cyclobenzaprine')" class="btn btn-taken">✅ Taken</button>
+            <button onclick="markSkip('cyclobenzaprine')" class="btn btn-skip">⏭️ Skip</button>
+        </div>
+
+        <div class="med-card">
+            <div class="med-name">Cephalexin</div>
+            <div class="med-time">Next: 8:00 AM (tomorrow)</div>
+            <span id="cephalexin-status" class="status-pending">⏳ Pending</span>
+            <br><br>
+            <button onclick="markTaken('cephalexin')" class="btn btn-taken">✅ Taken</button>
+            <button onclick="markSkip('cephalexin')" class="btn btn-skip">⏭️ Skip</button>
+        </div>
+
+        <div class="log">
+            <h3>📋 Today's Log</h3>
+            <div id="log-entries">
+                <p><strong>7:30 AM</strong> - All medications taken ✅</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple auth - you can change this password
+        const ACCESS_CODE = 'steph2026';
+        
+        function checkAuth() {
+            const input = document.getElementById('password').value;
+            if (input === ACCESS_CODE) {
+                document.getElementById('auth').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                loadData();
+            } else {
+                alert('Wrong access code');
+                document.getElementById('password').value = '';
+            }
+        }
+
+        function loadData() {
+            document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            });
+            
+            // Load saved states
+            const today = new Date().toISOString().split('T')[0];
+            const savedData = JSON.parse(localStorage.getItem('medTracker_' + today) || '{}');
+            
+            ['percocet', 'cyclobenzaprine', 'cephalexin'].forEach(med => {
+                if (savedData[med]) {
+                    updateStatus(med, savedData[med]);
+                }
+            });
+        }
+
+        function markTaken(med) {
+            const timestamp = new Date().toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'});
+            updateStatus(med, 'taken');
+            addLogEntry(`<strong>${timestamp}</strong> - ${capitalize(med)} taken ✅`);
+            saveData(med, 'taken');
+        }
+
+        function markSkip(med) {
+            const timestamp = new Date().toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'});
+            updateStatus(med, 'skip');
+            addLogEntry(`<strong>${timestamp}</strong> - ${capitalize(med)} skipped ⏭️`);
+            saveData(med, 'skip');
+        }
+
+        function updateStatus(med, status) {
+            const element = document.getElementById(med + '-status');
+            if (status === 'taken') {
+                element.textContent = '✅ Taken';
+                element.className = 'status-taken';
+            } else if (status === 'skip') {
+                element.textContent = '⏭️ Skipped';
+                element.className = 'status-skip';
+            }
+        }
+
+        function addLogEntry(entry) {
+            const logDiv = document.getElementById('log-entries');
+            const p = document.createElement('p');
+            p.innerHTML = entry;
+            logDiv.appendChild(p);
+        }
+
+        function saveData(med, status) {
+            const today = new Date().toISOString().split('T')[0];
+            const data = JSON.parse(localStorage.getItem('medTracker_' + today) || '{}');
+            data[med] = status;
+            localStorage.setItem('medTracker_' + today, JSON.stringify(data));
+        }
+
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Enter key support
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') checkAuth();
+        });
+    </script>
+</body>
+</html>
