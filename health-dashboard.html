@@ -18,7 +18,8 @@
             margin: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .med-name { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
-        .med-time { color: #666; margin-bottom: 15px; }
+        .med-time { color: #666; margin-bottom: 10px; }
+        .last-dose { color: #888; font-size: 14px; margin-bottom: 15px; }
         .btn {
             padding: 8px 16px; border: none; border-radius: 4px;
             font-size: 14px; cursor: pointer; margin-right: 10px;
@@ -55,6 +56,7 @@
             <div class="med-name">Percocet 5mg/325</div>
             <div class="med-time">Every 4-6 hours as needed (1-2 tablets)</div>
             <div style="font-size: 12px; color: #666; margin: 5px 0;">Reminders: 6 AM, Noon, 6 PM, Midnight</div>
+            <div class="last-dose" id="percocet-last">Last dose: 7:30 AM today</div>
             <span id="percocet-status" class="status-pending">⏳ Available</span>
             <br><br>
             <button onclick="markTaken('percocet')" class="btn btn-taken">✅ Taken</button>
@@ -65,6 +67,7 @@
             <div class="med-name">Cyclobenzaprine</div>
             <div class="med-time">Every 8 hours as needed (1-2 tablets)</div>
             <div style="font-size: 12px; color: #666; margin: 5px 0;">Reminders: 8 AM, 4 PM, Midnight</div>
+            <div class="last-dose" id="cyclobenzaprine-last">Last dose: 7:30 AM today</div>
             <span id="cyclobenzaprine-status" class="status-pending">⏳ Available</span>
             <br><br>
             <button onclick="markTaken('cyclobenzaprine')" class="btn btn-taken">✅ Taken</button>
@@ -75,6 +78,7 @@
             <div class="med-name">Cephalexin (Antibiotic)</div>
             <div class="med-time">Twice daily with food</div>
             <div style="font-size: 12px; color: #666; margin: 5px 0;">Reminders: 8 AM, 8 PM</div>
+            <div class="last-dose" id="cephalexin-last">Last dose: 7:30 AM today</div>
             <span id="cephalexin-status" class="status-pending">⏳ Available</span>
             <br><br>
             <button onclick="markTaken('cephalexin')" class="btn btn-taken">✅ Taken</button>
@@ -119,13 +123,18 @@
                     updateStatus(med, savedData[med]);
                 }
             });
+
+            // Load last doses
+            loadLastDoses();
         }
 
         function markTaken(med) {
-            const timestamp = new Date().toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'});
+            const now = new Date();
+            const timestamp = now.toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'});
             updateStatus(med, 'taken');
+            updateLastDose(med, now);
             addLogEntry(`<strong>${timestamp}</strong> - ${capitalize(med)} taken ✅`);
-            saveData(med, 'taken');
+            saveData(med, 'taken', now);
         }
 
         function markSkip(med) {
@@ -153,11 +162,46 @@
             logDiv.appendChild(p);
         }
 
-        function saveData(med, status) {
+        function saveData(med, status, timestamp = null) {
             const today = new Date().toISOString().split('T')[0];
             const data = JSON.parse(localStorage.getItem('medTracker_' + today) || '{}');
             data[med] = status;
+            
+            // Save last dose timestamp for "taken" status
+            if (status === 'taken' && timestamp) {
+                const lastDoses = JSON.parse(localStorage.getItem('medTracker_lastDoses') || '{}');
+                lastDoses[med] = timestamp.toISOString();
+                localStorage.setItem('medTracker_lastDoses', JSON.stringify(lastDoses));
+            }
+            
             localStorage.setItem('medTracker_' + today, JSON.stringify(data));
+        }
+
+        function updateLastDose(med, timestamp) {
+            const lastDoseElement = document.getElementById(med + '-last');
+            const timeStr = timestamp.toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'});
+            const dateStr = timestamp.toDateString() === new Date().toDateString() ? 'today' : timestamp.toLocaleDateString();
+            lastDoseElement.textContent = `Last dose: ${timeStr} ${dateStr}`;
+        }
+
+        function loadLastDoses() {
+            const lastDoses = JSON.parse(localStorage.getItem('medTracker_lastDoses') || '{}');
+            
+            // Set initial values from this morning
+            const thisAM = new Date();
+            thisAM.setHours(7, 30, 0, 0);
+            
+            ['percocet', 'cyclobenzaprine', 'cephalexin'].forEach(med => {
+                if (lastDoses[med]) {
+                    updateLastDose(med, new Date(lastDoses[med]));
+                } else {
+                    // Use this morning as default
+                    updateLastDose(med, thisAM);
+                    const defaultLastDoses = JSON.parse(localStorage.getItem('medTracker_lastDoses') || '{}');
+                    defaultLastDoses[med] = thisAM.toISOString();
+                    localStorage.setItem('medTracker_lastDoses', JSON.stringify(defaultLastDoses));
+                }
+            });
         }
 
         function capitalize(str) {
