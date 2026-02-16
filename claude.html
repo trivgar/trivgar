@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code - Getting Started</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #020617;
+            padding: 2rem;
+            border-bottom: 1px solid #1e293b;
+        }
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 0;
+            color: #94a3b8;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+        ul, ol {
+            padding-left: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        code {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: #fbbf24;
+            font-family: "Consolas", "Monaco", monospace;
+        }
+        pre {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 1rem;
+            display: block;
+            overflow-x: auto;
+            color: #e5e7eb;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-family: "Consolas", "Monaco", monospace;
+        }
+        pre code {
+            border: none;
+            padding: 0;
+            color: #e5e7eb;
+        }
+        .note {
+            background: #020617;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            color: #cbd5f5;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip {
+            background: #020617;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            color: #bbf7d0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning {
+            background: #020617;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            color: #fecaca;
+            border-radius: 0 8px 8px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        kbd {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            padding: 0.1rem 0.4rem;
+            font-family: inherit;
+            font-size: 0.9em;
+        }
+        .command-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .command-table th, .command-table td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid #1e293b;
+        }
+        .command-table th {
+            color: #94a3b8;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Claude Code - Getting Started</h1>
+    <p>Your AI coding assistant in the terminal</p>
+</header>
+
+<main>
+
+<section>
+    <h2>What is Claude Code?</h2>
+    <p>
+        Claude Code is an AI assistant that lives in your terminal. It can:
+    </p>
+    <ul>
+        <li>Read and understand your code files</li>
+        <li>Write new code or edit existing files</li>
+        <li>Run terminal commands</li>
+        <li>Explain how things work</li>
+        <li>Debug problems and suggest fixes</li>
+        <li>Help you learn as you build</li>
+    </ul>
+    <p>
+        Think of it as having a senior developer sitting next to you, 
+        ready to help with whatever you're working on.
+    </p>
+</section>
+
+<section>
+    <h2>Opening Claude Code</h2>
+    
+    <h3>Step 1: Open Git Bash</h3>
+    <ol>
+        <li>Press <kbd>Win</kbd> key</li>
+        <li>Type <code>git bash</code></li>
+        <li>Press <kbd>Enter</kbd></li>
+    </ol>
+    
+    <h3>Step 2: Navigate to Your Project</h3>
+    <p>Use <code>cd</code> to change directories:</p>
+    <pre><code># Go to your Documents folder
+cd ~/Documents
+
+# Go to a specific project
+cd ~/Documents/my-project
+
+# Go up one folder
+cd ..
+
+# See what's in the current folder
+ls</code></pre>
+
+    <div class="tip">
+        <strong>Tip:</strong> You can drag a folder from File Explorer into Git Bash 
+        to paste its path automatically!
+    </div>
+
+    <h3>Step 3: Start Claude</h3>
+    <pre><code>claude</code></pre>
+    <p>That's it! Claude will start and show you a prompt where you can type.</p>
+</section>
+
+<section>
+    <h2>Basic Usage</h2>
+    
+    <p>Just type what you want in plain English:</p>
+    
+    <pre><code># Ask about your project
+> what files are in this project?
+
+# Get help with code
+> explain how the login function works
+
+# Make changes
+> add a dark mode toggle to the settings page
+
+# Fix bugs
+> the save button isn't working, can you debug it?
+
+# Learn something
+> how do I make an API call in JavaScript?</code></pre>
+
+    <div class="note">
+        <strong>Note:</strong> Claude can see all the files in your current folder 
+        and subfolders. It reads them to understand your project.
+    </div>
+</section>
+
+<section>
+    <h2>Useful Commands</h2>
+    
+    <table class="command-table">
+        <tr>
+            <th>Command</th>
+            <th>What it does</th>
+        </tr>
+        <tr>
+            <td><code>/help</code></td>
+            <td>Show all available commands</td>
+        </tr>
+        <tr>
+            <td><code>/clear</code></td>
+            <td>Clear the conversation and start fresh</td>
+        </tr>
+        <tr>
+            <td><code>/compact</code></td>
+            <td>Summarize the conversation to save memory</td>
+        </tr>
+        <tr>
+            <td><code>/cost</code></td>
+            <td>See how much you've used this session</td>
+        </tr>
+        <tr>
+            <td><code>/quit</code> or <kbd>Ctrl+C</kbd></td>
+            <td>Exit Claude</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Tips for Better Results</h2>
+    
+    <h3>Be Specific</h3>
+    <p>Instead of:</p>
+    <pre><code>> make it better</code></pre>
+    <p>Try:</p>
+    <pre><code>> refactor the handleSubmit function to use async/await instead of .then()</code></pre>
+
+    <h3>Give Context</h3>
+    <pre><code>> I'm building a recipe app. Add a feature to save favorite recipes to local storage.</code></pre>
+
+    <h3>Ask for Explanations</h3>
+    <pre><code>> explain what you changed and why</code></pre>
+
+    <h3>Review Before Accepting</h3>
+    <p>
+        Claude will show you what it wants to change before doing it. 
+        Read the diff and type <code>y</code> to accept or <code>n</code> to reject.
+    </p>
+
+    <div class="warning">
+        <strong>Important:</strong> Always review changes before accepting them. 
+        Claude is helpful but not perfect. You're the final decision maker.
+    </div>
+</section>
+
+<section>
+    <h2>Starting a New Project</h2>
+    
+    <pre><code># Create a new folder
+mkdir my-new-project
+cd my-new-project
+
+# Start Claude
+claude
+
+# Ask it to help you set up
+> help me create a basic React app with a todo list</code></pre>
+
+    <p>Claude can scaffold entire projects, install dependencies, and get you started quickly.</p>
+</section>
+
+<section>
+    <h2>Working on Existing Code</h2>
+    
+    <pre><code># Navigate to the project
+cd ~/Documents/existing-project
+
+# Start Claude
+claude
+
+# Let it learn about the project
+> give me an overview of this codebase
+
+# Then start working
+> add input validation to the signup form</code></pre>
+</section>
+
+<section>
+    <h2>Keyboard Shortcuts</h2>
+    
+    <table class="command-table">
+        <tr>
+            <th>Shortcut</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>C</kbd></td>
+            <td>Cancel current operation / Exit</td>
+        </tr>
+        <tr>
+            <td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+            <td>Scroll through previous messages</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>L</kbd></td>
+            <td>Clear the screen</td>
+        </tr>
+        <tr>
+            <td><kbd>Esc</kbd></td>
+            <td>Cancel multi-line input</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Troubleshooting</h2>
+    
+    <h3>"claude" is not recognized</h3>
+    <p>Close Git Bash completely and reopen it. If still not working:</p>
+    <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+
+    <h3>Claude seems stuck</h3>
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel, then try again.</p>
+
+    <h3>Too much output</h3>
+    <p>Use <code>/clear</code> to start a fresh conversation.</p>
+
+    <h3>Need help?</h3>
+    <p>Just ask Claude: <code>I'm having trouble with X, can you help?</code></p>
+</section>
+
+</main>
+
+<footer>
+    Claude Code • Built by Anthropic • Guide by Trav
+</footer>
+
+</body>
+</html>
