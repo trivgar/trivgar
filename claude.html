@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code - Getting Started</title>
+    <title>Claude Code Guide</title>
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -26,13 +26,12 @@
             margin: 0;
             color: #94a3b8;
         }
-        
-        /* Tabs */
         .tabs {
             display: flex;
             background: #020617;
             border-bottom: 1px solid #1e293b;
             padding: 0 2rem;
+            flex-wrap: wrap;
         }
         .tab-button {
             background: none;
@@ -59,7 +58,6 @@
         .tab-content.active {
             display: block;
         }
-        
         main {
             max-width: 900px;
             margin: auto;
@@ -216,6 +214,33 @@
             text-align: center;
             margin: 1rem 0;
         }
+        .provider-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid #334155;
+        }
+        .provider-card h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .provider-card .price {
+            background: #020617;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        .provider-card .free {
+            background: #064e3b;
+            color: #6ee7b7;
+        }
+        a {
+            color: #fbbf24;
+        }
     </style>
 </head>
 <body>
@@ -227,6 +252,7 @@
 
 <div class="tabs">
     <button class="tab-button active" onclick="openTab(event, 'getting-started')">Getting Started</button>
+    <button class="tab-button" onclick="openTab(event, 'extras')">⚡ Power-Ups</button>
     <button class="tab-button" onclick="openTab(event, 'supercharge')">🚀 Supercharge Your Pi</button>
 </div>
 
@@ -362,16 +388,74 @@
 </main>
 </div>
 
-<!-- TAB 2: SUPERCHARGE YOUR PI -->
+<!-- TAB 2: POWER-UPS -->
+<div id="extras" class="tab-content">
+<main>
+
+<section>
+    <h2>⚡ Power-Ups for Claude Code</h2>
+    <p>
+        These optional add-ons extend what Claude Code can do. Install only what you need.
+    </p>
+</section>
+
+<section>
+    <h2>Enable Web/URL Reading</h2>
+    <p>
+        By default, Claude Code can't read web pages. Add this to let it fetch and read URLs:
+    </p>
+    
+    <div class="step-box">
+        <h3>Install the Fetch MCP Server</h3>
+        <pre><code>npm install -g @anthropic-ai/mcp-server-fetch</code></pre>
+    </div>
+
+    <div class="step-box">
+        <h3>Add to Claude's Config</h3>
+        <p>In Claude Code, run:</p>
+        <pre><code>/mcp add fetch -- mcp-server-fetch</code></pre>
+        <p>Or manually edit <code>~/.claude/config.json</code>:</p>
+        <pre><code>{
+  "mcpServers": {
+    "fetch": {
+      "command": "mcp-server-fetch"
+    }
+  }
+}</code></pre>
+    </div>
+
+    <p>Now you can ask Claude to read web pages:</p>
+    <pre><code>> read https://example.com/article and summarize the key points</code></pre>
+</section>
+
+<section>
+    <h2>Enable PDF Reading</h2>
+    <p>
+        To let Claude read PDF files directly, install poppler-utils:
+    </p>
+    
+    <div class="step-box">
+        <h3>On Windows (via Git Bash)</h3>
+        <p>Download and install from: <a href="https://github.com/oschwartz10612/poppler-windows/releases" target="_blank">Poppler for Windows</a></p>
+        <p>Add the <code>bin</code> folder to your PATH.</p>
+    </div>
+
+    <p>Then Claude can extract text from PDFs:</p>
+    <pre><code>> read the PDF in this folder and summarize section 3</code></pre>
+</section>
+
+</main>
+</div>
+
+<!-- TAB 3: SUPERCHARGE YOUR PI -->
 <div id="supercharge" class="tab-content">
 <main>
 
 <section>
     <h2>🚀 Supercharge Your Raspberry Pi</h2>
     <p>
-        Your Pi-hole is already blocking ads on your home network. Now let's make it 
-        accessible from <em>anywhere</em> — so you get ad-blocking on your phone at 
-        the coffee shop, at work, or anywhere else.
+        Your Pi-hole is already blocking ads on your home network. Let's add 
+        remote access and optionally an always-on AI assistant.
     </p>
     
     <div class="note">
@@ -390,20 +474,11 @@
             phone, laptop, and Raspberry Pi together in a private network — even when they're 
             in completely different locations.
         </p>
-        <p>
-            Normally, your home devices are hidden behind your router and you can't reach them 
-            from outside. Tailscale solves this by creating secure connections between your devices, 
-            no matter where they are.
-        </p>
     </div>
 
     <div class="concept-box">
         <h3>🌐 Why This Matters for Your Pi-hole</h3>
-        <p>
-            Right now, your Pi-hole only blocks ads when you're at home. But with Tailscale, 
-            you can route your phone's internet traffic through your Pi — even when you're 
-            miles away. This means:
-        </p>
+        <p>Right now, your Pi-hole only blocks ads when you're at home. With Tailscale:</p>
         <ul>
             <li>✅ Ad-blocking on your phone at coffee shops, airports, work</li>
             <li>✅ Access Pi-hole dashboard from anywhere</li>
@@ -415,32 +490,14 @@
     <div class="concept-box">
         <h3>🔒 How It Works</h3>
         <div class="diagram">
-Your Phone (anywhere) ←──🔐──→ Tailscale Network ←──🔐──→ Your Pi (at home)
+Your Phone (anywhere) ←──🔐──→ Tailscale ←──🔐──→ Your Pi (at home)
         </div>
         <p>
-            When you enable your Pi as an "exit node," all your phone/laptop traffic 
-            goes through your Pi first. Since Pi-hole is running there, it blocks ads 
-            before they ever reach your device.
+            When you enable your Pi as an "exit node," all your traffic 
+            goes through your Pi first — ads get blocked before reaching your device.
         </p>
+        <p><strong>💰 Cost:</strong> Free for personal use (up to 100 devices).</p>
     </div>
-
-    <div class="concept-box">
-        <h3>💰 Cost</h3>
-        <p>
-            <strong>Free</strong> for personal use. Tailscale's free tier includes up to 100 devices, 
-            which is way more than you'll ever need.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>Prerequisites Checklist</h2>
-    <ul class="checklist">
-        <li>Raspberry Pi 5 with Pi-hole installed and running</li>
-        <li>Pi connected to your network (ethernet recommended)</li>
-        <li>SSH access to your Pi working</li>
-        <li>Your Pi's IP address (check Fing app or router)</li>
-    </ul>
 </section>
 
 <section>
@@ -448,11 +505,10 @@ Your Phone (anywhere) ←──🔐──→ Tailscale Network ←──🔐─�
     
     <div class="step-box">
         <h3>Step 1.1: SSH into your Pi</h3>
-        <p>From Git Bash on your PC, connect to the Pi:</p>
+        <p>From Git Bash on your PC:</p>
         <pre><code>ssh pihole@YOUR_PI_IP</code></pre>
-        <p>Replace <code>YOUR_PI_IP</code> with your Pi's actual IP address (e.g., 192.168.1.55)</p>
-        <p><strong>Default password:</strong> <code>raspberry</code></p>
-        <p><strong>Expected output:</strong> You should see a command prompt like <code>pihole@pihole:~$</code></p>
+        <p>Replace <code>YOUR_PI_IP</code> with your Pi's IP (e.g., 192.168.1.55)</p>
+        <p><strong>Password:</strong> <code>raspberry</code></p>
     </div>
 </section>
 
@@ -461,136 +517,216 @@ Your Phone (anywhere) ←──🔐──→ Tailscale Network ←──🔐─�
     
     <div class="step-box">
         <h3>Step 2.1: Install Tailscale</h3>
-        <p>Run this command on your Pi:</p>
         <pre><code>curl -fsSL https://tailscale.com/install.sh | sh</code></pre>
-        <p><strong>Expected output:</strong> Installation messages ending with "Installation complete"</p>
     </div>
 
     <div class="step-box">
-        <h3>Step 2.2: Start Tailscale as Exit Node</h3>
-        <p>This lets you route all traffic through your Pi:</p>
+        <h3>Step 2.2: Start as Exit Node</h3>
         <pre><code>sudo tailscale up --advertise-exit-node</code></pre>
-        <p><strong>Expected output:</strong> A URL to authenticate. Open it in your browser.</p>
+        <p>Copy the URL it shows and open it in your browser to sign in.</p>
     </div>
 
     <div class="step-box">
-        <h3>Step 2.3: Authenticate</h3>
+        <h3>Step 2.3: Approve Exit Node</h3>
         <ol>
-            <li>Copy the URL from the terminal</li>
-            <li>Open it in your browser</li>
-            <li>Sign in with Google (or create a Tailscale account)</li>
-            <li>Authorize the device</li>
-        </ol>
-        <p><strong>Expected result:</strong> Terminal shows "Success" and your Pi is connected.</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 2.4: Approve Exit Node in Admin Console</h3>
-        <ol>
-            <li>Go to <a href="https://login.tailscale.com/admin/machines" target="_blank" style="color: #fbbf24;">Tailscale Admin Console</a></li>
-            <li>Find your Pi in the machines list</li>
-            <li>Click the <strong>⋮</strong> menu → <strong>Edit route settings</strong></li>
-            <li>Enable <strong>"Use as exit node"</strong></li>
-            <li>Save</li>
+            <li>Go to <a href="https://login.tailscale.com/admin/machines" target="_blank">Tailscale Admin Console</a></li>
+            <li>Find your Pi → click <strong>⋮</strong> → <strong>Edit route settings</strong></li>
+            <li>Enable <strong>"Use as exit node"</strong> → Save</li>
         </ol>
     </div>
 
     <div class="step-box">
-        <h3>Step 2.5: Get Your Pi's Tailscale IP</h3>
+        <h3>Step 2.4: Get Your Tailscale IP</h3>
         <pre><code>tailscale ip -4</code></pre>
-        <p><strong>Expected output:</strong> An IP like <code>100.x.x.x</code> — write this down!</p>
-    </div>
-
-    <div class="tip">
-        <strong>Success!</strong> Your Pi is now on your Tailscale network and can act as an exit node.
+        <p>Write down this <code>100.x.x.x</code> IP — you'll use it to connect!</p>
     </div>
 </section>
 
 <section>
-    <h2>Part 3: Install Tailscale on Your Other Devices</h2>
+    <h2>Part 3: Connect Your Devices</h2>
     
     <div class="step-box">
-        <h3>On Your Phone (iPhone or Android)</h3>
+        <h3>On Your Phone</h3>
         <ol>
-            <li>Download the <strong>Tailscale</strong> app from App Store or Play Store</li>
-            <li>Sign in with the same Google account you used for your Pi</li>
-            <li>Tap the <strong>⋮</strong> menu → <strong>Use exit node</strong></li>
-            <li>Select your Pi from the list</li>
+            <li>Download <strong>Tailscale</strong> from App Store / Play Store</li>
+            <li>Sign in with the same account</li>
+            <li>Tap <strong>⋮</strong> → <strong>Use exit node</strong> → select your Pi</li>
         </ol>
-        <p>Now all your phone's traffic routes through your Pi — ads blocked everywhere!</p>
     </div>
 
     <div class="step-box">
-        <h3>On Your Laptop (Windows)</h3>
+        <h3>On Your Laptop</h3>
         <ol>
-            <li>Download Tailscale from <a href="https://tailscale.com/download/windows" target="_blank" style="color: #fbbf24;">tailscale.com/download/windows</a></li>
-            <li>Install and sign in with your Google account</li>
-            <li>Click the Tailscale icon in your system tray</li>
-            <li>Select <strong>Exit node</strong> → choose your Pi</li>
+            <li>Download from <a href="https://tailscale.com/download" target="_blank">tailscale.com/download</a></li>
+            <li>Sign in → click tray icon → <strong>Exit node</strong> → select Pi</li>
         </ol>
     </div>
 </section>
 
 <section>
-    <h2>Part 4: Test It!</h2>
+    <h2>Part 4: OpenClaw — Always-On AI (Optional)</h2>
+    <p>
+        <strong>OpenClaw</strong> is an AI gateway that runs on your Pi. Chat with AI 
+        via Telegram, Discord, or web — accessible from anywhere via Tailscale.
+    </p>
+
+    <div class="warning">
+        <strong>Note:</strong> OpenClaw requires an API key from an AI provider. 
+        Choose one below based on your preference and budget.
+    </div>
+</section>
+
+<section>
+    <h2>Choose Your AI Provider</h2>
     
-    <div class="step-box">
-        <h3>Verify Everything Works</h3>
+    <div class="provider-card">
+        <h3>🟣 Anthropic (Claude) <span class="price">Pay as you go</span></h3>
+        <p>The same Claude you use in Claude Code — fast, capable, great for writing.</p>
         <ol>
-            <li>Make sure your phone/laptop is using the Pi as exit node</li>
-            <li>Visit <code>http://YOUR_TAILSCALE_IP/admin</code> in a browser</li>
-            <li>You should see your Pi-hole dashboard!</li>
-            <li>Visit an ad-heavy website — ads should be blocked</li>
-            <li>Check Pi-hole dashboard — you should see queries coming in</li>
+            <li>Go to <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a></li>
+            <li>Sign up or log in</li>
+            <li>Go to <strong>API Keys</strong> → <strong>Create Key</strong></li>
+            <li>Copy the key (starts with <code>sk-ant-</code>)</li>
         </ol>
+        <p><strong>Pricing:</strong> ~$3 per million input tokens, ~$15 per million output tokens (Sonnet)</p>
+    </div>
+
+    <div class="provider-card">
+        <h3>🔵 Google (Gemini) <span class="price free">Free tier available!</span></h3>
+        <p>Google's AI — generous free tier, good for experimentation.</p>
+        <ol>
+            <li>Go to <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com/app/apikey</a></li>
+            <li>Sign in with Google</li>
+            <li>Click <strong>Create API Key</strong></li>
+            <li>Copy the key</li>
+        </ol>
+        <p><strong>Pricing:</strong> Free tier includes 15 requests/minute, 1 million tokens/month!</p>
+    </div>
+
+    <div class="provider-card">
+        <h3>🟢 OpenAI (ChatGPT/GPT-4) <span class="price">Pay as you go</span></h3>
+        <p>The original ChatGPT — widely known, lots of integrations.</p>
+        <ol>
+            <li>Go to <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a></li>
+            <li>Sign up or log in</li>
+            <li>Click <strong>Create new secret key</strong></li>
+            <li>Copy the key (starts with <code>sk-</code>)</li>
+        </ol>
+        <p><strong>Pricing:</strong> ~$2.50 per million input tokens, ~$10 per million output tokens (GPT-4o)</p>
     </div>
 
     <div class="tip">
-        <strong>Pro tip:</strong> Turn off the exit node when you need maximum speed 
-        (like video streaming). Turn it back on when browsing normally.
+        <strong>Recommendation:</strong> Start with <strong>Google Gemini</strong> — the free tier 
+        is generous enough for personal use without worrying about costs.
+    </div>
+</section>
+
+<section>
+    <h2>Part 5: Install OpenClaw</h2>
+    
+    <div class="step-box">
+        <h3>Step 5.1: Install Node.js</h3>
+        <pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
+sudo apt install -y nodejs</code></pre>
+        <p>Verify: <code>node --version</code> should show v22.x.x</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 5.2: Install OpenClaw</h3>
+        <pre><code>sudo npm install -g openclaw</code></pre>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 5.3: Initialize OpenClaw</h3>
+        <pre><code>openclaw init</code></pre>
+        <p>It will ask for your API key — paste the one you got from your chosen provider.</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 5.4: Configure for Remote Access</h3>
+        <pre><code>nano ~/.openclaw/openclaw.yaml</code></pre>
+        <p>Set the bind address:</p>
+        <pre><code>gateway:
+  port: 18789
+  bind: tailnet</code></pre>
+        <p>Save: <kbd>Ctrl</kbd>+<kbd>O</kbd>, Exit: <kbd>Ctrl</kbd>+<kbd>X</kbd></p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 5.5: Start OpenClaw</h3>
+        <pre><code>openclaw gateway start</code></pre>
+        <p>Access it at: <code>http://YOUR_TAILSCALE_IP:18789</code></p>
+    </div>
+</section>
+
+<section>
+    <h2>Part 6: Run OpenClaw on Startup (Optional)</h2>
+    
+    <div class="step-box">
+        <h3>Create a systemd Service</h3>
+        <pre><code>sudo nano /etc/systemd/system/openclaw.service</code></pre>
+        <p>Paste:</p>
+        <pre><code>[Unit]
+Description=OpenClaw AI Gateway
+After=network.target
+
+[Service]
+Type=simple
+User=pihole
+ExecStart=/usr/bin/openclaw gateway start --foreground
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+        <p>Enable and start:</p>
+        <pre><code>sudo systemctl daemon-reload
+sudo systemctl enable openclaw
+sudo systemctl start openclaw</code></pre>
+    </div>
+</section>
+
+<section>
+    <h2>Part 7: Add Telegram Bot (Optional)</h2>
+    
+    <div class="step-box">
+        <h3>Create a Bot</h3>
+        <ol>
+            <li>Message <a href="https://t.me/BotFather" target="_blank">@BotFather</a> on Telegram</li>
+            <li>Send <code>/newbot</code></li>
+            <li>Choose a name and username</li>
+            <li>Copy the API token</li>
+        </ol>
+    </div>
+
+    <div class="step-box">
+        <h3>Add to OpenClaw Config</h3>
+        <pre><code>nano ~/.openclaw/openclaw.yaml</code></pre>
+        <p>Add:</p>
+        <pre><code>channels:
+  telegram:
+    token: "YOUR_BOT_TOKEN"
+    allowlist:
+      - "your_telegram_username"</code></pre>
+        <p>Restart: <code>sudo systemctl restart openclaw</code></p>
     </div>
 </section>
 
 <section>
     <h2>🎉 You're Done!</h2>
-    <p>Your setup now includes:</p>
     <ul>
-        <li>✅ <strong>Pi-hole</strong> — Network-wide ad blocking at home</li>
-        <li>✅ <strong>Tailscale</strong> — Secure access from anywhere</li>
-        <li>✅ <strong>Exit Node</strong> — Ad blocking on the go</li>
-        <li>✅ <strong>Claude Code</strong> — AI assistant on your laptop</li>
+        <li>✅ <strong>Pi-hole</strong> — Ad blocking at home</li>
+        <li>✅ <strong>Tailscale</strong> — Access from anywhere</li>
+        <li>✅ <strong>Exit Node</strong> — Ad blocking everywhere</li>
+        <li>✅ <strong>OpenClaw</strong> — Always-on AI assistant (optional)</li>
     </ul>
     
     <div class="tip">
-        <strong>Quick access from anywhere:</strong><br>
-        • Pi-hole dashboard: <code>http://TAILSCALE_IP/admin</code><br>
+        <strong>Access from anywhere:</strong><br>
+        • Pi-hole: <code>http://TAILSCALE_IP/admin</code><br>
+        • OpenClaw: <code>http://TAILSCALE_IP:18789</code><br>
         • SSH: <code>ssh pihole@TAILSCALE_IP</code>
     </div>
-</section>
-
-<section>
-    <h2>Troubleshooting</h2>
-    
-    <h3>Can't connect to Pi via Tailscale</h3>
-    <pre><code># On the Pi, check Tailscale status
-tailscale status
-
-# Make sure it's running
-sudo systemctl status tailscaled</code></pre>
-
-    <h3>Exit node not working</h3>
-    <ul>
-        <li>Make sure you approved it in the Tailscale admin console</li>
-        <li>Try disconnecting and reconnecting on your phone/laptop</li>
-        <li>Check that your Pi has internet access</li>
-    </ul>
-
-    <h3>Slow internet when using exit node</h3>
-    <p>
-        All traffic goes through your home internet, so speed depends on your 
-        home upload speed. This is normal — disable exit node for bandwidth-heavy 
-        tasks like streaming.
-    </p>
 </section>
 
 </main>
@@ -606,12 +742,10 @@ function openTab(evt, tabName) {
     for (var i = 0; i < tabContents.length; i++) {
         tabContents[i].classList.remove("active");
     }
-    
     var tabButtons = document.getElementsByClassName("tab-button");
     for (var i = 0; i < tabButtons.length; i++) {
         tabButtons[i].classList.remove("active");
     }
-    
     document.getElementById(tabName).classList.add("active");
     evt.currentTarget.classList.add("active");
 }
