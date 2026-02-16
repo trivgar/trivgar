@@ -26,6 +26,40 @@
             margin: 0;
             color: #94a3b8;
         }
+        
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: #020617;
+            border-bottom: 1px solid #1e293b;
+            padding: 0 2rem;
+        }
+        .tab-button {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .tab-button:hover {
+            color: #e5e7eb;
+            background: #1e293b;
+        }
+        .tab-button.active {
+            color: #fbbf24;
+            border-bottom-color: #fbbf24;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
         main {
             max-width: 900px;
             margin: auto;
@@ -138,21 +172,46 @@
             color: #94a3b8;
             font-size: 0.9rem;
         }
-        img.screenshot {
-            max-width: 100%;
+        .step-box {
+            background: #1e293b;
             border-radius: 8px;
-            border: 1px solid #1e293b;
-            margin: 1rem 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #8b5cf6;
+        }
+        .step-box h3 {
+            margin-top: 0;
+            color: #c4b5fd;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Claude Code - Getting Started</h1>
-    <p>Your AI assistant in the terminal — for writing, research, and beyond</p>
+    <h1>Claude Code Guide</h1>
+    <p>Your AI assistant — from basics to supercharged setup</p>
 </header>
 
+<div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'getting-started')">Getting Started</button>
+    <button class="tab-button" onclick="openTab(event, 'supercharge')">🚀 Supercharge Your Pi</button>
+</div>
+
+<!-- TAB 1: GETTING STARTED -->
+<div id="getting-started" class="tab-content active">
 <main>
 
 <section>
@@ -169,10 +228,6 @@
         <li>Analyze data and generate reports</li>
         <li>Answer questions about your files</li>
     </ul>
-    <p>
-        Think of it as having a capable research assistant who can see all 
-        your project files and help you work through them.
-    </p>
 </section>
 
 <section>
@@ -180,7 +235,7 @@
     
     <h3>Step 1: Navigate to Your Folder in File Explorer</h3>
     <ol>
-        <li>Open <strong>File Explorer</strong> (the folder icon in your taskbar, or press <kbd>Win</kbd> + <kbd>E</kbd>)</li>
+        <li>Open <strong>File Explorer</strong> (press <kbd>Win</kbd> + <kbd>E</kbd>)</li>
         <li>Navigate to the folder containing your project or documents</li>
         <li>For example: <code>Documents → Research → My Paper</code></li>
     </ol>
@@ -193,8 +248,7 @@
     </ol>
     
     <div class="tip">
-        <strong>Tip:</strong> You can also hold <kbd>Shift</kbd> while right-clicking 
-        to see additional options if "Open Git Bash here" doesn't appear immediately.
+        <strong>Tip:</strong> Hold <kbd>Shift</kbd> while right-clicking for additional options.
     </div>
 
     <h3>Step 3: Type <code>claude</code> and Press Enter</h3>
@@ -204,67 +258,34 @@
 
 <section>
     <h2>What Can You Ask Claude?</h2>
-    
-    <p>Just type what you need in plain English. Here are examples tailored for academic work:</p>
 
     <div class="example-box">
         <h4>📝 Writing & Editing</h4>
         <pre><code>> review my introduction and suggest improvements for clarity
-
 > help me strengthen the argument in section 3
-
-> check this paragraph for passive voice and suggest active alternatives
-
-> make this abstract more concise — it needs to be under 250 words</code></pre>
+> check this paragraph for passive voice
+> make this abstract under 250 words</code></pre>
     </div>
 
     <div class="example-box">
         <h4>📚 Research & Literature</h4>
-        <pre><code>> summarize the key arguments in these three PDFs
-
+        <pre><code>> summarize the key arguments in these PDFs
 > what themes appear across these interview transcripts?
-
-> help me organize these sources into a literature review outline
-
-> find contradictions between Smith's argument and Jones's response</code></pre>
+> help me organize these sources into a lit review outline</code></pre>
     </div>
 
     <div class="example-box">
         <h4>🎓 Course Materials</h4>
-        <pre><code>> create a syllabus outline for an intro to technical writing course
-
+        <pre><code>> create a syllabus outline for intro to technical writing
 > draft a rubric for evaluating professional memos
-
-> generate discussion questions based on this week's reading
-
-> create a peer review checklist for the proposal assignment</code></pre>
+> generate discussion questions for this week's reading</code></pre>
     </div>
 
     <div class="example-box">
         <h4>📊 Data & Analysis</h4>
-        <pre><code>> analyze this survey data and identify key trends
-
+        <pre><code>> analyze this survey data and identify trends
 > help me code these interview responses for themes
-
-> create a summary table of participant demographics
-
-> what patterns do you see in this feedback data?</code></pre>
-    </div>
-
-    <div class="example-box">
-        <h4>✉️ Professional Communication</h4>
-        <pre><code>> draft an email to the department about the upcoming workshop
-
-> help me write a response to this reviewer comment
-
-> make this conference proposal more compelling
-
-> write a professional bio for the department website</code></pre>
-    </div>
-
-    <div class="note">
-        <strong>Note:</strong> Claude can see all the files in your current folder 
-        and subfolders. It reads them to understand your project context.
+> create a summary table of participant demographics</code></pre>
     </div>
 </section>
 
@@ -272,173 +293,347 @@
     <h2>Useful Commands</h2>
     
     <table class="command-table">
-        <tr>
-            <th>Command</th>
-            <th>What it does</th>
-        </tr>
-        <tr>
-            <td><code>/help</code></td>
-            <td>Show all available commands</td>
-        </tr>
-        <tr>
-            <td><code>/clear</code></td>
-            <td>Clear the conversation and start fresh</td>
-        </tr>
-        <tr>
-            <td><code>/compact</code></td>
-            <td>Summarize the conversation to save memory</td>
-        </tr>
-        <tr>
-            <td><code>/cost</code></td>
-            <td>See how much you've used this session</td>
-        </tr>
-        <tr>
-            <td><code>/quit</code> or <kbd>Ctrl+C</kbd></td>
-            <td>Exit Claude</td>
-        </tr>
+        <tr><th>Command</th><th>What it does</th></tr>
+        <tr><td><code>/help</code></td><td>Show all available commands</td></tr>
+        <tr><td><code>/clear</code></td><td>Clear conversation and start fresh</td></tr>
+        <tr><td><code>/compact</code></td><td>Summarize conversation to save memory</td></tr>
+        <tr><td><code>/cost</code></td><td>See usage this session</td></tr>
+        <tr><td><code>/quit</code> or <kbd>Ctrl+C</kbd></td><td>Exit Claude</td></tr>
     </table>
 </section>
 
 <section>
     <h2>Tips for Better Results</h2>
     
-    <h3>Be Specific About What You Want</h3>
-    <p>Instead of:</p>
-    <pre><code>> make this better</code></pre>
-    <p>Try:</p>
-    <pre><code>> make this introduction more engaging by starting with a concrete example 
-  instead of a general statement</code></pre>
+    <h3>Be Specific</h3>
+    <pre><code>> make this introduction more engaging by starting with a concrete example</code></pre>
 
     <h3>Give Context</h3>
-    <pre><code>> I'm writing a journal article for Technical Communication Quarterly. 
-  Help me revise this methods section to match their style guidelines.</code></pre>
+    <pre><code>> I'm writing for Technical Communication Quarterly. Help me match their style.</code></pre>
 
-    <h3>Ask for Explanations</h3>
-    <pre><code>> explain why you made those changes</code></pre>
-
-    <h3>Iterate and Refine</h3>
-    <pre><code>> that's good but make it less formal — this is for undergraduate students
-
-> try again but keep the original opening sentence</code></pre>
-
-    <h3>Review Before Accepting Changes</h3>
-    <p>
-        When Claude wants to edit a file, it will show you exactly what it plans to change.
-        Review the changes and type <code>y</code> to accept or <code>n</code> to reject.
-    </p>
+    <h3>Iterate</h3>
+    <pre><code>> good, but make it less formal — this is for undergrads</code></pre>
 
     <div class="warning">
-        <strong>Important:</strong> Always review changes before accepting them. 
-        Claude is helpful but not perfect — you're the expert on your own work.
+        <strong>Always review changes</strong> before accepting. Type <code>y</code> to accept or <code>n</code> to reject.
     </div>
-</section>
-
-<section>
-    <h2>Organizing Your Work</h2>
-    
-    <p>Claude works best when your files are organized in project folders:</p>
-    
-    <pre><code>My Research Project/
-├── drafts/
-│   ├── introduction.docx
-│   └── methods.docx
-├── sources/
-│   ├── smith-2023.pdf
-│   └── jones-2024.pdf
-├── data/
-│   └── survey-responses.csv
-└── notes/
-    └── meeting-notes.txt</code></pre>
-
-    <p>
-        When you open Claude in the project folder, it can see and reference 
-        all these files as you work.
-    </p>
-</section>
-
-<section>
-    <h2>Example Workflow: Revising a Paper</h2>
-    
-    <ol>
-        <li>
-            <strong>Open your paper's folder</strong><br>
-            In File Explorer, navigate to where your draft is saved
-        </li>
-        <li>
-            <strong>Right-click → Open Git Bash here</strong>
-        </li>
-        <li>
-            <strong>Start Claude</strong><br>
-            <pre><code>claude</code></pre>
-        </li>
-        <li>
-            <strong>Get an overview</strong><br>
-            <pre><code>> read my draft and give me your overall impression — what's working 
-  and what needs attention?</code></pre>
-        </li>
-        <li>
-            <strong>Work through issues</strong><br>
-            <pre><code>> let's focus on the literature review — help me better connect 
-  these sources to my argument</code></pre>
-        </li>
-        <li>
-            <strong>Polish the writing</strong><br>
-            <pre><code>> go through the conclusion and tighten up the prose</code></pre>
-        </li>
-    </ol>
-</section>
-
-<section>
-    <h2>Keyboard Shortcuts</h2>
-    
-    <table class="command-table">
-        <tr>
-            <th>Shortcut</th>
-            <th>Action</th>
-        </tr>
-        <tr>
-            <td><kbd>Ctrl</kbd> + <kbd>C</kbd></td>
-            <td>Cancel current operation / Exit</td>
-        </tr>
-        <tr>
-            <td><kbd>↑</kbd> / <kbd>↓</kbd></td>
-            <td>Scroll through previous messages</td>
-        </tr>
-        <tr>
-            <td><kbd>Ctrl</kbd> + <kbd>L</kbd></td>
-            <td>Clear the screen</td>
-        </tr>
-    </table>
 </section>
 
 <section>
     <h2>Troubleshooting</h2>
     
     <h3>"claude" is not recognized</h3>
-    <p>Close Git Bash completely and reopen it. If still not working, reinstall:</p>
     <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
 
-    <h3>Claude seems stuck or slow</h3>
-    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel, then try again with a simpler request.</p>
+    <h3>Claude seems stuck</h3>
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel, then try again.</p>
 
-    <h3>Too much conversation history</h3>
-    <p>Use <code>/clear</code> to start fresh, or <code>/compact</code> to summarize and continue.</p>
-
-    <h3>Claude made changes I don't want</h3>
-    <p>
-        If you accepted changes you didn't mean to, use <kbd>Ctrl</kbd> + <kbd>Z</kbd> in your 
-        text editor to undo, or check your file's version history.
-    </p>
-
-    <h3>Need help?</h3>
-    <p>Just ask Claude: <code>I'm having trouble with X, can you help?</code></p>
+    <h3>Too much history</h3>
+    <p>Use <code>/clear</code> to start fresh.</p>
 </section>
 
 </main>
+</div>
+
+<!-- TAB 2: SUPERCHARGE YOUR PI -->
+<div id="supercharge" class="tab-content">
+<main>
+
+<section>
+    <h2>🚀 Supercharge Your Raspberry Pi</h2>
+    <p>
+        Turn your Pi-hole into an always-on AI gateway. Access Claude from anywhere, 
+        get notifications, and have an assistant that's always running.
+    </p>
+    
+    <div class="note">
+        <strong>For Claude Code:</strong> You can read this page and follow the instructions step by step. 
+        Run each command block in order and verify the expected output before proceeding.
+    </div>
+</section>
+
+<section>
+    <h2>Prerequisites Checklist</h2>
+    <ul class="checklist">
+        <li>Raspberry Pi 5 with Pi-hole installed and running</li>
+        <li>Pi connected to your network (ethernet recommended)</li>
+        <li>SSH access to your Pi working</li>
+        <li>Your Pi's IP address (check Fing app or router)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Part 1: Connect to Your Pi</h2>
+    
+    <div class="step-box">
+        <h3>Step 1.1: SSH into your Pi</h3>
+        <p>From Git Bash on your PC, connect to the Pi:</p>
+        <pre><code>ssh pihole@YOUR_PI_IP</code></pre>
+        <p>Replace <code>YOUR_PI_IP</code> with your Pi's actual IP address (e.g., 192.168.1.55)</p>
+        <p><strong>Default password:</strong> <code>raspberry</code></p>
+        <p><strong>Expected output:</strong> You should see a command prompt like <code>pihole@pihole:~$</code></p>
+    </div>
+</section>
+
+<section>
+    <h2>Part 2: Install Tailscale (Remote Access)</h2>
+    <p>Tailscale lets you access your Pi from anywhere — home, work, phone, anywhere.</p>
+    
+    <div class="step-box">
+        <h3>Step 2.1: Install Tailscale</h3>
+        <p>Run this command on your Pi:</p>
+        <pre><code>curl -fsSL https://tailscale.com/install.sh | sh</code></pre>
+        <p><strong>Expected output:</strong> Installation messages ending with "Installation complete"</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 2.2: Start Tailscale as Exit Node</h3>
+        <p>This lets you route all traffic through your Pi (for ad-blocking anywhere):</p>
+        <pre><code>sudo tailscale up --advertise-exit-node</code></pre>
+        <p><strong>Expected output:</strong> A URL to authenticate. Open it in your browser.</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 2.3: Authenticate</h3>
+        <ol>
+            <li>Copy the URL from the terminal</li>
+            <li>Open it in your browser</li>
+            <li>Sign in with Google (or create a Tailscale account)</li>
+            <li>Authorize the device</li>
+        </ol>
+        <p><strong>Expected result:</strong> Terminal shows "Success" and your Pi is connected.</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 2.4: Approve Exit Node</h3>
+        <ol>
+            <li>Go to <a href="https://login.tailscale.com/admin/machines" target="_blank">Tailscale Admin Console</a></li>
+            <li>Find your Pi in the machines list</li>
+            <li>Click the <strong>⋮</strong> menu → <strong>Edit route settings</strong></li>
+            <li>Enable <strong>"Use as exit node"</strong></li>
+            <li>Save</li>
+        </ol>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 2.5: Get Your Pi's Tailscale IP</h3>
+        <pre><code>tailscale ip -4</code></pre>
+        <p><strong>Expected output:</strong> An IP like <code>100.x.x.x</code> — save this!</p>
+    </div>
+
+    <div class="tip">
+        <strong>Success!</strong> You can now access your Pi from anywhere using the Tailscale IP.
+        Install Tailscale on your phone and laptop to connect from anywhere.
+    </div>
+</section>
+
+<section>
+    <h2>Part 3: Install Node.js</h2>
+    <p>OpenClaw requires Node.js. Let's install it.</p>
+    
+    <div class="step-box">
+        <h3>Step 3.1: Add NodeSource Repository</h3>
+        <pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -</code></pre>
+        <p><strong>Expected output:</strong> Repository added successfully</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 3.2: Install Node.js</h3>
+        <pre><code>sudo apt install -y nodejs</code></pre>
+        <p><strong>Expected output:</strong> Installation completes without errors</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 3.3: Verify Installation</h3>
+        <pre><code>node --version
+npm --version</code></pre>
+        <p><strong>Expected output:</strong> Version numbers like <code>v22.x.x</code> and <code>10.x.x</code></p>
+    </div>
+</section>
+
+<section>
+    <h2>Part 4: Install OpenClaw</h2>
+    <p>OpenClaw is an AI gateway that gives you Claude access via Telegram, Discord, or web chat.</p>
+    
+    <div class="step-box">
+        <h3>Step 4.1: Install OpenClaw</h3>
+        <pre><code>sudo npm install -g openclaw</code></pre>
+        <p><strong>Expected output:</strong> Installation completes, shows openclaw version</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 4.2: Initialize OpenClaw</h3>
+        <pre><code>openclaw init</code></pre>
+        <p>This will ask you for:</p>
+        <ul>
+            <li><strong>Anthropic API key</strong> — get one from <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a></li>
+            <li><strong>Default model</strong> — recommend <code>claude-sonnet-4</code> for balance of speed/quality</li>
+        </ul>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 4.3: Configure Network Binding</h3>
+        <p>To access OpenClaw from other devices, edit the config:</p>
+        <pre><code>nano ~/.openclaw/openclaw.yaml</code></pre>
+        <p>Find the <code>gateway</code> section and set:</p>
+        <pre><code>gateway:
+  port: 18789
+  bind: tailnet  # or 0.0.0.0 for all interfaces</code></pre>
+        <p>Save with <kbd>Ctrl</kbd>+<kbd>O</kbd>, exit with <kbd>Ctrl</kbd>+<kbd>X</kbd></p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 4.4: Start OpenClaw</h3>
+        <pre><code>openclaw gateway start</code></pre>
+        <p><strong>Expected output:</strong> Gateway starts, shows URL</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 4.5: Test It</h3>
+        <p>From your PC or phone (with Tailscale connected), open a browser:</p>
+        <pre><code>http://YOUR_TAILSCALE_IP:18789</code></pre>
+        <p><strong>Expected result:</strong> OpenClaw web chat interface loads!</p>
+    </div>
+</section>
+
+<section>
+    <h2>Part 5: Run OpenClaw on Startup</h2>
+    <p>Make OpenClaw start automatically when your Pi boots.</p>
+    
+    <div class="step-box">
+        <h3>Step 5.1: Create systemd Service</h3>
+        <pre><code>sudo nano /etc/systemd/system/openclaw.service</code></pre>
+        <p>Paste this content:</p>
+        <pre><code>[Unit]
+Description=OpenClaw AI Gateway
+After=network.target
+
+[Service]
+Type=simple
+User=pihole
+ExecStart=/usr/bin/openclaw gateway start --foreground
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+        <p>Save and exit.</p>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 5.2: Enable and Start</h3>
+        <pre><code>sudo systemctl daemon-reload
+sudo systemctl enable openclaw
+sudo systemctl start openclaw</code></pre>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 5.3: Check Status</h3>
+        <pre><code>sudo systemctl status openclaw</code></pre>
+        <p><strong>Expected output:</strong> Shows "active (running)"</p>
+    </div>
+</section>
+
+<section>
+    <h2>Part 6: Optional — Connect Telegram</h2>
+    <p>Chat with Claude from your phone via Telegram.</p>
+    
+    <div class="step-box">
+        <h3>Step 6.1: Create a Telegram Bot</h3>
+        <ol>
+            <li>Open Telegram and message <a href="https://t.me/BotFather" target="_blank">@BotFather</a></li>
+            <li>Send <code>/newbot</code></li>
+            <li>Choose a name (e.g., "Mason's Claude")</li>
+            <li>Choose a username (must end in "bot", e.g., "masons_claude_bot")</li>
+            <li>Copy the <strong>API token</strong> BotFather gives you</li>
+        </ol>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 6.2: Add to OpenClaw Config</h3>
+        <pre><code>nano ~/.openclaw/openclaw.yaml</code></pre>
+        <p>Add under channels:</p>
+        <pre><code>channels:
+  telegram:
+    token: "YOUR_BOT_TOKEN_HERE"
+    allowlist:
+      - "your_telegram_username"</code></pre>
+    </div>
+
+    <div class="step-box">
+        <h3>Step 6.3: Restart OpenClaw</h3>
+        <pre><code>sudo systemctl restart openclaw</code></pre>
+        <p>Now message your bot on Telegram — Claude will respond!</p>
+    </div>
+</section>
+
+<section>
+    <h2>🎉 You're Done!</h2>
+    <p>Your Raspberry Pi now has:</p>
+    <ul>
+        <li>✅ <strong>Pi-hole</strong> — Network-wide ad blocking</li>
+        <li>✅ <strong>Tailscale</strong> — Access from anywhere</li>
+        <li>✅ <strong>Exit Node</strong> — Ad blocking on the go</li>
+        <li>✅ <strong>OpenClaw</strong> — Always-on Claude assistant</li>
+        <li>✅ <strong>Telegram</strong> — Chat with Claude from your phone</li>
+    </ul>
+    
+    <div class="tip">
+        <strong>Access your setup from anywhere:</strong><br>
+        • Pi-hole: <code>http://TAILSCALE_IP/admin</code><br>
+        • OpenClaw: <code>http://TAILSCALE_IP:18789</code><br>
+        • SSH: <code>ssh pihole@TAILSCALE_IP</code>
+    </div>
+</section>
+
+<section>
+    <h2>Troubleshooting</h2>
+    
+    <h3>Can't connect to Pi via Tailscale</h3>
+    <pre><code># On the Pi, check Tailscale status
+tailscale status
+
+# Make sure it's running
+sudo systemctl status tailscaled</code></pre>
+
+    <h3>OpenClaw won't start</h3>
+    <pre><code># Check logs
+sudo journalctl -u openclaw -f
+
+# Check config syntax
+openclaw config validate</code></pre>
+
+    <h3>Telegram bot not responding</h3>
+    <ul>
+        <li>Make sure your username is in the allowlist</li>
+        <li>Check the bot token is correct</li>
+        <li>Restart OpenClaw after config changes</li>
+    </ul>
+</section>
+
+</main>
+</div>
 
 <footer>
-    Claude Code • Built by Anthropic • Guide by Trav
+    Claude Code Guide • Built for learning and building
 </footer>
+
+<script>
+function openTab(evt, tabName) {
+    var tabContents = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+    }
+    
+    var tabButtons = document.getElementsByClassName("tab-button");
+    for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+    
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
 
 </body>
 </html>
