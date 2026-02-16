@@ -196,6 +196,26 @@
             position: absolute;
             left: 0;
         }
+        .concept-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .concept-box h3 {
+            margin-top: 0;
+            color: #fbbf24;
+        }
+        .diagram {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: "Consolas", "Monaco", monospace;
+            text-align: center;
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <body>
@@ -228,6 +248,10 @@
         <li>Analyze data and generate reports</li>
         <li>Answer questions about your files</li>
     </ul>
+    <p>
+        It uses your <strong>Claude Pro subscription</strong> ($20/month) — no separate API costs.
+        When you first run it, it opens a browser window to sign into your Claude account.
+    </p>
 </section>
 
 <section>
@@ -253,7 +277,10 @@
 
     <h3>Step 3: Type <code>claude</code> and Press Enter</h3>
     <pre><code>claude</code></pre>
-    <p>That's it! Claude will start and you can begin working.</p>
+    <p>
+        The first time, it will open a browser window to sign into your Claude account.
+        After that, it just starts up directly.
+    </p>
 </section>
 
 <section>
@@ -342,13 +369,67 @@
 <section>
     <h2>🚀 Supercharge Your Raspberry Pi</h2>
     <p>
-        Turn your Pi-hole into an always-on AI gateway. Access Claude from anywhere, 
-        get notifications, and have an assistant that's always running.
+        Your Pi-hole is already blocking ads on your home network. Now let's make it 
+        accessible from <em>anywhere</em> — so you get ad-blocking on your phone at 
+        the coffee shop, at work, or anywhere else.
     </p>
     
     <div class="note">
         <strong>For Claude Code:</strong> You can read this page and follow the instructions step by step. 
         Run each command block in order and verify the expected output before proceeding.
+    </div>
+</section>
+
+<section>
+    <h2>What is Tailscale?</h2>
+    
+    <div class="concept-box">
+        <h3>🔗 The Simple Explanation</h3>
+        <p>
+            <strong>Tailscale</strong> is like a secret tunnel between your devices. It connects your 
+            phone, laptop, and Raspberry Pi together in a private network — even when they're 
+            in completely different locations.
+        </p>
+        <p>
+            Normally, your home devices are hidden behind your router and you can't reach them 
+            from outside. Tailscale solves this by creating secure connections between your devices, 
+            no matter where they are.
+        </p>
+    </div>
+
+    <div class="concept-box">
+        <h3>🌐 Why This Matters for Your Pi-hole</h3>
+        <p>
+            Right now, your Pi-hole only blocks ads when you're at home. But with Tailscale, 
+            you can route your phone's internet traffic through your Pi — even when you're 
+            miles away. This means:
+        </p>
+        <ul>
+            <li>✅ Ad-blocking on your phone at coffee shops, airports, work</li>
+            <li>✅ Access Pi-hole dashboard from anywhere</li>
+            <li>✅ SSH into your Pi remotely for maintenance</li>
+            <li>✅ All traffic encrypted and private</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <h3>🔒 How It Works</h3>
+        <div class="diagram">
+Your Phone (anywhere) ←──🔐──→ Tailscale Network ←──🔐──→ Your Pi (at home)
+        </div>
+        <p>
+            When you enable your Pi as an "exit node," all your phone/laptop traffic 
+            goes through your Pi first. Since Pi-hole is running there, it blocks ads 
+            before they ever reach your device.
+        </p>
+    </div>
+
+    <div class="concept-box">
+        <h3>💰 Cost</h3>
+        <p>
+            <strong>Free</strong> for personal use. Tailscale's free tier includes up to 100 devices, 
+            which is way more than you'll ever need.
+        </p>
     </div>
 </section>
 
@@ -376,8 +457,7 @@
 </section>
 
 <section>
-    <h2>Part 2: Install Tailscale (Remote Access)</h2>
-    <p>Tailscale lets you access your Pi from anywhere — home, work, phone, anywhere.</p>
+    <h2>Part 2: Install Tailscale on Your Pi</h2>
     
     <div class="step-box">
         <h3>Step 2.1: Install Tailscale</h3>
@@ -388,7 +468,7 @@
 
     <div class="step-box">
         <h3>Step 2.2: Start Tailscale as Exit Node</h3>
-        <p>This lets you route all traffic through your Pi (for ad-blocking anywhere):</p>
+        <p>This lets you route all traffic through your Pi:</p>
         <pre><code>sudo tailscale up --advertise-exit-node</code></pre>
         <p><strong>Expected output:</strong> A URL to authenticate. Open it in your browser.</p>
     </div>
@@ -405,9 +485,9 @@
     </div>
 
     <div class="step-box">
-        <h3>Step 2.4: Approve Exit Node</h3>
+        <h3>Step 2.4: Approve Exit Node in Admin Console</h3>
         <ol>
-            <li>Go to <a href="https://login.tailscale.com/admin/machines" target="_blank">Tailscale Admin Console</a></li>
+            <li>Go to <a href="https://login.tailscale.com/admin/machines" target="_blank" style="color: #fbbf24;">Tailscale Admin Console</a></li>
             <li>Find your Pi in the machines list</li>
             <li>Click the <strong>⋮</strong> menu → <strong>Edit route settings</strong></li>
             <li>Enable <strong>"Use as exit node"</strong></li>
@@ -418,170 +498,72 @@
     <div class="step-box">
         <h3>Step 2.5: Get Your Pi's Tailscale IP</h3>
         <pre><code>tailscale ip -4</code></pre>
-        <p><strong>Expected output:</strong> An IP like <code>100.x.x.x</code> — save this!</p>
+        <p><strong>Expected output:</strong> An IP like <code>100.x.x.x</code> — write this down!</p>
     </div>
 
     <div class="tip">
-        <strong>Success!</strong> You can now access your Pi from anywhere using the Tailscale IP.
-        Install Tailscale on your phone and laptop to connect from anywhere.
+        <strong>Success!</strong> Your Pi is now on your Tailscale network and can act as an exit node.
     </div>
 </section>
 
 <section>
-    <h2>Part 3: Install Node.js</h2>
-    <p>OpenClaw requires Node.js. Let's install it.</p>
+    <h2>Part 3: Install Tailscale on Your Other Devices</h2>
     
     <div class="step-box">
-        <h3>Step 3.1: Add NodeSource Repository</h3>
-        <pre><code>curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -</code></pre>
-        <p><strong>Expected output:</strong> Repository added successfully</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 3.2: Install Node.js</h3>
-        <pre><code>sudo apt install -y nodejs</code></pre>
-        <p><strong>Expected output:</strong> Installation completes without errors</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 3.3: Verify Installation</h3>
-        <pre><code>node --version
-npm --version</code></pre>
-        <p><strong>Expected output:</strong> Version numbers like <code>v22.x.x</code> and <code>10.x.x</code></p>
-    </div>
-</section>
-
-<section>
-    <h2>Part 4: Install OpenClaw</h2>
-    <p>OpenClaw is an AI gateway that gives you Claude access via Telegram, Discord, or web chat.</p>
-    
-    <div class="step-box">
-        <h3>Step 4.1: Install OpenClaw</h3>
-        <pre><code>sudo npm install -g openclaw</code></pre>
-        <p><strong>Expected output:</strong> Installation completes, shows openclaw version</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 4.2: Initialize OpenClaw</h3>
-        <pre><code>openclaw init</code></pre>
-        <p>This will ask you for:</p>
-        <ul>
-            <li><strong>Anthropic API key</strong> — get one from <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a></li>
-            <li><strong>Default model</strong> — recommend <code>claude-sonnet-4</code> for balance of speed/quality</li>
-        </ul>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 4.3: Configure Network Binding</h3>
-        <p>To access OpenClaw from other devices, edit the config:</p>
-        <pre><code>nano ~/.openclaw/openclaw.yaml</code></pre>
-        <p>Find the <code>gateway</code> section and set:</p>
-        <pre><code>gateway:
-  port: 18789
-  bind: tailnet  # or 0.0.0.0 for all interfaces</code></pre>
-        <p>Save with <kbd>Ctrl</kbd>+<kbd>O</kbd>, exit with <kbd>Ctrl</kbd>+<kbd>X</kbd></p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 4.4: Start OpenClaw</h3>
-        <pre><code>openclaw gateway start</code></pre>
-        <p><strong>Expected output:</strong> Gateway starts, shows URL</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 4.5: Test It</h3>
-        <p>From your PC or phone (with Tailscale connected), open a browser:</p>
-        <pre><code>http://YOUR_TAILSCALE_IP:18789</code></pre>
-        <p><strong>Expected result:</strong> OpenClaw web chat interface loads!</p>
-    </div>
-</section>
-
-<section>
-    <h2>Part 5: Run OpenClaw on Startup</h2>
-    <p>Make OpenClaw start automatically when your Pi boots.</p>
-    
-    <div class="step-box">
-        <h3>Step 5.1: Create systemd Service</h3>
-        <pre><code>sudo nano /etc/systemd/system/openclaw.service</code></pre>
-        <p>Paste this content:</p>
-        <pre><code>[Unit]
-Description=OpenClaw AI Gateway
-After=network.target
-
-[Service]
-Type=simple
-User=pihole
-ExecStart=/usr/bin/openclaw gateway start --foreground
-Restart=on-failure
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target</code></pre>
-        <p>Save and exit.</p>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 5.2: Enable and Start</h3>
-        <pre><code>sudo systemctl daemon-reload
-sudo systemctl enable openclaw
-sudo systemctl start openclaw</code></pre>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 5.3: Check Status</h3>
-        <pre><code>sudo systemctl status openclaw</code></pre>
-        <p><strong>Expected output:</strong> Shows "active (running)"</p>
-    </div>
-</section>
-
-<section>
-    <h2>Part 6: Optional — Connect Telegram</h2>
-    <p>Chat with Claude from your phone via Telegram.</p>
-    
-    <div class="step-box">
-        <h3>Step 6.1: Create a Telegram Bot</h3>
+        <h3>On Your Phone (iPhone or Android)</h3>
         <ol>
-            <li>Open Telegram and message <a href="https://t.me/BotFather" target="_blank">@BotFather</a></li>
-            <li>Send <code>/newbot</code></li>
-            <li>Choose a name (e.g., "Mason's Claude")</li>
-            <li>Choose a username (must end in "bot", e.g., "masons_claude_bot")</li>
-            <li>Copy the <strong>API token</strong> BotFather gives you</li>
+            <li>Download the <strong>Tailscale</strong> app from App Store or Play Store</li>
+            <li>Sign in with the same Google account you used for your Pi</li>
+            <li>Tap the <strong>⋮</strong> menu → <strong>Use exit node</strong></li>
+            <li>Select your Pi from the list</li>
+        </ol>
+        <p>Now all your phone's traffic routes through your Pi — ads blocked everywhere!</p>
+    </div>
+
+    <div class="step-box">
+        <h3>On Your Laptop (Windows)</h3>
+        <ol>
+            <li>Download Tailscale from <a href="https://tailscale.com/download/windows" target="_blank" style="color: #fbbf24;">tailscale.com/download/windows</a></li>
+            <li>Install and sign in with your Google account</li>
+            <li>Click the Tailscale icon in your system tray</li>
+            <li>Select <strong>Exit node</strong> → choose your Pi</li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <h2>Part 4: Test It!</h2>
+    
+    <div class="step-box">
+        <h3>Verify Everything Works</h3>
+        <ol>
+            <li>Make sure your phone/laptop is using the Pi as exit node</li>
+            <li>Visit <code>http://YOUR_TAILSCALE_IP/admin</code> in a browser</li>
+            <li>You should see your Pi-hole dashboard!</li>
+            <li>Visit an ad-heavy website — ads should be blocked</li>
+            <li>Check Pi-hole dashboard — you should see queries coming in</li>
         </ol>
     </div>
 
-    <div class="step-box">
-        <h3>Step 6.2: Add to OpenClaw Config</h3>
-        <pre><code>nano ~/.openclaw/openclaw.yaml</code></pre>
-        <p>Add under channels:</p>
-        <pre><code>channels:
-  telegram:
-    token: "YOUR_BOT_TOKEN_HERE"
-    allowlist:
-      - "your_telegram_username"</code></pre>
-    </div>
-
-    <div class="step-box">
-        <h3>Step 6.3: Restart OpenClaw</h3>
-        <pre><code>sudo systemctl restart openclaw</code></pre>
-        <p>Now message your bot on Telegram — Claude will respond!</p>
+    <div class="tip">
+        <strong>Pro tip:</strong> Turn off the exit node when you need maximum speed 
+        (like video streaming). Turn it back on when browsing normally.
     </div>
 </section>
 
 <section>
     <h2>🎉 You're Done!</h2>
-    <p>Your Raspberry Pi now has:</p>
+    <p>Your setup now includes:</p>
     <ul>
-        <li>✅ <strong>Pi-hole</strong> — Network-wide ad blocking</li>
-        <li>✅ <strong>Tailscale</strong> — Access from anywhere</li>
+        <li>✅ <strong>Pi-hole</strong> — Network-wide ad blocking at home</li>
+        <li>✅ <strong>Tailscale</strong> — Secure access from anywhere</li>
         <li>✅ <strong>Exit Node</strong> — Ad blocking on the go</li>
-        <li>✅ <strong>OpenClaw</strong> — Always-on Claude assistant</li>
-        <li>✅ <strong>Telegram</strong> — Chat with Claude from your phone</li>
+        <li>✅ <strong>Claude Code</strong> — AI assistant on your laptop</li>
     </ul>
     
     <div class="tip">
-        <strong>Access your setup from anywhere:</strong><br>
-        • Pi-hole: <code>http://TAILSCALE_IP/admin</code><br>
-        • OpenClaw: <code>http://TAILSCALE_IP:18789</code><br>
+        <strong>Quick access from anywhere:</strong><br>
+        • Pi-hole dashboard: <code>http://TAILSCALE_IP/admin</code><br>
         • SSH: <code>ssh pihole@TAILSCALE_IP</code>
     </div>
 </section>
@@ -596,19 +578,19 @@ tailscale status
 # Make sure it's running
 sudo systemctl status tailscaled</code></pre>
 
-    <h3>OpenClaw won't start</h3>
-    <pre><code># Check logs
-sudo journalctl -u openclaw -f
-
-# Check config syntax
-openclaw config validate</code></pre>
-
-    <h3>Telegram bot not responding</h3>
+    <h3>Exit node not working</h3>
     <ul>
-        <li>Make sure your username is in the allowlist</li>
-        <li>Check the bot token is correct</li>
-        <li>Restart OpenClaw after config changes</li>
+        <li>Make sure you approved it in the Tailscale admin console</li>
+        <li>Try disconnecting and reconnecting on your phone/laptop</li>
+        <li>Check that your Pi has internet access</li>
     </ul>
+
+    <h3>Slow internet when using exit node</h3>
+    <p>
+        All traffic goes through your home internet, so speed depends on your 
+        home upload speed. This is normal — disable exit node for bandwidth-heavy 
+        tasks like streaming.
+    </p>
 </section>
 
 </main>
