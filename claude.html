@@ -127,13 +127,30 @@
             color: #94a3b8;
             font-weight: normal;
         }
+        .example-box {
+            background: #1e293b;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .example-box h4 {
+            margin: 0 0 0.5rem 0;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        img.screenshot {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #1e293b;
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Claude Code - Getting Started</h1>
-    <p>Your AI coding assistant in the terminal</p>
+    <p>Your AI assistant in the terminal — for writing, research, and beyond</p>
 </header>
 
 <main>
@@ -141,79 +158,113 @@
 <section>
     <h2>What is Claude Code?</h2>
     <p>
-        Claude Code is an AI assistant that lives in your terminal. It can:
+        Claude Code is an AI assistant that works directly with your files and folders. 
+        It can read documents, help you write and edit, organize research, and much more.
     </p>
     <ul>
-        <li>Read and understand your code files</li>
-        <li>Write new code or edit existing files</li>
-        <li>Run terminal commands</li>
-        <li>Explain how things work</li>
-        <li>Debug problems and suggest fixes</li>
-        <li>Help you learn as you build</li>
+        <li>Read and understand your documents</li>
+        <li>Help draft, edit, and refine writing</li>
+        <li>Organize and summarize research materials</li>
+        <li>Create outlines, syllabi, and course materials</li>
+        <li>Analyze data and generate reports</li>
+        <li>Answer questions about your files</li>
     </ul>
     <p>
-        Think of it as having a senior developer sitting next to you, 
-        ready to help with whatever you're working on.
+        Think of it as having a capable research assistant who can see all 
+        your project files and help you work through them.
     </p>
 </section>
 
 <section>
-    <h2>Opening Claude Code</h2>
+    <h2>Opening Claude Code (The Easy Way)</h2>
     
-    <h3>Step 1: Open Git Bash</h3>
+    <h3>Step 1: Navigate to Your Folder in File Explorer</h3>
     <ol>
-        <li>Press <kbd>Win</kbd> key</li>
-        <li>Type <code>git bash</code></li>
-        <li>Press <kbd>Enter</kbd></li>
+        <li>Open <strong>File Explorer</strong> (the folder icon in your taskbar, or press <kbd>Win</kbd> + <kbd>E</kbd>)</li>
+        <li>Navigate to the folder containing your project or documents</li>
+        <li>For example: <code>Documents → Research → My Paper</code></li>
     </ol>
     
-    <h3>Step 2: Navigate to Your Project</h3>
-    <p>Use <code>cd</code> to change directories:</p>
-    <pre><code># Go to your Documents folder
-cd ~/Documents
-
-# Go to a specific project
-cd ~/Documents/my-project
-
-# Go up one folder
-cd ..
-
-# See what's in the current folder
-ls</code></pre>
-
+    <h3>Step 2: Right-Click → Open Git Bash Here</h3>
+    <ol>
+        <li>Once you're in your folder, <strong>right-click</strong> on empty space</li>
+        <li>Click <strong>"Open Git Bash here"</strong></li>
+        <li>A terminal window will open, already in that folder</li>
+    </ol>
+    
     <div class="tip">
-        <strong>Tip:</strong> You can drag a folder from File Explorer into Git Bash 
-        to paste its path automatically!
+        <strong>Tip:</strong> You can also hold <kbd>Shift</kbd> while right-clicking 
+        to see additional options if "Open Git Bash here" doesn't appear immediately.
     </div>
 
-    <h3>Step 3: Start Claude</h3>
+    <h3>Step 3: Type <code>claude</code> and Press Enter</h3>
     <pre><code>claude</code></pre>
-    <p>That's it! Claude will start and show you a prompt where you can type.</p>
+    <p>That's it! Claude will start and you can begin working.</p>
 </section>
 
 <section>
-    <h2>Basic Usage</h2>
+    <h2>What Can You Ask Claude?</h2>
     
-    <p>Just type what you want in plain English:</p>
-    
-    <pre><code># Ask about your project
-> what files are in this project?
+    <p>Just type what you need in plain English. Here are examples tailored for academic work:</p>
 
-# Get help with code
-> explain how the login function works
+    <div class="example-box">
+        <h4>📝 Writing & Editing</h4>
+        <pre><code>> review my introduction and suggest improvements for clarity
 
-# Make changes
-> add a dark mode toggle to the settings page
+> help me strengthen the argument in section 3
 
-# Fix bugs
-> the save button isn't working, can you debug it?
+> check this paragraph for passive voice and suggest active alternatives
 
-# Learn something
-> how do I make an API call in JavaScript?</code></pre>
+> make this abstract more concise — it needs to be under 250 words</code></pre>
+    </div>
+
+    <div class="example-box">
+        <h4>📚 Research & Literature</h4>
+        <pre><code>> summarize the key arguments in these three PDFs
+
+> what themes appear across these interview transcripts?
+
+> help me organize these sources into a literature review outline
+
+> find contradictions between Smith's argument and Jones's response</code></pre>
+    </div>
+
+    <div class="example-box">
+        <h4>🎓 Course Materials</h4>
+        <pre><code>> create a syllabus outline for an intro to technical writing course
+
+> draft a rubric for evaluating professional memos
+
+> generate discussion questions based on this week's reading
+
+> create a peer review checklist for the proposal assignment</code></pre>
+    </div>
+
+    <div class="example-box">
+        <h4>📊 Data & Analysis</h4>
+        <pre><code>> analyze this survey data and identify key trends
+
+> help me code these interview responses for themes
+
+> create a summary table of participant demographics
+
+> what patterns do you see in this feedback data?</code></pre>
+    </div>
+
+    <div class="example-box">
+        <h4>✉️ Professional Communication</h4>
+        <pre><code>> draft an email to the department about the upcoming workshop
+
+> help me write a response to this reviewer comment
+
+> make this conference proposal more compelling
+
+> write a professional bio for the department website</code></pre>
+    </div>
 
     <div class="note">
         <strong>Note:</strong> Claude can see all the files in your current folder 
-        and subfolders. It reads them to understand your project.
+        and subfolders. It reads them to understand your project context.
     </div>
 </section>
 
@@ -251,60 +302,90 @@ ls</code></pre>
 <section>
     <h2>Tips for Better Results</h2>
     
-    <h3>Be Specific</h3>
+    <h3>Be Specific About What You Want</h3>
     <p>Instead of:</p>
-    <pre><code>> make it better</code></pre>
+    <pre><code>> make this better</code></pre>
     <p>Try:</p>
-    <pre><code>> refactor the handleSubmit function to use async/await instead of .then()</code></pre>
+    <pre><code>> make this introduction more engaging by starting with a concrete example 
+  instead of a general statement</code></pre>
 
     <h3>Give Context</h3>
-    <pre><code>> I'm building a recipe app. Add a feature to save favorite recipes to local storage.</code></pre>
+    <pre><code>> I'm writing a journal article for Technical Communication Quarterly. 
+  Help me revise this methods section to match their style guidelines.</code></pre>
 
     <h3>Ask for Explanations</h3>
-    <pre><code>> explain what you changed and why</code></pre>
+    <pre><code>> explain why you made those changes</code></pre>
 
-    <h3>Review Before Accepting</h3>
+    <h3>Iterate and Refine</h3>
+    <pre><code>> that's good but make it less formal — this is for undergraduate students
+
+> try again but keep the original opening sentence</code></pre>
+
+    <h3>Review Before Accepting Changes</h3>
     <p>
-        Claude will show you what it wants to change before doing it. 
-        Read the diff and type <code>y</code> to accept or <code>n</code> to reject.
+        When Claude wants to edit a file, it will show you exactly what it plans to change.
+        Review the changes and type <code>y</code> to accept or <code>n</code> to reject.
     </p>
 
     <div class="warning">
         <strong>Important:</strong> Always review changes before accepting them. 
-        Claude is helpful but not perfect. You're the final decision maker.
+        Claude is helpful but not perfect — you're the expert on your own work.
     </div>
 </section>
 
 <section>
-    <h2>Starting a New Project</h2>
+    <h2>Organizing Your Work</h2>
     
-    <pre><code># Create a new folder
-mkdir my-new-project
-cd my-new-project
+    <p>Claude works best when your files are organized in project folders:</p>
+    
+    <pre><code>My Research Project/
+├── drafts/
+│   ├── introduction.docx
+│   └── methods.docx
+├── sources/
+│   ├── smith-2023.pdf
+│   └── jones-2024.pdf
+├── data/
+│   └── survey-responses.csv
+└── notes/
+    └── meeting-notes.txt</code></pre>
 
-# Start Claude
-claude
-
-# Ask it to help you set up
-> help me create a basic React app with a todo list</code></pre>
-
-    <p>Claude can scaffold entire projects, install dependencies, and get you started quickly.</p>
+    <p>
+        When you open Claude in the project folder, it can see and reference 
+        all these files as you work.
+    </p>
 </section>
 
 <section>
-    <h2>Working on Existing Code</h2>
+    <h2>Example Workflow: Revising a Paper</h2>
     
-    <pre><code># Navigate to the project
-cd ~/Documents/existing-project
-
-# Start Claude
-claude
-
-# Let it learn about the project
-> give me an overview of this codebase
-
-# Then start working
-> add input validation to the signup form</code></pre>
+    <ol>
+        <li>
+            <strong>Open your paper's folder</strong><br>
+            In File Explorer, navigate to where your draft is saved
+        </li>
+        <li>
+            <strong>Right-click → Open Git Bash here</strong>
+        </li>
+        <li>
+            <strong>Start Claude</strong><br>
+            <pre><code>claude</code></pre>
+        </li>
+        <li>
+            <strong>Get an overview</strong><br>
+            <pre><code>> read my draft and give me your overall impression — what's working 
+  and what needs attention?</code></pre>
+        </li>
+        <li>
+            <strong>Work through issues</strong><br>
+            <pre><code>> let's focus on the literature review — help me better connect 
+  these sources to my argument</code></pre>
+        </li>
+        <li>
+            <strong>Polish the writing</strong><br>
+            <pre><code>> go through the conclusion and tighten up the prose</code></pre>
+        </li>
+    </ol>
 </section>
 
 <section>
@@ -327,10 +408,6 @@ claude
             <td><kbd>Ctrl</kbd> + <kbd>L</kbd></td>
             <td>Clear the screen</td>
         </tr>
-        <tr>
-            <td><kbd>Esc</kbd></td>
-            <td>Cancel multi-line input</td>
-        </tr>
     </table>
 </section>
 
@@ -338,14 +415,20 @@ claude
     <h2>Troubleshooting</h2>
     
     <h3>"claude" is not recognized</h3>
-    <p>Close Git Bash completely and reopen it. If still not working:</p>
+    <p>Close Git Bash completely and reopen it. If still not working, reinstall:</p>
     <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
 
-    <h3>Claude seems stuck</h3>
-    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel, then try again.</p>
+    <h3>Claude seems stuck or slow</h3>
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to cancel, then try again with a simpler request.</p>
 
-    <h3>Too much output</h3>
-    <p>Use <code>/clear</code> to start a fresh conversation.</p>
+    <h3>Too much conversation history</h3>
+    <p>Use <code>/clear</code> to start fresh, or <code>/compact</code> to summarize and continue.</p>
+
+    <h3>Claude made changes I don't want</h3>
+    <p>
+        If you accepted changes you didn't mean to, use <kbd>Ctrl</kbd> + <kbd>Z</kbd> in your 
+        text editor to undo, or check your file's version history.
+    </p>
 
     <h3>Need help?</h3>
     <p>Just ask Claude: <code>I'm having trouble with X, can you help?</code></p>
