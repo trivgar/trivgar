@@ -431,17 +431,35 @@
 <section>
     <h2>Enable PDF Reading</h2>
     <p>
-        To let Claude read PDF files directly, install poppler-utils:
+        To let Claude read PDF files directly, install poppler (provides <code>pdftotext</code>):
     </p>
     
     <div class="step-box">
-        <h3>On Windows (via Git Bash)</h3>
-        <p>Download and install from: <a href="https://github.com/oschwartz10612/poppler-windows/releases" target="_blank">Poppler for Windows</a></p>
-        <p>Add the <code>bin</code> folder to your PATH.</p>
+        <h3>Option A: Using winget (Recommended)</h3>
+        <p>Open <strong>PowerShell</strong> (not Git Bash) and run:</p>
+        <pre><code>winget install -e --id freedesktop.poppler</code></pre>
+        <p><strong>Then close and reopen your terminal.</strong></p>
     </div>
 
-    <p>Then Claude can extract text from PDFs:</p>
-    <pre><code>> read the PDF in this folder and summarize section 3</code></pre>
+    <div class="step-box">
+        <h3>Option B: Using Chocolatey</h3>
+        <p>If you have Chocolatey installed, open PowerShell as Admin:</p>
+        <pre><code>choco install poppler -y</code></pre>
+        <p><strong>Then close and reopen your terminal.</strong></p>
+    </div>
+
+    <div class="step-box">
+        <h3>Verify Installation</h3>
+        <p>In Git Bash, run:</p>
+        <pre><code>pdftotext -v</code></pre>
+        <p><strong>Expected output:</strong> Version info like <code>pdftotext version 24.x.x</code></p>
+        <p>If you see "command not found", restart your terminal or computer.</p>
+    </div>
+
+    <p>Now Claude can extract and read text from PDFs:</p>
+    <pre><code>> read the PDF in this folder and summarize section 3
+> extract the references from paper.pdf
+> compare the methodology sections in these two PDFs</code></pre>
 </section>
 
 </main>
