@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pi-hole + Unbound Setup Guide</title>
+    <meta name="description" content="Complete guide to setting up Pi-hole with Unbound for network-wide ad blocking and private DNS resolution.">
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -26,6 +27,15 @@
             margin: 0;
             color: #94a3b8;
         }
+        .back {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
         main {
             max-width: 900px;
             margin: auto;
@@ -44,34 +54,49 @@
             margin-top: 1.5rem;
             font-size: 1.1rem;
         }
-        ul {
+        ul, ol {
             padding-left: 1.2rem;
         }
         li {
             margin-bottom: 0.5rem;
         }
-        code, pre {
+        code {
             background: #020617;
             border: 1px solid #1e293b;
-            padding: 0.75rem;
-            display: block;
+            padding: 0.2rem 0.4rem;
+            color: #fbbf24;
+            font-family: ui-monospace, monospace;
+        }
+        pre {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 1rem;
             overflow-x: auto;
             color: #e5e7eb;
             margin: 1rem 0;
         }
+        pre code {
+            border: none;
+            padding: 0;
+            color: inherit;
+        }
         .note {
-            background: #020617;
+            background: #0c1929;
             border-left: 4px solid #3b82f6;
             padding: 1rem;
             margin: 1.5rem 0;
-            color: #cbd5f5;
         }
         .warning {
-            background: #020617;
+            background: #1c0c0c;
             border-left: 4px solid #ef4444;
             padding: 1rem;
             margin: 1.5rem 0;
-            color: #fecaca;
+        }
+        .tip {
+            background: #0c1c0c;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
         }
         footer {
             text-align: center;
@@ -80,133 +105,229 @@
             color: #64748b;
             font-size: 0.9rem;
         }
+        a {
+            color: #3b82f6;
+        }
     </style>
 </head>
 <body>
 
 <header>
+    <a href="/" class="back">← Back to trivgar.com</a>
     <h1>Pi-hole + Unbound Setup Guide</h1>
-    <p>Network-wide ad blocking and private DNS resolution</p>
+    <p>Network-wide ad blocking with private DNS resolution</p>
 </header>
 
 <main>
 
 <section>
-    <h2>What This System Does</h2>
+    <h2>What This Does</h2>
 
     <h3>Pi-hole</h3>
     <p>
-        Pi-hole is a network-wide DNS filter. Every device on your network asks it
+        Pi-hole is a network-wide DNS sinkhole. Every device on your network asks it
         where websites and services live on the internet.
     </p>
     <ul>
         <li>Blocks ads, trackers, and telemetry before they load</li>
-        <li>Works for phones, TVs, tablets, and computers</li>
+        <li>Works for phones, TVs, tablets, computers — everything on your network</li>
         <li>No browser extensions required</li>
-        <li>Reduces tracking and network noise</li>
+        <li>Reduces bandwidth and speeds up page loads</li>
     </ul>
 
     <h3>Unbound</h3>
     <p>
-        Unbound is a local, private DNS resolver that runs behind Pi-hole.
-        Instead of asking Google or your ISP for DNS answers, it queries the
-        internet’s root DNS servers directly.
+        Unbound is a local recursive DNS resolver that runs behind Pi-hole.
+        Instead of asking Google (8.8.8.8) or Cloudflare (1.1.1.1) for DNS answers, 
+        it queries the internet's root DNS servers directly.
     </p>
     <ul>
-        <li>No third-party DNS provider</li>
-        <li>No external logging of your DNS requests</li>
+        <li>No third-party DNS provider sees your queries</li>
+        <li>No external logging of your browsing</li>
         <li>Local caching for faster repeat lookups</li>
+        <li>DNSSEC validation for security</li>
     </ul>
 
-    <h3>Together</h3>
-    <pre>
-Device → Pi-hole → Unbound → Internet (root DNS)
-    </pre>
-    <p>
-        Pi-hole blocks what should never load.  
-        Unbound privately resolves everything else.
-    </p>
+    <h3>The Flow</h3>
+    <pre><code>Device → Pi-hole (blocks ads) → Unbound (resolves privately) → Root DNS</code></pre>
 </section>
 
 <section>
-    <h2>Hardware Setup</h2>
+    <h2>Requirements</h2>
+    <ul>
+        <li>Raspberry Pi (3B+ or newer recommended) or any Linux machine</li>
+        <li>Ethernet connection to your router (WiFi works but ethernet is more reliable)</li>
+        <li>Access to your router's admin panel</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Install Pi-hole</h2>
+    <p>SSH into your Pi or Linux machine and run:</p>
+    <pre><code>curl -sSL https://install.pi-hole.net | bash</code></pre>
+    
+    <div class="note">
+        Follow the installer prompts. The defaults are fine for most setups.
+        Write down the admin password it generates at the end.
+    </div>
+</section>
+
+<section>
+    <h2>Install Unbound</h2>
+    <pre><code>sudo apt update
+sudo apt install unbound -y</code></pre>
+
+    <p>Download the root hints file:</p>
+    <pre><code>sudo wget -O /var/lib/unbound/root.hints https://www.internic.net/domain/named.root</code></pre>
+
+    <p>Create the Pi-hole config for Unbound:</p>
+    <pre><code>sudo nano /etc/unbound/unbound.conf.d/pi-hole.conf</code></pre>
+
+    <p>Paste this configuration:</p>
+    <pre><code>server:
+    verbosity: 0
+    interface: 127.0.0.1
+    port: 5335
+    do-ip4: yes
+    do-udp: yes
+    do-tcp: yes
+    do-ip6: no
+    prefer-ip6: no
+    
+    # Security
+    harden-glue: yes
+    harden-dnssec-stripped: yes
+    use-caps-for-id: no
+    edns-buffer-size: 1232
+    
+    # Privacy
+    qname-minimisation: yes
+    
+    # Performance
+    num-threads: 1
+    msg-cache-slabs: 2
+    rrset-cache-slabs: 2
+    infra-cache-slabs: 2
+    key-cache-slabs: 2
+    rrset-cache-size: 100m
+    msg-cache-size: 50m
+    
+    private-address: 192.168.0.0/16
+    private-address: 169.254.0.0/16
+    private-address: 172.16.0.0/12
+    private-address: 10.0.0.0/8
+    private-address: fd00::/8
+    private-address: fe80::/10</code></pre>
+
+    <p>Restart Unbound:</p>
+    <pre><code>sudo systemctl restart unbound</code></pre>
+
+    <p>Test it:</p>
+    <pre><code>dig google.com @127.0.0.1 -p 5335</code></pre>
+
+    <div class="tip">
+        If you get a response with an IP address, Unbound is working.
+    </div>
+</section>
+
+<section>
+    <h2>Configure Pi-hole to Use Unbound</h2>
     <ol>
-        <li>Connect the Raspberry Pi to your router using an Ethernet cable.</li>
-        <li>Plug in the USB-C power cable.</li>
-        <li>Wait about 60 seconds for the Pi to boot.</li>
+        <li>Open Pi-hole admin: <code>http://&lt;PI_IP&gt;/admin</code></li>
+        <li>Go to <strong>Settings → DNS</strong></li>
+        <li>Uncheck all upstream DNS servers (Google, Cloudflare, etc.)</li>
+        <li>Under "Custom 1 (IPv4)", enter: <code>127.0.0.1#5335</code></li>
+        <li>Save</li>
     </ol>
-    <p>A solid green light means it’s ready.</p>
 </section>
 
 <section>
-    <h2>Find the Pi’s IP Address</h2>
-    <ol>
-        <li>Log into your router’s admin page.</li>
-        <li>Find the connected devices list.</li>
-        <li>Look for a device named <strong>pihole</strong> or <strong>raspberrypi</strong>.</li>
-        <li>Write down the IP address (example: <code>192.168.1.55</code>).</li>
-    </ol>
+    <h2>Set Static IP on the Pi</h2>
+    <p>The Pi needs a static IP so your router always knows where to send DNS queries.</p>
+    
+    <p>Edit dhcpcd.conf:</p>
+    <pre><code>sudo nano /etc/dhcpcd.conf</code></pre>
+
+    <p>Add at the bottom (adjust for your network):</p>
+    <pre><code>interface eth0
+static ip_address=192.168.1.10/24
+static routers=192.168.1.1
+static domain_name_servers=127.0.0.1</code></pre>
+
+    <p>Reboot:</p>
+    <pre><code>sudo reboot</code></pre>
 </section>
 
 <section>
-    <h2>Reserve the IP Address (Required)</h2>
-    <p>
-        Prevent the Pi-hole IP from changing.
-    </p>
+    <h2>Configure Your Router</h2>
     <ol>
-        <li>In your router, find DHCP Reservation / Static Lease.</li>
-        <li>Select the Pi-hole device.</li>
-        <li>Reserve the IP address.</li>
-    </ol>
-</section>
-
-<section>
-    <h2>Set the Router DNS</h2>
-    <ol>
-        <li>Find DNS settings in your router.</li>
-        <li>Set <strong>Primary DNS</strong> to the Pi-hole IP.</li>
-        <li>Leave <strong>Secondary DNS</strong> blank or set it to the same IP.</li>
+        <li>Log into your router's admin panel</li>
+        <li>Find DNS settings (usually under DHCP or WAN settings)</li>
+        <li>Set <strong>Primary DNS</strong> to your Pi's IP address</li>
+        <li>Leave <strong>Secondary DNS blank</strong> or set it to the same IP</li>
+        <li>Save and reboot the router</li>
     </ol>
 
     <div class="warning">
-        If you leave 8.8.8.8, 1.1.1.1, or anything else as secondary DNS,
-        ads and trackers will bypass Pi-hole.
+        <strong>Important:</strong> If you add a secondary DNS like 8.8.8.8 or 1.1.1.1, 
+        devices may bypass Pi-hole entirely and you'll still see ads.
     </div>
-
-    <p>Save settings and allow the router to reboot if needed.</p>
 </section>
 
 <section>
-    <h2>Verify Pi-hole Is Working</h2>
+    <h2>Verify It's Working</h2>
     <ol>
-        <li>Open a browser on your phone or computer.</li>
-        <li>Go to:
-            <code>http://&lt;PIHOLE_IP&gt;/admin</code>
-        </li>
-        <li>Log in using the admin password provided with the device.</li>
+        <li>Visit <code>http://&lt;PI_IP&gt;/admin</code></li>
+        <li>You should see queries being logged and blocked</li>
+        <li>Visit <a href="https://ads-blocker.com/testing/" target="_blank">ads-blocker.com/testing</a> to test ad blocking</li>
     </ol>
 
-    <div class="note">
-        If the dashboard loads and shows queries being blocked, everything is working.
+    <div class="tip">
+        If the dashboard shows queries and blocks, you're done! 
+        All devices on your network are now protected.
     </div>
 </section>
 
 <section>
-    <h2>SSH Access (Optional)</h2>
-    <pre>
-Username: pihole
-Password: raspberry
-    </pre>
-    <p>
-        SSH is only needed for maintenance or advanced configuration.
-        Normal operation does not require logging in.
-    </p>
+    <h2>Optional: Add More Blocklists</h2>
+    <p>Pi-hole's default blocklist is good, but you can add more:</p>
+    <ol>
+        <li>Go to <strong>Adlists</strong> in Pi-hole admin</li>
+        <li>Add URLs from <a href="https://firebog.net/" target="_blank">firebog.net</a></li>
+        <li>Run <strong>Tools → Update Gravity</strong></li>
+    </ol>
+</section>
+
+<section>
+    <h2>Troubleshooting</h2>
+    
+    <h3>No internet after setup?</h3>
+    <ul>
+        <li>Check Pi-hole is running: <code>pihole status</code></li>
+        <li>Check Unbound is running: <code>sudo systemctl status unbound</code></li>
+        <li>Temporarily set router DNS back to 8.8.8.8 to restore internet while debugging</li>
+    </ul>
+
+    <h3>Ads still showing?</h3>
+    <ul>
+        <li>Make sure secondary DNS is blank in router settings</li>
+        <li>Flush DNS cache on your device</li>
+        <li>Some apps use hardcoded DNS (YouTube, etc.) — these bypass Pi-hole</li>
+    </ul>
+
+    <h3>Website broken?</h3>
+    <ul>
+        <li>Check Query Log in Pi-hole admin to see what's being blocked</li>
+        <li>Whitelist the domain if needed</li>
+    </ul>
 </section>
 
 </main>
 
 <footer>
-    Pi-hole + Unbound • Local, private, and boring in the best possible way
+    Pi-hole + Unbound — Local, private, and boring in the best way<br>
+    <a href="https://pi-hole.net" target="_blank">pi-hole.net</a> • 
+    <a href="https://docs.pi-hole.net/guides/dns/unbound/" target="_blank">Official Unbound Guide</a>
 </footer>
 
 </body>
