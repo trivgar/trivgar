@@ -1,0 +1,99 @@
+
+<table width='100%' border='0' cellpadding='0' cellspacing='0'><tr><td>
+
+<?php
+
+$brieftext = "Search aquanuke database"; # write here the text to display
+$searching = "Power Search"; # text for the search link
+
+?>
+      <br>
+      <table width='100%' border='0' cellpadding='0' cellspacing='0'>
+      <tr>
+      <td valign='top' align='right'>
+          <table height='22'width='100%' bgcolor='#000000' border='0' cellpadding='0' cellspacing='0'>
+          <tr>
+          <td valign='middle'><img src='themes/reo/images/corner.gif'></td>
+          <td background='themes/reo/images/cornerwall.gif' class='ctblanco' width='100%'>&nbsp;<B>$brieftext</B>&nbsp;</td>
+          <td valign='middle'><img src='themes/reo/images/corner2.gif'></td>
+          </tr>
+          </table>
+      </td>
+      </tr>
+      </table>
+
+      <table width='100%' bgcolor='#5C5C5C' cellpadding='0' cellspacing='0'>
+      <tr>
+      <td width='100%' height='1' bgcolor='#000000' colspan='4'><img src='themes/reo/images/pix.gif' height='1'></td>
+      </tr>
+      <tr>
+      <td width='1' height='100%' bgcolor='#000000'><img src='themes/reo/images/pix.gif' height='1'></td>
+      <td align=center class=ctblanco width=50%>
+          	  <table border='0'>
+              <form action=search.php method=post>
+              <tr>
+              <td align=right valign=middle class=ctblanco>&nbsp;".translate("Search")." </td>
+              <td valign=middle><input type=text class=resalta1 style='border: solid 1px #000000; background : Silver' name=query ></td>
+              <td><input type=image src=themes/reo/images/tip.gif border=0></td>
+              </form>
+              </tr>
+              </table>
+      </td>
+      <td class=ctblanco width=50%> >>>&nbsp;&nbsp;<a class='resalta1' style='color: #FFFFFF' href=search.php>$searching</a></td>
+      <td width='1' height='100%' bgcolor='#000000'><img src='themes/reo/images/pix.gif' height='1'></td>
+      </tr>
+      <tr>
+      <td width='100%' height='1' bgcolor='#000000' colspan='4'><img src='themes/reo/images/pix.gif' height='1'></td>
+      </tr>
+      </table>
+<?
+
+if ($index == 0) {
+
+?>
+      <table border=0 cellpadding=0 cellspacing=0 width=100% bgcolor=#FFFFFF align=left>
+      <tr>
+      <td width='1' height='100%' bgcolor='#000000'><img src='themes/reo/images/pix.gif' height='1'></td>
+     
+
+/* Top 10 read stories */
+<?
+$result = mysql_query("select sid, title, time, counter from $prefix"._stories." order by counter DESC limit 0,$top");
+if (mysql_num_rows($result)>0) {
+
+echo "<td valign=top align=left class=ctnegro>
+      <b><br>&nbsp;&nbsp;&nbsp;&nbsp;$top "._READSTORIES."</b><br>";
+ $lugar=1;
+    while(list($sid, $title, $time, $counter) = mysql_fetch_row($result)) {
+        if($counter>0) {
+    	    echo "<strong><big>&middot;</big></strong>&nbsp;$lugar: <a href=\"article.php?sid=$sid\">$title</a> - ($counter "._READS.")<br>\n";
+	    $lugar++;
+	}
+    }
+echo "<br><br></td>";
+}
+mysql_free_result($result);
+
+/* Top 10 commented stories */
+$result = mysql_query("select sid, title, comments from $prefix"._stories." order by comments DESC limit 0,$top");
+if (mysql_num_rows($result)>0) {
+echo "
+      <td valign=top align=left class=ctnegro>
+      <b><br>&nbsp;&nbsp;$top ".translate("most commented stories")."</b><br>";
+$lugar=1;
+    while(list($sid, $title, $comments) = mysql_fetch_row($result)) {
+	if($comments>0) {
+	    echo "<strong><big>&middot;</big></strong>&nbsp;$lugar: <a href=\"article.php?sid=$sid\">$title</a> - ($comments "._COMMENTS.")<br>\n";
+	    $lugar++;
+    }
+
+
+?>
+<br><br></td>
+<td width='1' height='100%' bgcolor='#000000'><img src='themes/reo/images/pix.gif' height='1'></td>
+</tr>
+<tr>
+<td colspan='4' width='100%' height='1' bgcolor='#000000'><img src='themes/reo/images/pix.gif' height='1'></td>
+</tr>
+</table>
+
