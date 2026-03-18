@@ -1,0 +1,28 @@
+BODY { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF;
+
+scrollbar-face-color: #000080; scrollbar-track-color: #004080; scrollbar-arrow-color: #E3DDFF; scrollbar-shadow-color: #602C72; scrollbar-3dlight-color: #602C72; scrollbar-darkshadow-color: #000000; buttonface: #FFFFFF;}
+
+
+TD, TH, .BOD { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; }
+
+A:link, A:visited, A:active { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: none; }
+
+A:hover { font: 11px geneva, verdana, arial, sans-serif; color: #FFFF80; text-decoration: underline overline; }
+
+select, input, textarea { font: 11px geneva, verdana, arial, sans-serif; color: #000000; }
+
+A.small:link, A.small:visited, A.small:active { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: none; }
+
+A.small:hover { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: underline; }
+
+A.newsarc:link, A.newsarc:visited, A.newsarc:active { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: underline; }
+
+A.newsarc:hover { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: underline; }
+
+.story title {BACKGROUND: none; COLOR: #FFE8FF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+
+.option {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+
+FONT {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+
+.title {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}

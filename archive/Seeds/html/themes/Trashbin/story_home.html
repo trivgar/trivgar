@@ -1,0 +1,55 @@
+
+<!-- STORY TABLE -->
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" width="100%">
+	<!-- TITLE LINE -->
+	<tr>
+		<td>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td class="story_header_border">
+						<table class="story_header" border="0" cellpadding="3" cellspacing="0" width="100%">
+							<tr>
+								<td align="left" >
+									<font class="option" color="#363636"><b>$title</b></font>
+								</td>
+								<td align="right" >
+									<font class="content" color="#363636">$posted</font>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!-- CONTENT LINE -->
+	<tr>
+		<td class="story_border" align="center">
+			<table class="story_content" border="0" cellpadding="0" cellspacing="0" width="99%">
+				<tr>
+					<td class="story_text">			
+						<a href="modules.php?name=News&amp;new_topic=$topic"><img src="$tipath$topicimage" border="0" Alt="$topictext" align="right" hspace="10" vspace="10"></a>
+						<font class="content">$content</font><br><br>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+<!-- STORY FOOTER TABLE -->
+	<tr>
+		<td class="story_footer_border">
+			<table border="0" cellpadding="3" cellspacing="0" bgcolor="#efefef" width="100%">
+				<tr>
+					<td align="left">
+						<font class="content">$datetime</font>
+					</td>
+					<td align="right">
+						<font class="content">$morelink</font>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<!-- SPACE BETWEEN STORIES -->
+<br><br>

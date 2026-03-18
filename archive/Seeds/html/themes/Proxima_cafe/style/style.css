@@ -1,0 +1,242 @@
+BODY, TD {
+font-family : Verdana, Arial, sans-serif ;	
+font-size : 8pt; 
+color : #EFE9DB;
+}
+A {	
+text-decoration: none;	
+color: #461404;
+}
+A:Hover {
+text-decoration: underline;	
+color: #EFE9DB;
+}
+.content {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color: #EFE9DB;  
+}
+
+ .PROX1-blocktitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 10pt;  
+color : #EFE9DB;  
+}
+ .PROX8-blocktitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 10pt;  
+color : #EFE9DB;  
+}
+ .PROX2-blocktitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 10pt;  
+color : #EFE9DB;  
+}
+ .titlenews {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+/* block-news2col */
+.news2col_date {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.news2col_title {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #8B0000;  
+}
+
+/* block-newsonlytitle */
+.newsonlytitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.titlearticle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.textinformant {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.textanonymous {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.note {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #993333;  
+}
+
+.navbar {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #D0CEB9;  
+}
+
+.titlemessagesnews {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+/******** only for admin *****/
+.modlayout {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 12pt;  
+color :#fffff0;  
+}
+
+.modtitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 12pt;  
+color :#fffff0;  
+}
+
+.moddesc {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 12pt;  
+color :#fffff0;  
+}
+
+.settext {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : Navy;  
+}
+
+.setarea {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #00008B;  
+}
+
+.settitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.pagereads {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.pulsanti {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #FFFFF0;
+ background-color : #635231;
+}
+
+.red {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.blue {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.green {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.yellow {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.white {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+TEXTAREA {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #635231;  
+}
+/*******************/
+.register {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.unregistred {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.online {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.offline {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.morelink {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.title {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.menutitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+
+.subtitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+	
+.formtexts {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #635231;  
+}
+
+.forminput {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #635231;  
+}
+

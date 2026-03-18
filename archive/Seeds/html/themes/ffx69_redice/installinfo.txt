@@ -1,0 +1,17 @@
+Install Info only GERMAN sorry:
+-------------------------------
+1. Alles entpacken in einem Verz.
+2. Wenn phpads benutzt wird für das einblenden der Banner muss die Theme.php bearbeitet werden, siehe im Theme nach
+   suche nach Banners.php und klammer diese aus, und den anderen Teil aktivieren indem die /* */ entfernt werden.
+   Jetzt noch die ads.php editieren (wo sich dein phpads befindet) und das wars schon fast, jetzt die Datei ads.php
+   ins Hauptverzeichnis von nuke kopieren (auf dem Server) fertig.
+3. Um das Menu vernüftig zu benutzen was über die rechte maustaste zusehen ist beim rechtsklick im Explorer Fenster,
+   einfach die Datei "contextmenue.js" editieren .. suche nach dem Eintrag www.yourdomain.com und ändere es in deine
+   Domain um, und schon geht auch das menu im Theme. Jetzt noch den rest auf den Server schmeissen und das wars dann.
+
+Bei Fragen schaut bei mir Forum vorbei.
+
+Viel Spass
+
+http://www.ffx69.de
+  

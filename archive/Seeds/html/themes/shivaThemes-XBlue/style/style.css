@@ -1,0 +1,33 @@
+FONT		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+TD		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+P		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+DIV		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+INPUT		{
+	FONT-FAMILY: Verdana, Helvetica;
+	FONT-SIZE: 12px;
+	color: #000000;
+}
+TEXTAREA	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 12px}
+FORM 		{
+	FONT-FAMILY: Verdana, Helvetica;
+	FONT-SIZE: 12px;
+	color: #000000;
+}
+BODY	   {BACKGROUND-IMAGE: url(/themes/shivaThemes-XBlue/images/bar.gif); FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 12px}
+A:link          {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px Verdana, Helvetica; TEXT-DECORATION: navy}
+A:active        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px Verdana, Helvetica; TEXT-DECORATION: underline}
+A:visited       {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px Verdana, Helvetica; TEXT-DECORATION: underline}
+A:hover         {BACKGROUND: none; COLOR: #FF0000; FONT-SIZE: 12px Verdana, Helvetica; TEXT-DECORATION: underline overline bold}
+.title 		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Helvetica}
+.contenta 	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.pn-title	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}.contenta a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none; color: #FFFFFF}
+.contenta a:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none; color: #FFFFFF}
+.contenta a:active {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none; color: #FFFFFF}
+.contenta a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; color: #FFFFFF; text-decoration: underline overline}

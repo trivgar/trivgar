@@ -1,0 +1,32 @@
+FONT	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+TD		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+BODY	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+P		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+DIV		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+
+INPUT 	{BACKGROUND-COLOR: #550847; BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-WIDTH: 3px; BORDER-LEFT-WIDTH: 3px; FONT-SIZE: 10px; COLOR: #FFFFCC; BORDER-BOTTOM-WIDTH: 3px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 3px; text-indent : 3px;}
+
+TEXTAREA	{BACKGROUND-COLOR: #A78F9C; BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-WIDTH: 3px; BORDER-LEFT-WIDTH: 3px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 3px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 3px 1px; text-indent : 3px;}
+
+SELECT 		{BACKGROUND-COLOR: #FFFFCC; BORDER-TOP-COLOR: transparent; BORDER-LEFT-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-WIDTH: 3px; BORDER-LEFT-WIDTH: 3px; FONT-SIZE: 10px; COLOR: #550847; BORDER-BOTTOM-WIDTH: 3px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 3px 1px; text-indent : 3px;}
+
+FORM 		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+.navbar     {BACKGROUND: none; COLOR: #FFFFCC; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica}
+.navbar A:link      {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.navbar A:active    {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.navbar A:visited   {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.navbar A:hover     {BACKGROUND: none; COLOR: #FFFFCC; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+
+A:link          {BACKGROUND: none; COLOR: #550847; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+A:active        {BACKGROUND: none; COLOR: #550847; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+A:visited       {BACKGROUND: none; COLOR: #550847; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+A:hover         {BACKGROUND: none; COLOR: #550847; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.title 		{BACKGROUND: none; COLOR: #550847; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #550847; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.block-title	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #550847; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 9px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}

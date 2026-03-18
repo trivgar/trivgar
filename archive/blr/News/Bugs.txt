@@ -1,0 +1,71 @@
+Bugs in previous versions:
+
+1.00:
+-------------
+fixed the incorrect template path
+fixed the requirement of path on every page
+-------------
+
+1.10:
+-------------
+fixed the require template type
+-------------
+
+1.20:
+-------------
+added 2 new templates
+-------------
+
+1.50:
+-------------
+added user levels
+-------------
+
+2.00:
+-------------
+added minor emoticon support
+added new feature in install.php
+-------------
+
+2.20:
+-------------
+added a exra ip security check
+-------------
+
+2.50:
+-------------
+added remember me login
+fixed emoticons images error
+fixed templates images error
+added new admin function
+added new update script
+-------------
+
+2.60:
+-------------
+changed install.php layout
+-------------
+
+2.65:
+-------------
+added database backup feature
+-------------
+
+2.67:
+-------------
+added classes for different sections
+changed tags for tag specific servers e.g. <? = <?php
+added automatic creation of backups folder
+-------------
+
+3.00:
+-------------
+added comments
+changed layout of admin section
+fixed minor bugs with code
+added strip and add slash functions
+added the ability to change admin details e.g. email address
+-------------
+as of version 3, n12 news pro has migrated to news ultra
+
+http://www.n-12.net/

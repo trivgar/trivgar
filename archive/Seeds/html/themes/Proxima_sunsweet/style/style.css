@@ -1,0 +1,93 @@
+BODY, TD {
+font-family : Verdana, Arial, sans-serif ;	
+font-size : 8pt; 
+color : #C0C0C0;
+}
+A {	
+text-decoration: none;	
+color: #C0C0C0;
+}
+A:Hover {
+text-decoration: underline;	
+color: #EDBB33;
+}
+.content {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color: #C0C0C0;  
+}
+.L-blocktitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 10pt;  
+color : #404040;  
+}
+ 
+.C-blocktitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 10pt;  
+color :#404040;  
+}
+
+.R-blocktitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 10pt;  
+color : #404040;  
+}
+.navbar {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #FFFFFF;  
+}
+/******** only for admin *****/
+.settext {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : Navy;  
+}
+.setarea {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #990000;  
+background-color: #F0EFC7;
+}
+.settitle {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #990000;  
+}
+.pulsanti {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #FFFFF0;
+ background-color : #8B0000;
+}
+.red {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+.blue {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+.green {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+.yellow {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+.white {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color :#fffff0;  
+}
+TEXTAREA {
+font-family :  Verdana, Arial, sans-serif ;	
+font-size : 8pt;  
+color : #404040;  
+}

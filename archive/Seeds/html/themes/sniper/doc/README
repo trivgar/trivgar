@@ -1,0 +1,48 @@
+***** Theme for PHP-Nuke - http://phpnuke.org *****
+
+
+================ Theme Information ================
+Date Creation 	  : May 23, 2002
+Last Modification : July 27, 2001
+Title 		  : Sniper
+Version		  : 1.0
+Filename          : sniper-1.0.zip
+Author            : Charles Pelkey
+Author E-Mail     : pelkeyc at yahoo
+Description       : A nuke theme based on the 
+
+================ Misc Information ================
+New Graphics : Yes
+CSS          : Yes
+Java 	       : No
+Java-Script  : No
+Flash        : No
+Sound        : No
+
+
+Future versions of this theme can be downloaded from:
+http://cpelkey.homeip.net:8080/
+
+
+================ Construction ================
+Tested with phpnuke version  : 5.5
+Browser support              : Netscape Navigator 4.79
+                             : Netscape 6.2
+			           : Internet Explorer 5.x
+                             : Internet Explorer 6.0
+			           : Mozilla 1.0 RC 2
+Base                         : static html template "Dark Soldier" by Lara-K <lara.k@email.si>
+Editor(s) and Utilities used : phpCoder, Notepad, Wordpad
+Known Bugs                   : Thin black space between header table and content table
+Build Time                   : 6 Hours
+
+
+================ Installation ================
+Decompress the files to the "themes" directory of phpnuke.
+Do not change the directory name without changing the paths
+to the images that comes with this package.
+
+
+================ Copyright & Legal Information ================
+This is Under GPL/GNU Licence
+

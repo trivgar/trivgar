@@ -1,0 +1,180 @@
+/* icicle theme for phpBB2
+ * Created by Nick Mahon
+ * http://nick.nineand3quarters.com/design.php
+ * Inspired by vBulletin
+ * http://www.vbulletin.com
+ * Based on subSilver
+ * http://www.subBlue.com
+ */
+
+/* Scrollbar Color and HR */
+
+body               
+{ 
+scrollbar-base-color: #F1F4F7
+}
+
+
+/* Font Properties */
+
+body             
+{
+font-family: Verdana, Tahoma; 
+font-size: 10px; 
+color: #383B3F
+}
+
+table            
+{
+font-family: Verdana, Tahoma; 
+font-size: 10px; 
+color: #383B3F
+}
+
+td               
+{
+font-family: Verdana, Tahoma; 
+font-size: 10px; 
+color: #383B3F
+}
+
+.smalltext       
+{ 
+font-family: Verdana; 
+font-size : 10px; 
+color: #383B3F
+}
+
+.mediumtext      
+{ 
+font-family: Verdana; 
+font-size : 11px; 
+color: #383B3F
+}
+
+.largetext       
+{ 
+font-family: Verdana; 
+font-size : 13px; 
+color: #383B3F
+}
+
+.catrowtext      
+{ 
+font-family: Verdana; 
+font-size : 12px; 
+color: #535D66; 
+font-weight: bold 
+}
+
+.toprowtext      
+{ 
+font-family: Verdana; 
+font-size : 9px; 
+color: #EAF0F5; 
+font-weight: bold 
+}
+
+
+/* Cell Properties */
+
+
+TD.row1	        
+{ 
+background-color: #E9EEF3;
+font-family: Verdana; 
+font-size : 13px; 
+color: #494957
+}     
+     
+TD.row2	        
+{ 
+background-color: #F1F4F7;
+font-family: Verdana; 
+font-size : 12px; 
+color: #494957
+}
+
+td.toprow
+{
+font-family: Verdana; 
+font-size : 9px; 
+color: #EAF0F5; 
+background-image: url(templates/icicle/images/icicle_gradient_blue.gif);
+background-repeat: repeat-y;
+} 
+
+td.catrow           
+{ 
+font-family: Verdana; 
+font-size : 12px; 
+color: #535D66; 
+font-weight: bold;
+background-image: url(templates/icicle/images/icicle_gradient_grey.gif);
+background-repeat: repeat-y;
+}
+
+TD.tableborder	  
+{ 
+background-color: #FFFFFF
+}
+
+/* Link Properties */
+
+
+a                         { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }  
+a:link                    { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }
+a:visited                 { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }
+a:active                  { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }
+a:hover                   { text-decoration: none; font-size: 11px; color: #304C6C; font-family: Verdana } 
+
+a.forumlink               { text-decoration: underline; font-weight: bold; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.forumlink:link          { text-decoration: underline; font-weight: bold; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.forumlink:visited       { text-decoration: underline; font-weight: bold; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.forumlink:active        { text-decoration: underline; font-weight: bold; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.forumlink:hover         { text-decoration: none; font-size: 13px; font-weight: bold; color: #304C6C; font-family: Verdana }
+   
+a.topiclink               { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }  
+a.topiclink:link          { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.topiclink:visited       { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.topiclink:active        { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.topiclink:hover         { text-decoration: none; font-size: 13px; color: #304C6C; font-family: Verdana }  
+ 
+a.catlink                 { text-decoration: none; font-weight: bold; font-size: 13px; color: #535D66; font-family: Verdana }   
+a.catlink:link            { text-decoration: none; font-weight: bold; font-size: 13px; color: #535D66; font-family: Verdana }
+a.catlink:visited         { text-decoration: none; font-weight: bold; font-size: 13px; color: #535D66; font-family: Verdana }
+a.catlink:active          { text-decoration: none; font-weight: bold; font-size: 13px; color: #535D66; font-family: Verdana }
+a.catlink:hover           { text-decoration: underline; font-weight: bold; font-size: 13px; color: #535D66; font-family: Verdana }
+  
+a.toprowlink              { text-decoration: none; font-size: 9px; color: #EAF0F5; font-family: Verdana }   
+a.toprowlink:link         { text-decoration: none; font-size: 9px; color: #EAF0F5; font-family: Verdana }
+a.toprowlink:visited      { text-decoration: none; font-size: 9px; color: #EAF0F5; font-family: Verdana }
+a.toprowlink:active       { text-decoration: underline; font-size: 9px; color: #EAF0F5; font-family: Verdana }
+a.toprowlink:hover        { text-decoration: underline; font-size: 9px; color: #EAF0F5; font-family: Verdana } 
+     
+a.smalllink               { text-decoration: underline; font-size: 10px; color: #304C6C; font-family: Verdana }   
+a.smalllink:link          { text-decoration: underline; font-size: 10px; color: #304C6C; font-family: Verdana }
+a.smalllink:visited       { text-decoration: underline; font-size: 10px; color: #304C6C; font-family: Verdana }
+a.smalllink:active        { text-decoration: underline; font-size: 10px; color: #304C6C; font-family: Verdana }
+a.smalllink:hover         { text-decoration: none; font-size: 10px; color: #304C6C; font-family: Verdana }   
+  
+a.mediumlink              { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }  
+a.mediumlink:link         { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }
+a.mediumlink:visited      { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }
+a.mediumlink:active       { text-decoration: underline; font-size: 11px; color: #304C6C; font-family: Verdana }
+a.mediumlink:hover        { text-decoration: none; font-size: 11px; color: #304C6C; font-family: Verdana }   
+    
+a.largelink               { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.largelink:link          { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.largelink:visited       { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.largelink:active        { text-decoration: underline; font-size: 13px; color: #304C6C; font-family: Verdana }
+a.largelink:hover         { text-decoration: none; font-size: 13px; color: #304C6C; font-family: Verdana }         
+
+/* Form elements */
+
+input, textarea, select 
+{
+color : #000000;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 10px;
+}

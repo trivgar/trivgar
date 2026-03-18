@@ -1,0 +1,34 @@
+#JAlbum Project
+#Sat Mar 29 12:00:43 PST 2003
+ftpUser=travis
+directory=C\:\\Documents and Settings\\Trav\\Desktop\\Pics\\Pictures\\PhotoShopImages
+ftpPassword=forever
+imageLinking=LinkOriginals
+reverseOrder=false
+passiveMode=true
+highQualityScaling=false
+thumbSize=120x120
+ftpServer=216.190.52.80
+imageSize=800x600
+rows=30
+copyOriginals=true
+sameDirectory=false
+cols=6
+alwaysUploadPages=true
+class=class se.datadosen.jalbum.AlbumBean
+includeDirectories=true
+slides=true
+indexPageName=index
+dateFormat=
+qualityPercent=70
+imageOrdering=OrderByName
+skin=standard
+pageExtension=.html
+metaData=true
+subdirs=true
+style=Plain.css
+savePassword=true
+remoteDirectory=
+urlEncode=true
+appendImages=false
+outputDirectory=C\:\\Documents and Settings\\Trav\\Desktop\\Pics\\69workshop\\photoshop

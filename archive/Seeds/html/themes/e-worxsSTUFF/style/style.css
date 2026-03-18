@@ -1,0 +1,149 @@
+FONT                     {FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; FONT-SIZE: 11px}
+TD                       {FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; FONT-SIZE: 11px}
+BODY                     {
+background-image: url(../images/back.gif);
+background-attachment: fixed;
+FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; FONT-SIZE: 11px; scrollbar-face-color: #CCCCCC; scrollbar-highlight-color: #000000;
+                         scrollbar-3dlight-color: #FFFFFF; scrollbar-darkshadow-color: #ffffff; scrollbar-track-color: #EEEEEE;
+                         scrollbar-arrow-color: #000000 }
+
+P                        {FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; FONT-SIZE: 11px}
+DIV                      {FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; FONT-SIZE: 11px}
+INPUT             {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000;
+                      BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px;
+                      FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Tahoma,Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+TEXTAREA             {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000;
+                      BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px;
+                      FONT-SIZE: 11px; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Tahoma,Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+
+FORM                     {FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; FONT-SIZE: 11px}
+SELECT               {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000;
+                      BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px;
+                      FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Tahoma,Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+
+A:link                   {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: underline}
+A:active                 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: underline}
+A:visited                {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: underline}
+A:hover                  {BACKGROUND: #EFEFEF; COLOR: #0000FF; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: underline overline}
+.title                   {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.content                 {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial;}
+.storytitle              {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.storycat                {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: underline}
+.boxtitle                {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.boxcontent              {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial;}
+.option                  {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.tiny                    {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial;
+TEXT-DECORATION: none}
+.posted                  {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.sideboxtitle            {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.date                    {BACKGROUND: none; COLOR: #FF0000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.user                    {BACKGROUND: none; COLOR: #FF0000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma,Verdana,Helvetica,Arial; TEXT-DECORATION: none}
+.navbox                  {border-top: 1px #efefef solid; border-left: 1px #efefef solid; border-right: 1px #efefef solid; border-bottom: 1px #efefef solid;
+                      font-family: Tahoma,Verdana,Helvetica; font-size: 8pt; font-weight: bold;}
+a.topnav:link            {color: #FFFFFF; font-size: 11px}
+a.topnav:active          {color: #FFFFFF; font-size: 11px}
+a.topnav:visited         {color: #FFFFFF; font-size: 11px}
+a.topnav:hover           {color: #0000FF; font-size: 11px}
+SELECT                   {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000;
+                         BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px;
+                         FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Tahoma,Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+.header_right {
+        background-color: #A7C3FB;
+        background-image: url(../images/block_header_back.gif);
+}
+
+.header_menu {
+        background-image: url(../images/block_header_back.gif);
+}
+
+.header_content {
+        background-image: url(../images/index_back.gif);
+}
+
+.header_whitespace {
+        background-image: url(../images/index_back.gif);
+        border-top: 1px solid #000000;
+}
+}
+
+.block_title_border {
+        border-top: 1px solid #363636;
+        border-left: 1px solid #363636;
+        border-bottom: 1px solid #363636;
+        border-right: 1px solid #363636;
+}
+
+.block_title        {
+        background-image: url(../images/block_header_back.gif);
+}
+
+.block_border {
+        border-left: 1px solid #cbcbcb;
+        border-bottom: 1px solid #cbcbcb;
+        border-right: 1px solid #cbcbcb;
+}
+
+.block_content {
+        background-image: url(../images/block_back.gif);
+}
+
+.block_text {
+}
+.story_header_border {
+        border: 1px solid #363636;
+}
+
+.story_header {
+        background-color: #A7C3FB;
+}
+
+.story_border {
+        border-left: 1px solid #363636;
+        border-right: 1px solid #363636;
+}
+
+.story_text {
+        text-indent: 10;
+}
+
+.story_content {
+        background-image: url(../images/story_back.gif);
+}
+
+.story_footer_border {
+        border: 1px solid #363636;
+}
+
+.story_page_border {
+        background-image: url(../images/story_back.gif);
+        border-left: 1px solid #363636;
+        border-bottom: 1px solid #363636;
+        border-right: 1px solid #363636;
+}
+
+.footer_border {
+        border-top: 1px solid #363636;
+}
+
+.tracking {
+        font-size: 6pt;
+}
+
+.myh_main_border {
+        border: 1px solid #363636;
+}
+
+.xxsmall {
+        font-size: 8px;
+}
+
+.hotornot {
+        border: 1px solid #cc0000;
+}
+
+.maintable {
+        border-top: 1px solid #696969;
+        border-left: 1px solid #696969;
+        border-bottom: 2px solid #696969;
+        border-right: 2px solid #696969;
+}

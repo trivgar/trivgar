@@ -1,0 +1,362 @@
+
+BODY, TD {
+
+font-family : Verdana, Arial, sans-serif ;	
+
+font-size : 8pt; 
+
+color : #FFFFFF;
+
+}
+
+.date{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+font-weight : normal;
+
+color: #000000;  
+
+}
+
+
+.formtexts{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+font-weight : normal;
+
+color: #FFFFFF;  
+
+
+
+}
+
+
+.formtexts2{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+font-weight : normal;
+
+color: #000000;  
+
+
+
+}
+
+
+.cellbox{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+font-weight : normal;
+
+color: #FFFFFF;  
+
+}
+
+
+A {	
+
+font-family :  Verdana, Arial, sans-serif ;
+
+font-size : 8pt;  
+
+text-decoration: underline;	
+
+color: #E7AD73;
+
+}
+
+
+A:Link {	
+
+font-family :  Verdana, Arial, sans-serif ;
+
+font-size : 8pt;  
+
+text-decoration: underline;	
+
+color: #E7AD73;
+
+}
+
+
+A:Hover {
+
+font-family :  Verdana, Arial, sans-serif ;
+
+font-size : 8pt;  
+
+text-decoration: underline;	
+
+color: #000000;
+
+background-color : #E7AD73;
+
+}
+
+A:Visted {
+
+font-family :  Verdana, Arial, sans-serif ;
+
+font-size : 8pt;  
+
+text-decoration: underline;	
+
+color: #E7AD73;
+
+}
+
+
+.content {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color: #FFFFFF;  
+
+
+}
+
+.navbar{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color: #FFFFFF;  
+
+
+}
+
+
+.L-blocktitle {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #FFFFFF;  
+
+}
+
+.LEFT-blocktitle {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #FFFFFF;  
+
+}
+
+
+.C-blocktitle {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 9pt;  
+
+color : #FFFFFF;  
+
+}
+
+
+
+.R-blocktitle {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 9pt;  
+
+color : #FFFFFF;  
+
+}
+
+.navbar {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #FFFFFF;  
+
+}
+
+.pulsanti {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #000000;
+
+ background-color : #808080;
+
+}
+
+.option{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #FF8C00;
+
+ 
+
+}
+
+
+
+
+/******** only for admin *****/
+
+.settext {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #FCCC5A;  
+
+}
+
+.setarea {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #00288C;  
+
+background-color: #F0EFC7;
+
+}
+
+.settitle {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #FCCC5A;  
+
+}
+
+.pulsanti {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color : #000000;
+
+ background-color : #808080;
+
+}
+
+.red {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color :#fffff0;  
+
+}
+
+.blue {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color :#fffff0;  
+
+}
+
+.green {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color :#fffff0;  
+
+}
+
+.yellow {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color :#fffff0;  
+
+}
+
+.white {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color :#fffff0;  
+
+}
+
+TEXTAREA {
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color :#234B53;  
+
+}
+
+.titlemessagesnews{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+font-weight : bold;
+
+color: #FF8E00;  
+
+}
+
+.contentmessagesnews{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+color: #00288C;  
+
+}
+
+.user{
+
+font-family :  Verdana, Arial, sans-serif ;	
+
+font-size : 8pt;  
+
+font-weight : bold;
+
+color: #000000;  
+
+}

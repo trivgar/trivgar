@@ -1,0 +1,306 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function GetCookie (name) {  
+var arg = name + "=";  
+var alen = arg.length;  
+var clen = document.cookie.length;  
+var i = 0;  
+while (i < clen) {
+var j = i + alen;    
+if (document.cookie.substring(i, j) == arg)      
+return getCookieVal (j);    
+i = document.cookie.indexOf(" ", i) + 1;    
+if (i == 0) break;   
+}  
+return null;
+}
+function SetCookie (name, value) {  
+var argv = SetCookie.arguments;  
+var argc = SetCookie.arguments.length;  
+var expires = (argc > 2) ? argv[2] : null;  
+var path = (argc > 3) ? argv[3] : null;  
+var domain = (argc > 4) ? argv[4] : null;  
+var secure = (argc > 5) ? argv[5] : false;  
+document.cookie = name + "=" + escape (value) + 
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+((path == null) ? "" : ("; path=" + path)) +  
+((domain == null) ? "" : ("; domain=" + domain)) +    
+((secure == true) ? "; secure" : "");
+}
+function DeleteCookie (name) {  
+var exp = new Date();  
+exp.setTime (exp.getTime() - 1);   
+var cval = GetCookie (name);  
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var expDays = 30;
+var exp = new Date(); 
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+function amt(){
+var count = GetCookie('count')
+if(count == null) {
+SetCookie('count','1')
+return 1
+}
+else {
+var newcount = parseInt(count) + 1;
+DeleteCookie('count')
+SetCookie('count',newcount,exp)
+return count
+   }
+}
+function getCookieVal(offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+// End -->
+</SCRIPT>
+<!--
+/* Standards */ 
+BODY          {scrollbar-face-color: #000000; scrollbar-shadow-color: #0000FF; scrollbar-highlight-color: 
+
+#cccccc;
+               scrollbar-3dlight-color: #333333; scrollbar-darkshadow-color: #0033FF; scrollbar-track-color: 
+
+#444444;
+               scrollbar-arrow-color: "blue"; font-family: Verdana, arial, helvetica, serif; font-size:14px;} 
+
+
+-->
+<title>workshop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+
+<body bgcolor="000033" text="#0000ff">
+ 
+<div id="Layer1" style="position:absolute; left:136px; top:6px; width:784px; height:599px; z-index:1"> 
+  <table border="1" height="596" cellpadding="8" bordercolor="#0000FF">
+    <tr> 
+      <td colspan="3" height="186"><img src="banner.gif" width="775" height="180"></td>
+    </tr>
+    <tr> 
+      <td width="141" height="341" bordercolor="#0000FF" align="center" valign="top"> 
+        <table width="100%" border="2" bordercolor="#0000FF">
+          <tr> 
+            <td bgcolor="#000033"> 
+              <div align="center"><font color="#FFFFFF"><u>navigation bar</u></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000" height="19"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="48" height="19">
+                  <param name=movie value="news.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="news.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="48" height="19" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="52" height="21">
+                  <param name=movie value="about.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="about.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="52" height="21" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="funny.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="funny.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="pictures.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="pictures.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="teresa.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="teresa.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="shoutouts.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="shoutouts.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="images.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="images.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000" height="22"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="random.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="random.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="affiliate.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="affiliate.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="links.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="links.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="intro.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="intro.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="teresa2.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="teresa2.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+          <tr> 
+            <td bgcolor="#000000" height="19"> 
+              <div align="center"><font color="#0000FF"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="58" height="20">
+                  <param name=movie value="contact.swf">
+                  <param name=quality value=high>
+                  <param name="BASE" value=".">
+                  <param name="BGCOLOR" value="#000000">
+                  <param name="SCALE" value="exactfit">
+                  <embed src="contact.swf" base="."  quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" width="58" height="20" bgcolor="#000000">
+                  </embed> 
+                </object></font></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="541" height="341" bgcolor="#000000" bordercolor="#0000FF" nowrap align="left" valign="top"> 
+        <div align="center"> 
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><font size="2">if you would like to have a link to your site on my 
+            site, please feel free to e-mail me your link, description, and a 
+            banner you would like me to use for the link.</font></p>
+          <p><font size="2">princesstravis69@hotmail.com</font></p>
+          <p>i realize this part of the page isnt very important but...its mine...not 
+            yours..</p>
+        </div>
+      </td>
+      <td width="64" height="341" nowrap>&nbsp;</td>
+    </tr>
+    <tr> 
+      <td width="141" bgcolor="#000000">&nbsp; </td>
+      <td width="541"> 
+        <center><script language="JavaScript">
+<!-- Begin
+document.write("You have been here " + amt() + " times.")
+// End -->
+</script></center>
+      </td>
+      <td width="64" bgcolor="#000000">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

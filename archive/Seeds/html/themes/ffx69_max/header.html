@@ -1,0 +1,78 @@
+<style>
+.shakeimage{
+position:relative
+}
+</style>
+<script language="JavaScript1.2">
+//configure shake degree (where larger # equals greater shake)
+var rector=2
+
+///////DONE EDITING///////////
+var stopit=0 
+var a=1
+
+function init(which){
+stopit=0
+shake=which
+shake.style.left=0
+shake.style.top=0
+}
+
+function rattleimage(){
+if ((!document.all&&!document.getElementById)||stopit==1)
+return
+if (a==1){
+shake.style.top=parseInt(shake.style.top)+rector
+}
+else if (a==2){
+shake.style.left=parseInt(shake.style.left)+rector
+}
+else if (a==3){
+shake.style.top=parseInt(shake.style.top)-rector
+}
+else{
+shake.style.left=parseInt(shake.style.left)-rector
+}
+if (a<4)
+a++
+else
+a=1
+setTimeout("rattleimage()",40)
+}
+
+function stoprattle(which){
+stopit=1
+which.style.left=0
+which.style.top=0
+}
+
+</script>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%"><TR VALIGN=TOP ALIGN=LEFT>
+<TD WIDTH=100%><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%"><COLGROUP>
+<COL WIDTH=170><COL WIDTH=505><COL WIDTH=1><COL WIDTH=95></COLGROUP><TR>
+<TD WIDTH=170 BGCOLOR="#FFFFFF" HEIGHT=42><P><IMG SRC="themes/ffx69_max/images/olinks.jpg" HEIGHT=110 WIDTH=170 VSPACE=0 HSPACE=0 ALIGN="TOP" BORDER=0></TD>
+<TD BGCOLOR="#FFFFFF" BACKGROUND="themes/ffx69_max/images/omitte.jpg" WIDTH=100%><P ALIGN=CENTER><b>$sitename</b><br><iframe src="banners.php" marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no height=62 width=470></iframe></P></TD>
+<TD COLSPAN=2><P><IMG WIDTH=96 SRC="themes/ffx69_max/images/orechts.jpg" VSPACE=0 HSPACE=0 ALIGN="TOP" BORDER=0></TD>
+</TR><TR><TD WIDTH=170 BGCOLOR="#FFFFFF" HEIGHT=19><P ALIGN=CENTER>&nbsp;Page Views: $result[0]&nbsp;</P>
+</TD><TD COLSPAN=2 BGCOLOR="#FFFFFF"><P>&nbsp;</P></TD><TD WIDTH=95 BGCOLOR="#FFFFFF">
+<P ALIGN=CENTER><B><script type="text/javascript"><!--   // Array ofmonth Names
+var monthNames = new Array( "Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember")
+var now = new Date();
+thisYear = now.getYear();
+if(thisYear < 1900) {thisYear += 1900}; // corrections if Y2K display problem
+document.write(now.getDate() + ". " + monthNames[now.getMonth()] + " " + thisYear);
+// -->
+</script>
+</B></P></TD></TR></TABLE></TD></TR></TABLE><center>
+<a href="modules.php?name=Downloads" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)">Downloads</a>&nbsp;&nbsp;&nbsp;
+<A HREF="modules.php?name=Forum" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)">Forum</a>&nbsp;&nbsp;&nbsp;
+<A HREF="modules.php?name=Submit_News" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)">Submit News</a>&nbsp;&nbsp;&nbsp;
+<A HREF="modules.php?name=Your_Account" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)">Account</a>&nbsp;&nbsp;&nbsp;
+<A HREF="modules.php?name=Faq" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)">Faq</a>&nbsp;&nbsp;&nbsp;
+<A HREF="modules.php?name=Feedback" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this)">Contact</a>&nbsp;</TD>&nbsp;&nbsp;&nbsp;</center>
+</TR><TR></TR></TABLE></TD></TR></TABLE>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" align="center"><tr valign="top">
+<td bgcolor="#FFFFFF"><img src="themes/ffx69_bluegrey/images/pixel.gif" width="1" height="20" border="0" alt=""></td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" align="center"><tr valign="top">
+<td bgcolor="#FFFFFF"><img src="themes/ffx69_bluegrey/images/pixel.gif" width="10" height="1" border="0" alt=""></td>
+<td bgcolor="#FFFFFF" width="150" valign="top">

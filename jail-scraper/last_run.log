@@ -1,0 +1,610 @@
+[2026-01-27 15:00:09] Starting jail roster scrape...
+Watching for 1547 name(s)
+Parsed 921 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> PORTER, TODD | 2025272003 | New Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> SMITH, BRIAN DESMOND | 2026025017 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-01-27 15:00:09] Done.
+[2026-01-28 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 949 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> PORTER, TODD | 2025272003 | (Not in Custody)
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> SMITH, BRIAN DESMOND | 2026025017 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-01-28 15:00:09] Done.
+[2026-01-29 15:00:15] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 905 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> PORTER, TODD | 2025272003 | (Not in Custody)
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-01-29 15:00:15] Done.
+[2026-01-30 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 916 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-01-30 15:00:08] Done.
+[2026-01-31 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 917 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-01-31 15:00:08] Done.
+[2026-02-01 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 909 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-01 15:00:09] Done.
+[2026-02-02 15:00:12] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 881 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-02 15:00:12] Done.
+[2026-02-03 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 943 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-03 15:00:08] Done.
+[2026-02-04 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 965 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-04 15:00:09] Done.
+[2026-02-05 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 924 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-05 15:00:08] Done.
+[2026-02-06 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 893 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> WILLIAMS, JOSEPH CURTIS | 2026036020 | New Jail
+Notification sent (HTTP 200)
+[2026-02-06 15:00:09] Done.
+[2026-02-07 15:00:07] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 885 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> WILLIAMS, JOSEPH CURTIS | 2026036020 | 
+Notification sent (HTTP 200)
+[2026-02-07 15:00:07] Done.
+[2026-02-08 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 880 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> WILLIAMS, JOSEPH CURTIS | 2026036020 | 
+Notification sent (HTTP 200)
+[2026-02-08 15:00:08] Done.
+[2026-02-09 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 889 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> WILLIAMS, JOSEPH CURTIS | 2026036020 | 
+Notification sent (HTTP 200)
+[2026-02-09 15:00:10] Done.
+[2026-02-10 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 935 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> WILLIAMS, JOSEPH CURTIS | 2026036020 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-02-10 15:00:09] Done.
+[2026-02-12 06:04:14] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 919 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-12 06:04:14] Done.
+[2026-02-12 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 910 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-12 15:00:09] Done.
+[2026-02-13 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 900 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-13 15:00:08] Done.
+[2026-02-14 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 891 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-14 15:00:10] Done.
+[2026-02-15 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 882 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-15 15:00:09] Done.
+[2026-02-16 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 866 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-16 15:00:09] Done.
+[2026-02-17 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 908 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-17 15:00:10] Done.
+[2026-02-18 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 930 inmates from roster.
+MATCH FOUND: 4 result(s)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-18 15:00:09] Done.
+[2026-02-19 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 968 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-19 15:00:10] Done.
+[2026-02-20 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 918 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-20 15:00:09] Done.
+[2026-02-21 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 916 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-21 15:00:10] Done.
+[2026-02-22 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 910 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> NAVARRO RAMIREZ, CESILIA | 2026053014 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-22 15:00:10] Done.
+[2026-02-23 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 896 inmates from roster.
+MATCH FOUND: 7 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> MILLER, JAMES LESTER | 2026053029 | New Jail
+  -> NAVARRO RAMIREZ, CESILIA | 2026053014 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-23 15:00:10] Done.
+[2026-02-24 15:00:13] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 912 inmates from roster.
+MATCH FOUND: 7 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> MILLER, JAMES LESTER | 2026053029 | (Not in Custody)
+  -> NAVARRO RAMIREZ, CESILIA | 2026053014 | (Not in Custody)
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-24 15:00:13] Done.
+[2026-02-25 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 950 inmates from roster.
+MATCH FOUND: 7 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> MILLER, JAMES LESTER | 2026053029 | (Not in Custody)
+  -> NAVARRO RAMIREZ, CESILIA | 2026053014 | (Not in Custody)
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-25 15:00:08] Done.
+[2026-02-26 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 930 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-26 15:00:10] Done.
+[2026-02-27 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 919 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> COOK, BRIAN AMBROSE | 2026057063 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-27 15:00:09] Done.
+[2026-02-28 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 914 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> COOK, BRIAN AMBROSE | 2026057063 | (Not in Custody)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-02-28 15:00:08] Done.
+[2026-03-01 15:00:08] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 894 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> COOK, BRIAN AMBROSE | 2026057063 | (Not in Custody)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-01 15:00:08] Done.
+[2026-03-02 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 887 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-02 15:00:09] Done.
+[2026-03-03 15:00:14] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 921 inmates from roster.
+MATCH FOUND: 5 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> MITCHELL, MICHAEL EDWARD | 2026061028 | (Not in Custody)
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-03 15:00:14] Done.
+[2026-03-04 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Error: page.waitForTimeout: Target page, context or browser has been closed
+
+  #  Node.js[1104391]: void node::ResetStdio() at ../src/node.cc:751
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xcb3007 node::Assert(node::AssertionInfo const&) [/usr/bin/node]
+ 2: 0xc5f924  [/usr/bin/node]
+ 3: 0x79c016447a76  [/lib/x86_64-linux-gnu/libc.so.6]
+ 4: 0x79c016447bbe  [/lib/x86_64-linux-gnu/libc.so.6]
+ 5: 0xbbf62f node::DefaultProcessExitHandlerInternal(node::Environment*, node::ExitCode) [/usr/bin/node]
+ 6: 0xc1ef0f node::Environment::Exit(node::ExitCode) [/usr/bin/node]
+ 7: 0xf4e54f v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo) [/usr/bin/node]
+ 8: 0xf4edbd  [/usr/bin/node]
+ 9: 0xf4f285 v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*) [/usr/bin/node]
+10: 0x1959df6  [/usr/bin/node]
+
+  #  Node.js[1104391]: void node::ResetStdio() at ../src/node.cc:751
+  #  Assertion failed: !(err != 0) || (err == -1 && (*__errno_location ()) == 1)
+
+----- Native stack trace -----
+
+ 1: 0xcb3007 node::Assert(node::AssertionInfo const&) [/usr/bin/node]
+ 2: 0xc5f924  [/usr/bin/node]
+ 3: 0xc5ff3d node::TrapWebAssemblyOrContinue(int, siginfo_t*, void*) [/usr/bin/node]
+ 4: 0x79c016445330  [/lib/x86_64-linux-gnu/libc.so.6]
+[2026-03-05 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 902 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> RODRIGUEZ-RAMIREZ, CRISTIAN ANDRES | 2026063007 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> TRISTAN, ARMANDO DANIEL | 2026064006 | New Jail
+Notification sent (HTTP 200)
+[2026-03-05 15:00:09] Done.
+[2026-03-06 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 882 inmates from roster.
+MATCH FOUND: 8 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> RODRIGUEZ-RAMIREZ, CRISTIAN ANDRES | 2026063007 | (Not in Custody)
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> TRISTAN, ARMANDO DANIEL | 2026064006 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-03-06 15:00:09] Done.
+[2026-03-07 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 893 inmates from roster.
+MATCH FOUND: 9 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> RODRIGUEZ-RAMIREZ, CRISTIAN ANDRES | 2026063007 | (Not in Custody)
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> TRISTAN, ARMANDO DANIEL | 2026064006 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-03-07 15:00:10] Done.
+[2026-03-08 15:00:10] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 885 inmates from roster.
+MATCH FOUND: 7 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-08 15:00:10] Done.
+[2026-03-09 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 870 inmates from roster.
+MATCH FOUND: 7 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-09 15:00:09] Done.
+[2026-03-10 15:00:09] Starting jail roster scrape...
+Watching for 1550 name(s)
+Parsed 896 inmates from roster.
+MATCH FOUND: 7 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | Main Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-10 15:00:09] Done.
+[2026-03-12 05:26:16] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 875 inmates from roster.
+MATCH FOUND: 9 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> BROWN, CHRISTOPHER DAVID | 2026070019 | (Not in Custody)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> NAVARRO RAMIREZ, CESILIA | 2026069037 | (Not in Custody)
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-12 05:26:16] Done.
+[2026-03-12 15:00:08] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 889 inmates from roster.
+MATCH FOUND: 9 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> BROWN, CHRISTOPHER DAVID | 2026070019 | (Not in Custody)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> NAVARRO RAMIREZ, CESILIA | 2026069037 | (Not in Custody)
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-12 15:00:08] Done.
+[2026-03-13 15:00:08] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 874 inmates from roster.
+MATCH FOUND: 10 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> BROWN, CHRISTOPHER DAVID | 2026070019 | (Not in Custody)
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | (Not in Custody)
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> NAVARRO RAMIREZ, CESILIA | 2026069037 | (Not in Custody)
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> SUE, TASI ETUALE | 2026071037 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-03-13 15:00:08] Done.
+[2026-03-14 15:00:08] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 869 inmates from roster.
+MATCH FOUND: 8 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> FAKER, CHAD AUSTIN | 2026064066 | (Not in Custody)
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+  -> SUE, TASI ETUALE | 2026071037 | (Not in Custody)
+Notification sent (HTTP 200)
+[2026-03-14 15:00:08] Done.
+[2026-03-15 15:00:09] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 880 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-15 15:00:09] Done.
+[2026-03-16 15:00:08] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 869 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-16 15:00:08] Done.
+[2026-03-17 15:00:08] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 877 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-17 15:00:08] Done.
+[2026-03-18 15:00:08] Starting jail roster scrape...
+Watching for 1559 name(s)
+Parsed 894 inmates from roster.
+MATCH FOUND: 6 result(s)
+  -> BROWN, CHRISTOPHER CHARLES | 2026049088 | Main Jail
+  -> EDDO, DAVID MICHAEL | 2025224032 | Main Jail
+  -> HOWLAND, JAMES RONALD | 2024249005 | Main Jail
+  -> JONES, CONNOR GARRETT | 2026065029 | New Jail
+  -> PETERSON, STEVEN EMMITT | 2026012030 | Main Jail
+  -> ROWLEY, WILLIAM DANIEL MORRIS | 2024201024 | Main Jail
+Notification sent (HTTP 200)
+[2026-03-18 15:00:08] Done.

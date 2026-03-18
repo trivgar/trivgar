@@ -1,0 +1,50 @@
+2 parts to this script
+================================================
+part 1
+================================================
+<script language=javascript>
+function mOvr(src,id,R) { if (!src.contains(event.fromElement)) { var cellID = id + 'Cell';document.all.toolbar.rows(R).cells(cellID).bgColor = '#ff0000'; }}
+function mOut(src,id,R) {if (!src.contains(event.toElement)) { var cellID = id + 'Cell'; document.all.toolbar.rows(R).cells(cellID).bgColor = '#ffff00';}}
+</script>
+
+<!-- this script and more free from a1javascripts.com --><TABLE id=toolbar border=1 cellpadding=1 cellspacing=0 width=400 height=19 bgcolor=black><TR valign=top>
+<TD width=100 align=center bgcolor=#ffff00 id=A1cell onmouseover="mOvr(this,'A1',0);" onmouseout="mOut(this,'A1',0);">
+<A HREF='#' class=tool id=A1 title='Home'>Home</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=A2cell onmouseover="mOvr(this,'A2',0);" onmouseout="mOut(this,'A2',0);">
+<A HREF='#' class=tool id=A2 title='JavaScripts'>JavaScripts</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=A3cell onmouseover="mOvr(this,'A3',0);" onmouseout="mOut(this,'A3',0);">
+<A HREF='#' class=tool id=A3 title='Tools'>Web Tools</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=A4cell onmouseover="mOvr(this,'A4',0);" onmouseout="mOut(this,'A4',0);">
+<A HREF='#' class=tool id=A4 title='Other Stuff'>Other Stuff</A>
+</TD>
+</TR>
+<TR>
+<TD width=100 align=center bgcolor=#ffff00 id=B1cell onmouseover="mOvr(this,'B1',1);" onmouseout="mOut(this,'B1',1);">
+<A HREF='#' class=tool id=B1 title='Hot Links'>Hot Links</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=B2cell onmouseover="mOvr(this,'B2',1);" onmouseout="mOut(this,'B2',1);">
+<A HREF='#' class=tool id=B2 title='Tutorials'>Tutorials</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=B3cell onmouseover="mOvr(this,'B3',1);" onmouseout="mOut(this,'B3',1);">
+<A HREF='#' class=tool id=B3 title='Free Stuff'>Free Stuff</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=B4cell onmouseover="mOvr(this,'B4',1);" onmouseout="mOut(this,'B4',1);">
+<A HREF='#' class=tool id=B4 title='Midis'>Midis</A>
+</TD>
+</TR>
+<TR>
+<TD width=100 align=center bgcolor=#ffff00 id=C1cell onmouseover="mOvr(this,'C1',2);" onmouseout="mOut(this,'C1',2);">
+<A HREF='#' class=tool id=C1 title='Awards this site has won'>Awards</A>
+</TD>
+<TD bgcolor="#ffff00">&nbsp;</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=C3cell onmouseover="mOvr(this,'C3',2);" onmouseout="mOut(this,'C3',2);">
+<A HREF='#' class=tool id=C3 title='Search This Site'>Search</A>
+</TD>
+<TD width=100 align=center bgcolor=#ffff00 id=C4cell onmouseover="mOvr(this,'C4',2);" onmouseout="mOut(this,'C4',2);">
+<A HREF='#' class=tool id=C4 title='Whats New'>What's New</A>
+</TD>
+</TR>
+</TABLE><!-- -->

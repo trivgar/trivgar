@@ -1,0 +1,80 @@
+
+
+FONT		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+TD		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+body
+{scrollbar-face-color: #82B281; scrollbar-track-color: #D1F1CD; scrollbar-arrow-color: #D1F1CD; scrollbar-shadow-color: #609760; scrollbar-3dlight-color: #9DCD98; scrollbar-darkshadow-color: #663300; buttonface: #82B281;
+
+background-color : #609760; 
+margin-top : 4; 
+margin-right : 4; 
+margin-bottom : 4; 
+margin-left : 4; 
+padding-top : 0; 
+padding-right : 0; 
+padding-bottom : 0; 
+padding-left : 0; 
+FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+P		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+DIV		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+//INPUT		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+TEXTAREA	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+FORM 		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+A:link          {BACKGROUND: none; COLOR: #316200; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+A:active        {BACKGROUND: none; COLOR: #316200; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+A:visited       {BACKGROUND: none; COLOR: #316200; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+A:hover         {BACKGROUND:teal; COLOR: #9DCD98; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.title 		{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 10px; FONT-FAMILY: Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.option2 	{BACKGROUND: none; COLOR: #D1F1CD; FONT-SIZE: 18px; FONT-WEIGHT: bold; FONT-FAMILY: Georgia,Verdana, Helvetica; TEXT-DECORATION: none}
+.option3 	{BACKGROUND: none; COLOR: #ECFAEB; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.topic 	{BACKGROUND: none; COLOR: #316200; FONT-SIZE: 8px; FONT-FAMILY: Verdana, Helvetica}
+INPUT {
+background-color : #9DCD98; 
+color : #316200; 
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+font-weight : bold;
+border-color : #ffffff;  
+border-top-width : 1px; 
+border-right-width : 1px; 
+border-bottom-width : 1px; 
+border-left-width : 1px;
+text-indent : 2px;  
+} 
+SELECT {
+background-color : #9DCD98; 
+color : black; 
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+font-weight : bold;
+}
+
+#centercontent {
+		border-top:3px solid #BBDCB8;
+		border-right:4px solid #609760;
+		border-left:0px solid #000000;
+		voice-family: "\"}\"";
+		voice-family: inherit;
+        margin:0px 0px 0px 0px;
+        Float:left;
+		height:100%;
+        width:99%;
+		}
+#centercontent2 {
+		border-top:1px solid #000000;
+		border-right:1px solid #82B281;
+		border-left:0px solid #000000;
+		voice-family: "\"}\"";
+		voice-family: inherit;
+        margin:0px 0px 0px 0px;
+        Float:left;
+		height:100%;
+        width:100%;
+		}

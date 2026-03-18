@@ -1,0 +1,208 @@
+<?php
+
+/************************************************************/
+/* IMPORTANT NOTE FOR THEMES DEVELOPERS!                    */
+/*                                                          */
+/* When you start coding your theme, if you want to         */
+/* distribute it, please double check it to fit the HTML    */
+/* 4.01 Transitional Standard. You can use the W3 validator */
+/* located at http://validator.w3.org                       */
+/* If you don't know where to start with your theme, just   */
+/* start modifying this theme, it's validate and is cool ;) */
+/************************************************************/
+
+/************************************************************/
+/* Theme Colors Definition                                  */
+/*                                                          */
+/* Define colors for your web site. $bgcolor2 is generaly   */
+/* used for the tables border as you can see on OpenTable() */
+/* function, $bgcolor1 is for the table background and the  */
+/* other two bgcolor variables follows the same criteria.   */
+/* $texcolor1 and 2 are for tables internal texts           */
+/************************************************************/
+
+/************************************************************/
+/* Theme sb_metal2 by ffx69 - http://www.shareware-base.de  */
+/*                                                          */
+/*  Getestet mit: IE6/                                      */
+/*                                                          */
+/*                                                          */
+/************************************************************/
+
+$bgcolor1 = "#AAAAAA";
+$bgcolor2 = "#FFFfff";
+$bgcolor3 = "#000000";
+$bgcolor4 = "#000000	";
+$textcolor1 = "#000000";
+$textcolor2 = "#000fff";
+
+include("themes/sb_metal2/tables.php");
+
+/************************************************************/
+/* Function themeheader()                                   */
+/*                                                          */
+/* Control the header for your site. You need to define the */
+/* BODY tag and in some part of the code call the blocks    */
+/* function for left side with: blocks(left);               */
+/************************************************************/
+
+function themeheader() {
+    global $user, $banners, $sitename, $slogan, $cookie, $prefix, $dbi;
+    cookiedecode($user);
+    $username = $cookie[1];
+    if ($username == "") {
+        $username = "Anonymous";
+    }
+    echo "<!----- 2002 http://www.shareware-base.de  Please dot not remove this line, THANX----->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<body bgcolor=\"#000000\" text=\"#000000\" link=\"#000000\" vlink=\"#000000\" alink=\"#000000\"><center><TABLE background=\"themes/sb_metal2/images/back.jpg\" bgcolor=#000000 BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=\"98%\"><TR><TD WIDTH=30%><P ALIGN=left><a href=\"index.php\"><img src=\"themes/sb_metal2/images/logo.gif\" border=0></a></P></TD><TD WIDTH=58%><P ALIGN=CENTER><br>";
+    if ($banners == 1) {
+	include("banners.php");
+    }
+echo "</P></TD><TD WIDTH=10%><P>&nbsp;</P></TD></TR></TABLE></center><br>";
+
+
+    $topics_list = "<select name=\"new_topic\" onChange='submit()'>\n";
+    $topics_list .= "<option value=\"\">All Topics</option>\n";
+    $toplist = sql_query("select topicid, topictext from ".$prefix."_topics order by topictext", $dbi);
+    while(list($topicid, $topics) = sql_fetch_row($toplist, $dbi)) {
+    if ($topicid==$topic) { $sel = "selected "; }
+	$topics_list .= "<option $sel value=\"$topicid\">$topics</option>\n";
+	$sel = "";
+    }
+    if ($username == "Anonymous") {
+	$theuser = "&nbsp;&nbsp;<a href=\"modules.php?name=Your_Account&op=new_user\">Create an account";
+    } else {
+	$theuser = "&nbsp;&nbsp;Welcome $username!";
+    }
+ /*   $tmpl_file = "themes/sb_metal2/header.html";
+    $thefile = implode("", file($tmpl_file));
+    $thefile = addslashes($thefile);
+    $thefile = "\$r_file=\"".$thefile."\";";
+    eval($thefile);
+    print $r_file; */
+echo "<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" bgcolor=\"#000000\" align=\"center\"><tr valign=\"top\">
+<td bgcolor=\"#000000\"><img src=\"themes/sb_metal2/images/pixel.gif\" width=\"10\" height=\"1\" border=\"0\" alt=\"\"></td>
+<td bgcolor=\"#000000\" width=\"150\" valign=\"top\">";
+    blocks(left);
+    $tmpl_file = "themes/sb_metal2/left_center.html";
+    $thefile = implode("", file($tmpl_file));
+    $thefile = addslashes($thefile);
+    $thefile = "\$r_file=\"".$thefile."\";";
+    eval($thefile);
+    print $r_file;
+}
+
+/************************************************************/
+/* Function themefooter()                                   */
+/*                                                          */
+/* Control the footer for your site. You don't need to      */
+/* close BODY and HTML tags at the end. In some part call   */
+/* the function for right blocks with: blocks(right);       */
+/* Also, $index variable need to be global and is used to   */
+/* determine if the page your're viewing is the Homepage or */
+/* and internal one.                                        */
+/************************************************************/
+
+function themefooter() {
+    global $index, $foot1, $foot2, $foot3, $foot4;
+    if ($index == 1) {
+	$tmpl_file = "themes/sb_metal2/center_right.html";
+	$thefile = implode("", file($tmpl_file));
+	$thefile = addslashes($thefile);
+	$thefile = "\$r_file=\"".$thefile."\";";
+	eval($thefile);
+	print $r_file;
+	blocks(right);
+    }
+    $footer_message = "$foot1<br>$foot2<br>$foot3<br>$foot4<br>Theme by <a href=\"http://www.shareware-base.de\">shareware-base.de</a>";
+    $tmpl_file = "themes/sb_metal2/footer.html";
+    $thefile = implode("", file($tmpl_file));
+    $thefile = addslashes($thefile);
+    $thefile = "\$r_file=\"".$thefile."\";";
+    eval($thefile);
+    print $r_file;
+}
+
+/************************************************************/
+/* Function themeindex()                                    */
+/*                                                          */
+/* This function format the stories on the Homepage         */
+/************************************************************/
+
+function themeindex ($aid, $informant, $time, $title, $counter, $topic, $thetext, $notes, $morelink, $topicname, $topicimage, $topictext) {
+    global $anonymous, $tipath;
+    if ($notes != "") {
+	$notes = "<br><br><b>"._NOTE."</b> <i>$notes</i>\n";
+    } else {
+	$notes = "";
+    }
+    if ("$aid" == "$informant") {
+	$content = "$thetext$notes\n";
+    } else {
+	if($informant != "") {
+	    $content = "<a href=\"modules.php?name=Your_Account&amp;op=userinfo&amp;uname=$informant\">$informant</a> ";
+	} else {
+	    $content = "$anonymous ";
+	}
+	$content .= ""._WRITES." <i>\"$thetext\"</i>$notes\n";
+    }
+    $posted = ""._POSTEDBY." ";
+    $posted .= get_author($aid);
+    $posted .= " "._ON." $time $timezone ($counter "._READS.")";
+    $tmpl_file = "themes/sb_metal2/story_home.html";
+    $thefile = implode("", file($tmpl_file));
+    $thefile = addslashes($thefile);
+    $thefile = "\$r_file=\"".$thefile."\";";
+    eval($thefile);
+    print $r_file;
+}
+
+/************************************************************/
+/* Function themearticle()                                  */
+/*                                                          */
+/* This function format the stories on the story page, when */
+/* you click on that "Read More..." link in the home        */
+/************************************************************/
+
+function themearticle ($aid, $informant, $datetime, $title, $thetext, $topic, $topicname, $topicimage, $topictext) {
+    global $admin, $sid, $tipath;
+    $posted = ""._POSTEDON." $datetime "._BY." ";
+    $posted .= get_author($aid);
+    if ($notes != "") {
+	$notes = "<br><br><b>"._NOTE."</b> <i>$notes</i>\n";
+    } else {
+	$notes = "";
+    }
+    if ("$aid" == "$informant") {
+	$content = "$thetext$notes\n";
+    } else {
+	if($informant != "") {
+	    $content = "<a href=\"modules.php?name=Your_Account&amp;op=userinfo&amp;uname=$informant\">$informant</a> ";
+	} else {
+	    $content = "$anonymous ";
+	}
+	$content .= ""._WRITES." <i>\"$thetext\"</i>$notes\n";
+    }
+    $tmpl_file = "themes/sb_metal2/story_page.html";
+    $thefile = implode("", file($tmpl_file));
+    $thefile = addslashes($thefile);
+    $thefile = "\$r_file=\"".$thefile."\";";
+    eval($thefile);
+    print $r_file;
+}
+
+/************************************************************/
+/* Function themesidebox()                                  */
+/*                                                          */
+/* Control look of your blocks. Just simple.                */
+/************************************************************/
+
+function themesidebox($title, $content) {
+    $tmpl_file = "themes/sb_metal2/blocks.html";
+    $thefile = implode("", file($tmpl_file));
+    $thefile = addslashes($thefile);
+    $thefile = "\$r_file=\"".$thefile."\";";
+    eval($thefile);
+    print $r_file;
+}
+
+?>

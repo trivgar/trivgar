@@ -1,0 +1,15 @@
+Credits.
+
+Please note that some images and CSS code used on this theme m3blue were
+modeled after the inJection theme by kodred.
+kodred@babylone6tem.com
+http://www.babylone6tem.com 
+
+The rest was created by me using MS FrontPage2000, the transformed to php by hand
+using a text editor. and PHPCoder.
+
+If this theme looks like something else out there, I apologies, 
+I did not know and am not aware of anyone like this.
+
+MaxG
+support@globlenet.com

@@ -1,0 +1,52 @@
+---------------------------------------
+License Agreement for n-12.net products
+---------------------------------------
+license revision number 3 - 23/2/03
+
+You should carefully read the following terms and conditions before 
+using this software. Unless you have a different license agreement 
+signed by www.n-12.net your use of this software indicates your 
+acceptance of this license agreement and warranty. 
+
+Please also be aware that the license is subject to change at any 
+time without notice. The default url that the license permenantly 
+resides at is: http://www.n-12.net/license.txt
+
+I.   SOFTWARE LIMITATIONS 
+One (1) licensed copy of the program may reside on a single server, 
+in use by a single web site. For each installed instance of the 
+program, a separate copy of this license (or the most recent license 
+avalible) is required. 
+
+II.  SOFTWARE MODIFICATION RESTRICTIONS 
+Registered users may alter or modify this software, at their own risk,
+of course, but only for their own use. They may also hire others to 
+modify their own copy of the code, as long as the code is not transferred 
+to or retained by the individual who is hired (unless he/she is also 
+a license holder). Although license-holders may modify the code for 
+their use, modified code may NOT be resold or distributed to any extent.
+
+III. DISPLAY OF COPYRIGHT AND "POWERED BY" NOTICES REQUIRED 
+All copyright notices used throughout the program, within the scripts 
+and within the HTML that the scripts generate, MUST remain intact. 
+Furthermore, these notices, including the "powered by" wording that 
+appears online, must remain visible to the human eye. The user may note
+somewhere that the copywrite does not cover the content of their news
+articles.
+
+IV.  DISCLAIMER OF WARRANTY 
+THIS SOFTWARE AND THE ACCOMPANYING FILES ARE DISTRIBUTED "AS IS" AND 
+WITHOUT WARRANTIES AS TO PERFORMANCE OR MERCHANTABILITY OR ANY OTHER 
+WARRANTIES WHETHER EXPRESSED OR IMPLIED. BY ACCEPTANCE AND CONTINUED
+USE OF THIS SOFTWARE, THE USER IS EXPRESSING AGREEMENT WITH THIS LICENSE.
+
+V.   LIABILITY WAIVER
+The final condiditon of agreement with this license is that the user hold 
+agree not to hold www.n-12.net liable for any damage that may be caused
+by this software. The user must assume the entire risk of using the program.
+
+n-12.net holds no liablity for the content that the end user may publish or
+show using any of n-12.net's scripts.
+
+
+ANY AND ALL SCRIPTS PRODUCED BY N-12.NET ARE BOUND BY THIS LICENSE

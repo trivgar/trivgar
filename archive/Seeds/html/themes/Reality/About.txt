@@ -1,0 +1,32 @@
+.::www.realm.tr.cx design::.
+
+.::Designed by Necromancer::.
+
+--------------info--------------
+
+-there is extra styles and javascripts in style folder if you want you can remove them
+
+-style.css has diffirent transparent backgrounds styles (like td.class=lefting td.class=anything) class names is not important you can change it (like td.class=fstrzertyumn):)
+
+-Transparent td backgorunds parameters is <td class="name of the td.class"> ( like td class="right"> 
+
+-You can change bg image
+
+-Background is fixed (bgproperties=\"fixed\")
+
+-story_page, story_home ... are based html, because itis easy to change or design
+
+and finally please sent us your comment about design 
+
+Sorry about my english :)
+
+Ýf did not like the design and you want better design to your site please contact us
+
+Web Site Media Team:
+Ýlyas Toker :ilyast@ironmaiden.com
+Ali Yalçýn :aliyalcin@gmx.com.tr
+Gurkan Çalýk :gurkancalik@turk.net
+
+Information and Inquiry:
+reignemesis@mail.com
+realm@stibs.cc 

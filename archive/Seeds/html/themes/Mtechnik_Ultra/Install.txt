@@ -1,0 +1,50 @@
+::INSTALL::
+JUST A FEW THINGS U NEED TO CHANGE IF U LIKE, THIS THEME IS ALMOST 100% CONFIGURABLE. LINKS, BUTTONS, TITLE, EVEN CDPLAYER.
+
+::UPLOADING::
+UNZIP OPEN "THEMES" FOLDER ON UR SITE DIR, AND UPLOAD THE WHOLE "MTECHNIK_ULTRA" AND THATS IT.
+
+::DYNAMIC TEXT CONFIGS::
+TITLE- JUST LIKE MY OTHER THEMES, OPEN UP THE TITLE.TXT FILE:
+______________________________________________________________
+title=yoursite.com
+CHANGE YOURSITE.COM TO WHATEVER U WANT AND SAVE.
+______________________________________________________________
+
+LINKS- WORKS THE SAME AS THE TITLE, OPEN UP THE LINKS.TXT FILE:
+______________________________________________________________
+link1=index.php&link2=modules.php?name=Downloads&link3=modules.php?name=Your_Account&link4=modules.php?name=Web_Links&link5=modules.php?name=Submit_News
+
+THE LINKS ABOVE IS WHAT I HAVE FOR DEFAULT, IF U LIKE TO CHANGE IT JUST REPLACE THE LINK U WANT WITH THE DEFAULT LINKS
+EXAMPLE:
+______________________________________________________________
+LETS SAY I WANT TO CHANGE THE SECOND LINK WHICH ON DEFAULT IS DOWNLOADS, AND I WANT TO CHANGE THAT TO MY Top_Sites MODULE,
+
+BEFORE______________________________________________________________
+link1=index.php&link2=modules.php?name=Downloads&link3=modules.php?name=Your_Account&link4=modules.php?name=Web_Links&link5=modules.php?name=Submit_News
+____________________________________________________________________
+
+AFTER______________________________________________________________
+link1=index.php&link2=modules.php?name=Top_sites&link3=modules.php?name=Your_Account&link4=modules.php?name=Web_Links&link5=modules.php?name=Submit_News
+____________________________________________________________________
+
+Note:MAKE SURE AFTER U'VE CHANGE THE LINKS, THE LINKS STAY INTACT, NO SPACES IN BETWEEN THEM.
+
+
+BUTTON LABLE-
+
+SAME AS ABOVE, OPEN UP THE LINKNAME.TXT:
+__________________________________________________________________
+link1name=home&link2name=downloads&link3name=account&link4name=links&link5name=submit news
+___________________________________________________________________
+EACH BUTTON LABLE IS SEPERATED BY A "&" SIGN SO JUST REPLACE THEM THE WAY U DID WITH THE LINKS AND THATS IT.
+
+
+::CD TRACK::
+
+TO CHANGE THE TRACK ON THIS THEME, I'VE ADDED A TUTORIAL WITH SOURCE FILE AT MY FORUM, YOU CAN GET IT BY GOING TO WWW.MTECHNIK.NET. DUE TO FILE SIZE, I DIDNT ADD IT IN HERE.
+
+
+HOPE U ALL ENJOY IT, FEEL FREE TO ASK ME ANY QUESTIONS ABOUT IT. 
+
+MTECHNIK.NET

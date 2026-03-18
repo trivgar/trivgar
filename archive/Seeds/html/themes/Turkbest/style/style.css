@@ -1,0 +1,72 @@
+
+BODY { font: 10px geneva, verdana, arial, sans-serif; color: #3D3D3D; }
+
+TD, TH, .BOD, FONT { font: 10px geneva, verdana, arial, sans-serif; }
+INPUT {
+background-color : transparent; 
+color : #666666; 
+font-family : geneva, verdana, arial, sans-serif; 
+font-size : 10px; 
+font-weight : ;
+border-color : #7D9DBB;  
+border-top-width : 1px; 
+border-right-width : 1px; 
+border-bottom-width : 1px; 
+border-left-width : 1px;
+text-indent : 2px;  
+}
+BODY 
+{scrollbar-face-color: #006699; scrollbar-shadow-color: #003366; 
+scrollbar-highlight-color: #003366; scrollbar-3dlight-color: #bedfff; 
+scrollbar-darkshadow-color: #bedfff; scrollbar-track-color: #bedfff}; 
+scrollbar-arrow-color: #003366}
+TEXTAREA {
+FONT-FAMILY: geneva, verdana, arial, sans-serif; 
+FONT-SIZE: 10px;
+font-weight : ; 
+background-color : transparent;
+border-color : #7F80B1;  
+border-top-width : 1px; 
+border-right-width : 1px; 
+border-bottom-width : 1px; 
+border-left-width : 1px;
+text-indent : 2px;  
+}
+SELECT {
+FONT-FAMILY: geneva, verdana, arial, sans-serif; 
+FONT-SIZE: 10px;
+font-weight : ; 
+background-color : #FFFFFF;
+}
+A:link {
+text-decoration : none;
+font-size : 10px;
+font-family : geneva, verdana, arial, sans-serif;
+color : #003366;
+}
+A:visited {
+text-decoration : none;
+font-size : 10px;
+font-family : geneva, verdana, arial, sans-serif;
+color : #003366;
+}
+A:hover {
+text-decoration : none;
+font-size : 10px;
+font-weight : bold;
+font-family : geneva, verdana, arial, sans-serif;
+color : #0099cc;
+}
+A:active {
+text-decoration : none;
+font-size : 10px;
+font-family : geneva, verdana, arial, sans-serif;
+color : #333333;
+}
+A.small:link, A.small:visited, A.small:active { font: 9px geneva, verdana, arial, sans-serif; color: #972400; text-decoration: none; }
+
+A.small:hover { font: 9px geneva, verdana, arial, sans-serif; color: #4F0000; text-decoration: underline; }
+
+A.newsarc:link, A.newsarc:visited, A.newsarc:active { font: 10px geneva, verdana, arial, sans-serif; color: #4E4E4E; text-decoration: underline; }
+
+A.newsarc:hover { font: 10px geneva, verdana, arial, sans-serif; color: #262626; text-decoration: underline; }

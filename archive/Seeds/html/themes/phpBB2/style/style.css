@@ -1,0 +1,24 @@
+BODY { font: 10px MS Sans Serif, verdana, arial, sans-serif; color: #006699;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;}
+TD, TH, .BOD { font: 10px MS Sans Serif, verdana, arial, sans-serif; color: #006699; }
+A:link, A:visited, A:active { font: 10px MS Sans Serif, verdana, arial, sans-serif; color: #006699; text-decoration: none; }
+A:hover { font: 10px MS Sans Serif, verdana, arial, sans-serif; color: #FF6900; text-decoration: none; }
+.orange {BACKGROUND: none; COLOR: #FF6900; FONT-SIZE: 10px; FONT-FAMILY: MS Sans Serif, verdana, arial, sans-serif}
+.option {BACKGROUND: none; COLOR: #FF6900; FONT-SIZE: 10px; FONT-FAMILY: MS Sans Serif, verdana, arial, sans-serif}
+FONT {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-FAMILY: MS Sans Serif, verdana, arial, sans-serif}
+.tite {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-FAMILY: MS Sans Serif, verdana, arial, sans-serif}
+.bodyline { background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+.cat {
+	background-color:#D1D7DC; border: #FFFFFF; border-style: solid;
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+INPUT {FONT-FAMILY: MS Sans Serif, Helvetica, sans-serif; FONT-SIZE: 10px; BACKGROUND-COLOR: EFEFEF;}
+TEXTAREA {FONT-FAMILY: MS Sans Serif, Helvetica, sans-serif; FONT-SIZE: 10px; BACKGROUND-COLOR: EFEFEF;}
+SELECT {FONT-FAMILY: MS Sans Serif, Helvetica, sans-serif; FONT-SIZE: 10px; BACKGROUND-COLOR: EFEFEF;}

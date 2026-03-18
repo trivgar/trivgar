@@ -1,0 +1,153 @@
+BODY {
+background-color : #ffffff; 
+margin : 0; 
+padding : 0; 
+border-width : 0; 
+border-style : none; 
+} 
+a:link {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px;
+color : #ff0000; 
+text-decoration : none; 
+}
+a:visited {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+color : #ff0000;
+text-decoration : none;
+} 
+a:hover {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+color : #ff0000; 
+text-decoration : underline;
+background-color : #FFFFFF; 
+} 
+a:active {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+color : blue; 
+text-decoration : underline overline; 
+}
+.header {
+background-color : #003366; 
+} 
+.boxtitle {
+background-color : #cccccc; 
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-weight : bold; 
+color : #FFFFFF;
+} 
+.tiretleft {
+background-image : url(/themes/Korporate/images/vertical.gif); 
+background-color : #666666; 
+} 
+.titlenews {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 14px; 
+font-weight : bolder; 
+color : #ffffff; 
+background-color : #999999; 
+background-image : url(/themes/Korporate/images/back-titre-news.jpg); 
+background-repeat : repeat-y;
+border-color : #003366;
+border-style : solid; 
+border-top-width : 1px; 
+border-right-width : 0; 
+border-bottom-width : 1px; 
+border-left-width : 0;
+} 
+.boxcontent {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-weight : normal; 
+color : #003366; 
+} 
+.horizontalback {
+background-image : url(/themes/Korporate/images/horizontal.gif); 
+background-repeat : repeat-x; 
+} 
+.more {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px; 
+font-weight : bold;
+} 
+.more a:link {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px;
+color : #ff0000; 
+text-decoration : none; 
+}
+.more a:visited {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px; 
+color : #ff0000;
+text-decoration : none;
+} 
+.more a:hover {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px; 
+color : #ff0000; 
+text-decoration : underline;
+background-color : #FFFFFF; 
+} 
+.more a:active {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px; 
+color : #ff0000; 
+text-decoration : none; 
+}
+.texte {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-style : normal; 
+font-weight : normal; 
+color : #000000; 
+} 
+.copyright {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+font-weight : bold; 
+color : #666666; 
+}
+.copyright a:link {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+font-style : normal; 
+color : #ff0000; 
+text-decoration : none; 
+} 
+.copyright a:hover {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+color : #ff0000; 
+text-decoration : none; 
+} 
+.copyright a:active {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+color : #ff0000; 
+text-decoration : none; 
+} 
+.copyright a:visited {
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 10px; 
+color : #ff0000; 
+text-decoration : none; 
+} 
+.submitbut {
+background-color : #eeeeee; 
+color : #666666; 
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px; 
+font-weight : bold; 
+} 
+.formbut {
+background-color : #cccccc; 
+color : black; 
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 11px; 
+font-weight : bold; 
+}

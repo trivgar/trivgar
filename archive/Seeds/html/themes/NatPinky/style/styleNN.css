@@ -1,0 +1,21 @@
+FONT		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+TD		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px;}
+BODY	{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva;FONT-SIZE: 10px;BACKGROUND-COLOR:#000000;}
+P		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+DIV		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+INPUT		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+TEXTAREA	{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+FORM 		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+SELECT		{FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-SIZE: 10px}
+A:link          {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; TEXT-DECORATION: none; FONT-WEIGHT: bold;}
+A:active        {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; TEXT-DECORATION: none; FONT-WEIGHT: bold;}
+A:visited       {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; TEXT-DECORATION: underline; FONT-WEIGHT: bold;}
+A:hover         {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; TEXT-DECORATION: underline; FONT-WEIGHT: bold;}
+.title 		{BACKGROUND: none; COLOR: #CCCCCC; FONT-SIZE: 10px; FONT-WEIGHT: geneva,arial,bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #CCCCCC FONT-SIZE: 10px; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-WEIGHT: bold;}
+.storytitle 	{BACKGROUND: none; COLOR: #CCCCCC; FONT-SIZE: 12px; FONT-WEIGHT: geneva,arial,bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #CCCCCC; FONT-SIZE: 12px; FONT-WEIGHT: geneva,arial,bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #CCCCCC; FONT-SIZE: 10px; FONT-WEIGHT: geneva,arial,bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #CCCCCC; FONT-SIZE: 10px; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; FONT-WEIGHT: bold;}
+.option 	{BACKGROUND: none; COLOR: #CCCCCC; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #CCCCC; FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Tahoma,Verdana,Helvetica,geneva; TEXT-DECORATION: none}

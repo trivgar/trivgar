@@ -1,0 +1,31 @@
+FONT		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+TD		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+BODY		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px;
+		SCROLLBAR-FACE-COLOR: #bed8eb;
+		SCROLLBAR-HIGHLIGHT-COLOR: #92c0d1; SCROLLBAR-SHADOW-COLOR: #ddf8ff;
+		SCROLLBAR-3DLIGHT-COLOR: #ddf8ff; SCROLLBAR-ARROW-COLOR: #92c0d1; SCROLLBAR-TRACK-COLOR: #e7f0f8;
+		SCROLLBAR-DARKSHADOW-COLOR: #92c0d1}
+P		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+DIV		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+INPUT		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px;background-color: #6487DC;border-style: solid;border-color: #0021A9;border-width: 1px;color: #FFFFFF}
+.lupa		{border-width: 0px}
+TEXTAREA	{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+FORM 		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+SELECT		{FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px}
+A:link          {BACKGROUND: none; COLOR: #000099; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+A:visited       {BACKGROUND: none; COLOR: #000099; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+A:hover         {BACKGROUND: none; COLOR: #000099; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: underline}
+A:active        {BACKGROUND: none; COLOR: #000099; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+.title 		{BACKGROUND: none; COLOR: #215DC6; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif}
+.storytitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #215DC6; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif}
+.option 	{BACKGROUND: none; COLOR: #000066; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #215DC6; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}.titulos	{BACKGROUND: none; COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none}
+
+a.titul:link	{COLOR: #ffffff; TEXT-DECORATION: none}
+a.titul:visited	{COLOR: #ffffff; TEXT-DECORATION: none}
+a.titul:hover	{COLOR: #ffffff; TEXT-DECORATION: underline}
+a.titul:active	{COLOR: #ffffff; TEXT-DECORATION: none}

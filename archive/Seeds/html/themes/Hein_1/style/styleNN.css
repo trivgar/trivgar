@@ -1,0 +1,106 @@
+TD		    {FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE:11px}
+
+BODY		{FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE:11px; COLOR : #0A3642;}
+
+P		    {FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE:11px}
+
+DIV		    {FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE:11px}
+
+BODY        {BACKGROUND-COLOR: #FFFFFF; MARGIN-TOP : 0; MARGIN-RIGHT : 0; MARGIN-BOTTOM : 0; MARGIN-LEFT : 0; PADDING-TOP : 0; PADDING-RIGHT : 0; PADDING-BOTTOM : 0; PADDING-LEFT : 0;}
+
+A:link      {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE :11px; COLOR : #000000; TEXT-DECORATION : underline;} 
+
+A:visited   {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE :11px; COLOR : #000000; TEXT-DECORATION : underline;} 
+
+A:hover     {FONT-FAMILY: Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE :11px; COLOR : #FFFFCC; BACKGROUND-COLOR : #0A3642; TEXT-DECORATION : none;} 
+
+A:active    {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR :#000000; TEXT-DECORATION : underline;}
+
+.boxcontent {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11/12px; FONT-WEIGHT : normal; COLOR : #000000;} 
+
+
+.boxin     {FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #20AAD2; } 
+
+.boxin A:link    {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR :#20AAD2; TEXT-DECORATION : underline; } 
+
+.boxin A:visited {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #20AAD2; TEXT-DECORATION : underline;} 
+
+.boxin A:hover   {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #20AAD2; BACKGROUND-COLOR : #FFFFCC; TEXT-DECORATION : underline; } 
+
+.boxin A:active  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : red; TEXT-DECORATION : none; }
+
+.content{FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE :11px; FONT-WEIGHT : normal; COLOR : #000000;} 
+
+.content     {FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #DC9350; } 
+
+.content A:link    {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR :#000080; TEXT-DECORATION : underline; } 
+
+.content A:visited {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #000080; TEXT-DECORATION : underline;} 
+
+.content A:hover   {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #000080; BACKGROUND-COLOR : #FFFFCC; TEXT-DECORATION : underline; } 
+
+.content A:active  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : red; TEXT-DECORATION : none; }
+
+
+.headmenu  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #ffffff;} 
+
+.headmenu A:link {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR :#FFFFCC; TEXT-DECORATION : none;} 
+
+.headmenu A:visited {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #FFFFCC; TEXT-DECORATION : none;} 
+
+.headmenu A:hover {FONT-FAMILY:  Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bolder;COLOR : #FFFFCC; TEXT-DECORATION : none;} 
+
+.headmenu A:active {FONT-FAMILY: Tahoma,  Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : red; TEXT-DECORATION : none;}
+
+.boxtitle  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #FF9900;} 
+
+.rbox {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #000000;} 
+
+.rbox A:link      {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #083942; TEXT-DECORATION : underline;} 
+
+.rbox A:visited   {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #083942; TEXT-DECORATION : underline;} 
+
+.rbox A:hover     {FONT-FAMILY: Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #FFFFCC; BACKGROUND-COLOR : #16A5BE; TEXT-DECORATION : none;} 
+
+.rbox A:active    {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR :#0A3642; TEXT-DECORATION : underline;}
+
+.newsline  {BACKGROUND-IMAGE: //url(themes/Compuor/images/more-line.gif); BACKGROUND-repeat : repeat-x; BACKGROUND-position : 0% 50%;} 
+
+.head-line {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; font-STYLE : normal; FONT-WEIGHT : bold; COLOR : #FFFFCC; horizontal-align: center; vertical-align : middle; BORDER-COLOR : black; BACKGROUND-IMAGE : url(themes/Hein_2/images/b02.jpg); BACKGROUND-repeat : repeat-x, y; BACKGROUND-position : 0% 100%; BORDER-STYLE : solid; BORDER-TOP-WIDTH : 0px; BORDER-RIGHT-width : 0; BORDER-BOTTOM-width : 0px; BORDER-LEFT-width : 0;}
+
+//.lineblue {background-image : url(themes/Hein_2/images/lineblue.gif); background-repeat : repeat-x; background-position : 0% 0%;}
+
+.thead-line {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; font-STYLE : normal; FONT-WEIGHT : bold; COLOR : #FFFFFF; vertical-align : middle; BACKGROUND-IMAGE : url(themes/Hein_2/images/b04.jpg); BACKGROUND-repeat : repeat-x; BACKGROUND-position : 0% 100%; BORDER-TOP: #000 1px solid; BORDER-RIGHT-width : 0; BORDER-BOTTOM: #000 1px solid;  BORDER-LEFT-width : 0;}
+
+.thead-line A:link {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #FFFFCC; TEXT-DECORATION : none;} 
+
+.thead-line A:visited {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #FFFFCC; TEXT-DECORATION : none}
+
+.thead-line A:hover {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #0A3642;BACKGROUND-COLOR : #FFFFCC; TEXT-DECORATION : none;} 
+
+.thead-line A:active {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : blue; TEXT-DECORATION : none;}  
+
+.option    {FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 16px; FONT-WEIGHT : bold; COLOR : #000000; } 
+
+.option A:link      {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 16px; FONT-WEIGHT : bold; COLOR : #000000; TEXT-DECORATION :none;} 
+
+.option A:visited   {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 16px; FONT-WEIGHT : bold; COLOR : #000000; TEXT-DECORATION : none;} 
+
+.option A:hover     {FONT-FAMILY: Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 16px; FONT-WEIGHT : bold; COLOR : #000000; BACKGROUND-COLOR : RED; TEXT-DECORATION : none;} 
+
+.option A:active    {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE : 16px; FONT-WEIGHT : bold; COLOR :#000000; TEXT-DECORATION : underline;}
+
+.lbox {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT: normal; COLOR: #FFFFcc;} 
+
+.lbox A:link    {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR :#FFCC99; TEXT-DECORATION : underline; } 
+
+.lbox A:visited {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #FFCC99; TEXT-DECORATION : underline;} 
+
+.lbox A:hover   {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #FFCC99; BACKGROUND-COLOR : #9C1821; TEXT-DECORATION : underline; } 
+
+.lbox A:active  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : red; TEXT-DECORATION : none; }
+
+INPUT     {BACKGROUND-COLOR: silver; COLOR : #0A3642; FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; BORDER-COLOR : #0A3642;  BORDER-TOP-WIDTH : 1px; BORDER-RIGHT-width : 1px; BORDER-BOTTOM-width : 1px; BORDER-LEFT-width : 1px;text-indent : 3px;} 
+
+SELECT    {BACKGROUND-COLOR: silver; COLOR : #0A3642; FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold;}
+

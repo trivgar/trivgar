@@ -1,0 +1,28 @@
+PHP-Nuke Theme: Xtreme
+=====================
+
+March 9, 2002        : Version 1
+----------------------------------
+First Release
+
+
+Version 1.1
+----------------------------------
+Header.html fixes
+Split the theme.php into 2 files for easy color changing.
+
+
+May 10, 2002	: Version 1.2
+----------------------------------
+Additional Header.html Fixes
+
+
+June 14, 2002	: Version 2.0
+----------------------------------
+Additional Header.html Fixes (should work with 800x600)
+	1 Reordered top nav menu
+	2 Modified the top menu to work with default installation
+Stylesheet enhancements
+	1 Gave it a tree structure.,
+	2 Added scrollbar, and form box colors.
+	3 Margin widths

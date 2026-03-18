@@ -1,0 +1,21 @@
+FONT		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000}
+TD		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000}
+BODY		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000}
+P		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000}
+DIV		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000}
+INPUT		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000; background-color: #ffffff; border-color: #999999;}
+TEXTAREA	{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000; background-color: #ffffff; border-color: #003333;}
+FORM 		{FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000}
+A:link          {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: underline}
+A:active        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: underline}
+A:visited       {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: underline}
+A:hover         {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: underline}
+.title 		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica;}
+.storytitle     {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: none}
+.boxcontent     {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica;}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; TEXT-DECORATION: none}
+.selectbox      {FONT-FAMILY: Verdana, Arial, Geneva, Helvetica; FONT-SIZE: 11px; COLOR: #000000; background-color: #eeeeee; border-color: #999999;}

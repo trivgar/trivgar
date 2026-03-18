@@ -1,0 +1,59 @@
+***** Theme for PHP-Nuke - http://phpnuke.org *****
+
+========================= Theme Information =========================
+Date Creation:	Feb 2002
+Modified:	June 14, 2002
+Title:		Xtreme
+Version:	2.0
+Filename:	
+Author:		MGCJerry
+Author E-Mail:	mgcjerry@users.sourceforge.net
+Description:	Updated to work with phpnuke 5.6.
+
+========================= Misc Information =========================
+New Graphics:	No
+CSS:		Yes
+Java:		No
+Java-Script:	Yes
+Flash:		No
+Sound:		No
+New Files:	Yes
+	A new banners.php has been included that uses your site's
+default theme. No more of those odd colors in your client banner
+login screen. It reads the default theme from your config.php file.
+
+Here is the code added into the main functions (you may hard code
+your default theme in there by hand if you wish:
+	include("config.php");
+	$dtheme ="themes/$Default_Theme/theme.php";
+	include($dtheme);
+
+HARD CODING YOUR DEFAULT THEME (recommended for experienced nukers):
+Before doing any modificiations, backup your current file!!! I'm
+not responsible if you hose your files.
+
+Hard code your default theme by replacing all instances of
+$Default_Theme with the folder of your intended theme folder. The
+necessary lines can be found on lines; 76, 111, & 242.
+
+After you successfully do this, you may remove the include("config.php");
+line from lines 75, 110, & 241.
+
+========================= Construction =========================
+Tested on:	Internet Explorer 5 and 6 (Win2k & Win98 SE)
+Resolution:	Ok but the scrollbar colors are only present in
+		new browsers
+Base:		Xtreme Theme
+Editor(s):	Notepad & php edit
+Known Bugs:	*none*
+Build Time:	1 hr (update time)
+
+========================= Installation =========================
+Unzip the contents into your phpnuke directory, and upload to your server
+
+**Do not** rename any files or folders, otherwise it wont work.
+
+Log in using the "God Account", or a regitered user and change themes. :)
+
+========================= Copyright & Legal Information =========================
+This is Under GPL/GNU Licence

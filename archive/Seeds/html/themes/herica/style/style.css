@@ -1,0 +1,21 @@
+FONT		{FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+TD		{FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+BODY		{FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+P		{FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+DIV		{FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+INPUT		{BACKGROUND: none; FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+TEXTAREA	{BACKGROUND: none; FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+FORM 		{BACKGROUND: none; FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+OPTION      {BACKGROUND: none; FONT-FAMILY: Arial,Lucida,Verdana,Helvetica; FONT-SIZE: 11px}
+A:link          {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold;FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: underline}
+A:active        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}
+A:visited       {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold;FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: underline}
+A:hover         {BACKGROUND: #none; COLOR: #FF7CFF; FONT-SIZE: 11px; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}
+.title 		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 13px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 13px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Lucida,Verdana, Helvetica; TEXT-DECORATION: none}

@@ -1,0 +1,68 @@
+#divUpControl{position:absolute; width:760; left:10; top:145; z-index:1; text-align: right} 
+#divDownControl{position:absolute; width:760; left:10; top:440; z-index:1; text-align: right} 
+#divContainer{position:absolute; width:740; height:320; overflow:hidden; top:135; left:20; clip:rect(0,740,320,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0} 
+
+body                 {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px; scrollbar-face-color: #006699; scrollbar-track-color: #999999; scrollbar-arrow-color: #FFFFFF; scrollbar-shadow-color: #006699; scrollbar-3dlight-color: #000000; scrollbar-darkshadow-color: #000000;buttonface: #FF0000;}
+
+
+
+
+
+
+FONT                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+TD                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+P                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+DIV                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+INPUT                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+TEXTAREA             {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+FORM                      {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+SELECT                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px;}
+
+
+
+A:link               {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; TEXT-DECORATION: underline; BACKGROUND: none;  font-variant : normal;  font-weight : bold;  }
+
+A:active             {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; TEXT-DECORATION: underline; BACKGROUND: none;  font-variant : normal; font-weight : bold; }
+
+A:visited            {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; TEXT-DECORATION: underline; BACKGROUND: none;  font-variant : normal; font-weight : bold; }
+
+A:hover              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; TEXT-DECORATION: underline; BACKGROUND: none;  font-variant : normal; font-weight : bold; }
+
+.note            {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.title                      {FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.storytitle              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.storytitle A:link              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.storytitle A:active              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.storytitle A:visited              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.storytitle A:hover              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.boxtitle              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; font-variant : normal; BACKGROUND: none;}
+
+.option              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.storycat             {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: underline; BACKGROUND: none;}
+
+.tiny                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none; BACKGROUND: none;}
+
+.slogan                     {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: Olive; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;  font : small-caps; }
+
+.content              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; BACKGROUND: none;}
+
+.boxcontent              {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 11px; BACKGROUND: none;}
+
+
+

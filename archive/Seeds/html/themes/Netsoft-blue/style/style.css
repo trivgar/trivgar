@@ -1,0 +1,80 @@
+FONT		{FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+TD		{FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+.tdtitle        {COLOR: #fafad2; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+BODY		{FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+P		{FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+DIV		{FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+INPUT		{FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+TEXTAREA	{FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+FORM 		{FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+SELECT		{FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px}
+A:link          {BACKGROUND: none; FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;  FONT-WEIGHT: bold;}
+A:active        {BACKGROUND: none; FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;  FONT-WEIGHT: bold;}
+A:visited       {BACKGROUND: none; FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; FONT-WEIGHT: bold;}
+A:hover         {BACKGROUND: none; FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;  FONT-WEIGHT: bold}
+.title 		{BACKGROUND: none; COLOR: #AAAAAA; FONT-SIZE: 16px; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif}
+.content1 	{BACKGROUND: none; COLOR: #FFFFFF; FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif}
+.storytitle 	{BACKGROUND: none; COLOR: #363636; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.option1 	{BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY:  Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.cellbox {
+     border-top: 1px #374646 solid; 
+     border-left: 1px #374646 solid; 
+     border-right: 1px #374646 solid; 
+     border-bottom: 1px #374646 solid;
+     font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+     font-size: 8pt; 
+     font-weight: normal;}
+     
+body {SCROLLBAR-FACE-COLOR: #ddddff;
+    FONT-SIZE: 8pt;
+    SCROLLBAR-HIGHLIGHT-COLOR: #9999ff;
+    SCROLLBAR-SHADOW-COLOR: #aaaaff;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, 'Ms Sans Serif', sans-serif;
+    SCROLLBAR-DARKSHADOW-COLOR: #5555ff;
+    bgcolor: #ffffff
+}
+.formtexts1 {  text-decoration: none; background-color: #FAFAFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight : normal; }
+.formtexts2 {  text-decoration: none; background-color: #96A096; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight : normal; }
+A.a_top_menu:link {
+	FONT-WEIGHT: bold; COLOR: #fafad2; TEXT-DECORATION: none
+}
+A.a_top_menu:visited {
+	FONT-WEIGHT: bold; COLOR: #fafad2; TEXT-DECORATION: none
+}
+A.a_top_menu:hover {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.a_top_menu:active {
+	FONT-WEIGHT: bold; COLOR: #fffbde; TEXT-DECORATION: none
+}
+TEXTAREA {BORDER: #000000 1px outset;}
+INPUT.norm
+{
+    BORDER-RIGHT: 0px outset;
+    BORDER-TOP: 0px outset;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: 0px outset;
+    COLOR: #484848;
+    BORDER-BOTTOM: 0px outset;
+}
+INPUT
+{
+    BORDER-RIGHT: #000000 1px outset;
+    BORDER-TOP: #000000 1px outset;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: #000000 1px outset;
+    COLOR: #484848;
+    BORDER-BOTTOM: #000000 1px outset;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    BACKGROUND-COLOR: #ffffff
+}

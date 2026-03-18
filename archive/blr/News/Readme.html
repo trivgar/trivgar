@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>Readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body {  font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p><font size="5" color="#FF0000">Readme.html<a name="top"></a></font></p>
+<hr>
+<p>Contents -</p>
+<p><a href="#installation">Installation</a><br>
+  <a href="#afterinstall">After Installation</a><br>
+  <a href="#adminguide">Administration Panel Guide</a><br>
+  <a href="#templates">How to make your own Templates?</a><br>
+  <a href="#emoticons">About Emoticons</a><br>
+  <a href="#troubleshooting">Troubleshooting </a></p>
+<hr>
+<p><b>Installation<a name="installation"></a> </b><a href="#top"><font size="2">Top</font></a></p>
+<ol>
+  <li>First unzip the downloaded Zip file to a directory on your Hard Drive<br>
+    You have 2 main files:<br>
+    <br>
+    admin.php - The Administration Script<br>
+    index.php - The demo of your news in the template you chose</li>
+  <br>
+  <br>
+  <li>Upload to a Directory on your Site. For example: http://www.yoursite.com/News/<br>
+    <br>
+    Chmod path.inc and config.php 777 for the Installation.<br>
+    <br>
+    Chmod the News directory 777 as the script needs to have write access to create 
+    the backups directory<br>
+    <br>
+    And Chmod the rest of the files and folder 755<br>
+    <br>
+  </li>
+  <li>Now type: For example. http://www.yourserver.com/News/install.php<br>
+    And follow the online instructions<br>
+    <br>
+  </li>
+  <li>Goto After Installation</li>
+</ol>
+<hr>
+<p><b>After Installation<a name="afterinstall"></a></b><b> </b><a href="#top"><font size="2">Top</font></a><br>
+</p>
+<p>Now that N-12 News Pro is installed and Hopefully running fine, you need to 
+  know<br>
+  how to access the news that you have posted!<br>
+  If you type: For example. http://www.yourserver.com/News/index.php<br>
+  You should see the News that you have posted, in the<br>
+  template that you have choosen! <br>
+  To display your news on any page on your server (with a .php or .php3 extention)<br>
+  you will need to add this code in the place you want it to be displayed!</p>
+<p><font size="2" face="Courier New, Courier, mono">&lt;?</font></p>
+<p><font size="2" face="Courier New, Courier, mono">require('path.inc');<br>
+  require($path.&quot;/config.php&quot;);</font></p>
+<p><font size="2" face="Courier New, Courier, mono">include($path.&quot;/template.php&quot;);</font></p>
+<p><font size="2" face="Courier New, Courier, mono">?&gt;</font></p>
+<p>Make sure you put a copy of path.inc in the directory you are putting your 
+  news displaying in.</p>
+<hr>
+<p><b>Administration Panel Guide<a name="adminguide"></a> </b><a href="#top"><font size="2">Top</font></a></p>
+<p>Admin Main - This will take you back to the Admin Main</p>
+<p>Return To Index - This will take you back to the index.php of your News Folder.</p>
+<p>Logout - This will let you log out of N-12 News Pro Script.</p>
+<p>Post - This will let you Post News.</p>
+<p>Modify Posts - This will let you Edit news or Delete news that has already 
+  been Posted.</p>
+<p>My Details - This will let you Edit your details like your Email Address and 
+  Password! <br>
+  <br>
+</p>
+<hr width="500" align="left">
+Only if Admin User<br>
+<hr width="500" align="left">
+<p>Create a New Admin - This will let you Create New Admin users so other Trusted 
+  people can Post News.</p>
+<p>View Current Admins - This will let you Delete Admins that have been Created.</p>
+<p>Edit Comments - This will let you delete and view any comments that have been 
+  made.</p>
+<p>Preferences - This will allow you to change the Options that you set when you 
+  installed the N-12 News Pro Script.</p>
+<p>Backup DB - This will allow you to Backup your Database to a directory called 
+  backups.<br>
+</p>
+<hr width="500" align="left">
+<p>Help/About - This is where you can find out how to Contact The script makers. 
+</p>
+<p>Credits - This is where it lists the Makers of this Script!</p>
+<hr>
+<p><b>How to make your own Temnplates?<a name="templates"></a> </b><a href="#top"><font size="2">Top</font></a></p>
+<ol>
+  <li>First of all make a new Folder in the Themes folder and call it what you 
+    want the name of your Template to be.<br>
+    <br>
+  </li>
+  <li>Now copy the index.tpl from one of the other Theme Folders and paste it 
+    into the folder you have just created.<br>
+    Also copy the comments folder into the folder you have just created.<br>
+    <br>
+  </li>
+  <li><b><font color="#FF0000">Main HTML:</font></b><br>
+    &nbsp; Open the index.tpl that you have just copied from the other folder 
+    and Change the HTML to what ever you like!</li>
+</ol>
+<blockquote> 
+  <p> &nbsp; &nbsp; &nbsp; <u>Variables:</u> <br>
+    <br>
+    &nbsp; &nbsp; &nbsp; Remember that to display certain Things like the Postdate 
+    or the Posttime you have to use a small bit&nbsp; &nbsp; &nbsp; of code!</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; <b>Subject</b> - {subject}</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp;<b> Message</b> - {news}</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; <b>Post Time</b> - {posttime}<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp;<b> Post Date</b> - {postdate}</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; <b>Poster Username</b> - {poster}</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; <b>Poster Email</b> - {posteremail}<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; <b>URL (for images)</b> - {url}<br>
+    &nbsp; &nbsp; &nbsp; &nbsp; For Example:<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td background=&quot;{url}/themes/SlotZone/box_loop.gif&quot;&gt;<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; Or<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img border=&quot;0&quot; 
+    src=&quot;{url}/themes/Orange/botright.gif&quot;&gt;</p>
+  <p><br>
+    <font color="#FF0000"><b>Comments HTML:</b></font></p>
+  <p> &nbsp; Open up the folder called Comments, and you will see 4 files: </p>
+  <p><br>
+    &nbsp; &nbsp; &nbsp; <b>comments.tpl</b> - This stores the HTML that will 
+    be displayed in the Main Template if Comments are turned on.<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Variables for this page:</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No Variables that are to be changed 
+    are on this page</p>
+  <p><br>
+    <b>&nbsp; &nbsp; &nbsp; comments_posting.tpl</b> - This stores the HTML that 
+    will be displayed when a user wants to post a comment. <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Variables for this page:</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No Variables that are to be changed 
+    are on this page</p>
+  <p> <br>
+    <b>&nbsp; &nbsp; &nbsp; comments_viewing.tpl</b> - This stores the HTML that 
+    will be displayed when a user wants to view comments.<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Variables for this page:</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No Variables that are to be changed 
+    are on this page</p>
+  <p><br>
+    &nbsp; &nbsp; &nbsp; <b>comments_thankyou.tpl</b> - This is the thankyou page 
+    that will be displayed after the user has posted a &nbsp; &nbsp; &nbsp; comment.<br>
+    <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Variables for this page:</p>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No Variables that are to be changed 
+    are on this page</p>
+</blockquote>
+<p><br>
+  <i><b>Thats all you need to know! Now you can start Creating your Own Templates 
+  </b></i></p>
+<hr>
+<p><b>About Emoticons<a name="emoticons"></a> </b><a href="#top"><font size="2">Top</font></a></p>
+<p>In Version 2.00 and above of n-12 News Pro, we have included support for Emoticons.<br>
+  Emoticons are Pictures that can be accessed when you post.<br>
+  For Example:</p>
+<p>Emoticons are Great (h)</p>
+<p>Would Be:</p>
+<p>Emoticons are Great SHADES SMILE</p>
+<p><br>
+  Here is a List of all the Emoticons Supported in Version 2.00 and up of n-12 
+  News.</p>
+<p>(y) = <img src="emoticons/thumbs_up.gif" width="19" height="19"><br>
+  (n) = <img src="emoticons/thumbs_down.gif" width="19" height="19"><br>
+  (b) = <img src="emoticons/beer_yum.gif" width="19" height="19"><br>
+  (d) = <img src="emoticons/martini_shaken.gif" width="19" height="19"><br>
+  (x) = <img src="emoticons/girl_handsacrossamerica.gif" width="19" height="19"><br>
+  (z) = <img src="emoticons/guy_handsacrossamerica.gif" width="19" height="19"><br>
+  :[ = <img src="emoticons/bat.gif" width="19" height="19"><br>
+  (}) = <img src="emoticons/girl_hug.gif" width="19" height="19"><br>
+  ({) = <img src="emoticons/dude_hug.gif" width="19" height="19"><br>
+  :) = <img src="emoticons/regular_smile.gif" width="19" height="19"><br>
+  :D = <img src="emoticons/teeth_smile.gif" width="19" height="19"><br>
+  :o = <img src="emoticons/omg_smile.gif" width="19" height="19"><br>
+  :p = <img src="emoticons/tounge_smile.gif" width="19" height="19"><br>
+  ;) = <img src="emoticons/wink_smile.gif" width="19" height="19"><br>
+  :( = <img src="emoticons/sad_smile.gif" width="19" height="19"><br>
+  :s = <img src="emoticons/confused_smile.gif" width="19" height="19"><br>
+  :| = <img src="emoticons/whatchutalkingabout_smile.gif" width="19" height="19"><br>
+  :'( = <img src="emoticons/cry_smile.gif" width="19" height="19"><br>
+  :$ = <img src="emoticons/embaressed_smile.gif" width="19" height="19"><br>
+  (h) = <img src="emoticons/shades_smile.gif" width="19" height="19"><br>
+  :@ = <img src="emoticons/angry_smile.gif" width="19" height="19"><br>
+  (a) = <img src="emoticons/angel_smile.gif" width="19" height="19"><br>
+  (6) = <img src="emoticons/devil_smile.gif" width="19" height="19"><br>
+  (l) = <img src="emoticons/heart.gif" width="19" height="19"><br>
+  (u) = <img src="emoticons/broken_heart.gif" width="19" height="19"><br>
+  (k) = <img src="emoticons/kiss.gif" width="19" height="19"><br>
+  (g) = <img src="emoticons/present.gif" width="19" height="19"><br>
+  (f) = <img src="emoticons/rose.gif" width="19" height="19"><br>
+  (w) = <img src="emoticons/wilted_rose.gif" width="19" height="19"><br>
+  (p) = <img src="emoticons/camera.gif" width="19" height="19"><br>
+  (~) = <img src="emoticons/film.gif" width="19" height="19"><br>
+  (t) = <img src="emoticons/phone.gif" width="19" height="19"><br>
+  (@) = <img src="emoticons/kittykay.gif" width="19" height="19"><br>
+  (&amp;) = <img src="emoticons/bowwow.gif" width="19" height="19"><br>
+  (c) = <img src="emoticons/coffee.gif" width="19" height="19"><br>
+  (i) = <img src="emoticons/lightbulb.gif" width="19" height="19"><br>
+  (s) = <img src="emoticons/moon.gif" width="19" height="19"><br>
+  (*) = <img src="emoticons/star.gif" width="19" height="19"><br>
+  (8) = <img src="emoticons/musical_note.gif" width="19" height="19"><br>
+  (e) = <img src="emoticons/envelope.gif" width="19" height="19"><br>
+  (^) = <img src="emoticons/cake.gif" width="19" height="19"><br>
+  (o) = <img src="emoticons/clock.gif" width="19" height="19"></p>
+<p>You Should try them out by typing them in when you Post!</p>
+<hr>
+<p><b>Troubleshooting<a name="troubleshooting"></a> </b><a href="#top"><font size="2">Top</font></a><br>
+  <br>
+  If you don't know how to do anything that it asks you in Our installation guide 
+  please look here!</p>
+<hr width="500" align="left">
+Help! I the installation script won't run!<br>
+<hr width="500" align="left">
+<p>There are a number of reasons this could happen, but one which we<br>
+  cannot fix is if are are running an F2 server.</p>
+<p>We apologise for this inconvenience but at the moment we have found no<br>
+  way of overcoming this problem!</p>
+<p>If you are not running F2's then please read on.</p>
+<p>First of all make sure you have uploaded</p>
+<hr width="500" align="left">
+Help! I've installed it but it still doesn't work!<br>
+<hr width="500" align="left">
+<p>First make sure that you have Followed the Install instructions to the T!<br>
+  If you KNOW that you have then check all the PATHS. If these paths for some 
+  reason<br>
+  where wrong then it would come up with all sorts of errors!</p>
+<p>If it still doesn't work please email your problem to Tom: tom@n-12.net or 
+  Chris: Chris@n-12.net<br>
+  and tell them your Problem. We may also need more identification and you MUST 
+  include the url of your <br>
+  news script in your post.</p>
+<hr width="500" align="left">
+Help! My Question isn't on here!<br>
+<hr width="500" align="left">
+<br>
+For any other questions please email your problem to Tom: tom@n-12.net or Chris: 
+Chris@n-12.net<br>
+and tell them your Problem. We may also need more identification and you MUST 
+include the url of your <br>
+news script in your post.
+<p>Thanxs</p>
+<p>The n-12 Group</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+BODY { font: 10px geneva, verdana, arial, sans-serif; color: #006699; }
+TD, TH, .BOD { font: 10px geneva, verdana, arial, sans-serif; color: #006699; }
+A:link, A:visited, A:active { font: 10px geneva, verdana, arial, sans-serif; color: #8BC7FF; text-decoration: none; }
+A:hover { font: 10px geneva, verdana, arial, sans-serif; color: #8BC7FF; text-decoration: none; }
+select, input, textarea { font: 10px geneva, verdana, arial, sans-serif; color: #000000; }
+A.small:link, A.small:visited, A.small:active { font: 9px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: none; }
+A.small:hover { font: 9px geneva, verdana, arial, sans-serif; color: #FFFFFF; text-decoration: underline; }
+A.newsarc:link, A.newsarc:visited, A.newsarc:active { font: 10px geneva, verdana, arial, sans-serif; color: #8BC7FF; text-decoration: underline; }
+A.newsarc:hover { font: 10px geneva, verdana, arial, sans-serif; color: #8BC7FF; text-decoration: underline; }
+.orange {BACKGROUND: none; COLOR: #FF6900; FONT-SIZE: 10px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+.option {BACKGROUND: none; COLOR: #8BC7FF; FONT-SIZE: 10px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+FONT {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+.titel {BACKGROUND: none; COLOR: #8BC7FF; FONT-SIZE: 10px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+.content {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 10px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+body {
+	scrollbar-face-color: #006699;
+	scrollbar-highlight-color: #2DB6FD;
+	scrollbar-shadow-color: #005886;
+	scrollbar-3dlight-color: #038DD5;
+	scrollbar-arrow-color: #8BC7FF;
+	scrollbar-track-color: #005F90;
+	scrollbar-darkshadow-color: #00466A;
+	color: #FFFFFF;
+	font-size : 12px;
+}

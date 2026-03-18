@@ -1,0 +1,36 @@
+<br><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+<TR><TD COLSPAN=3 background="themes/Orange/images/barpic1o.gif" height="25" align=right><P>
+<script type="text/javascript">
+<!--   // Array ofmonth Names
+var monthNames = new Array( "Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember")
+var now = new Date();
+thisYear = now.getYear();
+if(thisYear < 1900) {thisYear += 1900}; // corrections if Y2K display problem
+document.write(now.getDate() + ". " + monthNames[now.getMonth()] + " " + thisYear);
+// -->
+</script>&nbsp;&nbsp;
+</P></TD></TR><TR>
+<TD bgcolor="#FFD226" WIDTH=20%><P><a href="index.php"><img src="themes/Orange/images/logo.gif" border="0" alt="$sitename"></P></TD><TD bgcolor="#FFD226" WIDTH=60%><P ALIGN=CENTER>
+</P></TD>
+<TD bgcolor="#FFD226" WIDTH=20%><P>&nbsp;
+<form action=modules.php?name=Search method=post><b>Search:</b>&nbsp;<input type=text name=query size=10 class="formtexts">&nbsp;
+<input type=image name=search src=themes/Orange/images/search.gif border=0>
+</form>
+<form action="modules.php?name=News&new_topic" method="post"><b>Topics </b><font class="gensmall">$topics_list</font></form>
+</P></TD></TR><TR><TD background="themes/Orange/images/barpic1.gif" COLSPAN=3 height="25">
+<P ALIGN=CENTER>
+.:: <a href="index.php" class="navi">Home</a>&nbsp;::.&nbsp;&nbsp;
+.:: <a href="modules.php?name=Downloads" class="navi">Downloads</a>&nbsp;::.&nbsp;&nbsp;
+.:: <a href="modules.php?name=Forums" class="navi">Forums</a>&nbsp;::.&nbsp;&nbsp;
+.:: <a href="modules.php?name=Submit_News" class="navi">Submit News</a>&nbsp;::.&nbsp;&nbsp;
+.:: <a href="modules.php?name=Topic" class="navi">Topics</a>&nbsp;::.&nbsp;&nbsp;
+.:: <a href="modules.php?name=Web_Links" class="navi">Links</a>&nbsp;::.&nbsp;&nbsp;
+.:: <a href="modules.php?name=Your_Account" class="navi">Account</a>&nbsp;::.&nbsp;&nbsp;
+</P></TD></TR>
+</TABLE>
+<!-- FIN DEL TITULO -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFCD01" align="center"><tr valign="top">
+<td bgcolor="#FFCD01">$public_msg<img src="themes/Orange/images/pixel.gif" width="1" height="10" border="0" alt=""></td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFCD01" align="center"><tr valign="top">
+<td bgcolor="#FFCD01"><img src="themes/Orange/images/pixel.gif" width="0" height="1" border="0" alt=""></td>
+<td bgcolor="#FFCD01" width="150" valign="top">

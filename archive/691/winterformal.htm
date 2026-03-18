@@ -1,0 +1,136 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function GetCookie (name) {  
+var arg = name + "=";  
+var alen = arg.length;  
+var clen = document.cookie.length;  
+var i = 0;  
+while (i < clen) {
+var j = i + alen;    
+if (document.cookie.substring(i, j) == arg)      
+return getCookieVal (j);    
+i = document.cookie.indexOf(" ", i) + 1;    
+if (i == 0) break;   
+}  
+return null;
+}
+function SetCookie (name, value) {  
+var argv = SetCookie.arguments;  
+var argc = SetCookie.arguments.length;  
+var expires = (argc > 2) ? argv[2] : null;  
+var path = (argc > 3) ? argv[3] : null;  
+var domain = (argc > 4) ? argv[4] : null;  
+var secure = (argc > 5) ? argv[5] : false;  
+document.cookie = name + "=" + escape (value) + 
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
+((path == null) ? "" : ("; path=" + path)) +  
+((domain == null) ? "" : ("; domain=" + domain)) +    
+((secure == true) ? "; secure" : "");
+}
+function DeleteCookie (name) {  
+var exp = new Date();  
+exp.setTime (exp.getTime() - 1);   
+var cval = GetCookie (name);  
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var expDays = 30;
+var exp = new Date(); 
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+function amt(){
+var count = GetCookie('count')
+if(count == null) {
+SetCookie('count','1')
+return 1
+}
+else {
+var newcount = parseInt(count) + 1;
+DeleteCookie('count')
+SetCookie('count',newcount,exp)
+return count
+   }
+}
+function getCookieVal(offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+// End -->
+</SCRIPT>
+<!--
+/* Standards */ 
+BODY          {scrollbar-face-color: #000000; scrollbar-shadow-color: #0000FF; scrollbar-highlight-color: 
+
+#cccccc;
+               scrollbar-3dlight-color: #333333; scrollbar-darkshadow-color: #0033FF; scrollbar-track-color: 
+
+#444444;
+               scrollbar-arrow-color: "blue"; font-family: Verdana, arial, helvetica, serif; font-size:14px;} 
+
+
+-->
+<title>workshop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+</head>
+
+<body bgcolor="000033" text="#0000ff">
+ 
+<div id="Layer1" style="position:absolute; left:136px; top:6px; width:784px; height:599px; z-index:1"> 
+  <table border="1" height="596" cellpadding="8" bordercolor="#0000FF">
+    <tr> 
+      <td height="186"><img src="banner.gif" width="775" height="180"></td>
+    </tr>
+    <tr> 
+      <td height="341" bordercolor="#0000FF" align="center" valign="top"> 
+        <div align="center"> 
+          <p><img src="jamesbond.jpg" width="568" height="855"></p>
+          <p>james bond/travis</p>
+          <p><img src="littlewill.jpg" width="831" height="581"></p>
+          <p>little will</p>
+          <p><img src="mike.jpg" width="842" height="592"></p>
+          <p>mike</p>
+          <p><img src="nickstaring.jpg" width="848" height="590"></p>
+          <p>nick and shantel....</p>
+          <p><img src="binladen.jpg" width="315" height="295"></p>
+          <p>yep</p>
+          <p><img src="makeout.jpg" width="859" height="598"></p>
+          <p>oh la la..me and teresa</p>
+          <p><img src="mmmyummy.jpg" width="853" height="590"></p>
+          <p>mmm yummy</p>
+          <p><img src="teresaandtravis4.jpg" width="571" height="869"></p>
+          <p>me and teresa being hot</p>
+          <p><img src="teresastaring.jpg" width="848" height="584"></p>
+          <p>whats teresa lookin at!?!?</p>
+          <p><img src="teresaspose.jpg" width="881" height="584"></p>
+          <p>cutie teresa</p>
+          <p><img src="travisheadok.jpg" width="842" height="581"></p>
+          <p>back of my head?!!</p>
+        </div>
+      </td>
+    </tr>
+    <tr> 
+      <td bgcolor="#000000"> 
+        <center>
+        </center>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

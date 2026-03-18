@@ -1,0 +1,364 @@
+body {
+                scrollbar-face-color: #F5E7C2; scrollbar-highlight-color: #E2BF9C;
+                scrollbar-shadow-color: #E2BF9C; scrollbar-3dlight-color: #FFF8D2;
+                scrollbar-arrow-color: #94670C; scrollbar-track-color: #F9F0DB;
+                scrollbar-darkshadow-color: #F3C563;
+}
+
+font    { font-family: Verdana, Arial, Helvetica, sans-serif;  color : #333333;  FONT-SIZE: 10px;     }
+
+TD                     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px;}
+P                     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px;}
+DIV                     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px;}
+INPUT                     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #8B4513;  FONT-SIZE: 10px;  background : White;    }
+TEXTAREA             {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px;}
+FORM                      {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px;}
+SELECT                     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px;}
+
+.note            
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+COLOR: #578A13; 
+FONT-SIZE: 10px; 
+LETTER-SPACING: 2px;
+FONT-WEIGHT: normal; 
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.title                      
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+COLOR: #333333; 
+FONT-SIZE: 11px; 
+FONT-WEIGHT: bold; 
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.boxtitle              {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; font-variant : normal; BACKGROUND: none;}
+.option              {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+.storycat             {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: underline; BACKGROUND: none;}
+
+.tiny                     
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif; 
+COLOR: #578A13; 
+FONT-SIZE: 9px; 
+FONT-WEIGHT: normal; 
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.tiny A:link                    
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif; 
+COLOR: #578A13; 
+FONT-SIZE: 9px; 
+FONT-WEIGHT: normal; 
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.tiny A:active                    
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif; 
+COLOR: #578A13; 
+FONT-SIZE: 9px; 
+FONT-WEIGHT: normal; 
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.tiny A:visited                    
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif; 
+COLOR: #578A13; 
+FONT-SIZE: 9px; 
+FONT-WEIGHT: normal; 
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.tiny  A:hover                   
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif; 
+COLOR: #131D8A; 
+FONT-SIZE: 9px; 
+FONT-WEIGHT: normal; 
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none; 
+BACKGROUND: none;
+}
+
+.slogan                     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;  font : small-caps; }
+.content              {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px; BACKGROUND: none;}
+.boxcontent              {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #333333; FONT-SIZE: 11px; BACKGROUND: none;}
+
+A:link
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 11px;
+TEXT-DECORATION: underline;
+BACKGROUND: none;
+font-variant : normal;
+font-weight : bold;
+}
+
+A:active
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 11px;
+TEXT-DECORATION: underline;
+BACKGROUND: none;  font-variant : normal; font-weight : bold;
+}
+
+A:visited
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 11px;
+TEXT-DECORATION: underline;
+BACKGROUND: none;
+font-variant: normal;
+font-weight: bold;
+}
+
+A:hover
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #131D9A;
+FONT-SIZE: 11px;
+TEXT-DECORATION: underline;
+BACKGROUND: none;
+font-variant : normal;
+font-weight : bold;
+}
+
+.leftcontent
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 11px;
+FONT-WEIGHT: bold;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.leftcontent  A:link
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 11px;
+FONT-WEIGHT: bold;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.leftcontent  A:active
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 11px;
+FONT-WEIGHT: bold;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.leftcontent  A:visited
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513; FONT-SIZE: 11px;
+FONT-WEIGHT: bold;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.leftcontent  A:hover
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8A8213;
+FONT-SIZE: 11px;
+FONT-WEIGHT: bold;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.storycontent
+{
+FONT-FAMILY: "MS Sans Serif", Geneva, sans-serif; 
+COLOR: #8B4513;
+FONT-SIZE: 10px; 
+FONT-WEIGHT: normal;
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.storycontent  A:link
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 10px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.storycontent  A:active
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 10px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.storycontent  A:visited
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513; 
+FONT-SIZE: 10px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 1px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+}
+
+.storycontent  A:hover
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #CD853F; 
+FONT-SIZE: 10px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 1px;
+TEXT-DECORATION: underline;
+BACKGROUND: none;
+}
+
+.comments
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif; 
+COLOR: #578A13;
+FONT-SIZE: 10px; 
+FONT-WEIGHT: normal;
+LETTER-SPACING: 3px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : italic;
+}
+
+.comments  A:link
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #578A13;
+FONT-SIZE: 10px;
+FONT-WEIGHT: normal;
+LETTER-SPACING: 3px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : italic;
+}
+
+.comments  A:active
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #578A13;
+FONT-SIZE: 10px;
+FONT-WEIGHT: normal;
+LETTER-SPACING: 3px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : italic;
+}
+
+.comments  A:visited
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #578A13; 
+FONT-SIZE: 10px;
+FONT-WEIGHT: normal;
+LETTER-SPACING: 3px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : italic;
+}
+
+.comments  A:hover
+{
+FONT-FAMILY: Arial, Helvetica, sans-serif;
+COLOR: #8B4513; FONT-SIZE: 10px;
+FONT-WEIGHT: normal;
+TEXT-DECORATION: underline;
+BACKGROUND: none;
+FONT : italic;
+}
+
+.storytitle
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+COLOR: #8B4513;
+FONT-SIZE: 9px; 
+FONT-WEIGHT: bold;
+LETTER-SPACING: 2px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : small-caps;
+}
+
+.storytitle  A:link
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 9px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 2px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : small-caps;
+}
+
+.storytitle  A:active
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 9px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 2px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : small-caps;
+}
+
+.storytitle  A:visited
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+COLOR: #8B4513;
+FONT-SIZE: 9px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 2px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : small-caps;
+}
+
+.storytitle  A:hover
+{
+FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+COLOR: #578A13; 
+FONT-SIZE: 9px;
+FONT-WEIGHT: bold;
+LETTER-SPACING: 2px;
+TEXT-DECORATION: none;
+BACKGROUND: none;
+FONT : small-caps;
+}

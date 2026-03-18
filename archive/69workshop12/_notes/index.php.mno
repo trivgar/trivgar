@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_journal" value="name:jid;datatype:int,name:aid;datatype:string,name:title;datatype:string,name:bodytext;datatype:blob,name:mood;datatype:string,name:pdate;datatype:string,name:ptime;datatype:string,name:status;datatype:string,name:mtime;datatype:string,name:mdate;datatype:string" />
+	<infoitem key="UD_workshop" value="name:name;datatype:string,name:pass;datatype:string" />
+</info>

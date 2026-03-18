@@ -1,0 +1,12 @@
+a:link				{ color: #000080; font-family: Verdana; text-decoration: underline }
+a:visited			{ color: #000080; font-family: Verdana; text-decoration: underline }
+a:active			{ color: #000080; font-family: Verdana; text-decoration: underline }
+a:hover			{ font-family: Verdana; color: #FF0000; text-decoration: underline }
+
+body				{ font-family: Verdana; background-color: #FFFFFF; color: #000000; font-size: 8pt }
+input, select		{ font-family: Verdana; font-size: 8pt; color: #000000 }
+font				{ color: #000000; font-family: Verdana; font-size: 8pt }
+textarea			{  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #000000}
+
+.important			{ color: red; font-family: Verdana; font-size: 8pt }
+.adminhead			{ color: white; font-family: Verdana; font-size: 8pt }

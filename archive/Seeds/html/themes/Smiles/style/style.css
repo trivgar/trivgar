@@ -1,0 +1,125 @@
+BODY {
+	color : White;
+	background-color : #333366;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	scrollbar-face-color: #333366;
+	scrollbar-highlight-color: #666699;
+	scrollbar-3dlight-color: #9999CC;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-shadow-color: #333333;
+	scrollbar-arrow-color: #FFFF33;
+	scrollbar-track-color: #666699;
+}
+
+TABLE, TD {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+
+A, A:ACTIVE, A:FOCUS, A:LINK, A:VISITED {
+	color : Yellow;
+	text-decoration : none;
+}
+
+A:HOVER {
+	color : Yellow;
+	text-decoration : underline;
+}
+BODY {
+	color : White;
+	background-color : #333366;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+
+TABLE, TD {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+
+A, A:ACTIVE, A:FOCUS, A:LINK, A:VISITED {
+	color : Yellow;
+	text-decoration : none;
+}
+
+A:HOVER {
+	color : Yellow;
+	text-decoration : underline;
+}
+
+INPUT, TEXTAREA, SELECT, FORM {
+	color : #000000;
+	BORDER-TOP-COLOR: #FFFFFF;
+	BORDER-LEFT-COLOR: #FFFFFF;
+	BORDER-RIGHT-COLOR: #FFFFFF;
+	BORDER-BOTTOM-COLOR: #FFFFFF;
+	BORDER-TOP-WIDTH: 1px;
+	BORDER-LEFT-WIDTH: 1px;
+	FONT-SIZE: 10px;
+	BORDER-BOTTOM-WIDTH: 1px;
+	FONT-FAMILY: Verdana,Helvetica;
+	BORDER-RIGHT-WIDTH: 1px;
+}
+
+.title {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.content {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+
+.block-title, B {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+}
+
+.option {
+	color : #c8c8c8;
+	BORDER-TOP-COLOR: #FFFFFF;
+	BORDER-LEFT-COLOR: #FFFFFF;
+	BORDER-RIGHT-COLOR: #FFFFFF;
+	BORDER-BOTTOM-COLOR: #FFFFFF;
+	BORDER-TOP-WIDTH: 1px;
+	BORDER-LEFT-WIDTH: 1px;
+	FONT-SIZE: 10px;
+	BORDER-BOTTOM-WIDTH: 1px;
+	FONT-FAMILY: Verdana,Helvetica;
+	BORDER-RIGHT-WIDTH: 1px;
+}
+
+.title {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.content {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+}
+
+.small {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+}
+
+.blocktitle {
+	color : White;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight : bold;
+}

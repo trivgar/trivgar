@@ -1,0 +1,140 @@
+App.progressCountTotal = 17;
+App.progressCountCurrent = 0;
+fw.dismissBatchDialogWhenDone = true;
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/gene.jpg');
+App.progressCountCurrent = 1;
+App.batchStatusString = 'gene.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/gene_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/gene_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/gene_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/gene_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/gene_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/gene_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/grad1.jpg');
+App.progressCountCurrent = 2;
+App.batchStatusString = 'grad1.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/grad1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/grad1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/grad1_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/grad1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/grad1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/grad1_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/grad2.jpg');
+App.progressCountCurrent = 3;
+App.batchStatusString = 'grad2.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/grad2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/grad2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/grad2_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/grad2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/grad2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/grad2_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/grad3.jpg');
+App.progressCountCurrent = 4;
+App.batchStatusString = 'grad3.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/grad3_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/grad3_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/grad3_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/grad3_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/grad3_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/grad3_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/grad4.jpg');
+App.progressCountCurrent = 5;
+App.batchStatusString = 'grad4.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/grad4_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/grad4_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/grad4_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/grad4_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/grad4_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/grad4_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/grad5.jpg');
+App.progressCountCurrent = 6;
+App.batchStatusString = 'grad5.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/grad5_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/grad5_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/grad5_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/grad5_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/grad5_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/grad5_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/group1.jpg');
+App.progressCountCurrent = 7;
+App.batchStatusString = 'group1.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/group1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/group1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/group1_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/group1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/group1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/group1_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/group2.jpg');
+App.progressCountCurrent = 8;
+App.batchStatusString = 'group2.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/group2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/group2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/group2_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/group2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/group2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/group2_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/group3.jpg');
+App.progressCountCurrent = 9;
+App.batchStatusString = 'group3.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/group3_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/group3_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/group3_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/group3_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/group3_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/group3_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/lauren1.jpg');
+App.progressCountCurrent = 10;
+App.batchStatusString = 'lauren1.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/lauren1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/lauren1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/lauren1_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/lauren1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/lauren1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/lauren1_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/lauren2.jpg');
+App.progressCountCurrent = 11;
+App.batchStatusString = 'lauren2.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/lauren2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/lauren2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/lauren2_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/lauren2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/lauren2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/lauren2_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/tim1.jpg');
+App.progressCountCurrent = 12;
+App.batchStatusString = 'tim1.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/tim1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/tim1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/tim1_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/tim1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/tim1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/tim1_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/tim2.jpg');
+App.progressCountCurrent = 13;
+App.batchStatusString = 'tim2.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/tim2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/tim2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/tim2_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/tim2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/tim2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/tim2_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/travis.jpg');
+App.progressCountCurrent = 14;
+App.batchStatusString = 'travis.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/travis_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/travis_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/travis_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/travis_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/travis_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/travis_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/tt1.jpg');
+App.progressCountCurrent = 15;
+App.batchStatusString = 'tt1.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/tt1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/tt1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/tt1_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/tt1_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/tt1_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/tt1_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/tt2.jpg');
+App.progressCountCurrent = 16;
+App.batchStatusString = 'tt2.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/tt2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/tt2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/tt2_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/tt2_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/tt2_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/tt2_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+doc = fw.openDocument('file:///K|/Pics/Pictures/Other/8th/will.jpg');
+App.progressCountCurrent = 17;
+App.batchStatusString = 'will.jpg';
+if (!Files.exists('file:///K|/Pics/blr/8/images/will_jpg.jpg') || confirm('file:///K|/Pics/blr/8/images/will_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/images/will_jpg.jpg',({applyScale:false, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:"150", useScale:true, xSize:0, ySize:0}));
+if (!Files.exists('file:///K|/Pics/blr/8/thumbnails/will_jpg.jpg') || confirm('file:///K|/Pics/blr/8/thumbnails/will_jpg.jpg already exists. Click OK to replace the file.')) 
+fw.exportDocumentAs(doc, 'file:///K|/Pics/blr/8/thumbnails/will_jpg.jpg',({applyScale:true, colorMode:"24 bit", exportFormat:"JPEG", jpegQuality:80, jpegSmoothness:0, jpegSubsampling:0, name:"JPEG - Better Quality", numEntriesRequested:0, percentScale:100, useScale:false, xSize:-100, ySize:-100}));
+fw.closeDocument(doc);
+'done';

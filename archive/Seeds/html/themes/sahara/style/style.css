@@ -1,0 +1,82 @@
+BODY {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-style : normal; 
+color : #000000; 
+background-color : #666666; 
+} 
+a:link {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-style : normal; 
+color : #000000; 
+text-decoration : underline; 
+} 
+a:hover {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+color : #ff0000; 
+text-decoration : none; 
+background-color : #f7f6e6; 
+} 
+a:active {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+color : #000000; 
+text-decoration : underline; 
+} 
+a:visited {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+} 
+.blackback {
+background-color : #000000; 
+} 
+.newsgrey {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 14px; 
+font-weight : bold; 
+color : #cc0000; 
+} 
+.newstxt {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-style : normal; 
+font-weight : normal; 
+} 
+.greytop {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-style : normal; 
+font-weight : normal; 
+color : #cc9933; 
+background-color : #cccccc; 
+} 
+.marronclair {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+background-color : #ffcc66; 
+height : 40px; 
+} 
+.Marronfonce {
+background-color : #cc9933; 
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 18px; 
+font-weight : bolder; 
+} 
+.marronclair2 {
+font-family : Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-weight : bold; 
+color : #cc0000; 
+text-align : left; 
+vertical-align : middle; 
+text-indent : 4pt; 
+} 
+.formbut {
+background-color : #cc9933; 
+color : #ffffff; 
+font-family : Verdana, Arial, Helvetica, sans-serif; 
+font-size : 12px; 
+font-weight : bold; 
+} 

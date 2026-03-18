@@ -1,0 +1,47 @@
+INSTALLATION INSTRUCTIONS FOR PHP-NUKE 5.5
+
+(PLEASE READ THE INSTALLATION INSTRUCTIONS CAREFULLY!!!)
+
+THIS THEME WILL ONLY WORK IF YOU REPLACE YOUR block($side) FUNCTION IN mainfile.php.
+(PLEASE BACKUP YOUR mainfile.php FILE BEFORE MAKING MODIFICATIONS)
+
+REPLACE IT WITH THE FOLLOWING CODE:
+
+function blocks($side) {
+    global $storynum, $prefix, $multilingual, $currentlang, $dbi, $admin, $user, $block_side; // $block_side added by Somara Sem
+    if ($multilingual == 1) {
+    	$querylang = "AND (blanguage='$currentlang' OR blanguage='')";
+    } else {
+    	$querylang = "";
+    }
+    
+    $side = strtolower($side[0]); // Added by Somara Sem
+    $block_side = $side; // Added by Somara Sem
+    
+    if (strtolower($side[0]) == "l") {
+	$pos = "l";
+    } elseif (strtolower($side[0]) == "r") {
+	$pos = "r";
+    }  elseif (strtolower($side[0]) == "c") {
+	$pos = "c";
+    }
+    $side = $pos;
+    $result = sql_query("select bid, bkey, title, content, url, blockfile, view from ".$prefix."_blocks where position='$pos' AND active='1' $querylang ORDER BY weight ASC", $dbi);
+    while(list($bid, $bkey, $title, $content, $url, $blockfile, $view) = sql_fetch_row($result, $dbi)) {
+	if ($bkey == admin) {
+	    adminblock();
+	} elseif ($bkey == userbox) {
+	    userblock();
+	} elseif ($bkey == "") {
+	    if ($view == 0) {
+		render_blocks($side, $blockfile, $title, $content, $bid, $url);
+	    } elseif ($view == 1 AND is_user($user) || is_admin($admin)) {
+		render_blocks($side, $blockfile, $title, $content, $bid, $url);
+	    } elseif ($view == 2 AND is_admin($admin)) {
+		render_blocks($side, $blockfile, $title, $content, $bid, $url);
+	    } elseif ($view == 3 AND !is_user($user) || is_admin($admin)) {
+		render_blocks($side, $blockfile, $title, $content, $bid, $url);
+	    }
+	}
+    }
+}

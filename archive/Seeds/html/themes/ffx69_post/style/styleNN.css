@@ -1,0 +1,217 @@
+/* mblocFig */
+
+body
+{
+background-color: #ffffff;
+color: #339980;
+font-size : 11px;
+font-family : Tahoma, Arial, Helvetica, Helv, sans-serif;
+font-weight : normal;
+
+scrollbar-3dlight-color:    #96C8C8;
+scrollbar-arrow-color:      #9CE3D8;
+scrollbar-darkshadow-color: #39676F;
+scrollbar-face-color:       #76C0C7;
+scrollbar-highlight-color:  #39676F;
+scrollbar-shadow-color:     #96C8C8;
+scrollbar-track-color:      #B4E8E6;
+
+margin-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px
+}
+
+input
+{
+	font-size : 11px;
+	height : 19px
+}
+
+select
+{
+	font-size : 11px
+}
+
+textarea
+{
+	font-family : Tahoma, Arial, Helvetica, Helv, sans-serif;
+	font-size : 12px
+}
+
+.pn-normal {
+font-family: Tahoma, Arial, Helvetica, Helv, sans-serif;
+font-size: 11px;
+font-weight: normal;
+color: #333333;
+text-decoration: none;
+background-color : transparent;
+}
+
+.pn-normal TEXTAREA {
+color: #000000;
+background-color : white
+}
+
+.pn-normal INPUT {
+color: #000000;
+}
+
+.pn-normal SELECT {
+color: #000000;
+background-color : white
+}
+
+.pn-normal OPTION {
+color: #000000;
+background-color : white
+}
+
+.pn-normal A:link {
+COLOR: #64BDA7;
+TEXT-DECORATION: bolder;
+background-color : transparent;
+}
+
+.pn-normal A:visited {
+COLOR: #64BDA7;
+TEXT-DECORATION: bold;
+background-color : transparent;
+}
+
+.pn-normal A:hover {
+COLOR: #409782;
+TEXT-DECORATION: bold;
+background-color : transparent;
+}
+
+.pn-normal A:active {
+COLOR: #339980;
+TEXT-DECORATION: none;
+background-color : transparent;
+}
+
+.pn-title {
+font-family: Tahoma, Arial, Helvetica, Helv, sans-serif;
+font-size: 14px;
+font-weight: bold;
+color: #339980;
+text-decoration: none;
+background-color : transparent;
+}
+
+.pn-title TD {
+	color: #339980;
+	font-size: 14px
+}
+
+.pn-title A:link {
+COLOR: #339980;
+TEXT-DECORATION: bold
+}
+
+.pn-title A:visited {
+COLOR: #339980;
+TEXT-DECORATION: bold
+}
+
+.pn-title A:hover {
+COLOR: #409782;
+TEXT-DECORATION: none
+}
+
+.pn-title A:active {
+COLOR: #4AB097;
+TEXT-DECORATION: none
+}
+
+.pn-sub {
+font-family: Tahoma, Arial, Helvetica, Helv, sans-serif;
+font-size: 9px;
+font-weight: normal;
+color: #339980;
+text-decoration: none
+}
+
+.pn-sub A:link {
+COLOR: #222222;
+TEXT-DECORATION: none
+}
+
+.pn-sub A:visited {
+COLOR: #333333;
+TEXT-DECORATION: underline
+}
+
+.pn-sub A:hover {
+COLOR: #555555;
+TEXT-DECORATION: bold
+}
+
+.pn-sub A:active {
+COLOR: #555555;
+TEXT-DECORATION: underline;
+font-style : normal
+}
+
+.pn-logo {
+color: #339980;
+FONT-SIZE: 16px;
+FONT-WEIGHT: bold;
+FONT-FAMILY: Tahoma, Arial, Helvetica, Helv, sans-serif;
+LETTER-SPACING: 85%;
+TEXT-DECORATION: none
+}
+
+A.pn-logo:link {
+COLOR: #339980;
+TEXT-DECORATION: none
+}
+
+A.pn-logo:visited {
+COLOR: #64BDA7;
+TEXT-DECORATION: none
+}
+
+A.pn-logo:hover	{
+COLOR: #409782;
+TEXT-DECORATION: none
+}
+
+A.pn-logo:active {
+COLOR: #407297;
+TEXT-DECORATION: none
+}
+
+.pn-logo-small  {
+COLOR: #339980;
+FONT-SIZE: 11px;
+FONT-WEIGHT: bold;
+FONT-FAMILY: Tahoma, Arial, Helvetica, Helv, sans-serif;
+TEXT-DECORATION: none
+}
+
+.pn-pagetitle {
+font-family: Tahoma, Arial, Helvetica, Helv, sans-serif;
+font-size: 14px;
+font-weight: bold;
+color: #339980;
+text-decoration: none
+}
+
+/* default classes */
+td { font: 11px Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 130% }
+
+h1 {  font: bold 18pt Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 100% }
+h2 {  font: bold 16pt Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 100% }
+h3 {  font: bold 14pt Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 100% }
+h4 {  font: bold 13pt Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 100% }
+h5 {  font: bold 12pt Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 100% }
+h6 {  font: bold 11pt Tahoma, Arial, Helvetica, Helv, sans-serif; color: #339980; line-height: 100% }
+
+a:active {  color: #404040; text-decoration: none}
+a:hover {  color: #535353; text-decoration: bolder}
+a:link {  color: #2D2D2D; text-decoration: none}
+a:visited {  color: #5A7C74; text-decoration: none}
+
+hr { border: thin dotted; color: #B5D7CE;  }

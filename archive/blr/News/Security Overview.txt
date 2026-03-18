@@ -1,0 +1,24 @@
+n-12 News Security Overview
+
+First when you type in your password and username, 
+then click Submit it passes it back to the Login.php
+and it the Script sets 2 cookies on your Computer.
+
+1 Called N12NEWSID
+
+And the Other is Called N12NEWSIP
+
+You can probably work out that the first Cookie Stores
+your User ID, and the second Cookie stores the IP Address
+that the user used to log in with.
+After it sets the cookie, it updates the Username that they
+logged in with's user_ip field, to there IP Address.
+
+When you access your admin.php page it include auth.php!
+In auth.php it checks to see if the 2 Cookies have been
+set, if they have been set the script then checks the IP
+address in the cookie with the IP Address that they are
+using to view the pages. Then if its the same, it checks
+the IP Address in the Cookie with the IP address that was
+stored in the DB. If it all checks out and all the IP 
+Address's are the same then it sets $logged_in too 1.

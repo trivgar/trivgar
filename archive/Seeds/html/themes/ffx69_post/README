@@ -1,0 +1,50 @@
+LEGAL NOTICE
+NO COMMERCIAL USE WITHOUT PERMISSION.
+Otherwise GPL applies.
+
+*** mblocFig ***
+Theme for postnuke 0.711
+
+AUTHOR
+
+created by J.Wilson / mentalbloc
+http://mentalbloc.da.ru
+
+GENERAL
+
+No php files were harmed during the creation of this theme.
+No hardcoded colors are used in this theme.
+
+All font calls are CSS based.
+via
+styles/style.css
+styles/styleNN.css
+
+INSTALL
+
+Installation by copying the complete directory structure mblocTec/... etc
+to the themes/ directory under postnuke.
+
+EDITING
+
+Please credit me when editing, if you have Adobe ImageReady 3.0
+the Graphics are provided in the archive...
+
+ImageReady Save Optimized into the Theme Folder will update the
+graphics as required, provided you didn't mess with the slices...
+
+NavBar links are setup via an array in function themeheader()
+in theme.php... it should be VERY easy to figure out what's going on.
+
+DISCLAIMER...
+
+Yeah, do what you like with it but credit me.
+
+All use except commercial is permitted, if you wish to use this theme
+or create a new one based on it for a commercial site or to resell, I
+must give explicit permission.
+
+COPYRIGHT? Not quite... just don't screw me over,
+thanks... I'm starving.
+
+jai.wilson@ntlworld.com

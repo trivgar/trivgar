@@ -1,0 +1,143 @@
+FONT {
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+TD {
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+BODY {
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+P {
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+DIV {
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+INPUT {
+	BACKGROUND-COLOR: #333333;
+	COLOR: #CC0000;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+TEXTAREA {
+	BACKGROUND-COLOR: #333333;
+	COLOR: #CC0000;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+SELECT {
+	BACKGROUND-COLOR: #333333;
+	COLOR: #CC0000;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+FORM {
+	FONT-FAMILY: Verdana,Helvetica;
+	FONT-SIZE: 12px;
+}
+
+BODY {
+	BACKGROUND-IMAGE: url(bar.gif);
+	SCROLLBAR-FACE-COLOR:#600000;
+	SCROLLBAR-HIGHLIGHT-COLOR:#600000;
+	SCROLLBAR-3DLIGHT-COLOR:#CC0000;
+	SCROLLBAR-DARKSAHDOW-COLOR:#000000;
+	SCROLLBAR-SHADOW-COLOR:#CC0000;
+	SCROLLBAR-ARROW-COLOR:#FF0000;
+	SCROLLBAR-TRACK-COLOR:#000000;      
+}
+
+A:link {
+	COLOR: 808080;
+	FONT-SIZE: 12px Verdana, Helvetica;
+	TEXT-DECORATION: navy;
+}
+
+A:active {
+	COLOR: C5C5C5;
+	FONT-SIZE: 12px Verdana, Helvetica;
+	TEXT-DECORATION: underline;
+}
+
+A:visited {
+	COLOR: 808080;
+	FONT-SIZE: 12px Verdana, Helvetica;
+	TEXT-DECORATION: underline;
+}
+
+A:hover {
+	COLOR: 00FF00;
+	FONT-SIZE: 12px Verdana, Helvetica;
+	TEXT-DECORATION: underline overline;
+}
+
+.title {
+	COLOR: C5C5C5;
+	FONT-SIZE: 16px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Helvetica;
+}
+
+.content {
+	COLOR: C5C5C5;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Verdana, Helvetica;
+}
+
+.storytitle {
+	COLOR: C5C5C5;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Helvetica;
+}
+
+.storycat {
+	COLOR: C5C5C5;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Helvetica;
+	TEXT-DECORATION: underline;
+}
+
+.boxtitle {
+	COLOR: C0C0C0;
+	FONT-SIZE: 12px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Helvetica;
+}
+
+.boxcontent {
+	COLOR: C5C5C5;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Verdana, Helvetica;
+}
+
+.option {
+	COLOR: C5C5C5;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Helvetica;
+}
+
+.tiny {
+	COLOR: C5C5C5;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: normal;
+	FONT-FAMILY: Verdana, Helvetica;
+}

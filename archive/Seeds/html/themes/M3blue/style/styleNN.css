@@ -1,0 +1,47 @@
+TD		    {FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+BODY		{FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px; COLOR : #000000;}
+P		    {FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+DIV		    {FONT-FAMILY: Tahoma, Verdana,Helvetica; FONT-SIZE: 11px}
+BODY        {BACKGROUND-COLOR: #FFFFFF; MARGIN-TOP : 0; MARGIN-RIGHT : 0; MARGIN-BOTTOM : 0; MARGIN-LEFT : 0; PADDING-TOP : 0; PADDING-RIGHT : 0; PADDING-BOTTOM : 0; PADDING-LEFT : 0;}
+A:link      {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #000080; TEXT-DECORATION : underline;} 
+A:visited   {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #000080; TEXT-DECORATION : underline;} 
+A:hover     {FONT-FAMILY: Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #FFFFCC; BACKGROUND-COLOR : #FFCC00; TEXT-DECORATION : none;} 
+A:active    {FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR :#000080; TEXT-DECORATION : underline;}
+.head-dark-back {FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif; FONT-SIZE : 11px; font-STYLE : normal; FONT-WEIGHT : bold; COLOR : #ffffff; BACKGROUND-COLOR : #003366;}
+.lineblue    {BACKGROUND-IMAGE: url(/themes/m3blue/images/lineblue.gif); BACKGROUND-repeat : repeat-x; BACKGROUND-position : 0% 0%;}
+.newsline    {BACKGROUND-IMAGE: url(/themes/m3blue/images/more-line.gif); BACKGROUND-repeat : repeat-x; BACKGROUND-position : 0% 50%;BACKGROUND-COLOR : transparent;} 
+.linevertical {BACKGROUND-IMAGE: url(/themes/m3blue/images/lineblack-vertical.gif); BACKGROUND-repeat : repeat-y; BACKGROUND-position : 100% 0%;}
+.fond-orange {BACKGROUND-COLOR: #B82020;}
+.fond-nuit   {BACKGROUND-COLOR: #003366;}
+.fond-orange-head {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #ffffff; BACKGROUND-COLOR : #B82020; height : 35px;} 
+.news-titre  {FONT-FAMILY: Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; font-STYLE : normal; FONT-WEIGHT : bolder; COLOR : #000000; BACKGROUND-IMAGE : url(/themes/m3blue/images/back-titre-news.gif); BACKGROUND-repeat : repeat; BACKGROUND-position : 0% 0%; text-align : LEFT; vertical-align : middle;}
+.news-titre A:link {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #000000; FONT-WEIGHT : bolder; TEXT-DECORATION : underline;} 
+.news-titre A:visited {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #000000; FONT-WEIGHT : bolder;TEXT-DECORATION : underline;} 
+.news-titre A:hover {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #000000;FONT-WEIGHT : bolder;BACKGROUND-COLOR : #FFCC00; TEXT-DECORATION : none;} 
+.news-titre A:active {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : red;FONT-WEIGHT : bolder; TEXT-DECORATION : underline; }
+.back-line {vertical-align: middle; BORDER-COLOR : black; BORDER-STYLE : solid; BORDER-TOP-WIDTH : 2px; BORDER-RIGHT-width : 0; BORDER-BOTTOM-width : 2px; BORDER-LEFT-width : 0;} 
+.head-line {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; font-STYLE : normal; FONT-WEIGHT : bold; COLOR : #000000; vertical-align : middle; BORDER-COLOR : black; BACKGROUND-IMAGE : url(/themes/m3blue/images/back-head-line.gif); BACKGROUND-repeat : repeat-x; BACKGROUND-position : 0% 100%; BORDER-STYLE : solid; BORDER-TOP-WIDTH : 2px; BORDER-RIGHT-width : 0; BORDER-BOTTOM-width : 2px; BORDER-LEFT-width : 0;}
+.head-line A:link {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #306498; TEXT-DECORATION : none;} 
+.head-line A:visited {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #306498; TEXT-DECORATION : none}
+.head-line A:hover {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : #000000;BACKGROUND-COLOR : #FFFFCC; TEXT-DECORATION : none;} 
+.head-line A:active {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; COLOR : blue; TEXT-DECORATION : none;}  
+.headmenu  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #000080;} 
+.headmenu A:link {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : Navy; TEXT-DECORATION : none;} 
+.headmenu A:visited {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : Navy; TEXT-DECORATION : none;} 
+.headmenu A:hover {FONT-FAMILY:  Tahoma, Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bolder;COLOR : #ffffcc; TEXT-DECORATION : none;} 
+.headmenu A:active {FONT-FAMILY: Tahoma,  Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : Navy; TEXT-DECORATION : none;}
+.boxtitle  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold; COLOR : #FF9900;BACKGROUND-IMAGE : url; //(/themes/m3blue/images/menu_TOP.jpg);BACKGROUND-position : 0% 0%;height : 19px;} 
+.boxcontent{FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #000000;} 
+.pn-normal {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal;} 
+.newsline  {BACKGROUND-IMAGE: url(/themes/m3blue/images/more-line.gif); BACKGROUND-repeat : repeat-x; BACKGROUND-position : 0% 50%;} 
+
+
+.boxin     {FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #FFFFCC; } 
+.boxin A:link    {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #FFFFFF; TEXT-DECORATION : none; } 
+.boxin A:visited {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #FFFFFF; TEXT-DECORATION : none;} 
+.boxin A:hover   {FONT-FAMILY:Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : #000080;BACKGROUND-COLOR : #ffffcc; TEXT-DECORATION : none; } 
+.boxin A:active  {FONT-FAMILY: Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; COLOR : red; TEXT-DECORATION : none; }
+INPUT     {BACKGROUND-COLOR: #6898D0; COLOR : #FFFFCC; FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : normal; BORDER-COLOR : #306498;  BORDER-TOP-WIDTH : 1px; BORDER-RIGHT-width : 1px; BORDER-BOTTOM-width : 1px; BORDER-LEFT-width : 1px;text-indent : 3px;} 
+SELECT    {BACKGROUND-COLOR: #6898D0; COLOR : #FFFFCC; FONT-FAMILY : Tahoma, Verdana, arial, Helvetica, sans-serif; FONT-SIZE : 11px; FONT-WEIGHT : bold;}
+.backnews {BACKGROUND-repeat: repeat-y;BACKGROUND-COLOR : #FFFFFF;}
+.backbigtable {BACKGROUND-repeat: repeat-y;BACKGROUND-position : TOP RIGHT;BACKGROUND-COLOR : #FFFFFF;}

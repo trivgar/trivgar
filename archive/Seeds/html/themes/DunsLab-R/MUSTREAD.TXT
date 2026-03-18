@@ -1,0 +1,71 @@
+#######################################################################
+#  DUNSLAB TYPE 'R' THEMATIC V5.6 for PhpNuke 
+#  http://nuke.dunslab.net
+#  writed by DuNs AKA Denis Villechalane                              
+#######################################################################
+
+================ Thematic Information ==========================
+
+Creation Date:      August 12, 2002 
+Title:              DunsLab Type 'R' Theme
+Version:            5.6 
+Filename:           DunsLab-R_556.zip
+Author:             DuNs AKA Denis Villechalane
+Scene: 		    French PHP-Nuke & Post-Nuke GPL Scene
+Author's Web site : http://www.dunslab.net
+Nuked Website :	    http://nuke.dunslab.net
+Author's E-Mail:    duns@dunslab.net
+Description:        Thematic for PhpNuke 5.6
+                    (see also in php files of the themes/DunsLab-R)
+
+SEE IMPORTANT NOTE ON INSTALLATION SECTION.
+
+================ Misc. Information ===========================
+
+Designed for :      PhpNuke 5.6, Internet Explorer 5.5, Netscape 6
+New Graphics:       Yes
+
+
+Featured fuctions :
+See details of features here :
+http://www.dunslab.net/modules.php?op=modload&name=News&file=article&sid=213&mode=&order=0
+
+Main website:
+http://www.dunslab.net
+
+================ Construction ===============================
+
+Utilities used:     Easyphp 1.5 / Textpad 4.1 / Photoimpact 6
+
+================ Installation ===============================
+
+Extract archive to your local PhpNuke root theme directory.
+
+!!! IMPORTANT NOTE !!!
+----------------------
+
+WHEN YOU'LL UPLOAD THIS THEME TO YOUR SERVER WITH YOUR FTP CLIENT :
+USE ONLY BINARY MODE TO TRANSFER FILES !!!!
+By default it's usually ASCII mode and TOPNAV will not work 
+if you do this step in ASCII MODE.
+
+Thes pieces of codes are provided as is so don't hesitate to go through the code.
+For bugs, suggestions, adds send e-mail to : duns@dunslab.net
+or come visit our forums at http://www.dunslab.net
+
+================ Copyright & Legal Information ==============
+
+DuNs AKA Denis Villechalane
+DunsLab 2002.
+
+If you plan to use this theme or part of specific code for any commercial purpose,
+contact the author at duns@dunslab.net.
+
+If you use this theme on a non-benefit based website just subscribe your site to our 
+main website in links sections & place link back to us to your website.
+
+
+Greetings to all PhpNuke Community...
+
+
+

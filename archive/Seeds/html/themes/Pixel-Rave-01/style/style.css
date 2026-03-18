@@ -1,0 +1,27 @@
+body                 {scrollbar-face-color: #F0C7C7; scrollbar-track-color: #F0C7C7; scrollbar-arrow-color: #B54242; scrollbar-shadow-color: #B54242; scrollbar-3dlight-color: #FFFFFF; scrollbar-darkshadow-color: Black;buttonface: #FF0000;}
+
+FONT		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+TD		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+BODY		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+P		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+DIV		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+INPUT		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px; BACKGROUND-COLOR: #F0C7C7;}
+TEXTAREA	     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+FORM 		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+SELECT		     {FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10px;}
+
+A:link               {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; TEXT-DECORATION: underline; BACKGROUND: none;}
+A:active             {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; TEXT-DECORATION: underline; BACKGROUND: none;}
+A:visited            {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; TEXT-DECORATION: underline; BACKGROUND: none;}
+A:hover              {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; TEXT-DECORATION: underline; BACKGROUND: none;}
+
+.title 		     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+.storytitle 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #363636; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+.boxtitle 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #363636; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+.option 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none; BACKGROUND: none;}
+.storycat	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: underline; BACKGROUND: none;}
+.tiny		     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none; BACKGROUND: none;}
+.content 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; BACKGROUND: none;}
+.boxcontent 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; BACKGROUND: none;}
+.sideboxtitle 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #A52D2D; FONT-SIZE: 10px; BACKGROUND: none;}
+.storyboxtitle 	     {FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #FFFFFF; FONT-SIZE: 10px; BACKGROUND: none;}

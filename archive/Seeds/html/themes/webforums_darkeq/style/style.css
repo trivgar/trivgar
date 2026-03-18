@@ -1,0 +1,36 @@
+BODY { font: 11px geneva, verdana, arial, sans-serif; color: #FFE8FF;
+
+scrollbar-face-color: #602C72; scrollbar-track-color: #333355; scrollbar-arrow-color: #E3DDFF; scrollbar-shadow-color: #602C72; scrollbar-3dlight-color: #602C72; scrollbar-darkshadow-color: #000000; buttonface: #FFE8FF;}
+
+FONT                     {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+TD                     {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+P                     {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+DIV                     {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+INPUT                     {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+TEXTAREA             {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+FORM                      {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+SELECT                     {FONT-FAMILY: Verdana, Helvetica; FONT-SIZE: 11px;}
+
+TD, TH, .BOD { font: 11px geneva, verdana, arial, sans-serif; color: #FFFFFF; }
+
+A:link, A:visited, A:active { font: 11px geneva, verdana, arial, sans-serif; color: #FFE8FF; text-decoration: none; }
+
+A:hover { font: 11px geneva, verdana, arial, sans-serif; color: #FFE8FF; text-decoration: underline; }
+
+select, input, textarea { font: 11px geneva, verdana, arial, sans-serif; color: #3D3D3D; }
+
+A.small:link, A.small:visited, A.small:active { font: 11px geneva, verdana, arial, sans-serif; color: #FFE8FF; text-decoration: none; }
+
+A.small:hover { font: 11px geneva, verdana, arial, sans-serif; color: #FFE8FF; text-decoration: underline; }
+
+A.newsarc:link, A.newsarc:visited, A.newsarc:active { font: 11px geneva, verdana, arial, sans-serif; color: #4E4E4E; text-decoration: underline; }
+
+A.newsarc:hover { font: 11px geneva, verdana, arial, sans-serif; color: #FFE8FF; text-decoration: underline; }
+
+.story title {BACKGROUND: none; COLOR: #FFE8FF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+
+.option {BACKGROUND: none; COLOR: #FFE8FF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+
+FONT {BACKGROUND: none; COLOR: #FFFFFF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}
+
+.title {BACKGROUND: none; COLOR: #FFE8FF; FONT-SIZE: 11px; FONT-FAMILY: geneva, verdana, arial, sans-serif}

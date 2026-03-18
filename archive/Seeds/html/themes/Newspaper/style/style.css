@@ -1,0 +1,21 @@
+FONT		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+TD		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+BODY		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+P		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+DIV		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+INPUT		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+TEXTAREA	{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+FORM 		{FONT-FAMILY: Times New Roman; FONT-SIZE: 14px}
+A:link          {BACKGROUND: none; COLOR: #000000; FONT-WEIGHT: bold; FONT-SIZE: 14px  Times New Roman; TEXT-DECORATION: none}
+A:active        {BACKGROUND: none; COLOR: #000000; FONT-WEIGHT: bold; FONT-SIZE: 14px  Times New Roman; TEXT-DECORATION: none}
+A:visited       {BACKGROUND: none; COLOR: #000000; FONT-WEIGHT: bold; FONT-SIZE: 14px  Times New Roman; TEXT-DECORATION: none}
+A:hover         {BACKGROUND: none; COLOR: #C02C2C; FONT-WEIGHT: bold; FONT-SIZE: 14px  Times New Roman; TEXT-DECORATION: none}
+.title 		{BACKGROUND: none; FONT-SIZE: 16px; FONT-WEIGHT: bold; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; FONT-SIZE: 14px; FONT-FAMILY:  Times New Roman}
+.storytitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 18px; FONT-WEIGHT: bold; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-FAMILY:  Times New Roman}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; FONT-SIZE: 14px; FONT-WEIGHT: normal; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: none}
+.name		{BACKGROUND: none; FONT-SIZE: 50px; FONT-WEIGHT: bold; FONT-FAMILY:  Times New Roman; TEXT-DECORATION: none}

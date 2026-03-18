@@ -1,0 +1,101 @@
+<body onLoad="goforit()">
+<!-- MAIN TABLE -->
+<table cellpadding="0" cellspacing="0" width="905" border="0" align="center"><tr>
+<td width="40" align="right" valign="top"><img src="themes/pcdefault/images/side_logo_left.gif" vspace="90" hspace="5"></td>
+<td width="825" class="maintable">
+<!-- TOP TABLE -->
+<table cellpadding="0" cellspacing="0" width="825" border="0" align="center">
+	<tr>
+		<!-- SITE LOGO -->
+		<td class="bottom_right" bgcolor="#78A3FA" width="810" align="left" background="themes/pcdefault/images/header_back.gif">		
+			<a href="http://pcclan.telebrium.com"><center><img alt="" src="themes/pcdefault/images/logo.gif" border="0"></a></center>
+		</td>
+	</tr>
+</table>
+<!-- MENU TABLE -->
+<table cellpadding="0" cellspacing="0" width="825" border="0" align="center">
+	<tr bgcolor="#A7C3FB">
+		<!-- MENU  -->
+		<td class="header_menu" align="left" width="30%" background="themes/pcdefault/images/header_bottom_logo.gif">
+			<b>$theuser</b>
+		</td>
+		<td class="header_menu" align="center" width="40%" background="themes/pcdefault/images/header_bottom_logo.gif">
+			<b><div id="menu_text" align="center">&nbsp;</div></b>
+		</td>
+		<td class="header_menu" align="right" width="30%" background="themes/pcdefault/images/header_bottom_logo.gif">
+			<script>
+
+/*
+Live Date Script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+
+
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+
+function getthedate(){
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var hours=mydate.getHours()
+var minutes=mydate.getMinutes()
+var seconds=mydate.getSeconds()
+var dn="AM"
+if (hours>=12)
+dn="PM"
+if (hours>12){
+hours=hours-12
+}
+if (hours==0)
+hours=12
+if (minutes<=9)
+minutes="0"+minutes
+if (seconds<=9)
+seconds="0"+seconds
+//change font size here
+var cdate="<small><font color='C6D200' face='verdana'><b>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+" "+hours+":"+minutes+":"+seconds+" "+dn
++"</b></font></small>"
+if (document.all)
+document.all.clock.innerHTML=cdate
+else if (document.getElementById)
+document.getElementById("clock").innerHTML=cdate
+else
+document.write(cdate)
+}
+if (!document.all&&!document.getElementById)
+getthedate()
+function goforit(){
+if (document.all||document.getElementById)
+setInterval("getthedate()",1000)
+}
+
+            </script>
+<span id="clock"></span>&nbsp;
+		</td>
+		<td background="themes/pcdefault/images/header_bottom_logo.gif">
+	</tr>
+</table>
+<!-- WHITE SPACE TABLE -->
+<table class="header_whitespace" width="825" cellpadding="0" cellspacing="0" border="0" align="center">
+	<tr valign="top">
+		<td align="right">
+			<img src="themes/pcdefault/images/pixel.gif" width="1" height="5" border="0" alt="">
+		</td>
+	</tr>
+</table>
+<!-- CONTENT TABLE -->
+<table class="header_content" width="825" cellpadding="0" cellspacing="0" border="0" align="center">
+	<tr valign="top">
+		<td>
+			<img src="themes/pcdefault/images/pixel.gif" width="5" height="1" border="0" alt="">
+		</td>
+		<td width="150" valign="top">

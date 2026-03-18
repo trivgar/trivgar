@@ -1,0 +1,46 @@
+FONT		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+TD		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+BODY		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+P		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+DIV		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+INPUT		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 10px}
+TEXTAREA	{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+FORM 		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px}
+A:link          {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+A:active        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+A:visited       {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+A:hover         {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.title 		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.content 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Helvetica}
+.storytitle 	{BACKGROUND: none; COLOR: #363636; FONT-SIZE: 14px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.storycat	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 13px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.boxtitle 	{BACKGROUND: none; COLOR: #363636; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.boxcontent 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Helvetica}
+.option 	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.tiny		{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.footmsg        {BACKGROUND: none; COLOR: #000000; FONT-SIZE: 8px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: none}
+.footmsg_l	{BACKGROUND: none; COLOR: #000000; FONT-SIZE: 8px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana, Helvetica; TEXT-DECORATION: underline}
+.box		{FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 11px; border: 1px solid #FFFFFF; background-color: #FFD145}
+.formtexts {  text-decoration: none; background-color: #FFA603; border: 2px solid #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight : normal; }
+input.post, textarea.post, select {background-color : #FFA603;}
+input { text-indent : 2px; }
+input.button {background-color : #FFD145; color : #000000;font-size: 8px; font-family: bold;}
+input.mainoption {background-color : #FFBB05; font-weight : bold; font-size: 8px;}
+input.liteoption {background-color : #FFBB05; font-weight : normal; font-size: 8px;}
+.gensmall { font-size : 9px; }
+.gensmall { color : #FFA603; }
+a.gensmall { color: #000000; text-decoration: none; }
+a.gensmall:hover	{ color: #FFA603; text-decoration: underline; }
+
+
+
+body { 
+	background-color: #FFBB05;
+	scrollbar-face-color: #FFD145;
+	scrollbar-highlight-color: #FFD603;
+	scrollbar-shadow-color: #FFD603;
+	scrollbar-3dlight-color: #FFBB05;
+	scrollbar-arrow-color:  #000000;
+	scrollbar-track-color: #FFBB05;
+	scrollbar-darkshadow-color: FFBB05;
+}

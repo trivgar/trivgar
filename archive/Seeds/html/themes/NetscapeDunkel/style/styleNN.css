@@ -1,0 +1,165 @@
+BODY		{
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color : #ffffff;
+}
+FONT		{
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color : #ffffff;
+}
+TD		{
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color : #ffffff;
+}
+P		{
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color : #ffffff;
+}
+DIV		{
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color : #ffffff;
+}
+A:link          {
+	BACKGROUND: none;
+	COLOR: #999999;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	TEXT-DECORATION: none;
+}
+A:active        {
+	BACKGROUND: none;
+	COLOR: #999999;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: underline;
+}
+A:visited       {
+	BACKGROUND: none;
+	COLOR: #999999;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	TEXT-DECORATION: none;
+}
+A:hover         {
+	BACKGROUND: #999999;
+	COLOR: #000000;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: underline overline;
+}
+.blocktitle {				/*&Uuml;berschrift der Bl&ouml;cke*/
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	color : White;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.header {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	color : White;
+	font-weight: bold;
+}
+.footer {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color : #ffffff;
+	font-weight: normal;
+}
+.h1 {
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 13px;
+	color : #cdcdcd;
+	font-weight: bold;
+}
+.title 		{
+	BACKGROUND: none;
+	COLOR: White;
+	FONT-SIZE: 12px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+.quelltext {
+	font-family : "Courier New", Courier, monospace;
+	color : Blue;
+	FONT-WEIGHT: bold;
+}
+.blau {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : blue;
+	FONT-WEIGHT: bold;
+}
+.rot {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : red;
+	FONT-WEIGHT: bold;
+}
+.content 	{
+	BACKGROUND: none;
+	COLOR: #ffffff;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.block-title	{
+	BACKGROUND: none;
+	COLOR: #FFFFFF;
+	FONT-SIZE: 10px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.storytitle 	{
+	BACKGROUND: none;
+	COLOR: #cdcdcd;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+.storycat	{
+	BACKGROUND: none;
+	COLOR: #cdcdcd;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: underline;
+}
+.boxtitle 	{
+	BACKGROUND: none;
+	COLOR: #cdcdcd;
+	FONT-SIZE: 10px; FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+.boxcontent 	{
+	BACKGROUND: none;
+	COLOR: #000000;
+	FONT-SIZE: 10px;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.option 	{
+	BACKGROUND: none;
+	COLOR: #ffffff;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+.tiny		{
+	BACKGROUND: none;
+	COLOR: #ffffff;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: normal;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+}
+.table {
+	border : 1px;
+	border-color : Black;
+	border-bottom-style : solid;
+}

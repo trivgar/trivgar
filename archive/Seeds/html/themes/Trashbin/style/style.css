@@ -1,0 +1,259 @@
+body {
+	background-image: url(../images/back.gif);
+	background-attachment: fixed;
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	color: #000000;
+}
+
+A:link, A:active, A:visited {
+	font-family: Verdana,Helvetica;
+	color: #000000;
+	text-decoration: none;
+}
+
+A:hover {
+	font-family: Verdana,Helvetica;
+	color: #363636;
+	text-decoration: underline;
+}
+
+A.menu:link, A.menu:active, A.menu:visited {
+	font-family: Verdana,Helvetica;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+A.menu:hover {
+	font-family: Verdana,Helvetica;
+	font-weight: bold;
+	color: #363636;
+	text-decoration: underline;
+}
+
+font {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+}
+
+td {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+}
+
+p {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+}
+
+div {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+}
+
+hr {
+	color: #a7c3fb;
+}
+
+form {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+}
+
+input {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	border-top: 1px solid #898989;
+	border-left: 1px solid #898989;
+	border-bottom: 2px solid #898989;
+	border-right: 2px solid #898989;
+}
+
+.search {
+	font-family: Verdana,Helvetica;
+	font-size: 8px;
+	color: #000000;
+	background-color: #efefef;
+	height: 14px;
+	width: 50px;
+	border: 1px solid #696969;
+}
+
+.button {
+	vertical-align: bottom;
+}
+
+textarea {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	border: 1px solid #000000;
+}
+
+select {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	border: 1px solid #000000;
+}
+
+.tiny {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.option {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.content {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	font-color: #000000;
+}
+
+.storytitle {
+	font-family: Verdana,Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	background: none;
+	color: #000000;
+}
+
+.storycat {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	font-weight: bold;
+	background: none;
+	color: #000000;
+}
+
+.boxtitle {
+	font-family: Verdana,Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	background: none;
+	color: #000000;
+}
+
+.boxcontent {
+	font-family: Verdana,Helvetica;
+	font-size: 10px;
+	background: none;
+	color: #000000;
+}
+
+.header_right {
+	background-color: #A7C3FB;
+	background-image: url(../images/block_header_back.gif);
+}
+
+.header_menu {
+	background-image: url(../images/block_header_back.gif);
+}
+
+.header_content {
+	background-image: url(../images/index_back.gif);
+}
+
+.header_whitespace {
+	background-image: url(../images/index_back.gif);
+	border-top: 1px solid #000000;
+}
+
+.bottom_right {
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+.bottom {
+	border-bottom: 1px solid #000000;
+}
+
+.block_title_border {
+	border-top: 1px solid #363636;
+	border-left: 1px solid #363636;
+	border-bottom: 1px solid #363636;
+	border-right: 1px solid #363636;
+}
+
+.block_title	{
+	background-image: url(../images/block_header_back.gif);
+}
+
+.block_border {
+	border-left: 1px solid #cbcbcb;
+	border-bottom: 1px solid #cbcbcb;
+	border-right: 1px solid #cbcbcb;
+}
+
+.block_content {
+	background-image: url(../images/block_back.gif);
+}
+
+.block_text {
+}
+
+.story_header_border {
+	border: 1px solid #363636;
+}
+
+.story_header {
+	background-color: #A7C3FB;
+}
+
+.story_border {
+	border-left: 1px solid #363636;
+	border-right: 1px solid #363636;
+}
+
+.story_text {
+	text-indent: 10;
+}
+
+.story_content {
+	background-image: url(../images/story_back.gif);
+}
+
+.story_footer_border {
+	border: 1px solid #363636;
+}
+
+.story_page_border {
+	background-image: url(../images/story_back.gif);
+	border-left: 1px solid #363636;
+	border-bottom: 1px solid #363636;
+	border-right: 1px solid #363636;
+}
+
+.footer_border {
+	border-top: 1px solid #363636;
+}
+
+.tracking {
+	font-size: 6pt;
+}
+
+.myh_main_border {
+	border: 1px solid #363636;
+}
+
+.xxsmall {
+	font-size: 8px;
+}
+
+.hotornot {
+	border: 1px solid #cc0000;
+}
+
+.maintable {
+	border-top: 1px solid #696969;
+	border-left: 1px solid #696969;
+	border-bottom: 2px solid #696969;
+	border-right: 2px solid #696969;
+}
