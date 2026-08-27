@@ -1,1 +1,1 @@
-ssh-audio
+termux-ssh
