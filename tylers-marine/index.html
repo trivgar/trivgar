@@ -5,14 +5,14 @@
 <script>document.documentElement.className+=" js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tyler's Marine &amp; Engine Service — Mobile Marine Repair, Tacoma &amp; South Sound</title>
-<meta name="description" content="Mobile marine and engine service on Puget Sound. Outboards, inboards and sterndrives serviced at your slip, your trailer or the ramp. Tacoma, Gig Harbor and the South Sound. Call 253-303-3979.">
+<meta name="description" content="Mobile boat engine repair in Tacoma and the South Sound. Outboards, inboards and sterndrives, fixed where the boat sits. Call Tyler at 253-303-3979.">
 <meta name="theme-color" content="#16212F">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="robots" content="noindex,nofollow">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tyler's Marine &amp; Engine Service">
-<meta property="og:description" content="Mobile marine and engine service on Puget Sound. I come to your slip, your trailer or the ramp.">
+<meta property="og:description" content="Mobile boat engine repair in Tacoma and the South Sound. I come to the boat.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +62,8 @@
   --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
   --step-2:clamp(1.5rem,1.3rem + .95vw,2.05rem);
   --step-3:clamp(1.95rem,1.6rem + 1.7vw,3.1rem);
-  --step-4:clamp(2.5rem,1.9rem + 3vw,4.6rem);
+  --step-4:clamp(2.55rem,1.85rem + 4.5vw,6.4rem);
+  --step-5:clamp(3.4rem,1.6rem + 9.5vw,9rem);
 
   --gut:clamp(1.15rem,4vw,2.5rem);
   --bar:64px;
@@ -138,15 +139,21 @@ h1,h2,h3{
 
 /* ---------- hero ---------- */
 .hero{position:relative;background:var(--navy);color:var(--paper);overflow:hidden}
+.grain{position:relative}
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.grain > *{position:relative;z-index:1}
 .hero::before{
-  content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  content:"";position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(120% 80% at 78% 8%,color-mix(in oklab,var(--navy-3) 90%,transparent),transparent 62%),
-    repeating-linear-gradient(115deg,transparent 0 38px,color-mix(in oklab,var(--powder) 4%,transparent) 38px 39px);
+    radial-gradient(135% 95% at 82% 4%,color-mix(in oklab,var(--navy-3) 92%,transparent),transparent 58%),
+    repeating-radial-gradient(circle at 88% 12%,transparent 0 46px,color-mix(in oklab,var(--powder) 5%,transparent) 46px 47px);
 }
 .hero__in{position:relative;padding:clamp(2.6rem,7vw,5.4rem) 0 clamp(2.8rem,7vw,5rem)}
 .hero__grid{display:grid;gap:clamp(2rem,5vw,3.4rem);align-items:center}
-@media (min-width:900px){.hero__grid{grid-template-columns:1.28fr .72fr}}
+@media (min-width:900px){.hero__grid{grid-template-columns:1.42fr .58fr}}
 
 .eyebrow{
   font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
@@ -154,10 +161,10 @@ h1,h2,h3{
 }
 .eyebrow::after{content:"";height:1px;flex:1;max-width:120px;background:color-mix(in oklab,var(--brass) 45%,transparent)}
 
-.hero h1{font-size:var(--step-4);color:var(--paper);max-width:15ch}
+.hero h1{font-size:var(--step-4);color:var(--paper);max-width:14ch;letter-spacing:-.035em;text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--powder);display:block}
 .hero__lede{
-  margin:1.5rem 0 0;max-width:46ch;color:color-mix(in oklab,var(--powder) 88%,var(--paper));
+  margin:1.6rem 0 0;max-width:42ch;color:color-mix(in oklab,var(--powder) 88%,var(--paper));
   font-size:var(--step-1);line-height:1.5;
 }
 .hero__acts{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.1rem}
@@ -168,11 +175,13 @@ h1,h2,h3{
   font-size:var(--step--1);color:var(--powder-dim);
 }
 .hero__meta b{color:var(--powder);font-weight:600}
-.hero__badge{justify-self:center;width:min(300px,74vw)}
-@media (max-width:899px){.hero__badge{order:-1;width:min(210px,52vw)}}
+.hero__badge{justify-self:center;width:min(430px,80vw);margin-right:clamp(-6rem,-5vw,0rem);filter:drop-shadow(0 26px 50px rgba(0,0,0,.45))}
+@media (max-width:899px){.hero__badge{order:-1;width:min(262px,62vw);margin-right:0}}
 
 /* ---------- section furniture ---------- */
 .sec{padding:clamp(3.2rem,8vw,6rem) 0}
+.sec--tight{padding-block:clamp(2.4rem,5vw,3.6rem)}
+.sec--tall{padding-block:clamp(4.4rem,11vw,8.5rem)}
 .sec--paper{background:var(--paper)}
 .sec--powder{background:var(--powder)}
 .sec--navy{background:var(--navy);color:var(--paper)}
@@ -191,14 +200,16 @@ h1,h2,h3{
   border-bottom:1px solid color-mix(in oklab,var(--navy) 16%,transparent);
 }
 @media (min-width:780px){
-  .svc li{grid-template-columns:5rem minmax(0,20.5rem) minmax(0,1fr);gap:0 2.25rem;align-items:baseline;padding:1.75rem 0}
+  .svc li{grid-template-columns:6.5rem minmax(0,19rem) minmax(0,1fr);gap:0 2.25rem;align-items:baseline;padding:2.1rem 0}
   .svc li:nth-child(even){padding-left:2.5rem}
 }
 .svc__n{
-  font-family:var(--display);font-weight:900;font-size:var(--step-1);
-  color:color-mix(in oklab,var(--brass-lo) 78%,transparent);
-  font-variant-numeric:tabular-nums;letter-spacing:-.03em;
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(2.4rem,1.5rem + 3.6vw,4.4rem);line-height:.86;
+  color:transparent;-webkit-text-stroke:1.5px color-mix(in oklab,var(--brass-lo) 62%,transparent);
+  font-variant-numeric:tabular-nums;letter-spacing:-.05em;
 }
+.svc li:hover .svc__n{color:color-mix(in oklab,var(--brass-lo) 20%,transparent);transition:color .5s cubic-bezier(.16,1,.3,1)}
 .svc__t{font-family:var(--display);font-weight:700;font-size:var(--step-2);line-height:1.12;letter-spacing:-.02em}
 .svc__d{margin:0;color:color-mix(in oklab,var(--navy) 66%,var(--paper));font-size:var(--step-0);grid-column:2/-1}
 @media (min-width:780px){.svc__d{grid-column:3/4}}
@@ -209,18 +220,6 @@ h1,h2,h3{
 .vessel__list{list-style:none;margin:0;padding:0;display:grid;gap:1.05rem}
 .vessel__list li{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;font-size:var(--step-0)}
 .vessel__list svg{width:20px;height:20px;margin-top:.32em;flex:none;color:var(--brass)}
-
-/* ---------- steps ---------- */
-.steps{display:grid;gap:0;margin-top:.5rem;counter-reset:s}
-@media (min-width:840px){.steps{grid-template-columns:repeat(3,1fr);gap:0 clamp(1.5rem,3vw,3rem)}}
-.step{padding:1.6rem 0;border-top:2px solid color-mix(in oklab,var(--navy) 82%,transparent)}
-.sec--powder .step{border-top-color:color-mix(in oklab,var(--navy) 55%,transparent)}
-.step__n{
-  font-family:var(--body);font-weight:700;font-size:.72rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--brass-lo);display:block;margin-bottom:.7rem;
-}
-.step h3{font-size:var(--step-2);margin-bottom:.55rem}
-.step p{margin:0;color:color-mix(in oklab,var(--navy) 70%,var(--paper))}
 
 /* ---------- area ---------- */
 .area{display:grid;gap:clamp(1.6rem,4vw,3rem)}
@@ -240,12 +239,12 @@ h1,h2,h3{
 
 /* ---------- contact ---------- */
 .contact{display:grid;gap:clamp(2rem,5vw,3.5rem)}
-@media (min-width:880px){.contact{grid-template-columns:1.15fr .85fr;align-items:start}}
+@media (min-width:880px){.contact{grid-template-columns:1.35fr .65fr;align-items:start}}
 .tel{
-  font-family:var(--display);font-weight:900;letter-spacing:-.035em;
-  font-size:clamp(2.3rem,1.3rem + 5.2vw,4.4rem);line-height:1;
-  color:var(--navy);text-decoration:none;display:inline-block;
-  transition:color .25s;
+  font-family:var(--display);font-weight:900;letter-spacing:-.055em;
+  font-size:var(--step-5);line-height:.88;
+  color:var(--navy);text-decoration:none;display:block;
+  transition:color .3s cubic-bezier(.16,1,.3,1);
 }
 .tel:hover{color:var(--brass-lo)}
 .contact__acts{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
@@ -303,54 +302,45 @@ h1,h2,h3{
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <symbol id="badge" viewBox="0 0 200 200">
-      <path id="arcTop" fill="none" d="M 26,100 A 74,74 0 0 1 174,100"></path>
-      <path id="arcBot" fill="none" d="M 30,100 A 70,70 0 0 0 170,100"></path>
+      <path id="arcTop" fill="none" d="M 29,100 A 71,71 0 0 1 171,100"></path>
+      <path id="arcBot" fill="none" d="M 16,100 A 84,84 0 0 0 184,100"></path>
 
-      <!-- outer disc -->
-      <circle cx="100" cy="100" r="99" fill="#16212F"></circle>
-      <!-- rope ring -->
-      <circle cx="100" cy="100" r="92.5" fill="none" stroke="#C0CFE2" stroke-width="7" stroke-dasharray="5.2 3.6"></circle>
-      <circle cx="100" cy="100" r="96.4" fill="none" stroke="#16212F" stroke-width="2.4"></circle>
-      <circle cx="100" cy="100" r="88.6" fill="none" stroke="#16212F" stroke-width="2.4"></circle>
-      <!-- text band -->
-      <circle cx="100" cy="100" r="85" fill="#16212F"></circle>
-      <!-- arced text -->
-      <text fill="#C0CFE2" font-family="Karla, Helvetica, Arial, sans-serif" font-weight="700" font-size="15.5" letter-spacing="2.6">
+      <circle cx="100" cy="100" r="99" fill="#C0CFE2"></circle>
+      <circle cx="100" cy="100" r="93" fill="none" stroke="#16212F" stroke-width="6.5" stroke-dasharray="5 3.4"></circle>
+      <circle cx="100" cy="100" r="87" fill="#16212F"></circle>
+
+      <text fill="#C0CFE2" font-family="Karla, Helvetica, Arial, sans-serif" font-weight="700" font-size="13.5" letter-spacing="2.4">
         <textPath href="#arcTop" startOffset="50%" text-anchor="middle">TYLER&#8217;S MARINE</textPath>
       </text>
-      <text fill="#C0CFE2" font-family="Karla, Helvetica, Arial, sans-serif" font-weight="700" font-size="11.5" letter-spacing="2.4">
+      <text fill="#C0CFE2" font-family="Karla, Helvetica, Arial, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2">
         <textPath href="#arcBot" startOffset="50%" text-anchor="middle">AND ENGINE SERVICE</textPath>
       </text>
-      <!-- dotted inner ring -->
-      <circle cx="100" cy="100" r="63.5" fill="none" stroke="#C0CFE2" stroke-width="1.6" stroke-dasharray="0.2 5" stroke-linecap="round"></circle>
-      <!-- center field -->
-      <circle cx="100" cy="100" r="58.5" fill="#C0CFE2"></circle>
 
-      <!-- crossed oars -->
-      <g stroke="#16212F" stroke-width="2.6" stroke-linecap="round">
-        <line x1="68" y1="68" x2="132" y2="132"></line>
-        <line x1="132" y1="68" x2="68" y2="132"></line>
+      <circle cx="100" cy="100" r="65" fill="none" stroke="#C0CFE2" stroke-width="1.5" stroke-dasharray="0.1 4.6" stroke-linecap="round"></circle>
+      <circle cx="100" cy="100" r="60" fill="#C0CFE2"></circle>
+
+      <g stroke="#16212F" stroke-width="2.4" stroke-linecap="round">
+        <line x1="63" y1="63" x2="137" y2="137"></line>
+        <line x1="137" y1="63" x2="63" y2="137"></line>
       </g>
       <g fill="#16212F">
-        <ellipse cx="65.5" cy="65.5" rx="3.4" ry="6.6" transform="rotate(45 65.5 65.5)"></ellipse>
-        <ellipse cx="134.5" cy="65.5" rx="3.4" ry="6.6" transform="rotate(-45 134.5 65.5)"></ellipse>
-        <ellipse cx="65.5" cy="134.5" rx="3.4" ry="6.6" transform="rotate(-45 65.5 134.5)"></ellipse>
-        <ellipse cx="134.5" cy="134.5" rx="3.4" ry="6.6" transform="rotate(45 134.5 134.5)"></ellipse>
+        <ellipse cx="61.5" cy="61.5" rx="3" ry="6" transform="rotate(45 61.5 61.5)"></ellipse>
+        <ellipse cx="138.5" cy="61.5" rx="3" ry="6" transform="rotate(-45 138.5 61.5)"></ellipse>
+        <ellipse cx="61.5" cy="138.5" rx="3" ry="6" transform="rotate(-45 61.5 138.5)"></ellipse>
+        <ellipse cx="138.5" cy="138.5" rx="3" ry="6" transform="rotate(45 138.5 138.5)"></ellipse>
       </g>
 
-      <!-- monogram -->
       <g fill="#16212F" font-family="Karla, Helvetica, Arial, sans-serif" font-weight="700" text-anchor="middle">
-        <text x="100" y="84" font-size="30">T</text>
-        <text x="72.5" y="113" font-size="30">M</text>
-        <text x="128" y="113" font-size="30">A</text>
+        <text x="100" y="86" font-size="27">T</text>
+        <text x="73" y="114" font-size="27">M</text>
+        <text x="127" y="114" font-size="27">A</text>
       </g>
 
-      <!-- anchor -->
-      <g stroke="#16212F" fill="none" stroke-width="2.4" stroke-linecap="round">
-        <circle cx="100" cy="120.5" r="3.4" stroke-width="2.2"></circle>
-        <line x1="100" y1="124" x2="100" y2="146"></line>
-        <line x1="92" y1="128.5" x2="108" y2="128.5"></line>
-        <path d="M88.5 137.5c0 6.4 5.2 10 11.5 10s11.5-3.6 11.5-10"></path>
+      <g stroke="#16212F" fill="none" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="100" cy="123" r="3.2" stroke-width="2"></circle>
+        <line x1="100" y1="126.4" x2="100" y2="147"></line>
+        <line x1="92.5" y1="130.5" x2="107.5" y2="130.5"></line>
+        <path d="M89.5 139c0 6.1 5 9.6 10.5 9.6s10.5-3.5 10.5-9.6"></path>
       </g>
     </symbol>
   </defs>
@@ -372,20 +362,20 @@ h1,h2,h3{
 <main id="main">
 
 <!-- ============ HERO ============ -->
-<section class="hero">
+<section class="hero grain">
   <div class="wrap hero__in">
     <div class="hero__grid">
       <div>
         <p class="eyebrow">Tacoma &amp; the South Sound</p>
-        <h1>Mobile marine &amp; engine service. <em>I come to the boat.</em></h1>
-        <p class="hero__lede">Outboards, inboards and sterndrives serviced where your boat already sits &mdash; your slip, your driveway, or the ramp. No trailering it across the county to sit in a shop queue.</p>
+        <h1>I fix boat engines.<br>I come to the boat.</h1>
+        <p class="hero__lede">Outboards, inboards, sterndrives. I work on it where it already sits, so you're not trailering it across town and then waiting three weeks for a shop to get to it.</p>
         <div class="hero__acts">
           <a class="btn btn--brass" href="tel:+12533033979">Call 253&#8209;303&#8209;3979</a>
-          <a class="btn btn--ghost" href="#services">What I work on</a>
+          <a class="btn btn--ghost" href="#services">What I fix</a>
         </div>
         <p class="hero__meta">
           <span><b>Tyler Blake</b> &middot; Owner &amp; Technician</span>
-          <span>On&#8209;water &amp; dockside <b>vessel support</b></span>
+          <span>Dockside and on-water calls</span>
         </p>
       </div>
       <div class="hero__badge">
@@ -398,120 +388,91 @@ h1,h2,h3{
 </section>
 
 <!-- ============ SERVICES ============ -->
-<section class="sec sec--paper" id="services">
+<section class="sec sec--paper sec--tall" id="services">
   <div class="wrap">
     <div class="sec__head rv">
-      <p class="eyebrow">Services</p>
-      <h2>What I work on</h2>
-      <p class="sec__sub">Most jobs get done on site. If it needs to come apart on a bench, I&rsquo;ll tell you that up front rather than after the invoice.</p>
+      <h2>What I fix</h2>
+      <p class="sec__sub">Most of it happens on site. If something has to come off the boat and go on a bench, I'll tell you that first.</p>
     </div>
 
     <ol class="svc rv">
       <li>
         <span class="svc__n">01</span>
-        <h3 class="svc__t">Outboard service &amp; repair</h3>
-        <p class="svc__d">Two-stroke and four-stroke, portable kickers through big blocks. Scheduled maintenance, tune-ups and repairs.</p>
+        <h3 class="svc__t">Outboards</h3>
+        <p class="svc__d">Two-stroke and four-stroke, kickers up through the big motors. Service, tune-ups, repairs.</p>
       </li>
       <li>
         <span class="svc__n">02</span>
-        <h3 class="svc__t">Inboard &amp; sterndrive</h3>
-        <p class="svc__d">I/O service, bellows and boot replacement, gimbal bearings, drive removal, alignment and shift cable work.</p>
+        <h3 class="svc__t">Inboards and sterndrives</h3>
+        <p class="svc__d">I/O work. Bellows, gimbal bearings, drive removal, alignment, shift cables.</p>
       </li>
       <li>
         <span class="svc__n">03</span>
-        <h3 class="svc__t">No-starts &amp; diagnostics</h3>
-        <p class="svc__d">Fuel, spark, compression, electrical. I find the actual cause before anything gets replaced.</p>
+        <h3 class="svc__t">It won&rsquo;t start</h3>
+        <p class="svc__d">Fuel, spark, compression, wiring. I find out what's actually wrong before I replace anything.</p>
       </li>
       <li>
         <span class="svc__n">04</span>
-        <h3 class="svc__t">Winterizing &amp; spring service</h3>
-        <p class="svc__d">Fogging, antifreeze, stabilizer, oil and gear lube. Then commissioning in the spring so the first trip isn&rsquo;t the shakedown.</p>
+        <h3 class="svc__t">Winterizing and spring startup</h3>
+        <p class="svc__d">Fogging, antifreeze, stabilizer, oil and gear lube in the fall. Commissioning in the spring.</p>
       </li>
       <li>
         <span class="svc__n">05</span>
         <h3 class="svc__t">Fuel systems</h3>
-        <p class="svc__d">Carb rebuilds, injector service, ethanol and varnish cleanup, water-in-fuel, tanks, lines and primer bulbs.</p>
+        <p class="svc__d">Carb rebuilds, injector service, water in the fuel, ethanol gunk, tanks, lines, primer bulbs. Honestly, this is most of what goes wrong.</p>
       </li>
       <li>
         <span class="svc__n">06</span>
-        <h3 class="svc__t">Lower units, impellers &amp; props</h3>
-        <p class="svc__d">Water pump kits, gearcase service, seal replacement, prop swaps and skeg damage assessment.</p>
+        <h3 class="svc__t">Lower units, impellers, props</h3>
+        <p class="svc__d">Water pump kits, gearcase service, seals, prop swaps. If you hit something, I can tell you how bad it is.</p>
       </li>
       <li>
         <span class="svc__n">07</span>
-        <h3 class="svc__t">Electrical &amp; charging</h3>
-        <p class="svc__d">Batteries, charging systems, trim and tilt, switch panels, nav lights and the wiring the last guy left behind.</p>
+        <h3 class="svc__t">Electrical</h3>
+        <p class="svc__d">Batteries, charging systems, trim and tilt, nav lights, switch panels. Also whatever the last owner did to the wiring.</p>
       </li>
     </ol>
   </div>
 </section>
 
 <!-- ============ VESSEL SUPPORT ============ -->
-<section class="sec sec--navy" id="vessel-support">
+<section class="sec sec--navy sec--tight grain" id="vessel-support">
   <div class="wrap">
     <div class="vessel">
       <div class="sec__head rv" style="margin-bottom:0">
         <p class="eyebrow">Vessel support</p>
-        <h2>More than the motor</h2>
-        <p class="sec__sub">Owning a boat is a string of small jobs that never quite justify a haul-out. That is most of what I do.</p>
+        <h2>Other things people call me for</h2>
+        <p class="sec__sub">A boat is a long list of small jobs that never add up to a haul-out. That's a good part of my week.</p>
       </div>
       <ul class="vessel__list rv">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
-          <span><b>Dockside &amp; on-water calls.</b> Dead in the slip or stuck at the ramp &mdash; call and we will sort out what it needs.</span>
+          <span>Dockside and on-water calls, for when it quits on you.</span>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
-          <span><b>Pre-purchase look-overs.</b> Before you hand over cash for someone else&rsquo;s project, get a compression test and an honest opinion.</span>
+          <span>Looking a boat over before you buy it. Compression test and a straight answer. It's talked people out of some expensive mistakes.</span>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
-          <span><b>Season prep &amp; layup.</b> Getting it ready in the spring, putting it away right in the fall.</span>
+          <span>Spring prep and fall layup.</span>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
-          <span><b>Trailer &amp; launch help.</b> Bearings, lights, winches and the things that strand you before you reach the water.</span>
+          <span>Trailer work. Bearings, lights, winches, all the stuff that strands you before you even get wet.</span>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS ============ -->
-<section class="sec sec--paper">
-  <div class="wrap">
-    <div class="sec__head rv">
-      <p class="eyebrow">How it works</p>
-      <h2>Straightforward</h2>
-    </div>
-    <div class="steps rv">
-      <div class="step">
-        <span class="step__n">Step one</span>
-        <h3>Call or text</h3>
-        <p>Tell me the boat, the motor and what it is doing. Photos and a model number help more than you would think.</p>
-      </div>
-      <div class="step">
-        <span class="step__n">Step two</span>
-        <h3>I come to you</h3>
-        <p>Slip, driveway or ramp. I bring the tools and the common parts, so most visits are one visit.</p>
-      </div>
-      <div class="step">
-        <span class="step__n">Step three</span>
-        <h3>Price before wrenches</h3>
-        <p>You get the diagnosis and the number before the work starts. Nothing gets done that you did not agree to.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SERVICE AREA ============ -->
-<section class="sec sec--navy" id="area">
+<section class="sec sec--navy sec--tight grain" id="area">
   <div class="wrap">
     <div class="area">
       <div class="sec__head rv" style="margin-bottom:0">
-        <p class="eyebrow">Service area</p>
-        <h2>Puget Sound, south end</h2>
-        <p class="sec__sub">Based in Tacoma and working the South Sound. Outside the list? Call anyway &mdash; if it is a reasonable drive, I will make it work.</p>
+        <h2>Where I go</h2>
+        <p class="sec__sub">Tacoma and south. If you're not on the list, call anyway. If it's a reasonable drive I'll come.</p>
       </div>
       <div class="rv">
         <ul class="chips">
@@ -520,24 +481,24 @@ h1,h2,h3{
           <li>Federal Way</li><li>Des Moines</li><li>Olympia</li>
           <li>Lakebay</li><li>Anderson Island</li>
         </ul>
-        <p class="note">Marina, ramp and driveway calls all welcome. Travel beyond the immediate area may carry a trip charge &mdash; you will know it before I roll.</p>
+        <p class="note">Marinas, ramps, driveways. A long trip might carry a trip charge. You'll hear about it before I leave, not after.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="sec sec--powder" id="contact">
+<section class="sec sec--powder sec--tall" id="contact">
   <div class="wrap">
     <div class="contact">
       <div class="rv">
-        <p class="eyebrow">Get it running</p>
-        <h2 style="font-size:var(--step-3);margin-bottom:1.4rem">Call and tell me what it is doing.</h2>
+        <h2 style="font-size:var(--step-3);margin-bottom:1.4rem">Call and tell me what it's doing.</h2>
         <a class="tel" href="tel:+12533033979">253&#8209;303&#8209;3979</a>
         <div class="contact__acts">
           <a class="btn btn--ink" href="tel:+12533033979">Call now</a>
           <a class="btn btn--ink" href="sms:+12533033979">Send a text</a>
         </div>
+        <p style="margin:1.8rem 0 0;max-width:44ch">Texting works fine. Photos and the model number off the motor help more than you'd think. You get the price before I start on anything.</p>
       </div>
       <div class="rv">
         <dl class="dl">
@@ -546,12 +507,8 @@ h1,h2,h3{
             <dd><a href="mailto:Tylersmarine@gmail.com">Tylersmarine@gmail.com</a></dd>
           </div>
           <div>
-            <dt>Technician</dt>
-            <dd>Tyler Blake &mdash; Owner &amp; Technician</dd>
-          </div>
-          <div>
             <dt>Hours</dt>
-            <dd>Monday&ndash;Saturday, 7:00am&ndash;6:00pm<br>On-water and after-hours calls by arrangement</dd>
+            <dd>Monday&ndash;Saturday, 7:00am&ndash;6:00pm<br>On-water and after-hours by arrangement</dd>
           </div>
           <div>
             <dt>Based in</dt>
@@ -572,11 +529,11 @@ h1,h2,h3{
       <svg class="foot__mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#badge"></use></svg>
       <div>
         <p class="foot__name">Tyler&rsquo;s Marine &amp; Engine Service</p>
-        <p style="margin:0 0 1rem">Mobile marine and engine service on Puget Sound.<br>Tacoma, Washington.</p>
+        <p style="margin:0 0 1rem">Boat engine repair, wherever the boat is.<br>Tacoma, Washington.</p>
         <ul class="foot__links">
-          <li><a href="#services">Services</a></li>
+          <li><a href="#services">What I fix</a></li>
           <li><a href="#vessel-support">Vessel support</a></li>
-          <li><a href="#area">Service area</a></li>
+          <li><a href="#area">Where I go</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
