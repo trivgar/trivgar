@@ -1,1 +1,0 @@
-Thanks to www.slotzone.de.vu for this Great Template!

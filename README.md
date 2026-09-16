@@ -1,6 +1,6 @@
 # Travis Pellegrini
 
-I work the docks at the Port of Tacoma. Between shifts I build things.
+I work the docks at the Port of Tacoma, and I'm a dad. Between shifts I build software.
 
 Mostly Python and TypeScript — FastAPI on the back, React on the front, Fly.io
 and Cloudflare to run it. Most of what I ship is in private repos, so the links

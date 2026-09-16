@@ -1,1 +1,0 @@
-link1name=home&link2name=downloads&link3name=account&link4name=links&link5name=submit news
