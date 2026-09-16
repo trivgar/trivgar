@@ -16,7 +16,7 @@ internet. Per the global rule, always ask before pushing — a commit here is a
 draft, a push is publication.
 
 `.nojekyll` disables Jekyll processing. Keep it: without it GitHub Pages hides
-every path beginning with `_`, which breaks the archive.
+every path beginning with `_`.
 
 ## Pages
 
@@ -26,7 +26,6 @@ every path beginning with `_`, which breaks the archive.
 | `pihole.html` | Universal Pi-hole install guide |
 | `health-dashboard.html` | Health dashboard |
 | `tylers-marine/` | Client site preview — Tyler's Marine & Engine Service |
-| `archive/` | 2003-2004 sites (69workshop, ASOP, Valor, Seeds, blr…). PHP was converted to HTML, but the 3,240 `.php` originals stayed tracked until 2026-09-16 and Pages served them as readable source — including three PHP-Nuke `config.php` files with live DB credentials. They are now untracked and `archive/**/*.php` is gitignored. Don't reintroduce `.php`. `_notes/` was gitignored, and is genuinely absent from the index. |
 | `README.md` | **The GitHub profile README**, not a site page. It renders on github.com/trivgar. |
 
 ## Do not re-add jail-scraper
@@ -36,6 +35,25 @@ every path beginning with `_`, which breaks the archive.
 (`scrape.js`, `watchlist.json`, `last_run.log`) and still run locally — see the
 Windows Task Scheduler job and the wake-timer note in memory. Keep it local.
 Never `git add` it, and never move its output into a published page.
+
+## Do not re-publish the archive
+
+`archive/` held Trav's 2003-2004 personal sites — friends' photos, a band's
+pages, a LAN party, someone else's art — built when he was sixteen. **All 12,996
+files were untracked and `archive/` gitignored on 2026-09-16** at his request:
+"I don't want to put all my private stuff from what I was 16 out there again."
+The files are still on disk at `archive/`. Never `git add` them.
+
+noindex was considered and rejected: it leaves every page public and reachable
+by URL, only unlisted, which is not what taking it down means.
+
+Two things that pass came out of, worth not repeating. This file previously
+claimed "All PHP was converted to HTML" — the conversion had run but the 3,240
+`.php` originals stayed tracked, and Pages served them as readable source,
+including three PHP-Nuke `config.php` files with live DB credentials. And 1,979
+email addresses across 1,555 files were published, including real personal
+addresses of other people in live `mailto:` links. **A claim in this file is not
+evidence; check the tree.**
 
 ## Do not re-publish claude.html
 
