@@ -24,7 +24,7 @@
 // Art with a digital touch!
 //
 // www.vipixel.com
-// webmaster@vipixel.com
+// [email removed]
 
 
  NAMING RULE FOR GRAPHICAL TITLE SIDEBLOCK:

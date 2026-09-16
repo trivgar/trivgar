@@ -275,7 +275,7 @@ with
 	/what ever folder it is
 
 If it still doesn't work please go on to n-12's website (where you downloaded the script)
-support forum and post your problem, or email Tom: tom@n-12.net or Chris: Chris@n-12.net
+support forum and post your problem, or email Tom: [email removed] or Chris: [email removed]
 and tell them your Problem. We may also need more identification and you MUST include the url of your 
 news script in your post.
 
@@ -288,7 +288,7 @@ If you KNOW that you have then check all the PATHS. If these paths for some reas
 where wrong then it would come up with all sorts of errors!
 
 If it still doesn't work please go on to n-12's website (where you downloaded the script)
-support forum and post your problem, or email Tom: tom@n-12.net or Chris: Chris@n-12.net
+support forum and post your problem, or email Tom: [email removed] or Chris: [email removed]
 and tell them your Problem. We may also need more identification and you MUST include the url of your 
 news script in your post.
 
@@ -297,7 +297,7 @@ Help! My Question isn't on here!
 **************************************************************************
 
 For any other questions please go on to n-12's website (where you downloaded the script)
-support forum and post your problem, or email Tom: tom@n-12.net or Chris: Chris@n-12.net
+support forum and post your problem, or email Tom: [email removed] or Chris: [email removed]
 and tell them your Problem. We may also need more identification and you MUST include the url of your 
 news script in your post.
 

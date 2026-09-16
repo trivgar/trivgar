@@ -213,7 +213,7 @@ if ($col_rs && mysql_num_rows($col_rs) > 0) {
     $saved_row_cnt  = count($save_row);
 
     ?>
-<form method="post" action="tbl_relation.php">
+<form method="post" action="tbl_relation.html">
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="submit_rel" value="true" />
 
@@ -285,7 +285,7 @@ if ($col_rs && mysql_num_rows($col_rs) > 0) {
 
         echo "\n";
         ?>
-<form method="post" action="tbl_relation.php">
+<form method="post" action="tbl_relation.html">
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="submit_show" value="true" />
 
@@ -319,7 +319,7 @@ if ($col_rs && mysql_num_rows($col_rs) > 0) {
 
         echo "\n";
         ?>
-<form method="post" action="tbl_relation.php">
+<form method="post" action="tbl_relation.html">
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="submit_comm" value="true" />
 

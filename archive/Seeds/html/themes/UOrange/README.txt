@@ -1,6 +1,6 @@
 # UOrange Theme for PHP-Nuke 5.3.0-5.4.0
 # 08 Feb 2002
-# Nuke Scripts (webmaster@nukescripts.com)
+# Nuke Scripts ([email removed])
 # Copyright © 2002, All rights reserved
 # for others releases: http://www.nukescripts.com
 

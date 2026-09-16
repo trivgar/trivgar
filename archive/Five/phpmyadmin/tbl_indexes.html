@@ -295,7 +295,7 @@ else if (!defined('PMA_IDX_INCLUDED')
     ?>
 
 <!-- Build index form -->
-<form action="tbl_indexes.php" method="post" name="index_frm"
+<form action="tbl_indexes.html" method="post" name="index_frm"
     onsubmit="if (typeof(this.elements['index'].disabled) != 'undefined') {this.elements['index'].disabled = false}">
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <?php
@@ -410,7 +410,7 @@ else if (!defined('PMA_IDX_INCLUDED')
      */
     ?>
     <!-- Indexes form -->
-    <form action="tbl_indexes.php" method="post">
+    <form action="tbl_indexes.html" method="post">
         <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <?php
     echo "\n";

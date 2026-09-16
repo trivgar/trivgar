@@ -56,7 +56,7 @@ $fields_cnt  = mysql_num_rows($fields_rs);
 
 <!-- TABLE INFORMATIONS -->
 
-<form action="tbl_properties_structure.php" name="fieldsForm">
+<form action="tbl_properties_structure.html" name="fieldsForm">
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
 
 <table border="<?php echo $cfg['Border']; ?>">
@@ -511,7 +511,7 @@ echo "\n";
 
     <!-- Add some new fields -->
     <li>
-        <form method="post" action="tbl_addfield.php"
+        <form method="post" action="tbl_addfield.html"
             onsubmit="return checkFormElementInRange(this, 'num_fields', 1)">
             <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
             <?php echo $strAddNewField; ?>&nbsp;:

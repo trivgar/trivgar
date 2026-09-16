@@ -4,7 +4,7 @@
  *                            -------------------
  *   begin                : Saturday, Feb 13, 2001
  *   copyright            : (C) 2001 The phpBB Group
- *   email                : support@phpbb.com
+ *   email                : [email removed]
  *
  *   $Id: usercp_register.php,v 1.20.2.35 2003/01/10 21:28:08 psotfx Exp $
  *
@@ -35,7 +35,7 @@
 ***************************************************************************/
 /***************************************************************************
  *   This file is part of the phpBB2 port to Nuke 6.0 (c) copyright 2002
- *   by Tom Nitzschner (tom@toms-home.com)
+ *   by Tom Nitzschner ([email removed])
  *   http://bbtonuke.sourceforge.net (or http://www.toms-home.com)
  *
  *   As always, make a backup before messing with anything. All code
@@ -540,7 +540,7 @@ if ( isset($HTTP_POST_VARS['submit']) )
                                 if (is_active("Forums")) {
                                         $message = $lang['Profile_updated_inactive'] . '<br /><br />' . sprintf($lang['Click_return_index'],  '<a href="' . append_sid("index.$phpEx") . '">', '</a>');
                                 } else {
-                                        $message = $lang['Profile_updated_inactive'] . '<br /><br />' . sprintf($lang['Click_return_index'],  '<a href="index.php">', '</a>');
+                                        $message = $lang['Profile_updated_inactive'] . '<br /><br />' . sprintf($lang['Click_return_index'],  '<a href="index.html">', '</a>');
                                 }
                         }
                         else
@@ -548,7 +548,7 @@ if ( isset($HTTP_POST_VARS['submit']) )
                                 if (is_active("Forums")) {
                                         $message = $lang['Profile_updated'] . '<br /><br />' . sprintf($lang['Click_return_index'],  '<a href="' . append_sid("index.$phpEx") . '">', '</a>');
                                 } else {
-                                            $message = $lang['Profile_updated'] . '<br /><br />' . sprintf($lang['Click_return_index'],  '<a href="index.php">', '</a>');
+                                            $message = $lang['Profile_updated'] . '<br /><br />' . sprintf($lang['Click_return_index'],  '<a href="index.html">', '</a>');
                                 }
                         }
 

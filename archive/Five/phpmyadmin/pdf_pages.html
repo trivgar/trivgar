@@ -131,7 +131,7 @@ if ($cfgRelation['pdfwork']) {
     $page_rs    = PMA_query_as_cu($page_query);
     if ($page_rs && mysql_num_rows($page_rs) > 0) {
         ?>
-<form method="post" action="pdf_pages.php" name="selpage">
+<form method="post" action="pdf_pages.html" name="selpage">
     <?php echo $strChoosePage . "\n"; ?>
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="do" value="choosepage" />
@@ -161,7 +161,7 @@ if ($cfgRelation['pdfwork']) {
 
     // Possibility to create a new page:
     ?>
-<form method="post" action="pdf_pages.php" name="crpage">
+<form method="post" action="pdf_pages.html" name="crpage">
     <?php echo $strCreatePage . "\n"; ?>
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="do" value="createpage" />
@@ -177,7 +177,7 @@ if ($cfgRelation['pdfwork']) {
 <hr />
 
 <h2><?php echo $strSelectTables ;?></h2>
-<form method="post" action="pdf_pages.php" name="edcoord">
+<form method="post" action="pdf_pages.html" name="edcoord">
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="chpage" value="<?php echo $chpage; ?>" />
     <input type="hidden" name="do" value="edcoord" />
@@ -266,7 +266,7 @@ if ($cfgRelation['pdfwork']) {
 
     if (isset($do) && ($do == 'edcoord' || $do == 'choosepage')) {
         ?>
-<form method="post" action="pdf_schema.php">
+<form method="post" action="pdf_schema.html">
     <?php echo PMA_generate_common_hidden_inputs($db); ?>
     <input type="hidden" name="pdf_page_number" value="<?php echo $chpage; ?>" />
     <?php echo $strDisplayPDF; ?>&nbsp;:<br />

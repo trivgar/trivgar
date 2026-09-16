@@ -2,7 +2,7 @@
 /*                         KodBlue2 For PHPNuke5                        */
 /*                         By KodRed                                    */
 /*                         http://www.babylone6tem.com/~kodred          */
-/*                         kodred@babylone6tem.com                      */
+/*                         [email removed]                      */
 /************************************************************************/
 /* KodRed - Design                                                      */
 /************************************************************************/
@@ -24,7 +24,7 @@ A little banner is included in the zip file if you want to link us on your WebSi
 ==========================================================================
 
 Thanks to Nexia(http://www.nexialys.net/)
-Copyright (c) 2001 by kodred (kodred@babylone6tem.com)
+Copyright (c) 2001 by kodred ([email removed])
 
 http://www.babylone6tem.com/~kodred
 

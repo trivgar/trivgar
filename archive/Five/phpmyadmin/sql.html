@@ -179,7 +179,7 @@ if ($do_confirm) {
     echo $strDoYouReally . '&nbsp;:<br />' . "\n";
     echo '<tt>' . htmlspecialchars($stripped_sql_query) . '</tt>&nbsp;?<br/>' . "\n";
     ?>
-<form action="sql.php" method="post">
+<form action="sql.html" method="post">
     <?php echo PMA_generate_common_hidden_inputs($db, (isset($table)?$table:'')); ?>
     <input type="hidden" name="sql_query" value="<?php echo urlencode(addslashes($sql_query)); ?>" />
     <input type="hidden" name="zero_rows" value="<?php echo isset($zero_rows) ? $zero_rows : ''; ?>" />
@@ -633,7 +633,7 @@ else {
                   . '&amp;id_bookmark=1';
             ?>
 <!-- Bookmark the query -->
-<form action="sql.php" method="post" onsubmit="return emptyFormElements(this, 'fields[label]');">
+<form action="sql.html" method="post" onsubmit="return emptyFormElements(this, 'fields[label]');">
             <?php
             echo "\n";
             if ($disp_mode[3] == '1') {

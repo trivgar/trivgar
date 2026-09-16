@@ -146,7 +146,7 @@ usort($statistics, 'PMA_dbCmp');
  * Displays the page
  */
 if (count($statistics) > 0) {
-    echo '<form action="./server_databases.php" method="post" name="dbStatsForm">' . "\n"
+    echo '<form action="./server_databases.html" method="post" name="dbStatsForm">' . "\n"
        . PMA_generate_common_hidden_inputs('', '', 1)
        . '    <input type="hidden" name="dbstats" value="' . (empty($dbstats) ? '0' : '1') . '" />' . "\n"
        . '    <input type="hidden" name="sort_by" value="' . $sort_by . '" />' . "\n"

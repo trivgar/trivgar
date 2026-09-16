@@ -1,7 +1,7 @@
 -----------------------------------------------
 ::Trashbin:: theme (PHP-Nuke 5.5)
 Author: trash
-Email: trash@trashbin.tk
+Email: [email removed]
 HomePage: http://www.trashbin.tk
 -----------------------------------------------
 

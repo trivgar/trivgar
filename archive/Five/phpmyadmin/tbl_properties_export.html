@@ -22,7 +22,7 @@ if (isset($sql_query)) {
     PMA_showMessage($GLOBALS['strSQLQuery']);
 }
 ?>
-<form method="post" action="tbl_dump.php" name="tbl_dump">
+<form method="post" action="tbl_dump.html" name="tbl_dump">
     <?php 
 echo '    ' . PMA_generate_common_hidden_inputs($db, $table);
 if (isset($sql_query)) {

@@ -57,7 +57,7 @@ $auto_sel  = ($cfg['TextareaAutoSelect']
     <!-- Query box and bookmark support -->
     <li>
         <a name="querybox"></a>
-        <form method="post" action="read_dump.php"<?php if ($is_upload) echo ' enctype="multipart/form-data"'; echo "\n"; ?>
+        <form method="post" action="read_dump.html"<?php if ($is_upload) echo ' enctype="multipart/form-data"'; echo "\n"; ?>
             onsubmit="return checkSqlQuery(this)" name="sqlform">
             <input type="hidden" name="is_js_confirmed" value="0" />
             <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>

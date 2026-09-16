@@ -71,7 +71,7 @@ mysql_query("CREATE TABLE ".$prefix."_bbtopics (topic_id int(10) NOT NULL auto_i
 
 // New Table Creation
 mysql_query("CREATE TABLE ".$prefix."_config (config_id int(10) NOT NULL auto_increment, allow_html int(2) default NULL, allow_bbcode int(2) default NULL, allow_sig int(2) default NULL, selected int(2) NOT NULL default '0', posts_per_page int(10) default NULL, hot_threshold int(10) default NULL, topics_per_page int(10) default NULL, email_sig varchar(255) default NULL, email_from varchar(100) default NULL, PRIMARY KEY  (config_id), UNIQUE KEY selected (selected))");
-mysql_query("INSERT INTO ".$prefix."_config VALUES ( '1', '1', '1', '1', '1', '10', '10', '20', 'Yours Truly, NukeAddOn.com', 'rtirtadji@hotmail.com')");
+mysql_query("INSERT INTO ".$prefix."_config VALUES ( '1', '1', '1', '1', '1', '10', '10', '20', 'Yours Truly, NukeAddOn.com', '[email removed]')");
 
 // New Table Creation
 mysql_query("CREATE TABLE ".$prefix."_disallow (disallow_id int(10) NOT NULL auto_increment, disallow_username varchar(50) default NULL, PRIMARY KEY  (disallow_id))");

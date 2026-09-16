@@ -115,7 +115,7 @@ if ($server == 0 || count($cfg['Servers']) > 1) {
 </tr>
 <tr>
     <td>
-        <form method="post" action="index.php" target="_parent">
+        <form method="post" action="index.html" target="_parent">
             <select name="server">
     <?php
     echo "\n";
@@ -302,7 +302,7 @@ if ($server > 0) {
         <tr>
             <td valign="baseline"><img src="<?php echo $item_img; ?>" width="7" height="7" alt="item" /></td>
             <td>
-            <form method="post" action="db_create.php">
+            <form method="post" action="db_create.html">
                 <?php echo $strCreateNewDatabase . '&nbsp;' . PMA_showMySQLDocu('Reference', 'CREATE_DATABASE'); ?><br />
                 <?php echo PMA_generate_common_hidden_inputs(); ?>
                 <input type="hidden" name="reload" value="1" />
@@ -470,7 +470,7 @@ if (empty($cfg['Lang'])) {
         <tr>
             <td valign="baseline"><img src="<?php echo $item_img; ?>" width="7" height="7" alt="item" /></td>
             <td nowrap="nowrap">
-                <form method="post" action="index.php" target="_parent">
+                <form method="post" action="index.html" target="_parent">
                     <input type="hidden" name="convcharset" value="<?php echo $convcharset; ?>" />
                     <input type="hidden" name="server" value="<?php echo $server; ?>" />
                     Language <a href="./translators.html" target="documentation">(*)</a>:
@@ -522,7 +522,7 @@ if (isset($cfg['AllowAnywhereRecoding']) && $cfg['AllowAnywhereRecoding']
         <tr>
             <td valign="baseline"><img src="<?php echo $item_img; ?>" width="7" height="7" alt="item" /></td>
             <td nowrap="nowrap">
-                <form method="post" action="index.php" target="_parent">
+                <form method="post" action="index.html" target="_parent">
                     <input type="hidden" name="server" value="<?php echo $server; ?>" />
                     <input type="hidden" name="lang" value="<?php echo $lang; ?>" />
                     <?php echo $strMySQLCharset;?>:
@@ -565,7 +565,7 @@ if ($is_superuser || $cfg['ShowPhpInfo']) {
         <tr>
             <td valign="baseline"><img src="<?php echo $item_img; ?>" width="7" height="7" alt="item" /></td>
             <td>
-                <a href="phpinfo.php" target="_new"><?php echo $strShowPHPInfo; ?></a>
+                <a href="phpinfo.html" target="_new"><?php echo $strShowPHPInfo; ?></a>
             </td>
         </tr>
     <?php

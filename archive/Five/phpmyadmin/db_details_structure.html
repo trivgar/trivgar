@@ -49,7 +49,7 @@ if ($num_tables == 0) {
 // 2. Shows table informations on mysql >= 3.23.03 - staybyte - 11 June 2001
 else if (PMA_MYSQL_INT_VERSION >= 32303) {
     ?>
-<form method="post" action="db_details_structure.php" name="tablesForm">
+<form method="post" action="db_details_structure.html" name="tablesForm">
     <?php echo PMA_generate_common_hidden_inputs($db); ?>
 
 <table border="<?php echo $cfg['Border']; ?>">
@@ -318,7 +318,7 @@ else {
     $i = 0;
     echo "\n";
     ?>
-<form action="db_details_structure.php">
+<form action="db_details_structure.html">
     <?php echo PMA_generate_common_hidden_inputs($db); ?>
 
 <table border="<?php echo $cfg['Border']; ?>">
@@ -432,7 +432,7 @@ if ($num_tables > 0) {
 
     <!-- Create a new table -->
     <li>
-        <form method="post" action="tbl_create.php"
+        <form method="post" action="tbl_create.html"
             onsubmit="return (emptyFormElements(this, 'table') && checkFormElementInRange(this, 'num_fields', 1))">
         <?php echo PMA_generate_common_hidden_inputs($db); ?>
 <?php

@@ -57,7 +57,7 @@ if (PMA_MYSQL_INT_VERSION >= 32322) {
 <ul>
     <!-- Table comments -->
     <li>
-        <form method="post" action="tbl_properties_options.php">
+        <form method="post" action="tbl_properties_options.html">
             <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
             <?php echo $strTableComments; ?>&nbsp;:&nbsp;
             <input type="hidden" name="prev_comment" value="<?php echo urlencode($show_comment); ?>" />&nbsp;
@@ -104,7 +104,7 @@ if (PMA_MYSQL_INT_VERSION >= 32322) {
     echo "\n";
     ?>
     <li>
-        <form method="post" action="tbl_properties_options.php">
+        <form method="post" action="tbl_properties_options.html">
             <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
             <?php echo $strTableType; ?>&nbsp;:&nbsp;
             <select name="tbl_type" style="vertical-align: middle">
@@ -147,7 +147,7 @@ if (PMA_MYSQL_INT_VERSION >= 32322) {
         <table border="0" cellspacing="0" cellpadding="0" style="vertical-align: top">
         <tr>
             <td valign="top">
-                <form method="post" action="tbl_properties_options.php">
+                <form method="post" action="tbl_properties_options.html">
                     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
 
                     <table border="0" cellspacing="0" cellpadding="0">

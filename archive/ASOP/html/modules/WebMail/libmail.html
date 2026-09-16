@@ -31,13 +31,13 @@
 @example
         include ("modules/WebMail/libmail.php");
         $m= new Mail; // create the mail
-        $m->From( "leo@isp.com" );
-        $m->To( "destination@somewhere.fr" );
+        $m->From( "[email removed]" );
+        $m->To( "[email removed]" );
         $m->Subject( "the subject of the mail" );
         $message= "Hello world!\nthis is a test of the Mail class\nplease ignore\nThanks.";
 	$m->Body( $message);        // set the body
-        $m->Cc( "someone@somewhere.fr");
-        $m->Bcc( "someoneelse@somewhere.fr");
+        $m->Cc( "[email removed]");
+        $m->Bcc( "[email removed]");
         $m->Priority(4) ;        // set the priority to Low
         $m->Attach( "/home/leo/toto.gif", "image/gif" ) ;        // attach a file of type image/gif
         $m->Send();        // send the mail
@@ -46,7 +46,7 @@
 LASTMOD
         Fri Oct  6 15:46:12 UTC 2000
 
-@author        Leo West - lwest@free.fr
+@author        Leo West - [email removed]
 
 */
 

@@ -12,5 +12,5 @@ I hope you find it useful!
 regards
 MaxG
 http://www.globlenet.com
-support@globlenet.com
+[email removed]
 

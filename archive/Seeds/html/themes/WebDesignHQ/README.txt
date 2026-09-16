@@ -17,7 +17,7 @@ Credits.
 
 clock.php --  
 
-// Script copyright (C) 2000 Dean Kennedy (dean@terrabyte.dc.com.au)
+// Script copyright (C) 2000 Dean Kennedy ([email removed])
 // Version 1.0   23 October 2000
 // Free to use, modify and copy so long as you leave my name in comments
 

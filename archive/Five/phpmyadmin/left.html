@@ -197,7 +197,7 @@ if ($num_dbs > 1) {
 
     // Light mode -> beginning of the select combo for databases
     if ($cfg['LeftFrameLight']) {
-        echo '    <form method="post" action="index.php" name="left" target="_parent">' . "\n";
+        echo '    <form method="post" action="index.html" name="left" target="_parent">' . "\n";
         echo PMA_generate_common_hidden_inputs();
         echo '        <select name="lightm_db" onchange="this.form.submit()">' . "\n";
         echo '            <option value="">(' . $strDatabases . ') ...</option>' . "\n";

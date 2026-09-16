@@ -24,18 +24,18 @@
 // | The Initial Developer of the Original Code is Michael P. Mehl.       |
 // +----------------------------------------------------------------------+
 // | Main Active Authors:                                                 |
-// |   Nigel Swinson <nigelswinson@users.sourceforge.net>                 |
+// |   Nigel Swinson <[email removed]>                 |
 // |     Started around 2001-07 and creator of V1.N.x branches.           |
-// |   Sam Blum <bs_php@infeer.com>                                       |
+// |   Sam Blum <[email removed]>                                       |
 // |     Started around 2001-09 major restruct and testbench initiator.   |
-// |   Daniel Allen <bigredlinux@yahoo.com>                               |
+// |   Daniel Allen <[email removed]>                               |
 // |     Started around 2001-10 working to make Php.XPath adhere to specs |
 // |   fab                                                                |
 // |     minor changes, especially the return of status codes instead of  |
 // |     echo and exit.                                                   |
 // +----------------------------------------------------------------------+
 // | Main Former Authors:                                                 |
-// |   Michael P. Mehl <mpm@phpxml.org>                                   |
+// |   Michael P. Mehl <[email removed]>                                   |
 // |     Inital creator of V 1.0. Stoped activities around 2001-03        |
 // +----------------------------------------------------------------------+
 // | Requires PHP version  4.0.5 and up                                   |
@@ -304,7 +304,7 @@ class XPath {
   function XPath($fileName='', $userXmlOptions=array()) {
     // Set the options for parsing the XML data.
     // Per default we want to keep spaces in the CDATA, as most people generally want to 
-    // keep space, and you can call trim() but there's no untrim() is there? Francis Fillion <francisf@videotron.ca>
+    // keep space, and you can call trim() but there's no untrim() is there? Francis Fillion <[email removed]>
     $this->xmlOptions[XML_OPTION_CASE_FOLDING] = FALSE;
     $this->xmlOptions[XML_OPTION_SKIP_WHITE] = FALSE;
     // Don't use PHP's array_merge!
@@ -440,7 +440,7 @@ class XPath {
    * content and upon success stores the information retrieved from
    * the file into an array.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>, changes by fab
+   * @author    Michael P. Mehl <[email removed]>, changes by fab
    * @param     string $fileName Path and name of the file to be read and parsed.
    * @return    bool TRUE on success, FALSE on failure (check getLastError())
    * @see       importFromString(), _getLastError(), 
@@ -485,7 +485,7 @@ class XPath {
    * content and upon success stores the information retrieved from
    * the string into an array.
    *
-   * @author    Francis Fillion <ffillion@infotopie.com> modified from Michael P. Mehl <mpm@phpxml.org>, changes by fab
+   * @author    Francis Fillion <[email removed]> modified from Michael P. Mehl <[email removed]>, changes by fab
    * @param     string $xmlString name of the string to be read and parsed.
    * @return    bool TRUE on success, FALSE on failure (check getLastError())
    * @see       _handleStartElement(), _handleEndElement(),
@@ -555,7 +555,7 @@ class XPath {
    *       If the result of the query leads to 1 unique node, then the
    *       path to that node is taken.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
+   * @author    Nigel Swinson <[email removed]>
    * @param     string $absoluteXPath The path to the current node (see text above)
    * @return    string The string returned is valid XML
    * @throws    FALSE on error;
@@ -603,7 +603,7 @@ class XPath {
    *       If the result of the query leads to 1 unique node, then the
    *       path to that node is taken.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
+   * @author    Nigel Swinson <[email removed]>
    * @param     string $absoluteXPath The path to the current node (see text above)
    * @return    string The string returned is valid XML
    * @throws    FALSE on error;
@@ -640,7 +640,7 @@ class XPath {
    *       If the result of the query leads to 1 unique node, then the
    *       path to that node is taken.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
+   * @author    Nigel Swinson <[email removed]>
    * @param     string $fileName
    * @param     string $absoluteXPath The path to the current node (see text above)
    * @param     string $xmlHeader ( default is '< ? xml version="1.0" ? >' )
@@ -1000,7 +1000,7 @@ class XPath {
    * Simplified wholeText(). This function is not actually in any spec and is 
    * therefore more of a helper "shortcut."
    *
-   * @author    Sam Blume <bs_php@infeer.com> and Daniel Allen <bigredlinux@yahoo.com>
+   * @author    Sam Blume <[email removed]> and Daniel Allen <[email removed]>
    * @param     string $absoluteXPath Full document path of the node, from 
    *            which the text should be retrieved (any text() will be truncated). *READONLY*
    * @return    string The returned string contains either the value or the
@@ -1026,7 +1026,7 @@ class XPath {
    * If the xpath terminated as a text() node, it will be truncated since this function
    * is intended primarily for novice users.
    *
-   * @author    Sam Blume <bs_php@infeer.com> and Daniel Allen <bigredlinux@yahoo.com>
+   * @author    Sam Blume <[email removed]> and Daniel Allen <[email removed]>
    * @param     string $absoluteXPath Full document path of the node, from 
    *            which the content should be retrieved as an array (xpath ending in a text()
    *            node will be truncated). *READONLY*
@@ -1070,7 +1070,7 @@ class XPath {
    * return the data...what I am not sure of, is if this is supposed to be recursive into
    * the text of the child nodes along side the text nodes of the original parent
    *
-   * @author   Daniel Allen <bigredlinux@yahoo.com>
+   * @author   Daniel Allen <[email removed]>
    * @param    string $absoluteXPath Full document path of the node, from 
    *           which the content should be retrieved. *READONLY*
    * @return   string The returned string contains the concat cdata of all of the
@@ -1147,7 +1147,7 @@ class XPath {
    * these text nodes are actually distinct nodes called text() nodes.  Obviously, elements with
    * only text as a child will have only a single text() node.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org> modified by Daniel Allen <bigredlinux@yahoo.com>
+   * @author    Michael P. Mehl <[email removed]> modified by Daniel Allen <[email removed]>
    * @param     string $absoluteXPath Full document path of the text() node, from 
    *            which the content should be retrieved. *READONLY*
    * @param     number $offset Return the string starting at this offset. 
@@ -1571,7 +1571,7 @@ class XPath {
    * only this attribute will be removed, the node to which the attribute
    * belongs as well as its children will remain unmodified.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
+   * @author    Nigel Swinson <[email removed]>
    * @param     string $absoluteXPath Full path of the node to be removed.
    * @return    TRUE on success
    * @throws    FALSE on error;
@@ -1806,7 +1806,7 @@ class XPath {
    *      [<path>]['attributes']    // array(<attrName> => <attrVal>, ...)
    *      [<path>]['text']          // array of text parts: E.g. <A>hello<B/>world</A> -> array('hello','world')
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $absoluteParentPath Full path of the parent, to which the new
    *            node should be added as a child. *READONLY*
    * @param     string $nodeName Name of the new node. *READONLY*
@@ -1960,7 +1960,7 @@ class XPath {
   /**
    * Returns TRUE if the given node has child nodes below it
    *
-   * @author    Dietrich Ayala <dietrich@ganx4.com>
+   * @author    Dietrich Ayala <[email removed]>
    * @param     string $absoluteXPath full path of the potentail parent node
    *            *READONLY*
    * @return    bool TRUE if this node exists and has a child, FALSE otherwise
@@ -1975,7 +1975,7 @@ class XPath {
   /**
    * Resets the object so it's able to take a new xml sting/file
    *
-   * @author    Sam Blume bs_php@infeer.com
+   * @author    Sam Blume [email removed]
    *
    */
   function reset() {
@@ -2132,7 +2132,7 @@ class XPath {
    * a modified document back to a file or doing other nice things with
    * it.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $highlight Array containing a list of full document
    *            paths of nodes to be highlighted by <font>...</font> tags
    *            in the generated XML string.
@@ -2322,7 +2322,7 @@ class XPath {
    * While parsing a XML document for each opening tag this method is
    * called. It'll add the tag found to the tree of document nodes.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     int $parser Handler for accessing the current XML parser.
    * @param     string $name Name of the opening tag found in the document.
    * @param     array $attributes Associative array containing a list of
@@ -2364,7 +2364,7 @@ class XPath {
    *
    * While parsing a XML document for each closing tag this method is called.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     int $parser Handler for accessing the current XML parser.
    * @param     string $name Name of the closing tag found in the document.
    * @see       _handleStartElement(), _handleCharacterData()
@@ -2391,7 +2391,7 @@ class XPath {
    * While parsing a XML document for each character data this method
    * is called. It'll add the character data to the document tree.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     int $parser Handler for accessing the current XML parser.
    * @param     string $text Character data found in the document.
    * @see       _handleStartElement(), _handleEndElement()
@@ -2531,7 +2531,7 @@ class XPath {
    * This method tries to extract the name of the axis and its node-test
    * from a given step of an XPath expression at a given node.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $step String containing a step of an XPath expression.
    * @param     string $nodePath Full document path of the node on which the
    *            step is executed.
@@ -2664,7 +2664,7 @@ class XPath {
    * This method check whether an expression contains a valid name of an
    * XPath function.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $expression Name of the function to be checked.
    * @return    boolean This method returns TRUE if the given name is a valid
    *            XPath function name, otherwise FALSE.
@@ -2761,7 +2761,7 @@ class XPath {
    * This method tries to evaluate a step from an XPath expression at a
    * specific context.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string or array $context Full document path of the context from
    *            which starting the step should be evaluated.  Either a single
    *             context, or an array of contexts.
@@ -2885,7 +2885,7 @@ class XPath {
    * This method evaluates a given XPath function with its arguments on a
    * specific node of the document.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $function Name of the function to be evaluated.
    * @param     string $arguments String containing the arguments being
    *            passed to the function.
@@ -2946,7 +2946,7 @@ class XPath {
    *
    * This method tries to evaluate a predicate on a given node.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the predicate
    *            should be evaluated.
    * @param     string $predicate String containing the predicate expression
@@ -3243,7 +3243,7 @@ class XPath {
    * This method checks whether a list of nodes passed to this method match
    * a given list of predicates. 
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $nodes Array of full paths of all nodes to be tested.
    * @param     array $predicates Array of predicates to use.
    * @return    array The array returned by this method contains a list of
@@ -3338,7 +3338,7 @@ class XPath {
    * This method checks whether a node in the document matches a given
    * node-test.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $context Full path of the node, which should be tested
    *            for matching the node-test.
    * @param     string $nodeTest String containing the node-test for the
@@ -3434,7 +3434,7 @@ class XPath {
    * This method handles the XPath child axis.  It essentially filters out the
    * children to match the name specified after the /
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3476,7 +3476,7 @@ class XPath {
    *
    * This method handles the XPath parent axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3503,7 +3503,7 @@ class XPath {
    *
    * This method handles the XPath attribute axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3542,7 +3542,7 @@ class XPath {
    *
    * This method handles the XPath self axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3568,7 +3568,7 @@ class XPath {
    *
    * This method handles the XPath descendant axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3602,7 +3602,7 @@ class XPath {
    *
    * This method handles the XPath ancestor axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3638,7 +3638,7 @@ class XPath {
    *
    * This method handles the XPath namespace axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3665,7 +3665,7 @@ class XPath {
    *
    * This method handles the XPath following axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3708,7 +3708,7 @@ class XPath {
    *
    * This method handles the XPath preceding axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3753,7 +3753,7 @@ class XPath {
    *
    * This method handles the XPath following-sibling axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3800,7 +3800,7 @@ class XPath {
    *
    * This method handles the XPath preceding-sibling axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3841,7 +3841,7 @@ class XPath {
    *
    * This method handles the XPath descendant-or-self axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3868,7 +3868,7 @@ class XPath {
    *
    * This method handles the XPath ancestor-or-self axis.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     array $axis Array containing information about the axis.
    * @param     string $context Node from which starting the axis should
    *            be processed.
@@ -3899,7 +3899,7 @@ class XPath {
    *
    * This method handles the XPath function last.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -3934,7 +3934,7 @@ class XPath {
    *
    * This method handles the XPath function position.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -3969,7 +3969,7 @@ class XPath {
    *
    * This method handles the XPath function count.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -3989,7 +3989,7 @@ class XPath {
    *
    * This method handles the XPath function id.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4031,7 +4031,7 @@ class XPath {
    *
    * This method handles the XPath function name.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4050,7 +4050,7 @@ class XPath {
    *
    * This method handles the XPath function string.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4105,7 +4105,7 @@ class XPath {
    *
    * This method handles the XPath function concat.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4139,7 +4139,7 @@ class XPath {
    *
    * This method handles the XPath function starts-with.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4172,7 +4172,7 @@ class XPath {
    *
    * This method handles the XPath function contains.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4208,7 +4208,7 @@ class XPath {
    *
    * This method handles the XPath function substring-before.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4235,7 +4235,7 @@ class XPath {
    *
    * This method handles the XPath function substring-after.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4262,7 +4262,7 @@ class XPath {
    *
    * This method handles the XPath function substring.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4300,7 +4300,7 @@ class XPath {
    *
    * This method handles the XPath function string-length.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4350,7 +4350,7 @@ class XPath {
    *
    * This method handles the XPath function translate.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4380,7 +4380,7 @@ class XPath {
    *
    * This method handles the XPath function boolean.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4432,7 +4432,7 @@ class XPath {
    *
    * This method handles the XPath function not.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4454,7 +4454,7 @@ class XPath {
    *
    * This method handles the XPath function TRUE.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4473,7 +4473,7 @@ class XPath {
    *
    * This method handles the XPath function FALSE.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4492,7 +4492,7 @@ class XPath {
    *
    * This method handles the XPath function lang.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4544,7 +4544,7 @@ class XPath {
    *
    * This method handles the XPath function number.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4579,7 +4579,7 @@ class XPath {
    *
    * This method handles the XPath function sum.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4615,7 +4615,7 @@ class XPath {
    *
    * This method handles the XPath function floor.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4640,7 +4640,7 @@ class XPath {
    *
    * This method handles the XPath function ceiling.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4666,7 +4666,7 @@ class XPath {
    *
    * This method handles the XPath function round.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $node Full path of the node on which the function
    *            should be processed.
    * @param     string $arguments String containing the arguments that were
@@ -4803,7 +4803,7 @@ class XPath {
   /**
    * This method checks the right ammount and match of brackets
    *
-   * @author    Sam Blume <bs_php@infeer.com>
+   * @author    Sam Blume <[email removed]>
    * @param     string $term String in which is checked.
    * @return    bool TRUE: OK / FALSE: KO  
    * @see       _evaluateStep()
@@ -4860,7 +4860,7 @@ class XPath {
    * only if the string the method is looking for is located outside of
    * brackets, the search will be successful.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $term String in which the search shall take place.
    * @param     string $expression String that should be searched.
    * @return    int This method returns -1 if no string was found, otherwise
@@ -4909,7 +4909,7 @@ class XPath {
    * This method retrieves everything from a string before a given delimiter,
    * not including the delimiter.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $string String, from which the substring should be
    *            extracted.
    * @param     string $delimiter String containing the delimiter to use.
@@ -4935,7 +4935,7 @@ class XPath {
    * This method retrieves everything from a string after a given delimiter,
    * not including the delimiter.
    *
-   * @author    Michael P. Mehl <mpm@phpxml.org>
+   * @author    Michael P. Mehl <[email removed]>
    * @param     string $string String, from which the substring should be
    *            extracted.
    * @param     string $delimiter String containing the delimiter to use.
@@ -4957,7 +4957,7 @@ class XPath {
    * This method displays an error messages and stops the execution of the
    * script.
    *
-   * @author     Michael P. Mehl <mpm@phpxml.org>
+   * @author     Michael P. Mehl <[email removed]>
    * @param      $message string Error message to be displayed.
    * @param      $lineNumber int line number given by __LINE__
    * @param      $terminate bool (default TURE) End the execution of this script.
@@ -4997,7 +4997,7 @@ class XPath {
    * Returns TRUE if this object has any xml content.  i.e. after a successfull
    * load_XXX() call we will have content, but before we shouldn't.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
+   * @author    Nigel Swinson <[email removed]>
    * @return    TRUE if the object holds any content, FALSE otherwise.
    */
   function _objectHasContent() {
@@ -5015,8 +5015,8 @@ class XPath {
    * is clear to the debugging user.  Call _closeDebugFunction() at the
    * end of the function to create a clean box round the function call.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
-   * @author    Sam   Blum    <bs_php@infeer.com>
+   * @author    Nigel Swinson <[email removed]>
+   * @author    Sam   Blum    <[email removed]>
    * @param     string $FunctionName the name of the function we are beginning to debug
    * @return    array the output from the gettimeofday function.
    * @see       _closeDebugFunction()
@@ -5038,7 +5038,7 @@ class XPath {
    * This method ends a <DIV><PRE> block and reports the time since $aStartTime
    * is clear to the debugging user.
    *
-   * @author    Nigel Swinson <nigelswinson@users.sourceforge.net>
+   * @author    Nigel Swinson <[email removed]>
    * @param     array $a_starttime the time that the function call was started.
    * @param     any $return_value the return value from the function call that 
    *            we are debugging

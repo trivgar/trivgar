@@ -1,6 +1,6 @@
 # NSN_Yellow_v3b Theme for PHP-Nuke 5.4.0-5.6.0
 # 06 Sep 2002
-# NukeScripts Network (webmaster@nukescripts.com)
+# NukeScripts Network ([email removed])
 # Copyright © 2002, All rights reserved
 # for others releases: http://www.nukescripts.net
 

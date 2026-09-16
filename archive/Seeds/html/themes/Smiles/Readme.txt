@@ -8,5 +8,5 @@ polished, but I think it is a pretty good theme.
 I hope you enjoy it.
 
 Trevor
-trevor@trevor.net
+[email removed]
 http://www.trevor.net

@@ -18,6 +18,6 @@
 // Art with a digital touch!
 //
 // www.vipixel.com
-// webmaster@vipixel.com
+// [email removed]
 //
 // ----------------------------------------------------------------------

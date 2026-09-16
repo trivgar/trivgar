@@ -2,7 +2,7 @@
 # PHP-NUKE: Advanced Content Management System
 # ============================================
 #
-# Copyright (c) 2002 by Francisco Burzi (fbc@mandrakesoft.com)
+# Copyright (c) 2002 by Francisco Burzi ([email removed])
 # http://phpnuke.org
 #
 # This module is to configure the main options for your site

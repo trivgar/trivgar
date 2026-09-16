@@ -4,7 +4,7 @@
  *                            -------------------
  *   begin                : Saturday, Feb 13, 2001
  *   copyright            : (C) 2001 The phpBB Group
- *   email                : support@phpbb.com
+ *   email                : [email removed]
  *
  *   $Id: bbcode.php,v 1.36.2.19 2003/01/10 13:21:24 psotfx Exp $
  *
@@ -213,7 +213,7 @@ function bbencode_second_pass($text, $uid)
 	$patterns[] = "#\[url=(([\w\-]+\.)*?[\w]+(:[0-9]+)?(/[^ \"\n\r\t<]*)?)\](.*?)\[/url\]#si";
 	$replacements[] = $bbcode_tpl['url4'];
 
-	// [email]user@domain.tld[/email] code..
+	// [email][email removed][/email] code..
 	$patterns[] = "#\[email\]([a-z0-9\-_.]+?@[\w\-]+\.([\w\-\.]+\.)?[\w]+)\[/email\]#si";
 	$replacements[] = $bbcode_tpl['email'];
 
@@ -604,7 +604,7 @@ function bbencode_second_pass_code($text, $uid, $bbcode_tpl)
  * - Only matches these 2 patterns either after a space, or at the beginning of a line
  *
  * Notes: the email one might get annoying - it's easy to make it more restrictive, though.. maybe
- * have it require something like xxxx@yyyy.zzzz or such. We'll see.
+ * have it require something like [email removed] or such. We'll see.
  */
 function make_clickable($text)
 {

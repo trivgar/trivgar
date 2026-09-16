@@ -193,7 +193,7 @@ $dbpassword="";
 $dbname="forum";
 
 // technical email address - any error messages will be emailed here
-$technicalemail = "dbmaster@your-email-address-here.com";
+$technicalemail = "[email removed]";
 
 // use persistant connections to the database
 // 0 = don't use
@@ -221,7 +221,7 @@ if ($canwrite==0 and $fileexists) {
 	echo "<p><b>Database name:</b> $dbname</p>\n";
 	echo "<p><b>Technical email:</b> <a href=\"mailto:$technicalemail\">$technicalemail</a></p>\n";
 	echo "<p>Only continue to the next step if those details are correct. If they are not, please edit your config.php file and reupload it. The next step will test database connectivity.</p>";
-  if ($technicalemail=="dbmaster@your-email-address-here.com") {
+  if ($technicalemail=="[email removed]") {
     echo "<p>Please update your 'Technical email' in your config.php before continuing.</p>";
   } else {
     echo "<p><a href=\"install.php?step=".($step+1)."\">Next step --&gt;</a></p>\n";
@@ -241,7 +241,7 @@ if ($canwrite!=0 and $fileexists) {
 	echo "<p><b>Database name:</b> <input name=\"dbname\" value=\"$dbname\"></p>\n";
 	echo "<p><b>Technical email:</b> <input name=\"technicalemail\" value=\"$technicalemail\"></a></p>\n";
 	echo "<p><input type=submit value=\"Update config.php file\"></form></p>";
-  if ($technicalemail!="dbmaster@your-email-address-here.com") {
+  if ($technicalemail!="[email removed]") {
     echo "<p><form action=\"install.php\" method=get><input type=hidden name=step value=".($step+1)."><input type=submit value=\"Continue without updating values\"></form></p>\n";
   }
 }
@@ -254,7 +254,7 @@ if ($canwrite!=0 and !$fileexists) {
 	echo "<p><b>Database username:</b> <input name=\"dbusername\" value=\"root\"></p>\n";
 	echo "<p><b>Database password:</b> <input name=\"dbpassword\" value=\"\"></p>\n";
 	echo "<p><b>Database name:</b> <input name=\"dbname\" value=\"forum\"></p>\n";
-	echo "<p><b>Technical email:</b> <input name=\"technicalemail\" value=\"dbmaster@your-email-address-here.com\"></a></p>\n";
+	echo "<p><b>Technical email:</b> <input name=\"technicalemail\" value=\"[email removed]\"></a></p>\n";
 	echo "<p><input type=submit value=\"Update config.php file\"></form></p>";
 }
 
@@ -265,7 +265,7 @@ if ($step=="writeconfig") {
 $dbservertype = strtolower($dbservertype);
   //write config file
 
-  if ($technicalemail=="dbmaster@your-email-address-here.com") {
+  if ($technicalemail=="[email removed]") {
     echo "<P>Please enter a new email address in the technical email field.</p>";
     exit;
   }
@@ -1064,9 +1064,9 @@ $query[]="INSERT INTO bbcode VALUES (NULL,'b','<b>\\\\4</b>','[b]Bold[/b]','The 
 $explain[]="Adding bbcode data";
 $query[]="INSERT INTO bbcode VALUES (NULL,'i','<i>\\\\4</i>','[i]Italics[/i]','The [i] tag allows you to write text in italics',0)";
 $explain[]="Adding bbcode data";
-$query[]="INSERT INTO bbcode VALUES (NULL,'email','<a href=\"mailto:\\\\4\">\\\\4</a>','[email]support@vbulletin.com[/email]','The [email] tag allows you to include email addresses.',0)";
+$query[]="INSERT INTO bbcode VALUES (NULL,'email','<a href=\"mailto:\\\\4\">\\\\4</a>','[email][email removed][/email]','The [email] tag allows you to include email addresses.',0)";
 $explain[]="Adding bbcode data";
-$query[]="INSERT INTO bbcode VALUES (NULL,'email','<a href=\"mailto:\\\\5\">\\\\7</a>','[email=support@vbulletin.com]vBulletin Support[/email]','This email tag allows you to include your own text in an email field.',1)";
+$query[]="INSERT INTO bbcode VALUES (NULL,'email','<a href=\"mailto:\\\\5\">\\\\7</a>','[email=[email removed]]vBulletin Support[/email]','This email tag allows you to include your own text in an email field.',1)";
 $explain[]="Adding bbcode data";
 $query[]="INSERT INTO bbcode VALUES (NULL,'size','<font size=\"\\\\5\">\\\\7</font>','[size=+1]Size 1[/size]','The [size] tag allows you to control the size of the font.',1)";
 $explain[]="Adding bbcode data";
@@ -1286,7 +1286,7 @@ $bburl = "http://$SERVER_NAME".substr($scriptpath,0,strpos($scriptpath,"/admin/"
 $homeurl = "http://$SERVER_NAME/";
 $webmaster = "webmaster@$SERVER_NAME";
 
-?><form action="install.php" method="post">
+?><form action="install.html" method="post">
 <input type="hidden" name="step" value="8">
 
 <table border=0>
@@ -1338,7 +1338,7 @@ STEP 8
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 */
 
-if ($bbtitle=="" or $hometitle=="" or $bburl=="http://www.yourhost.com/forums" or $homeurl=="http://www.yourhost.com/" or $webmasteremail=="webmaster@your-email-address-here.com") {
+if ($bbtitle=="" or $hometitle=="" or $bburl=="http://www.yourhost.com/forums" or $homeurl=="http://www.yourhost.com/" or $webmasteremail=="[email removed]") {
   echo "<p>Please enter new values in all the fields on the previous page. Press the back button and correct the error and then try again.</p>";
   exit;
 }
@@ -1391,7 +1391,7 @@ $DB_site->query("INSERT INTO setting VALUES (NULL,2,'Homepage Name','hometitle',
 $DB_site->query("INSERT INTO setting VALUES (NULL,2,'URL of homepage','homeurl','".addslashes($homeurl)."','URL of your home page. Appears at the bottom of every page.','',4)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,2,'Copyright Text','copyrighttext','','Copyright text to insert the footer of the page.','',5)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,2,'URL of Privacy Statement','privacyurl','','Enter the URL of your privacy statement, if one exists.','',6)");
-$DB_site->query("INSERT INTO setting VALUES (NULL,3,'Contact Us Link','contactuslink','mailto:".addslashes($webmasteremail)."','Link for contacting the site. Can just be mailto:webmaster@whereever.com or your own form. Appears at the bottom of every page.','',1)");
+$DB_site->query("INSERT INTO setting VALUES (NULL,3,'Contact Us Link','contactuslink','mailto:".addslashes($webmasteremail)."','Link for contacting the site. Can just be mailto:[email removed] or your own form. Appears at the bottom of every page.','',1)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,3,'Webmaster\'s email','webmasteremail','".addslashes($webmasteremail)."','Email address of the webmaster.','',2)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,3,'Company Name','companyname','','The name of your company. Required for COPPA.','',6)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,3,'Address','address','','Address of your company. This is required for COPPA forms to be posted to.','',5)");
@@ -1485,7 +1485,7 @@ $DB_site->query("INSERT INTO setting VALUES (NULL,16,'Enable checking for post f
 $DB_site->query("INSERT INTO setting VALUES (NULL,16,'Minimum time between posts','floodchecktime','30','Set the amount of time in seconds used by flood check to prevent post flooding. Recommended: 60. Type the number of seconds only.','',2)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,17,'Enable Banning Options?','enablebanning','0','Banning allows you to stop certain IP addresses and email addresses from registering and posting to the board. ','yesno',1)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,17,'IPs to ban:','banip','','IP Number Ban Lists: You may ban any IP numbers from registering and posting. Type in the complete IP number (as in 243.21.31.7), or use a partial IP number (as in 243.21.31). The BB will do matches from the beginning of each IP number that you enter. Thus, If you enter a partial IP of 243.21.31, someone attempting to register who has an IP number of 243.21.31.5 will not be able to register. Similarly, if you have an IP ban on 243.21, someone registering who has an IP of 243.21.3.44 will not be able to register. Thus, be careful when you add IPs to your ban list and be as specific as possible. As with the email ban list, put a space between each IP number. The IP Ban prevents anyone with matching IP number from registering and posting.','textarea',2)");
-$DB_site->query("INSERT INTO setting VALUES (NULL,17,'Email addresses to ban','banemail','','Email Ban Lists: You may ban certain email addresses from registering on your forums. To ban a specific email, type the full email address (as in, waldo@whereiswaldo.com). To ban all email addresses from certain domains, such as hotmail, simply type the domain name (as in hotmail.com)- that will prevent anyone using a hotmail address from registering. Put a space between each banned email.','textarea',3)");
+$DB_site->query("INSERT INTO setting VALUES (NULL,17,'Email addresses to ban','banemail','','Email Ban Lists: You may ban certain email addresses from registering on your forums. To ban a specific email, type the full email address (as in, [email removed]). To ban all email addresses from certain domains, such as hotmail, simply type the domain name (as in hotmail.com)- that will prevent anyone using a hotmail address from registering. Put a space between each banned email.','textarea',3)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,17,'Allow user to keep banned email','allowkeepbannedemail','1','If you ban an email address and a user already uses that address, a problem will occur. Using this option, you can specify whether the user will have to enter a new email address in their profile when they next modify their email address, or whether the user can just keep the email address which you have banned.','yesno',4)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,18,'Text for \'on\'','ontext','ON','Text that means on. This is used to keep the code language independent. It is used with the vB code / HTML code On / Off settings for postings.','',1)");
 $DB_site->query("INSERT INTO setting VALUES (NULL,18,'Text for \'off\'','offtext','OFF','Text that means off. This is used to keep the code language independent. It is used with the vB code / HTML code On / Off settings for postings.','',2)");
@@ -1583,7 +1583,7 @@ STEP 9
 
 ?><p>Please fill in the form below to set yourself up as an administrator...</p>
 
-<form action="install.php" method="post">
+<form action="install.html" method="post">
 <input type="hidden" name="step" value="<?php echo ($step+1); ?>">
 
 <table border=0>

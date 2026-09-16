@@ -11,7 +11,7 @@ This software was developed for PHPNuke 5.5
 /* PHP-NUKE: Advanced Content Management System                         */
 /* ============================================                         */
 /*                                                                      */
-/* Copyright (c) 2002 by Francisco Burzi (fbc@mandrakesoft.com)         */
+/* Copyright (c) 2002 by Francisco Burzi ([email removed])         */
 /* http://phpnuke.org                                                   */
 /*                                                                      */
 /* This program is free software. You can redistribute it and/or modify */

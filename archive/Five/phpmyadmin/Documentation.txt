@@ -1706,11 +1706,11 @@ FAQ - Frequently Asked Questions
    The following method is preferred for new developers:
     1. fetch the current CVS tree over anonymous CVS:
        cvs
-       -d:pserver:anonymous@cvs.phpmyadmin.sourceforge.net:/cvsroot/phpmy
+       -d:pserver:[email removed]:/cvsroot/phpmy
        admin login
        [Password: simply press the Enter key]
        cvs -z3
-       -d:pserver:anonymous@cvs.phpmyadmin.sourceforge.net:/cvsroot/phpmy
+       -d:pserver:[email removed]:/cvsroot/phpmy
        admin checkout phpMyAdmin
        [This will create a new sub-directory named phpMyAdmin]
     2. add your stuff

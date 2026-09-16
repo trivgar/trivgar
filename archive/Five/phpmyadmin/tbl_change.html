@@ -122,7 +122,7 @@ else
     unset($row);
 }
 
-// <markus@noga.de>
+// <[email removed]>
 // retrieve keys into foreign fields, if any
 $cfgRelation = PMA_getRelationsParam();
 $foreigners  = ($cfgRelation['relwork'] ? PMA_getForeigners($db, $table) : FALSE);
@@ -148,7 +148,7 @@ document.onkeydown = onKeyDownArrowsHandler;
 </script>
 
 <!-- Change table properties form -->
-<form method="post" action="tbl_replace.php" name="insertForm" <?php if ($is_upload) echo ' enctype="multipart/form-data"'; ?>>
+<form method="post" action="tbl_replace.html" name="insertForm" <?php if ($is_upload) echo ' enctype="multipart/form-data"'; ?>>
     <?php echo PMA_generate_common_hidden_inputs($db, $table); ?>
     <input type="hidden" name="goto" value="<?php echo $goto; ?>" />
     <input type="hidden" name="pos" value="<?php echo isset($pos) ? $pos : 0; ?>" />
@@ -310,7 +310,7 @@ for ($i = 0; $i < $fields_cnt; $i++) {
 
     // The function column
     // -------------------
-    // Change by Bernard M. Piller <bernard@bmpsystems.com>
+    // Change by Bernard M. Piller <[email removed]>
     // We don't want binary data to be destroyed
     // Note: from the MySQL manual: "BINARY doesn't affect how the column is
     //       stored or retrieved" so it does not mean that the contents is
@@ -515,7 +515,7 @@ for ($i = 0; $i < $fields_cnt; $i++) {
         </td>
         <?php
     }
-    // Change by Bernard M. Piller <bernard@bmpsystems.com>
+    // Change by Bernard M. Piller <[email removed]>
     // We don't want binary data destroyed
     else if ($is_binary || $is_blob) {
         if (($cfg['ProtectBinary'] && $is_blob)
