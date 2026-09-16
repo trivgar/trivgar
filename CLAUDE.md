@@ -23,11 +23,10 @@ every path beginning with `_`, which breaks the archive.
 | Path | What it is |
 |---|---|
 | `index.html` | Home |
-| `claude.html` | Claude Code / Termux setup guide, tabbed (Tailscale, Supercharge Pi, Power-Ups) |
 | `pihole.html` | Universal Pi-hole install guide |
 | `health-dashboard.html` | Health dashboard |
 | `tylers-marine/` | Client site preview — Tyler's Marine & Engine Service |
-| `archive/` | 2003-2004 sites (69workshop, ASOP, Valor, Seeds, blr…). All PHP was converted to HTML for static hosting; Dreamweaver `_notes/` metadata was stripped. Don't reintroduce `.php`, Pages won't execute it. |
+| `archive/` | 2003-2004 sites (69workshop, ASOP, Valor, Seeds, blr…). PHP was converted to HTML, but the 3,240 `.php` originals stayed tracked until 2026-09-16 and Pages served them as readable source — including three PHP-Nuke `config.php` files with live DB credentials. They are now untracked and `archive/**/*.php` is gitignored. Don't reintroduce `.php`. `_notes/` was gitignored, and is genuinely absent from the index. |
 | `README.md` | **The GitHub profile README**, not a site page. It renders on github.com/trivgar. |
 
 ## Do not re-add jail-scraper
@@ -37,6 +36,13 @@ every path beginning with `_`, which breaks the archive.
 (`scrape.js`, `watchlist.json`, `last_run.log`) and still run locally — see the
 Windows Task Scheduler job and the wake-timer note in memory. Keep it local.
 Never `git add` it, and never move its output into a published page.
+
+## Do not re-publish claude.html
+
+`claude.html` was a Claude Code / Tailscale tutorial Trav wrote **for his dad and
+brother**, not a site page. It was untracked and added to `.gitignore` on
+2026-09-16 because the site should not advertise Claude or AI. The file is still
+on disk and a copy lives in `/mnt/c/Users/Trav/scratch/`. Don't `git add` it.
 
 ## Notes
 
