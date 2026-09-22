@@ -30,7 +30,7 @@ are the work, not the code.
 
 ### Off the clock
 
-A house running 144 Home Assistant automations on a Raspberry Pi, an AIS
+A house running 146 Home Assistant automations on a Raspberry Pi, an AIS
 receiver on the roof feeding live vessel traffic into the dispatch app, and a
 1986 944 Turbo that is never quite finished.
 
