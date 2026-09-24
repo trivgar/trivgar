@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#14120f" />
   <title>Rooting a Roborock Q7 Max for Valetudo | Travis Pellegrini</title>
-  <meta name="description" content="Notes from rooting a Roborock Q7 Max to run Valetudo: the parts the official docs don't cover, two accidental factory resets, and getting it into Home Assistant." />
+  <meta name="description" content="Free software that takes a Roborock robot vacuum off the maker's app and servers, so it answers only to you. My notes from installing Valetudo on a Roborock Q7 Max, three times." />
   <meta name="author" content="Travis Pellegrini" />
   <link rel="canonical" href="https://trivgar.com/roborock-valetudo.html" />
 
@@ -222,8 +222,10 @@
   <a href="/" class="back">&larr; trivgar.com</a>
   <h1>Roborock Q7 Max + Valetudo</h1>
   <p class="lede">
-    Getting a Roborock Q7 Max off Roborock's cloud and onto Valetudo. These are my notes from
-    rooting mine in May 2024, and from the two times I've been back in since.
+    A robot vacuum normally answers to the company that made it: their app, their account, their
+    servers. Valetudo is free software that replaces all of that, so the robot answers only to
+    you, from any web browser in your house. These are my notes from putting it on my Roborock Q7
+    Max in May 2024, and from the two times I've been back in since.
   </p>
   <p class="checked">Last done Sept 2026 &middot; Q7 Max (a38) &middot; Valetudo 2026.08</p>
 </header>
@@ -233,27 +235,33 @@
 <section>
   <h2>Why bother</h2>
   <p>
-    Out of the box, a Q7 Max is a Roborock cloud device. You need their app, and an account tied to
-    your email or phone number. The app talks to the robot through Roborock's servers, and the map
-    it builds of your house goes up to them too. Firmware updates come when Roborock decides, with
-    whatever they changed.
+    Out of the box, a Q7 Max only works through Roborock. You need their app, and an account tied to
+    your email or phone number. Every button you press goes from your phone to Roborock's servers
+    and back down to a robot in the next room, and the map it makes of your home goes to them too.
+    Software updates arrive when Roborock decides, with whatever they changed.
   </p>
   <p>
-    Valetudo cuts all of that. There's no account. The robot serves its own web page on your
-    network, so any browser works, and commands never leave the house, so they're quick. The map
+    Valetudo cuts all of that out. There's no account. The robot hosts its own control page on your
+    home network, so any phone or computer with a browser works, and because nothing leaves the
+    house, it responds right away. The map
     stays on the robot. It keeps working when Roborock's servers are down, and it'll keep working the
     day Roborock stops supporting the Q7 Max, which is how a lot of smart home gear ends up in a
     drawer.
   </p>
   <p>
-    Then there's Home Assistant. Cloud vacuums tend to show up there with a start button and not
-    much else. Mine shows up with the lot: fan and water level, all seven rooms from its map, every
+    Then there's Home Assistant, the free software that runs the rest of my smart home. Cloud
+    vacuums tend to show up there with a start button and not much else. Mine shows up with the lot: fan and water level, all seven rooms from its map, every
     brush and filter with a reset button, carpet mode, and the map itself.
+  </p>
+  <p>
+    The catch is getting it on there. Roborock doesn't let you install your own software, so you
+    take the robot apart, plug it into a laptop and "root" it: unlock the small Linux computer
+    inside so it'll run what you give it. That's what most of this page is about.
   </p>
   <p class="aside">
     What you give up, from Valetudo's own
     <a href="https://valetudo.cloud/pages/general/why-not-valetudo/">Why not Valetudo?</a> page: it's
-    permanent, with no going back to stock. It isn't Roborock's app minus the cloud, so some features
+    permanent, with no going back to Roborock's software. It isn't Roborock's app minus the cloud, so some features
     never arrive; multi-floor maps are the usual one. Security updates and reaching it from outside the
     house become your job. And that page asks people not to try to talk anyone into it. Fair enough.
     This is just why I did.

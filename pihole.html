@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#14120f" />
   <title>Pi-hole and Unbound on a Raspberry Pi | Travis Pellegrini</title>
-  <meta name="description" content="How I run Pi-hole with Unbound on a Raspberry Pi: ad blocking for every device on the network, and DNS answered at home instead of by Google or Cloudflare. Checked against Pi-hole v6." />
+  <meta name="description" content="Block ads and tracking on every phone, laptop and TV in the house at once, with nothing to install on any of them. How I set up Pi-hole and Unbound on a Raspberry Pi, step by step." />
   <meta name="author" content="Travis Pellegrini" />
   <link rel="canonical" href="https://trivgar.com/pihole.html" />
 
@@ -196,8 +196,9 @@
   <a href="/" class="back">&larr; trivgar.com</a>
   <h1>Pi-hole + Unbound</h1>
   <p class="lede">
-    Ad blocking for every device in the house, and DNS answered at home instead of by
-    Google or Cloudflare. This is how mine runs, on a Raspberry Pi 4.
+    Blocks ads and tracking on every phone, laptop and TV in your house at once, with nothing
+    to install on any of them. It runs on a Raspberry Pi, a cheap computer about the size of a
+    deck of cards. This is how I set mine up.
   </p>
   <p class="checked">Last checked Sept 2026 &middot; Pi-hole v6 &middot; Debian 12 (Bookworm)</p>
 </header>
@@ -207,24 +208,33 @@
 <section>
   <h2>What it does</h2>
   <p>
-    Before your phone or TV connects to anything, it looks up the name and gets back an
-    IP address. Pi-hole answers those lookups for the whole network. When a name is on a
-    blocklist it answers <code>0.0.0.0</code>, and the ad or tracker never loads. Nothing
-    gets installed on the devices, which is the point. The TV doesn't take browser
-    extensions.
+    Every time a phone or TV loads something from the internet, it first has to ask where that
+    thing lives. It's like looking up a number before you make a call. One news article can set
+    off dozens of these lookups: one for the story, and the rest for the ads, trackers and
+    analytics that ride along with it.
   </p>
   <p>
-    Unbound handles whatever Pi-hole lets through. Most setups forward every lookup to
-    Google (8.8.8.8) or Cloudflare (1.1.1.1), so one company ends up with a list of every
-    site every device in your house visits. Unbound does the lookup itself: it asks the
-    root servers, then the <code>.com</code> servers, then the site's own, which is exactly
-    what Google would have done for you. It caches the answers and checks DNSSEC signatures
-    on the way.
+    Pi-hole becomes the phone book for your whole house. When a device asks for the number of a
+    known ad or tracking company, Pi-hole says there's no such number, and that piece of the page
+    never loads. The article still does. It works from a list of about 1.7 million known ad and
+    tracking addresses, and the day I looked, mine turned away 4,783 requests.
+  </p>
+  <p>
+    Because it works for the whole network, it covers the things you can't put an ad blocker on:
+    smart TVs, game consoles, apps on your phone. The technical name for that phone book is DNS,
+    and you'll see the word a lot below.
+  </p>
+  <p>
+    Unbound is the second half, and it's about privacy. Normally every one of those lookups goes
+    to your internet provider, or to Google if you've changed it. Either way, one company gets a
+    running list of every site every device in your house visits. Unbound does the lookups
+    itself, straight from the source each time, so nobody gets the whole list.
   </p>
   <p class="aside">
-    Your ISP can still see where you go if it wants to; this isn't a VPN. It just keeps
-    the whole list out of any one company's log.
+    It isn't a VPN. Your internet provider can still see which sites you connect to if it wants
+    to. It just keeps the whole list out of any one company's log.
   </p>
+  <p>For the technically minded, here's the path a lookup takes:</p>
   <pre><code>phone, TV, laptop
   → Pi-hole   :53     drops anything on a blocklist
   → Unbound   :5335   looks up the rest itself
