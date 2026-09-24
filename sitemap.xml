@@ -11,6 +11,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://trivgar.com/roborock-valetudo.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://trivgar.com/tylers-marine/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
