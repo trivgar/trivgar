@@ -197,7 +197,7 @@
   <h1>Pi-hole + Unbound</h1>
   <p class="lede">
     Blocks ads and tracking on every phone, laptop and TV in your house at once, with nothing
-    to install on any of them. It runs on a Raspberry Pi, a cheap computer about the size of a
+    to install on any of them. It runs on a <a href="https://www.raspberrypi.com/">Raspberry Pi</a>, a cheap computer about the size of a
     deck of cards. This is how I set mine up.
   </p>
   <p class="checked">Last checked Sept 2026 &middot; Pi-hole v6 &middot; Debian 12 (Bookworm)</p>
@@ -214,24 +214,24 @@
     analytics that ride along with it.
   </p>
   <p>
-    Pi-hole becomes the phone book for your whole house. When a device asks for the number of a
+    <a href="https://pi-hole.net/">Pi-hole</a> becomes the phone book for your whole house. When a device asks for the number of a
     known ad or tracking company, Pi-hole says there's no such number, and that piece of the page
     never loads. The article still does. It works from a list of about 1.7 million known ad and
     tracking addresses, and the day I looked, mine turned away 4,783 requests.
   </p>
   <p>
     Because it works for the whole network, it covers the things you can't put an ad blocker on:
-    smart TVs, game consoles, apps on your phone. The technical name for that phone book is DNS,
+    smart TVs, game consoles, apps on your phone. The technical name for that phone book is <a href="https://www.cloudflare.com/learning/dns/what-is-dns/">DNS</a>,
     and you'll see the word a lot below.
   </p>
   <p>
-    Unbound is the second half, and it's about privacy. Normally every one of those lookups goes
+    <a href="https://nlnetlabs.nl/projects/unbound/about/">Unbound</a> is the second half, and it's about privacy. Normally every one of those lookups goes
     to your internet provider, or to Google if you've changed it. Either way, one company gets a
     running list of every site every device in your house visits. Unbound does the lookups
     itself, straight from the source each time, so nobody gets the whole list.
   </p>
   <p class="aside">
-    It isn't a VPN. Your internet provider can still see which sites you connect to if it wants
+    It isn't a <a href="https://en.wikipedia.org/wiki/Virtual_private_network">VPN</a>. Your internet provider can still see which sites you connect to if it wants
     to. It just keeps the whole list out of any one company's log.
   </p>
   <p>For the technically minded, here's the path a lookup takes:</p>
@@ -284,7 +284,7 @@ sudo nmcli connection up "Wired connection 1"</code></pre>
     <code>apt</code> on the day Pi-hole is the thing that's broken.
   </p>
   <p class="aside">
-    Over SSH, that last command moves the Pi to its new address and your session hangs.
+    Over <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a>, that last command moves the Pi to its new address and your session hangs.
     Reconnect on the new one.
   </p>
 </section>

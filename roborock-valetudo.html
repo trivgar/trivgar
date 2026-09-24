@@ -223,7 +223,7 @@
   <h1>Roborock Q7 Max + Valetudo</h1>
   <p class="lede">
     A robot vacuum normally answers to the company that made it: their app, their account, their
-    servers. Valetudo is free software that replaces all of that, so the robot answers only to
+    servers. <a href="https://valetudo.cloud/">Valetudo</a> is free software that replaces all of that, so the robot answers only to
     you, from any web browser in your house. These are my notes from putting it on my Roborock Q7
     Max in May 2024, and from the two times I've been back in since.
   </p>
@@ -249,13 +249,13 @@
     drawer.
   </p>
   <p>
-    Then there's Home Assistant, the free software that runs the rest of my smart home. Cloud
+    Then there's <a href="https://www.home-assistant.io/">Home Assistant</a>, the free software that runs the rest of my smart home. Cloud
     vacuums tend to show up there with a start button and not much else. Mine shows up with the lot: fan and water level, all seven rooms from its map, every
     brush and filter with a reset button, carpet mode, and the map itself.
   </p>
   <p>
     The catch is getting it on there. Roborock doesn't let you install your own software, so you
-    take the robot apart, plug it into a laptop and "root" it: unlock the small Linux computer
+    take the robot apart, plug it into a laptop and "root" it: unlock the small <a href="https://en.wikipedia.org/wiki/Linux">Linux</a> computer
     inside so it'll run what you give it. That's what most of this page is about.
   </p>
   <p class="aside">
@@ -300,12 +300,12 @@
   <ul>
     <li>The robot, fully charged. All of this runs on battery.</li>
     <li>
-      A computer running Linux with sunxi-tools 1.3 or newer. An old laptop booted from an Ubuntu
+      A computer running Linux with <a href="https://linux-sunxi.org/Sunxi-tools">sunxi-tools</a> 1.3 or newer. An old laptop booted from an <a href="https://ubuntu.com/download/desktop">Ubuntu</a>
       USB stick does the job (step 3).
     </li>
     <li>A micro USB cable, a jumper wire or paperclip, and screwdrivers.</li>
     <li>Your phone, to photograph every step of the teardown, and somewhere to keep a lot of screws in order.</li>
-    <li><code>adb</code> from Android's platform tools, in case yours comes up the way mine did.</li>
+    <li><a href="https://developer.android.com/tools/adb"><code>adb</code></a> from Android's platform tools, in case yours comes up the way mine did.</li>
   </ul>
 </section>
 
@@ -376,7 +376,7 @@
   <p>
     The docs want Linux running on the machine itself. In November 2025 I booted an old Dell from an
     Ubuntu USB stick, and that worked fine. In September 2026 I did it from Windows instead, passing
-    the USB device through to WSL with <code>usbipd</code> (bind it from an admin prompt, then attach
+    the USB device through to <a href="https://learn.microsoft.com/en-us/windows/wsl/about">WSL</a> with <a href="https://github.com/dorssel/usbipd-win"><code>usbipd</code></a> (bind it from an admin prompt, then attach
     it) and running the Linux <code>sunxi-fel</code>. The zip also includes
     <code>sunxi-fel.exe</code> and <code>run.bat</code> for Windows, which I haven't tried.
   </p>
@@ -463,8 +463,8 @@ reboot</code></pre>
 <section>
   <h2><span class="n">6</span>Home Assistant</h2>
   <p>
-    Valetudo talks MQTT, and Home Assistant finds it through MQTT discovery. On Home Assistant OS,
-    install the Mosquitto broker add-on. In Valetudo, open Connectivity &rarr; MQTT Connectivity,
+    Valetudo talks <a href="https://mqtt.org/">MQTT</a>, and Home Assistant finds it through MQTT discovery. On Home Assistant OS,
+    install the <a href="https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md">Mosquitto broker</a> add-on. In Valetudo, open Connectivity &rarr; MQTT Connectivity,
     point it at the broker and turn on the Home Assistant integration. The vacuum shows up as a
     device on its own; there's no "new device found" prompt. The
     <a href="https://valetudo.cloud/pages/integrations/home-assistant-integration/">docs</a> cover
