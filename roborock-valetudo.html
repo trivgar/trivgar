@@ -189,6 +189,17 @@
       font-size: 14px;
       color: var(--steel);
     }
+    figure a{ display: block; }
+    figure.tall img, figure.tall figcaption{ max-width: 440px; }
+    .pair{
+      display: grid;
+      gap: 18px;
+      margin: 20px 0 24px;
+    }
+    .pair figure{ margin: 0; }
+    @media (min-width: 640px){
+      .pair{ grid-template-columns: 1fr 1fr; }
+    }
 
     footer{
       margin-top: clamp(48px, 8vw, 80px);
@@ -212,7 +223,7 @@
   <h1>Roborock Q7 Max + Valetudo</h1>
   <p class="lede">
     Getting a Roborock Q7 Max off Roborock's cloud and onto Valetudo. These are my notes from
-    rooting mine, then re-rooting it after I broke it twice.
+    rooting mine in May 2024, and from the two times I've been back in since.
   </p>
   <p class="checked">Last done Sept 2026 &middot; Q7 Max (a38) &middot; Valetudo 2026.08</p>
 </header>
@@ -281,8 +292,8 @@
   <ul>
     <li>The robot, fully charged. All of this runs on battery.</li>
     <li>
-      A computer with Linux and sunxi-tools 1.3 or newer. The docs want Linux on the metal; I got
-      by with Windows and WSL (step 3).
+      A computer running Linux with sunxi-tools 1.3 or newer. An old laptop booted from an Ubuntu
+      USB stick does the job (step 3).
     </li>
     <li>A micro USB cable, a jumper wire or paperclip, and screwdrivers.</li>
     <li>Your phone, to photograph every step of the teardown, and somewhere to keep a lot of screws in order.</li>
@@ -317,11 +328,18 @@
     connectors at the front and tilting the board up. Photograph each step and keep the screws in
     order. The docs say to budget one to two hours.
   </p>
-  <figure>
-    <img src="img/roborock-board-up.jpg" width="1200" height="1202" loading="lazy"
-         alt="A Roborock Q7 Max with its top off, the mainboard tilted up and lit, a USB cable plugged into it, and the red battery pack on the floor beside it." />
-    <figcaption>Mine, opened up, with the mainboard tilted out and the USB cable plugged in.</figcaption>
-  </figure>
+  <div class="pair">
+    <figure>
+      <a href="img/roborock-top-off-2024.jpg"><img src="img/roborock-top-off-2024.jpg" width="1200" height="1200" loading="lazy"
+         alt="A Roborock Q7 Max with its top cover off. The green mainboard is still in place, with the grey lidar turret behind it." /></a>
+      <figcaption>May 2024, the first time. Top off, mainboard still in place. The grey turret with the red dot is the lidar.</figcaption>
+    </figure>
+    <figure>
+      <a href="img/roborock-board-up.jpg"><img src="img/roborock-board-up.jpg" width="1200" height="1202" loading="lazy"
+         alt="The same robot with the mainboard tilted up and lit, a USB cable plugged into it, and the red battery pack on the floor beside it." /></a>
+      <figcaption>September 2026. Board tilted out and the USB cable plugged in.</figcaption>
+    </figure>
+  </div>
 </section>
 
 <section>
@@ -340,12 +358,22 @@
     <li>Unzip the <code>_fel.zip</code> and run its <code>run.sh</code> as root.</li>
   </ol>
   <p>
-    On Windows, the zip includes <code>sunxi-fel.exe</code> and <code>run.bat</code>. I didn't use
-    them. I passed the USB device through to WSL with <code>usbipd</code> (bind it from an admin
-    prompt, then attach it) and ran the Linux one.
+    The docs want Linux running on the machine itself. In November 2025 I booted an old Dell from an
+    Ubuntu USB stick, and that worked fine. In September 2026 I did it from Windows instead, passing
+    the USB device through to WSL with <code>usbipd</code> (bind it from an admin prompt, then attach
+    it) and running the Linux <code>sunxi-fel</code>. The zip also includes
+    <code>sunxi-fel.exe</code> and <code>run.bat</code> for Windows, which I haven't tried.
   </p>
+  <figure class="tall">
+    <a href="img/roborock-fel-laptop-2025.jpg"><img src="img/roborock-fel-laptop-2025.jpg" width="1200" height="1653" loading="lazy"
+       alt="A Dell laptop running Ubuntu with a terminal open, a white USB cable running from it to the robot's lit mainboard in the foreground." /></a>
+    <figcaption>
+      November 2025: the Dell, running Ubuntu off a USB stick. <code>lsusb</code> has found the robot
+      in FEL mode, and <code>run.sh</code> has just finished.
+    </figcaption>
+  </figure>
   <p>
-    Here's where mine didn't match the docs. They say the robot reboots and puts up a Wi-Fi
+    Here's where mine didn't match the docs, in September 2026 at least. They say the robot reboots and puts up a Wi-Fi
     hotspot. Mine came back on USB as an Android debug device instead: <code>1f3a:1001</code>,
     "Rockrobo ruby". It takes more than ten seconds to show up, so if you check straight away it
     looks like it failed. <code>adb devices</code> lists it and <code>adb shell</code> is a root
