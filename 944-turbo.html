@@ -214,14 +214,25 @@
 
 
 
-    .hero{ margin: 28px 0 0; }
-    .hero img{ display: block; width: 100%; max-width: none; height: auto; border: 1px solid var(--rule); }
-    .hero + section{ padding-top: 24px; }
-    .pair-row{ display: flex; gap: 12px; margin: 28px 0 0; }
-    .pair-row a{ display: block; }
-    .pair-row img{ display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+    .timeline{ display: grid; gap: 44px; margin-top: 36px; }
+    .tl-entry{ display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 8px 20px; }
+    .tl-date{
+      font-family: var(--display);
+      font-size: 22px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--rust);
+      padding-top: 2px;
+    }
+    .tl-photos{ display: flex; gap: 10px; }
+    .tl-photos.stack{ flex-direction: column; }
+    .tl-photos.narrow{ max-width: 380px; }
+    .tl-photos a{ display: block; }
+    .tl-photos img{ display: block; width: 100%; max-width: none; height: auto; border: 1px solid var(--rule); }
+    .tl-body p{ margin: 10px 0 0; color: var(--steel); }
     @media (max-width: 640px){
-      .pair-row{ flex-direction: column; }
+      .tl-entry{ grid-template-columns: 1fr; }
+      .tl-photos{ flex-direction: column; }
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -239,11 +250,6 @@
 
 <main>
 
-<figure class="hero">
-  <a href="img/944-rear.jpg"><img src="img/944-rear.jpg" width="1600" height="1067"
-     alt="The red 944 Turbo from behind, parked at a yellow curb, with the Turbo badge and rear spoiler." /></a>
-</figure>
-
 <section>
   <p>
     My 1986 <a href="https://en.wikipedia.org/wiki/Porsche_944">Porsche 944 Turbo</a>. The 944
@@ -252,6 +258,65 @@
     cars. It's running a bigger Garrett turbo now and a <a href="https://vems.hu/">VEMS</a>
     standalone engine computer that I tuned myself.
   </p>
+</section>
+
+<section class="timeline" aria-label="Photos over the years">
+  <div class="tl-entry">
+    <div class="tl-date">Feb 2007</div>
+    <div class="tl-body">
+      <div class="tl-photos">
+        <a href="img/944-2007.jpg" style="flex: 1.328 1 0"><img src="img/944-2007.jpg" width="1600" height="1205" alt="The red 944 Turbo parked at a curb on a wet residential street in morning sun." /></a>
+      </div>
+      <p>A month after I bought it.</p>
+    </div>
+  </div>
+  <div class="tl-entry">
+    <div class="tl-date">Sep 2007</div>
+    <div class="tl-body">
+      <div class="tl-photos">
+        <a href="img/944-2007-dyno.jpg" style="flex: 1.333 1 0"><img src="img/944-2007-dyno.jpg" width="1600" height="1200" loading="lazy" alt="The 944 Turbo side-on, strapped to a dyno with the hood up, in a shop with a checkered floor." /></a>
+        <a href="img/944-2007-dyno-window.jpg" style="flex: 0.750 1 0"><img src="img/944-2007-dyno-window.jpg" width="1200" height="1600" loading="lazy" alt="Someone leaning out of the driver's window of the 944 while it sits on the dyno rollers." /></a>
+      </div>
+      <p>Dyno day.</p>
+    </div>
+  </div>
+  <div class="tl-entry">
+    <div class="tl-date">Oct 2008</div>
+    <div class="tl-body">
+      <div class="tl-photos">
+        <a href="img/944-2008-turbo-install.jpg" style="flex: 1.328 1 0"><img src="img/944-2008-turbo-install.jpg" width="1024" height="771" loading="lazy" alt="Working in the 944's engine bay with the intake and turbo piping exposed." /></a>
+        <a href="img/944-2008-garage.jpg" style="flex: 1.328 1 0"><img src="img/944-2008-garage.jpg" width="1600" height="1205" loading="lazy" alt="Standing beside the 944 with the hood up in front of an open garage." /></a>
+      </div>
+      <p>Putting in the bigger turbo, injectors and a new airflow sensor.</p>
+    </div>
+  </div>
+  <div class="tl-entry">
+    <div class="tl-date">Around 2010</div>
+    <div class="tl-body">
+      <div class="tl-photos stack">
+        <a href="img/944-pan.jpg" style="flex: 2.893 1 0"><img src="img/944-pan.jpg" width="1600" height="553" loading="lazy" alt="The 944 Turbo driving past, blurred background, rennlist sticker in the rear window." /></a>
+        <a href="img/944-rear.jpg" style="flex: 1.500 1 0"><img src="img/944-rear.jpg" width="1600" height="1067" loading="lazy" alt="The 944 Turbo from behind, parked at a yellow curb, with the Turbo badge and rear spoiler." /></a>
+      </div>
+    </div>
+  </div>
+  <div class="tl-entry">
+    <div class="tl-date">Jan 2011</div>
+    <div class="tl-body">
+      <div class="tl-photos">
+        <a href="img/944-2011-parts-car.jpg" style="flex: 1.329 1 0"><img src="img/944-2011-parts-car.jpg" width="1200" height="903" loading="lazy" alt="A second red 944 Turbo, damaged, on a U-Haul trailer outside a garage." /></a>
+      </div>
+      <p>Bought a parts car and stripped it. It supplied parts to both my dad's guards red '86 951 and mine.</p>
+    </div>
+  </div>
+  <div class="tl-entry">
+    <div class="tl-date">2012</div>
+    <div class="tl-body">
+      <div class="tl-photos narrow">
+        <a href="img/944-engine.jpg" style="flex: 0.747 1 0"><img src="img/944-engine.jpg" width="717" height="960" loading="lazy" alt="The engine out of the car on an engine stand in a garage, with the timing belt on." /></a>
+      </div>
+      <p>Swapped the block.</p>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -265,13 +330,6 @@
     <li>993 Cup 2 wheels</li>
   </ul>
 </section>
-
-<div class="pair-row">
-  <a href="img/944-2007.jpg" style="flex: 1.328 1 0"><img src="img/944-2007.jpg" width="1600" height="1205" loading="lazy"
-     alt="The red 944 Turbo parked at a curb on a residential street, wet from rain, in low morning sun." /></a>
-  <a href="img/944-engine.jpg" style="flex: 0.747 1 0"><img src="img/944-engine.jpg" width="717" height="960" loading="lazy"
-     alt="The engine out of the car on an engine stand in a garage, with the timing belt on." /></a>
-</div>
 
 </main>
 
