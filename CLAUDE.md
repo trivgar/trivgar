@@ -23,8 +23,11 @@ every path beginning with `_`.
 | Path | What it is |
 |---|---|
 | `index.html` | Home |
-| `pihole.html` | Universal Pi-hole install guide |
-| `health-dashboard.html` | Health dashboard |
+| `pihole.html` | Pi-hole + Unbound guide, checked against Pi-hole v6 on the real Pi |
+| `roborock-valetudo.html` | Roborock Q7 Max + Valetudo guide, written from Trav's own re-roots |
+| `944-turbo.html` | The 944 Turbo page. **Live but deliberately unlinked**: not on the homepage, not in `sitemap.xml`, until Trav says it's ready |
+| `img/` | Photos for the guides and the 944 page. Trav's photos go up unedited (no blurring, no cropping); only resized, with metadata stripped |
+| `archive/` | The index and four site homepages only; see below |
 | `tylers-marine/` | Client site preview — Tyler's Marine & Engine Service |
 | `README.md` | **The GitHub profile README**, not a site page. It renders on github.com/trivgar. |
 
@@ -44,6 +47,21 @@ files were untracked and `archive/` gitignored on 2026-09-16** at his request:
 "I don't want to put all my private stuff from what I was 16 out there again."
 The files are still on disk at `archive/`. Never `git add` them.
 
+**Landing pages only came back the same day** (dae1749), because his first
+request had been to hide everything except each site's landing page. As of
+2026-09-24 the published set is `archive/index.html` plus the homepages of
+69workshop, 691, 692 and 69workshop12, force-added with `git add -f` while
+`archive/` stays ignored. Team Five and Valor were removed at his request. The
+bio's "website in 2003" links to `/archive/`. Nothing below a homepage goes up.
+
+- 69workshop and 69workshop12 also carry `welcome.htm`, the frame each homepage
+  shows. Without it the main panel is a 404.
+- 691 loads Ruffle 0.6.0 from jsdelivr, pinned with an SRI hash, to play its
+  Flash buttons. Four of its `.swf` files and two GIFs are 0 bytes on disk,
+  lost before this repo existed. There is nothing to restore.
+- Test archive changes against `git checkout-index -f -a --prefix=<dir>/`
+  served locally, never the working tree, which still holds every private page.
+
 noindex was considered and rejected: it leaves every page public and reachable
 by URL, only unlisted, which is not what taking it down means.
 
@@ -61,6 +79,13 @@ evidence; check the tree.**
 brother**, not a site page. It was untracked and added to `.gitignore` on
 2026-09-16 because the site should not advertise Claude or AI. The file is still
 on disk and a copy lives in `/mnt/c/Users/Trav/scratch/`. Don't `git add` it.
+
+## Do not re-publish health-dashboard.html
+
+`health-dashboard.html` is a private medication tracker for a family member. It
+was served publicly from February 2026 until it was untracked and gitignored on
+2026-09-25. The file is still on disk. Don't `git add` it, and remember the repo
+is public: the old versions are still in its git history.
 
 ## Notes
 
