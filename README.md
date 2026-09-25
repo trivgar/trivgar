@@ -2,7 +2,7 @@
 
 I work the docks at the Port of Tacoma, and I'm a dad. Between shifts I build software.
 
-Mostly Python and TypeScript — FastAPI on the back, React on the front, Fly.io
+Mostly Python and TypeScript: FastAPI on the back, React on the front, Fly.io
 and Cloudflare to run it. Most of what I ship is in private repos, so the links
 are the work, not the code.
 
@@ -31,8 +31,11 @@ are the work, not the code.
 ### Off the clock
 
 A house running 146 Home Assistant automations on a Raspberry Pi, an AIS
-receiver on the roof feeding live vessel traffic into the dispatch app, and a
-1986 944 Turbo that is never quite finished.
+receiver feeding live vessel traffic into the dispatch app, and a 1986 944
+Turbo that is never quite finished.
+
+Guides from the house: [Pi-hole + Unbound](https://trivgar.com/pihole.html) and
+[Roborock Q7 Max + Valetudo](https://trivgar.com/roborock-valetudo.html).
 
 ---
 
