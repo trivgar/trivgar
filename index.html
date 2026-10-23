@@ -250,15 +250,24 @@
       transform-origin: top;
       transition: transform .25s ease-out;
     }
-    a.row:hover::after, .row.linked:hover::after{ transform: scaleY(1); }
-    a.row:hover .row-name, .row.linked:hover .row-name{ color: var(--rust-lt); }
+    a.row:hover::after{ transform: scaleY(1); }
+    a.row:hover .row-name{ color: var(--rust-lt); }
 
-    /* a row that also carries a store link: the name's link covers the row */
-    .row-link{ color: inherit; }
-    .row-link::before{ content: ""; position: absolute; inset: 0; }
+    /* a row with more than one destination: links of its own, not a whole-row link */
+    .row-links{
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: var(--steel-dim);
+    }
+    .row-links a:not(.store):hover{ color: var(--rust-lt); }
+    .row-links span{ display: inline-flex; align-items: center; gap: 14px; margin-right: 10px; }
     .store{
-      position: relative;
-      z-index: 1;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: .18em;
@@ -476,25 +485,33 @@
         <span class="sec-note">Client &amp; Product</span>
       </div>
 
-      <div class="row lead linked">
+      <div class="row lead">
         <div class="row-top">
-          <a class="row-name row-link" href="https://dispatchcompanion.com/" target="_blank" rel="noreferrer">Dispatch Companion</a>
+          <span class="row-name">Dispatch &amp; Longshore</span>
           <span class="status live"><i aria-hidden="true"></i>Live</span>
-          <span class="row-url">dispatchcompanion.com</span>
-          <a class="store" href="https://apps.apple.com/us/app/dispatch-companion/id6758360727" target="_blank" rel="noreferrer">App Store</a>
+        </div>
+        <div class="row-links">
+          <span>
+            <a href="https://dispatchcompanion.com/" target="_blank" rel="noreferrer">dispatchcompanion.com</a>
+            <a class="store" href="https://apps.apple.com/us/app/dispatch-companion/id6758360727" target="_blank" rel="noreferrer">App Store</a>
+          </span>
+          <span>
+            <a href="https://longshorecompanion.com/" target="_blank" rel="noreferrer">longshorecompanion.com</a>
+            <a class="store" href="https://apps.apple.com/us/app/longshore-companion/id6759852276" target="_blank" rel="noreferrer">App Store</a>
+          </span>
         </div>
         <p class="row-desc">
-          Started in April 2024 as a spreadsheet called Spin Lookup, which meant
-          pasting the new sheet in by hand every week. A concept called Spin Check came
-          next and never got past the app name. Then I learned how to build scrapers, and
-          the first commit here was one. Now it carries dispatch, announcements, spins,
-          job utilities and a timebook for thirteen ports across Washington and Oregon,
-          with berth-level ship tracking in Tacoma and Seattle.
+          Two apps for longshore workers, both in the App Store. Dispatch Companion
+          started in April 2024 as a spreadsheet called Spin Lookup. Now it carries
+          dispatch, spins and ship tracking down to the berth in Tacoma and Seattle, with
+          boards for 28 ports up and down the West Coast. Longshore Companion tracks
+          shifts and works out the pay for any longshoreman on the coast, and it works on
+          a dock with no signal. They share one encrypted timebook, so the two apps agree.
         </p>
         <div class="tags">
-          React Router <span class="sep">/</span> TypeScript <span class="sep">/</span> FastAPI <span class="sep">/</span> Fly.io <span class="sep">/</span> Cloudflare Pages <span class="sep">/</span> Capacitor
+          React Router <span class="sep">/</span> TypeScript <span class="sep">/</span> FastAPI <span class="sep">/</span> Supabase <span class="sep">/</span> TinyBase <span class="sep">/</span> Capacitor <span class="sep">/</span> Fly.io <span class="sep">/</span> Cloudflare Pages
         </div>
-        <div class="ledger">On this since Apr 2024 &middot; 5,900+ commits since Dec 2025</div>
+        <div class="ledger">On this since Apr 2024 &middot; 7,100+ commits since Dec 2025</div>
       </div>
 
       <a class="row lead" href="https://bookingcompanion.app/" target="_blank" rel="noreferrer">
@@ -515,23 +532,6 @@
         </div>
         <div class="ledger">488 commits &middot; a salon live, a second operator onboarding</div>
       </a>
-
-      <div class="row linked">
-        <div class="row-top">
-          <a class="row-name row-link" href="https://longshorecompanion.com/" target="_blank" rel="noreferrer">Longshore Companion</a>
-          <span class="status live"><i aria-hidden="true"></i>Live</span>
-          <span class="row-url">longshorecompanion.com</span>
-          <a class="store" href="https://apps.apple.com/us/app/longshore-companion/id6759852276" target="_blank" rel="noreferrer">App Store</a>
-        </div>
-        <p class="row-desc">
-          Shift tracking and pay-rate math for any longshoreman on the West Coast. Every
-          ILWU local maps to its port area, so you only see the job codes that apply to
-          you. Offline-first, so it works on a dock with no signal and merges when it
-          comes back, and every shift is encrypted rather than just the pay. Job codes and
-          rates come from the Dispatch Companion API, so the two apps agree.
-        </p>
-        <div class="tags">React 19 <span class="sep">/</span> TypeScript <span class="sep">/</span> TinyBase <span class="sep">/</span> Supabase <span class="sep">/</span> Capacitor <span class="sep">/</span> Cloudflare Pages</div>
-      </div>
 
       <a class="row" href="https://robertacutright.com/" target="_blank" rel="noreferrer">
         <div class="row-top">
