@@ -271,8 +271,24 @@
       transform-origin: top;
       transition: transform .25s ease-out;
     }
-    a.row:hover::after{ transform: scaleY(1); }
-    a.row:hover .row-name{ color: var(--rust-lt); }
+    a.row:hover::after, .row.linked:hover::after{ transform: scaleY(1); }
+    a.row:hover .row-name, .row.linked:hover .row-name{ color: var(--rust-lt); }
+
+    /* a row that also carries a store link: the name's link covers the row */
+    .row-link{ color: inherit; }
+    .row-link::before{ content: ""; position: absolute; inset: 0; }
+    .store{
+      position: relative;
+      z-index: 1;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--steel);
+      border: 1px solid var(--rule);
+      padding: 6px 10px;
+    }
+    .store:hover{ color: var(--hazard); border-color: var(--hazard); }
 
     .row-top{
       display: flex;
@@ -466,11 +482,11 @@
       <p class="role">Longshoreman &nbsp;/&nbsp; Software Developer</p>
 
       <p class="bio">
-        I work the docks at the Port of Tacoma, and I'm a dad. Between shifts I build
-        software. A dispatch app covering thirteen ports across Washington and Oregon, a
-        booking platform for people who run a shop alone, a house that mostly runs itself,
-        and a car that never quite does. Mostly self-taught, starting with a
-        <a href="/archive/">website in 2003</a>.
+        I've worked the docks at the Port of Tacoma since 2005, and I'm a dad. Between
+        shifts I build software: two apps in the App Store for longshore workers, a booking
+        platform for people who run a shop alone, a house that mostly runs itself, and a
+        car that never quite does. Mostly self-taught, starting with a
+        <a href="/archive/">website in 2003</a>. Open to freelance and contract work.
       </p>
 
       <p class="avail">
@@ -487,11 +503,12 @@
         <span class="sec-note">Client &amp; Product</span>
       </div>
 
-      <a class="row lead" href="https://dispatchcompanion.com/" target="_blank" rel="noreferrer">
+      <div class="row lead linked">
         <div class="row-top">
-          <span class="row-name">Dispatch Companion</span>
+          <a class="row-name row-link" href="https://dispatchcompanion.com/" target="_blank" rel="noreferrer">Dispatch Companion</a>
           <span class="status live"><i aria-hidden="true"></i>Live</span>
           <span class="row-url">dispatchcompanion.com</span>
+          <a class="store" href="https://apps.apple.com/us/app/dispatch-companion/id6758360727" target="_blank" rel="noreferrer">App Store</a>
         </div>
         <p class="row-desc">
           Started in April 2024 as a spreadsheet called Spin Lookup, which meant
@@ -505,7 +522,7 @@
           React Router <span class="sep">/</span> TypeScript <span class="sep">/</span> FastAPI <span class="sep">/</span> Fly.io <span class="sep">/</span> Cloudflare Pages <span class="sep">/</span> Capacitor
         </div>
         <div class="ledger">On this since Apr 2024 &middot; 5,900+ commits since Dec 2025</div>
-      </a>
+      </div>
 
       <a class="row lead" href="https://bookingcompanion.app/" target="_blank" rel="noreferrer">
         <div class="row-top">
@@ -526,11 +543,12 @@
         <div class="ledger">488 commits &middot; a salon live, a second operator onboarding</div>
       </a>
 
-      <a class="row" href="https://longshorecompanion.com/" target="_blank" rel="noreferrer">
+      <div class="row linked">
         <div class="row-top">
-          <span class="row-name">Longshore Companion</span>
+          <a class="row-name row-link" href="https://longshorecompanion.com/" target="_blank" rel="noreferrer">Longshore Companion</a>
           <span class="status live"><i aria-hidden="true"></i>Live</span>
           <span class="row-url">longshorecompanion.com</span>
+          <a class="store" href="https://apps.apple.com/us/app/longshore-companion/id6759852276" target="_blank" rel="noreferrer">App Store</a>
         </div>
         <p class="row-desc">
           Shift tracking and pay-rate math for any longshoreman on the West Coast. Every
@@ -540,7 +558,7 @@
           rates come from the Dispatch Companion API, so the two apps agree.
         </p>
         <div class="tags">React 19 <span class="sep">/</span> TypeScript <span class="sep">/</span> TinyBase <span class="sep">/</span> Supabase <span class="sep">/</span> Capacitor <span class="sep">/</span> Cloudflare Pages</div>
-      </a>
+      </div>
 
       <a class="row" href="https://robertacutright.com/" target="_blank" rel="noreferrer">
         <div class="row-top">
