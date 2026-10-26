@@ -200,23 +200,6 @@
       color: var(--bone);
     }
 
-    .avail{
-      margin-top: clamp(26px, 4vw, 36px);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px 18px;
-      font-size: 15px;
-      color: var(--steel);
-    }
-    .avail .dot{
-      width: 9px; height: 9px;
-      background: var(--hazard);
-      flex: none;
-    }
-    .avail strong{ color: var(--bone); font-weight: 600; }
-    .avail a{ font-weight: 600; }
-
     /* ── sections ─────────────────────────────────────────── */
 
     section{ padding-bottom: var(--pad-section); }
@@ -454,7 +437,7 @@
       .role, .ledger, a{ color: #8a3d18 !important; }
       .bio, .row-desc, .lead .row-desc, .stack, .c-value{ color: #111 !important; }
       .tags, .status, .row-url, .c-label, footer{ color: #555 !important; }
-      .status.live i, .avail .dot{ background: #8a3d18 !important; }
+      .status.live i{ background: #8a3d18 !important; }
       .sec-head{ border-bottom-color: #8a3d18; }
       .sec-num{ color: #8a3d18; }
       .sec-title{ color: #111; }
@@ -487,12 +470,6 @@
         platform for people who run a shop alone, a house that mostly runs itself, and a
         car that never quite does. Mostly self-taught, starting with a
         <a href="/archive/">website in 2003</a>.
-      </p>
-
-      <p class="avail">
-        <span class="dot" aria-hidden="true"></span>
-        <span><strong>Open to freelance and contract work.</strong></span>
-        <a href="mailto:trivgar@gmail.com">trivgar@gmail.com</a>
       </p>
     </header>
 
@@ -724,11 +701,6 @@
 
         <span class="c-label">Based in</span>
         <p class="c-value">Tacoma, Washington</p>
-
-        <span class="c-label">Work</span>
-        <p class="c-value small">
-          Freelance and contract. Happy to talk about anything on this page.
-        </p>
 
         <span class="c-label">Tip jar</span>
         <p class="c-value small">
