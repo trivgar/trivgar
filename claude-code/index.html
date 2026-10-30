@@ -282,9 +282,10 @@
 <section>
   <h2>App or terminal</h2>
   <p>
-    Start in the Claude desktop app's <strong>Code</strong> tab; move to the terminal when you want
-    to customize. Both run the same Claude Code engine, so your project settings and
-    <code>CLAUDE.md</code> files carry over.
+    This guide takes the terminal route: one install, and every power-user feature below works.
+    If you'd rather not use a terminal yet, the Claude desktop app's <strong>Code</strong> tab runs
+    the same Claude Code engine with nothing extra to install, and your project settings and
+    <code>CLAUDE.md</code> files carry over if you switch later.
   </p>
   <table>
     <thead><tr><th></th><th>Desktop app (Code tab)</th><th>Terminal (<code>claude</code>)</th></tr></thead>
@@ -318,9 +319,10 @@
 <section>
   <h2>Install on Windows</h2>
   <p>
-    The recommended setup is three pieces: <strong>WSL</strong> (Linux running inside Windows, where
-    coding tools work best), <strong>Git</strong> (saves every version of your work), and
-    <strong>Tailscale</strong> (reach your PC from your phone, privately). About 30 minutes, one restart.
+    The recommended setup is two pieces: <strong>WSL</strong> (Linux running inside Windows) and
+    <strong>Git</strong> (saves every version of your work). It takes one restart. Claude Code also
+    runs on plain Windows, but WSL is what power users run: Linux tools work best there, and only
+    WSL 2 supports Claude Code's sandboxing.
   </p>
   <p>
     Each grey box is one command: tap its <strong>Copy</strong> button (or select it and press
@@ -362,16 +364,6 @@
     <li>You should see a number like <code>2.1.211 (Claude Code)</code>. Done.</li>
   </ol>
 
-  <p class="part">Part 3: Tailscale</p>
-  <ol>
-    <li>On the PC, download Tailscale for Windows from
-      <a href="https://tailscale.com/download">tailscale.com/download</a>, install it, and sign in
-      (a Google or Microsoft account works).</li>
-    <li>On your phone, install the Tailscale app and sign in with the <strong>same account</strong>.</li>
-    <li>Both devices now show in the Tailscale app. They can reach each other from anywhere, without
-      opening anything to the internet. The remote access section below shows what to do with it.</li>
-  </ol>
-
   <h3>If something goes wrong</h3>
   <ul>
     <li><strong>"claude: command not found"</strong>: close Ubuntu, open a new window, try again.</li>
@@ -410,7 +402,7 @@
   </ol>
   <p>
     <strong>Handy keys:</strong> <strong>Esc</strong> stops Claude mid-step. <strong>Shift+Tab</strong>
-    switches to plan mode, where Claude explains its plan before touching anything. Type <code>/</code>
+    cycles through modes: press it until the bottom of the screen says plan mode, where Claude explains its plan before touching anything. Type <code>/</code>
     to see every command; <code>/exit</code> quits. Next time: open Ubuntu,
     <code>cd ~/code/my-first-app</code>, then <code>claude</code>.
   </p>
@@ -426,8 +418,8 @@
     <li><strong>Use git from day one.</strong> You never type git commands yourself. Just tell Claude
       "save this project in git" at the start, and "commit this" whenever something works. Then any
       mistake is one sentence from undone: "go back to the last commit".</li>
-    <li><strong>Plan before big changes.</strong> Press Shift+Tab into plan mode for anything larger
-      than a small fix, read the plan, then let it build.</li>
+    <li><strong>Plan before big changes.</strong> Press Shift+Tab until the screen says plan mode
+      for anything larger than a small fix, read the plan, then let it build.</li>
     <li><strong>Grow your <code>CLAUDE.md</code>.</strong> When Claude gets something wrong twice, add a
       line saying how you want it done. That beats repeating yourself.</li>
     <li><strong>Read what it asks to run.</strong> Approve commands you understand; ask "what does this
@@ -498,7 +490,8 @@
   <div class="warn">
     <p>
       The scary name is on purpose: Claude can then change or delete anything your user account can.
-      Anthropic's docs recommend it only on a machine where mistakes can't hurt. Power users run it
+      Anthropic's docs recommend it only in isolated setups like containers or virtual machines, and
+      point to auto mode as the safer way to cut prompts. Power users run it
       anyway, with a safety net instead of prompts:
     </p>
   </div>
@@ -564,6 +557,9 @@
   <ul>
     <li><strong>A message is never your permission.</strong> If another session asks for something
       risky, you still get the yes/no prompt. One session can't approve things for another.</li>
+    <li><strong>Run them all the same way.</strong> A session in bypass mode holds each message from
+      a normal session until you approve it, and a normal session does the same for messages from
+      bypass sessions. Run every session in bypass, or none.</li>
     <li><strong>Keep them on the same side.</strong> A session in Ubuntu (WSL) can't message one
       running in plain Windows. Run them all in Ubuntu.</li>
     <li><strong>Other machines:</strong> sessions on another PC or in the cloud can be reached when
@@ -583,12 +579,21 @@
   <table>
     <thead><tr><th>Tool</th><th>What it gives you</th><th>Cost</th></tr></thead>
     <tbody>
-      <tr><td><a href="https://code.claude.com/docs/en/remote-control.md">Remote Control</a> (built into Claude Code)</td><td data-label="What it gives you">Keep driving a Claude Code session on your PC from your phone or any browser. Nothing to set up on your network</td><td data-label="Cost">Included</td></tr>
+      <tr><td><a href="https://code.claude.com/docs/en/remote-control.md">Remote Control</a> (built into Claude Code)</td><td data-label="What it gives you">Keep driving a Claude Code session on your PC from your phone or any browser: type <code>/remote-control</code> in the session. Nothing to set up on your network</td><td data-label="Cost">Included</td></tr>
       <tr><td><a href="https://tailscale.com/">Tailscale</a></td><td data-label="What it gives you">A private network between your phone, laptop and PC. Open the apps you build on your PC from your phone, SSH in, no ports opened to the internet</td><td data-label="Cost">Free for personal use</td></tr>
       <tr><td><a href="https://github.com/LizardByte/Sunshine">Sunshine</a> + <a href="https://moonlight-stream.org/">Moonlight</a></td><td data-label="What it gives you">Your full desktop on your phone, tablet or laptop, smooth enough to stream games too</td><td data-label="Cost">Free</td></tr>
     </tbody>
   </table>
   <p>Install Tailscale first: Sunshine and SSH both work best over it, and it keeps your PC off the open internet.</p>
+  <h3>Setting up Tailscale</h3>
+  <ol>
+    <li>On the PC, download Tailscale for Windows from
+      <a href="https://tailscale.com/download">tailscale.com/download</a>, install it, and sign in
+      (a Google or Microsoft account works).</li>
+    <li>On your phone, install the Tailscale app and sign in with the <strong>same account</strong>.</li>
+    <li>Both devices now show in the Tailscale app. They can reach each other from anywhere, without
+      opening anything to the internet.</li>
+  </ol>
 </section>
 
 <section>
