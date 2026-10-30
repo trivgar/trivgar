@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#14120f" />
+  <title>Claude Code Power User Guide: Getting Started</title>
+  <meta name="description" content="Set up Claude Code on a Windows PC and run your first real task in about 30 minutes: WSL, Git, Tailscale, your first session, bypass mode, several sessions at once, and working from your phone." />
+  <link rel="canonical" href="https://trivgar.com/claude-code/" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314120f'/%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23c65d2e' stroke-width='2.5'/%3E%3Cpath d='M9 11h14M16 11v11' stroke='%23ece5da' stroke-width='3.2' stroke-linecap='square'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --ground:     #14120f;
+      --ground-2:   #1b1814;
+      --rule:       #2c2721;
+      --bone:       #ece5da;
+      --steel:      #9d9387;
+      --steel-dim:  #857c71;
+      --rust:       #c65d2e;
+      --rust-lt:    #e0854f;
+      --hazard:     #e8b931;
+
+      --display: "Anton", "Haettenschweiler", "Arial Narrow", sans-serif;
+      --body: "Archivo", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+      --mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
+
+      --gutter: clamp(20px, 5vw, 64px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body{
+      margin: 0;
+      background: var(--ground);
+      color: var(--bone);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 5px;
+      z-index: 50;
+      background: repeating-linear-gradient(-45deg, var(--hazard) 0 10px, #14120f 10px 20px);
+    }
+
+    .shell{
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    a { color: var(--rust-lt); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+    a:hover { color: var(--hazard); text-decoration-color: currentColor; }
+    a:focus-visible{ outline: 2px solid var(--hazard); outline-offset: 3px; }
+
+    header{
+      padding-top: clamp(40px, 9vw, 88px);
+      padding-bottom: clamp(28px, 5vw, 48px);
+      border-bottom: 2px solid var(--rust);
+    }
+    .back{
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+      text-decoration: none;
+    }
+    .back:hover{ color: var(--hazard); }
+
+    h1{
+      margin: clamp(22px, 4vw, 34px) 0 0;
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(44px, 10vw, 84px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+    }
+    .lede{
+      margin: 22px 0 0;
+      max-width: 52ch;
+      font-size: clamp(17px, 2.2vw, 20px);
+      line-height: 1.55;
+    }
+    .checked{
+      margin: 18px 0 0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+    }
+
+    section{ padding-top: clamp(36px, 6vw, 56px); }
+
+    h2{
+      margin: 0 0 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-size: clamp(15px, 1.8vw, 17px);
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h2 .n{
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1;
+      letter-spacing: 0;
+      color: var(--rust);
+      flex: none;
+    }
+    h3{
+      margin: 28px 0 8px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    p, li{ max-width: 64ch; }
+    p{ margin: 0 0 14px; }
+    ul, ol{ margin: 0 0 14px; padding-left: 1.3rem; }
+    li{ margin-bottom: 6px; }
+    li::marker{ color: var(--steel-dim); }
+
+    .aside{ color: var(--steel); }
+
+    code{
+      font-family: var(--mono);
+      font-size: .88em;
+      background: var(--ground-2);
+      border: 1px solid var(--rule);
+      padding: .1em .35em;
+      overflow-wrap: anywhere;
+    }
+    pre{
+      margin: 0 0 16px;
+      padding: 14px 16px;
+      background: var(--ground-2);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--rust);
+      overflow-x: auto;
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+    pre code{
+      font-size: inherit;
+      background: none;
+      border: 0;
+      padding: 0;
+      overflow-wrap: normal;
+    }
+
+    .warn{
+      margin: 18px 0;
+      padding: 14px 16px;
+      background: var(--ground-2);
+      border-left: 3px solid var(--hazard);
+    }
+    .warn p:last-child{ margin-bottom: 0; }
+
+    footer{
+      margin-top: clamp(48px, 8vw, 80px);
+      border-top: 1px solid var(--rule);
+      padding: 24px 0 60px;
+      font-size: 14px;
+      color: var(--steel);
+    }
+    footer p{ margin: 0 0 6px; }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+
+    h1{ font-size: clamp(40px, 9vw, 76px); }
+
+    .part{
+      margin: 26px 0 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--hazard);
+    }
+    .part span{ color: var(--steel); letter-spacing: .04em; text-transform: none; font-weight: 500; font-size: 15px; }
+
+    /* code blocks with a copy button */
+    .cmd{ position: relative; margin: 0 0 16px; }
+    .cmd pre{ margin: 0; padding-right: 92px; min-height: 52px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .copy{
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      min-height: 36px;
+      padding: 0 12px;
+      font: 700 11px/1 var(--body);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--bone);
+      background: var(--ground);
+      border: 1px solid var(--rule);
+      cursor: pointer;
+    }
+    .copy:hover{ border-color: var(--hazard); color: var(--hazard); }
+    .copy:focus-visible{ outline: 2px solid var(--hazard); outline-offset: 2px; }
+    .copy.done{ color: var(--hazard); border-color: var(--hazard); }
+
+    /* tables: rows become stacked blocks on a phone */
+    table{
+      width: 100%;
+      margin: 0 0 18px;
+      border-collapse: collapse;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    th, td{
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    th{
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+      border-bottom-color: var(--rust);
+    }
+    td:first-child{ font-weight: 600; }
+    td.say{ color: var(--steel); }
+
+    @media (max-width: 640px){
+      table, thead, tbody, tr, td{ display: block; width: 100%; }
+      thead{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      tr{ padding: 12px 0; border-bottom: 1px solid var(--rule); }
+      td{ padding: 2px 0; border: 0; }
+      td[data-label]:not(:first-child)::before{
+        content: attr(data-label);
+        display: block;
+        margin-top: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: var(--steel-dim);
+      }
+      td:first-child{ font-size: 16px; color: var(--bone); }
+    }
+  </style>
+</head>
+<body>
+<div class="shell">
+
+<header>
+  <a href="/" class="back">&larr; trivgar.com</a>
+  <h1>Claude Code Power User Guide: Getting Started</h1>
+  <p class="lede">
+    Claude Code is Claude working directly on your computer: it reads your project, edits files
+    and runs commands. This gets you from zero to your first real task in about 30 minutes on a
+    Windows PC.
+  </p>
+</header>
+
+<main>
+
+<section>
+  <h2>App or terminal</h2>
+  <p>
+    Start in the Claude desktop app's <strong>Code</strong> tab; move to the terminal when you want
+    to customize. Both run the same Claude Code engine, so your project settings and
+    <code>CLAUDE.md</code> files carry over.
+  </p>
+  <table>
+    <thead><tr><th></th><th>Desktop app (Code tab)</th><th>Terminal (<code>claude</code>)</th></tr></thead>
+    <tbody>
+      <tr><td>Setup</td><td data-label="Desktop app">Nothing extra: the app includes Claude Code</td><td data-label="Terminal">One install command</td></tr>
+      <tr><td>Best for</td><td data-label="Desktop app">Visual diffs, several sessions side by side, getting started</td><td data-label="Terminal">Scripting, hooks, automation, power use</td></tr>
+      <tr><td>Chat tab vs Code tab</td><td data-label="Desktop app">The Chat tab cannot work in your project folders. Use <strong>Code</strong></td><td data-label="Terminal">Always works in the folder you start it in</td></tr>
+    </tbody>
+  </table>
+  <p>You need a paid plan (Pro, Max or higher). The free claude.ai plan does not include Claude Code.</p>
+</section>
+
+<section>
+  <h2>Already building apps in artifacts?</h2>
+  <p>Artifacts are a great sketchpad. Claude Code is where those apps become real ones on your PC:</p>
+  <table>
+    <thead><tr><th>In an artifact</th><th>With Claude Code</th></tr></thead>
+    <tbody>
+      <tr><td>The app lives in a chat and is regenerated each time</td><td data-label="With Claude Code">Real files in a folder you own, saved in git, nothing lost</td></tr>
+      <tr><td>One page; outside access is limited</td><td data-label="With Claude Code">A real backend, a database, files on disk, any library</td></tr>
+      <tr><td>Edits mean asking for a new version of the whole thing</td><td data-label="With Claude Code">Claude edits only the lines that change, across many files</td></tr>
+      <tr><td>Runs only on claude.ai</td><td data-label="With Claude Code">Runs on your PC, a phone on your network, or a free host online</td></tr>
+    </tbody>
+  </table>
+  <p>
+    A good first project: take your favorite artifact app, copy its code into a new folder, start
+    <code>claude</code> there and ask it to turn it into a proper project you can run locally.
+  </p>
+</section>
+
+<section>
+  <h2>Install on Windows</h2>
+  <p>
+    The recommended setup is three pieces: <strong>WSL</strong> (Linux running inside Windows, where
+    coding tools work best), <strong>Git</strong> (saves every version of your work), and
+    <strong>Tailscale</strong> (reach your PC from your phone, privately). About 30 minutes, one restart.
+  </p>
+  <p>
+    Each grey box is one command: tap its <strong>Copy</strong> button (or select it and press
+    <strong>Ctrl+C</strong>), paste it where the step says, and press <strong>Enter</strong>.
+  </p>
+
+  <p class="part">Part 1: WSL</p>
+  <ol>
+    <li>Press the <strong>Windows key</strong>, type <code>powershell</code>, right-click
+      <strong>Windows PowerShell</strong> and choose <strong>Run as administrator</strong>. Click
+      <strong>Yes</strong> when Windows asks.</li>
+    <li>In the blue window, paste this (<strong>Ctrl+V</strong> or right-click) and press <strong>Enter</strong>:</li>
+  </ol>
+  <div class="cmd"><pre><code>wsl --install</code></pre></div>
+  <ol start="3">
+    <li>When it finishes, <strong>restart the PC</strong>.</li>
+    <li>After the restart, an <strong>Ubuntu</strong> window opens by itself (if not: Windows key, type
+      <code>ubuntu</code>, click it). It asks for a username: type a short lowercase name, like <code>alex</code>.</li>
+    <li>It asks for a password. <strong>Nothing shows on screen while you type it. That's normal.</strong>
+      Type it, press <strong>Enter</strong>, type it again. Write it down: you'll need it when installing things.</li>
+    <li>The line now ends in <code>$</code>. That's your Linux terminal. From now on, "open Ubuntu"
+      means Windows key, type <code>ubuntu</code>, click it.</li>
+  </ol>
+
+  <p class="part">Part 2: Git and Claude Code <span>(in the Ubuntu window)</span></p>
+  <ol>
+    <li>Install Git. It asks for the password from Part 1 (invisible again):</li>
+  </ol>
+  <div class="cmd"><pre><code>sudo apt update &amp;&amp; sudo apt install -y git</code></pre></div>
+  <ol start="2">
+    <li>Install Claude Code. It shows little while it downloads; wait for the <code>$</code> to come back:</li>
+  </ol>
+  <div class="cmd"><pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre></div>
+  <ol start="3">
+    <li>Close the Ubuntu window, open a new one, and check it worked:</li>
+  </ol>
+  <div class="cmd"><pre><code>claude --version</code></pre></div>
+  <ol start="4">
+    <li>You should see a number like <code>2.1.211 (Claude Code)</code>. Done.</li>
+  </ol>
+
+  <p class="part">Part 3: Tailscale</p>
+  <ol>
+    <li>On the PC, download Tailscale for Windows from
+      <a href="https://tailscale.com/download">tailscale.com/download</a>, install it, and sign in
+      (a Google or Microsoft account works).</li>
+    <li>On your phone, install the Tailscale app and sign in with the <strong>same account</strong>.</li>
+    <li>Both devices now show in the Tailscale app. They can reach each other from anywhere, without
+      opening anything to the internet. The remote access section below shows what to do with it.</li>
+  </ol>
+
+  <h3>If something goes wrong</h3>
+  <ul>
+    <li><strong>"claude: command not found"</strong>: close Ubuntu, open a new window, try again.</li>
+    <li><strong>wsl --install says virtualization is off</strong>: it needs a setting in the PC's BIOS.
+      Ask Claude in the desktop app: "how do I enable virtualization on my motherboard?" with the motherboard name.</li>
+    <li><strong>Red error text anywhere</strong>: drag over it with the mouse, press
+      <strong>Ctrl+Shift+C</strong> in Ubuntu (Ctrl+C in PowerShell) to copy, and paste it to Claude
+      in the desktop app with "what does this mean?".</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Your first session</h2>
+  <ol>
+    <li><strong>Open Ubuntu</strong> and make a project folder, then step into it:</li>
+  </ol>
+  <div class="cmd"><pre><code>mkdir -p ~/code/my-first-app &amp;&amp; cd ~/code/my-first-app</code></pre></div>
+  <ol start="2">
+    <li><strong>Start Claude:</strong></li>
+  </ol>
+  <div class="cmd"><pre><code>claude</code></pre></div>
+  <ol start="3">
+    <li>The first time, it asks you to sign in. If your browser doesn't open by itself, hold
+      <strong>Ctrl</strong> and click the link it shows. Approve, then come back to Ubuntu.</li>
+    <li><strong>Let Claude learn the project.</strong> Type this and press <strong>Enter</strong>:</li>
+  </ol>
+  <div class="cmd"><pre><code>/init</code></pre></div>
+  <ol start="5">
+    <li>Claude writes <code>CLAUDE.md</code>: notes it reads every time you start. Ask Claude to add
+      your own rules to it any time, like "explain things simply".</li>
+    <li><strong>Ask for something, in plain English</strong>: "make a small website that shows a
+      countdown to Christmas", or paste in the code from one of your artifact apps and say "turn this
+      into a real project here, and save it in git".</li>
+    <li>When Claude wants to create a file or run a command, it asks first. Read the question, pick
+      <strong>Yes</strong> with the arrow keys and <strong>Enter</strong>, or say no.</li>
+  </ol>
+  <p>
+    <strong>Handy keys:</strong> <strong>Esc</strong> stops Claude mid-step. <strong>Shift+Tab</strong>
+    switches to plan mode, where Claude explains its plan before touching anything. Type <code>/</code>
+    to see every command; <code>/exit</code> quits. Next time: open Ubuntu,
+    <code>cd ~/code/my-first-app</code>, then <code>claude</code>.
+  </p>
+  <p>
+    <strong>Your files from Windows:</strong> in File Explorer, your Linux files are under
+    <strong>Linux &gt; Ubuntu &gt; home &gt; your-username &gt; code</strong> in the left sidebar.
+  </p>
+</section>
+
+<section>
+  <h2>Habits that pay off early</h2>
+  <ul>
+    <li><strong>Use git from day one.</strong> You never type git commands yourself. Just tell Claude
+      "save this project in git" at the start, and "commit this" whenever something works. Then any
+      mistake is one sentence from undone: "go back to the last commit".</li>
+    <li><strong>Plan before big changes.</strong> Press Shift+Tab into plan mode for anything larger
+      than a small fix, read the plan, then let it build.</li>
+    <li><strong>Grow your <code>CLAUDE.md</code>.</strong> When Claude gets something wrong twice, add a
+      line saying how you want it done. That beats repeating yourself.</li>
+    <li><strong>Read what it asks to run.</strong> Approve commands you understand; ask "what does this
+      do?" when you don't.</li>
+    <li><strong>One task per session.</strong> Start a fresh session (<code>/clear</code>) when you switch
+      topics; long mixed sessions get muddled.</li>
+    <li><strong>Free course:</strong> <a href="https://academy.claude.com/courses/claude-code-101">Claude Code 101</a>
+      on Claude Academy.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Tools to add next</h2>
+  <p>
+    Once your first project works, add these one at a time. You don't have to learn any of them
+    deeply: Claude sets them up and runs them. Say the sentence in the last column to start.
+  </p>
+
+  <h3>For your projects</h3>
+  <table>
+    <thead><tr><th>Tool</th><th>What it does for you</th><th>Say to Claude</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/">GitHub</a></td><td data-label="What it does">An online backup of every project and its whole history. If the PC dies, nothing is lost. Also where free hosting picks up your code</td><td class="say" data-label="Say to Claude">"Install the GitHub CLI, log me in, and back this project up to a private GitHub repo"</td></tr>
+      <tr><td><a href="https://bitwarden.com/">Bitwarden</a> password vault</td><td data-label="What it does">One safe place for your passwords and for the keys your agents use (GitHub tokens, hosting keys, app passwords). Claude reads keys from the vault instead of leaving them in files where they leak</td><td class="say" data-label="Say to Claude">"Set up the Bitwarden CLI so you can read my agents' keys from my vault, never from files"</td></tr>
+      <tr><td>Free hosting: <a href="https://pages.cloudflare.com/">Cloudflare Pages</a> or <a href="https://pages.github.com/">GitHub Pages</a></td><td data-label="What it does">Puts a website or app on the internet with its own link, free for small projects</td><td class="say" data-label="Say to Claude">"Put this app online with Cloudflare Pages"</td></tr>
+    </tbody>
+  </table>
+
+  <h3>For running things on your PC</h3>
+  <table>
+    <thead><tr><th>Tool</th><th>What it does for you</th><th>Say to Claude</th></tr></thead>
+    <tbody>
+      <tr><td>tmux</td><td data-label="What it does">Keeps a Claude session (or anything else) running after you close the window or disconnect. Reconnect later from anywhere and it's still going</td><td class="say" data-label="Say to Claude">"Install tmux and show me how to start Claude inside it and come back to it later"</td></tr>
+      <tr><td>systemd timers</td><td data-label="What it does">Runs a job on a schedule, like checking a website twice a day, even when nobody is logged in</td><td class="say" data-label="Say to Claude">"Make this script run every morning at 8 with a systemd timer"</td></tr>
+      <tr><td>Headless Chrome (Playwright)</td><td data-label="What it does">A browser with no window that Claude controls: turns pages into PDFs or screenshots, tests your web apps, fills in web forms</td><td class="say" data-label="Say to Claude">"Install Playwright and take a screenshot of my app to check it looks right"</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Making Claude Code itself smarter</h3>
+  <table>
+    <thead><tr><th>Feature</th><th>What it does for you</th><th>Say to Claude</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://code.claude.com/docs/en/hooks.md">Hooks</a></td><td data-label="What it does">Rules that run automatically around what Claude does, like blocking a publish until you say yes, or tidying code after every edit</td><td class="say" data-label="Say to Claude">"Add a hook that stops you from putting my site live without asking me first"</td></tr>
+      <tr><td><a href="https://code.claude.com/docs/en/mcp.md">MCP servers</a></td><td data-label="What it does">Give Claude new tools: your Gmail, calendar, Google Drive, a database, almost any service</td><td class="say" data-label="Say to Claude">Type <code>/mcp</code>, or "connect my Google Calendar so you can read it"</td></tr>
+      <tr><td><a href="https://code.claude.com/docs/en/skills.md">Skills</a></td><td data-label="What it does">Save a job you do often as a reusable command, like <code>/deploy</code> or <code>/backup</code></td><td class="say" data-label="Say to Claude">"Turn what we just did into a skill I can run again"</td></tr>
+      <tr><td><a href="https://code.claude.com/docs/en/sub-agents.md">Helpers (subagents)</a></td><td data-label="What it does">Claude hands parts of a big job to helper agents that work in parallel, then combines the results</td><td class="say" data-label="Say to Claude">"Use helpers to research these three options at the same time"</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Bypass mode: how power users run it</h2>
+  <p>
+    By default Claude asks before every command and file change. That's right for your first week.
+    After that, the prompts become most of what you do, and power users switch to
+    <strong>bypass permissions mode</strong>: Claude just works, start to finish, and you check the result.
+  </p>
+  <table>
+    <thead><tr><th>Mode</th><th>What happens</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td>Default</td><td data-label="What happens">Asks before edits and commands</td><td data-label="When">Your first projects, while you learn what Claude does</td></tr>
+      <tr><td>Auto</td><td data-label="What happens">Runs without routine prompts; a safety check reviews each action first</td><td data-label="When">The middle step, once prompts get tedious</td></tr>
+      <tr><td>Bypass</td><td data-label="What happens">No prompts at all</td><td data-label="When">Once your safety net (below) is in place</td></tr>
+    </tbody>
+  </table>
+  <p>To start Claude in bypass mode:</p>
+  <div class="cmd"><pre><code>claude --dangerously-skip-permissions</code></pre></div>
+  <div class="warn">
+    <p>
+      The scary name is on purpose: Claude can then change or delete anything your user account can.
+      Anthropic's docs recommend it only on a machine where mistakes can't hurt. Power users run it
+      anyway, with a safety net instead of prompts:
+    </p>
+  </div>
+  <ul>
+    <li><strong>Git and GitHub on every project</strong>, so any change is one "go back to the last
+      commit" from undone, and a dead PC loses nothing.</li>
+    <li><strong>A hook that blocks publishing</strong> (putting a site live, pushing to the main branch)
+      until you say yes. Bypass skips prompts, not hooks.</li>
+    <li><strong>Passwords in the vault</strong>, not in project files Claude reads and might paste somewhere.</li>
+    <li><strong>Work inside WSL</strong>, so Claude is working in Linux, not loose across your Windows
+      files and games.</li>
+  </ul>
+  <p>
+    A few things still stop and ask even in bypass mode, such as deleting your whole home folder. In a
+    session, <strong>Shift+Tab</strong> switches between modes; bypass appears there only if you
+    started with the flag. More: <a href="https://code.claude.com/docs/en/permission-modes.md">permission modes</a>.
+  </p>
+</section>
+
+<section>
+  <h2>Running several sessions at once</h2>
+  <p>
+    Once you have more than one project, run one Claude session per project, side by side. Each one
+    keeps its own conversation and its own <code>CLAUDE.md</code>, so they never mix up which project
+    they're in.
+  </p>
+  <h3>The simple way: one window per project</h3>
+  <ol>
+    <li>Open Ubuntu, <code>cd</code> into a project, run <code>claude</code>.</li>
+    <li>Open another Ubuntu window for the next project, and do the same.</li>
+    <li>Give each a name so you can tell them apart: type <code>/rename</code> and a short name, like
+      <code>/rename website</code>.</li>
+    <li>With tmux (see Tools to add next), each session gets its own tmux window instead and keeps
+      running after you disconnect.</li>
+  </ol>
+  <p>
+    <strong>Two sessions on the same project</strong> would edit the same files and trip over each
+    other. Ask Claude to "work in a git worktree": each session then gets its own copy of the project
+    and merges back when done.
+  </p>
+  <p>
+    <strong>One screen for all of them:</strong> run <code>claude agents</code> to see every session,
+    what it's doing, and which ones are waiting on you. It's a research preview, so expect changes.
+  </p>
+</section>
+
+<section>
+  <h2>Sessions talking to each other</h2>
+  <p>
+    Your sessions can message each other. It's built in and on by default in recent versions, inside
+    WSL too. One session can tell another what it changed, ask it a question, or hand it a job,
+    without you copying and pasting between windows.
+  </p>
+  <p>Just ask in plain words:</p>
+  <ul>
+    <li>"Tell the website session that the API now returns dates in a new format."</li>
+    <li>"Ask @backend whether the database change is finished." Type <code>@</code> and the first
+      letters of a session's name to pick it.</li>
+    <li>"Let me know when the backend session finishes what it's doing."</li>
+  </ul>
+  <p>Type <code>/list-agents</code> to see which sessions this one can reach.</p>
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>A message is never your permission.</strong> If another session asks for something
+      risky, you still get the yes/no prompt. One session can't approve things for another.</li>
+    <li><strong>Keep them on the same side.</strong> A session in Ubuntu (WSL) can't message one
+      running in plain Windows. Run them all in Ubuntu.</li>
+    <li><strong>Other machines:</strong> sessions on another PC or in the cloud can be reached when
+      both use Remote Control (see the next section).</li>
+    <li><strong>Every session uses your plan's usage.</strong> Five busy sessions burn through it about
+      five times faster than one.</li>
+  </ul>
+  <p>
+    More detail: <a href="https://code.claude.com/docs/en/agents.md">running agents in parallel</a> and
+    <a href="https://code.claude.com/docs/en/cross-session-messaging.md">messaging your other sessions</a>.
+  </p>
+</section>
+
+<section>
+  <h2>Working on your home PC from anywhere</h2>
+  <p>Three tools, from easiest to most complete. Most people end up using all three.</p>
+  <table>
+    <thead><tr><th>Tool</th><th>What it gives you</th><th>Cost</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://code.claude.com/docs/en/remote-control.md">Remote Control</a> (built into Claude Code)</td><td data-label="What it gives you">Keep driving a Claude Code session on your PC from your phone or any browser. Nothing to set up on your network</td><td data-label="Cost">Included</td></tr>
+      <tr><td><a href="https://tailscale.com/">Tailscale</a></td><td data-label="What it gives you">A private network between your phone, laptop and PC. Open the apps you build on your PC from your phone, SSH in, no ports opened to the internet</td><td data-label="Cost">Free for personal use</td></tr>
+      <tr><td><a href="https://github.com/LizardByte/Sunshine">Sunshine</a> + <a href="https://moonlight-stream.org/">Moonlight</a></td><td data-label="What it gives you">Your full desktop on your phone, tablet or laptop, smooth enough to stream games too</td><td data-label="Cost">Free</td></tr>
+    </tbody>
+  </table>
+  <p>Install Tailscale first: Sunshine and SSH both work best over it, and it keeps your PC off the open internet.</p>
+</section>
+
+<section>
+  <h2>Sources</h2>
+  <p>Install commands and plan requirements checked on Oct 30, 2026 against Anthropic's docs:</p>
+  <ul>
+    <li><a href="https://code.claude.com/docs/en/overview">Claude Code overview</a></li>
+    <li><a href="https://code.claude.com/docs/en/setup">Advanced setup</a></li>
+    <li><a href="https://code.claude.com/docs/en/quickstart.md">Quickstart</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p><a href="/">trivgar.com</a></p>
+</footer>
+
+</div>
+<script>
+  document.querySelectorAll('.cmd').forEach(function (box) {
+    var code = box.querySelector('code');
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy';
+    btn.textContent = 'Copy';
+    btn.setAttribute('aria-label', 'Copy command: ' + code.textContent);
+    btn.addEventListener('click', function () {
+      var text = code.textContent;
+      var done = function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('done');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1600);
+      };
+      var fallback = function () {
+        var t = document.createElement('textarea');
+        t.value = text;
+        t.setAttribute('readonly', '');
+        t.style.position = 'fixed';
+        t.style.opacity = '0';
+        document.body.appendChild(t);
+        t.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(t);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+    box.appendChild(btn);
+  });
+</script>
+</body>
+</html>
