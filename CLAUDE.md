@@ -26,6 +26,7 @@ every path beginning with `_`.
 | `pihole.html` | Pi-hole + Unbound guide, checked against Pi-hole v6 on the real Pi |
 | `roborock-valetudo.html` | Roborock Q7 Max + Valetudo guide, written from Trav's own re-roots |
 | `944-turbo.html` | The 944 Turbo page. **Live but deliberately unlinked**: not on the homepage, not in `sitemap.xml`, until Trav says it's ready |
+| `claude-code/` | Claude Code getting-started guide, built 2026-10-30 from Trav's Claude Doc (claude.ai/artifact/AZ9gMEm4bAJDxx4QTBWRqk, the editable draft). **Live but deliberately unlinked** at his word: not on the homepage, not in `sitemap.xml`. The no-Claude rule below still holds for every linked page |
 | `img/` | Photos for the guides and the 944 page. Trav's photos go up unedited (no blurring, no cropping); only resized, with metadata stripped |
 | `archive/` | The index and four site homepages only; see below |
 | `tylers-marine/` | Client site preview — Tyler's Marine & Engine Service |
