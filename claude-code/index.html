@@ -422,6 +422,17 @@
       for anything larger than a small fix, read the plan, then let it build.</li>
     <li><strong>Grow your <code>CLAUDE.md</code>.</strong> When Claude gets something wrong twice, add a
       line saying how you want it done. That beats repeating yourself.</li>
+    <li><strong>Keep rules for every project in one place.</strong> <code>~/.claude/CLAUDE.md</code>
+      applies to all your projects at once. Put "explain things simply" or "never publish without
+      asking me" there one time. Type <code>/memory</code> to open it.</li>
+    <li><strong>Say "remember this".</strong> Claude keeps its own notes for each project and reads
+      them next session. "Remember that the site goes live from the main branch" saves one.
+      <code>/memory</code> shows what it has saved.</li>
+    <li><strong>Never commit passwords.</strong> Tell Claude "never commit passwords, keys or .env
+      files, and keep .env in .gitignore", and add that line to your <code>CLAUDE.md</code>.</li>
+    <li><strong>Use the right model.</strong> Paid plans start on Opus, the strongest and most
+      expensive. Type <code>/model sonnet</code> for everyday building to make your plan's usage
+      last, or <code>/model opusplan</code> for Opus while planning and Sonnet while building.</li>
     <li><strong>Read what it asks to run.</strong> Approve commands you understand; ask "what does this
       do?" when you don't.</li>
     <li><strong>One task per session.</strong> Start a fresh session (<code>/clear</code>) when you switch
@@ -455,6 +466,7 @@
       <tr><td>tmux</td><td data-label="What it does">Keeps a Claude session (or anything else) running after you close the window or disconnect. Reconnect later from anywhere and it's still going</td><td class="say" data-label="Say to Claude">"Install tmux and show me how to start Claude inside it and come back to it later"</td></tr>
       <tr><td>systemd timers</td><td data-label="What it does">Runs a job on a schedule, like checking a website twice a day, even when nobody is logged in</td><td class="say" data-label="Say to Claude">"Make this script run every morning at 8 with a systemd timer"</td></tr>
       <tr><td>Headless Chrome (Playwright)</td><td data-label="What it does">A browser with no window that Claude controls: turns pages into PDFs or screenshots, tests your web apps, fills in web forms</td><td class="say" data-label="Say to Claude">"Install Playwright and take a screenshot of my app to check it looks right"</td></tr>
+      <tr><td><a href="https://code.claude.com/docs/en/chrome.md">Claude in Chrome</a></td><td data-label="What it does">Claude drives your real Chrome, signed in as you: dashboards and web forms with no other way in. It doesn't work inside Ubuntu, so run that session from PowerShell. It clicks as you, so publishing and paying stay your call</td><td class="say" data-label="Say to Claude">Start with <code>claude --chrome</code>, then "open my hosting dashboard and show me my DNS settings"</td></tr>
     </tbody>
   </table>
 
