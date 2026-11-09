@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#14120f" />
+  <title>Tesla + Home Assistant | Travis Pellegrini</title>
+  <meta name="description" content="Our Tesla warms itself up before school, before I leave work and before anything on the family calendar, and checks at night that it's plugged in and locked. How I hooked it up to Home Assistant, with every automation to copy." />
+  <meta name="author" content="Travis Pellegrini" />
+  <link rel="canonical" href="https://trivgar.com/tesla-home-assistant.html" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314120f'/%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23c65d2e' stroke-width='2.5'/%3E%3Cpath d='M9 11h14M16 11v11' stroke='%23ece5da' stroke-width='3.2' stroke-linecap='square'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --ground:     #14120f;
+      --ground-2:   #1b1814;
+      --rule:       #2c2721;
+      --bone:       #ece5da;
+      --steel:      #9d9387;
+      --steel-dim:  #857c71;
+      --rust:       #c65d2e;
+      --rust-lt:    #e0854f;
+      --hazard:     #e8b931;
+
+      --display: "Anton", "Haettenschweiler", "Arial Narrow", sans-serif;
+      --body: "Archivo", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+      --mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, monospace;
+
+      --gutter: clamp(20px, 5vw, 64px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body{
+      margin: 0;
+      background: var(--ground);
+      color: var(--bone);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 5px;
+      z-index: 50;
+      background: repeating-linear-gradient(-45deg, var(--hazard) 0 10px, #14120f 10px 20px);
+    }
+
+    .shell{
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    a { color: var(--rust-lt); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+    a:hover { color: var(--hazard); text-decoration-color: currentColor; }
+    a:focus-visible{ outline: 2px solid var(--hazard); outline-offset: 3px; }
+
+    header{
+      padding-top: clamp(40px, 9vw, 88px);
+      padding-bottom: clamp(28px, 5vw, 48px);
+      border-bottom: 2px solid var(--rust);
+    }
+    .back{
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+      text-decoration: none;
+    }
+    .back:hover{ color: var(--hazard); }
+
+    h1{
+      margin: clamp(22px, 4vw, 34px) 0 0;
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(44px, 10vw, 84px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+    }
+    .lede{
+      margin: 22px 0 0;
+      max-width: 52ch;
+      font-size: clamp(17px, 2.2vw, 20px);
+      line-height: 1.55;
+    }
+    .checked{
+      margin: 18px 0 0;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--steel-dim);
+    }
+
+    section{ padding-top: clamp(36px, 6vw, 56px); }
+
+    h2{
+      margin: 0 0 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-size: clamp(15px, 1.8vw, 17px);
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h2 .n{
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1;
+      letter-spacing: 0;
+      color: var(--rust);
+      flex: none;
+    }
+    h3{
+      margin: 32px 0 8px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    p, li{ max-width: 64ch; }
+    p{ margin: 0 0 14px; }
+    ul, ol{ margin: 0 0 14px; padding-left: 1.3rem; }
+    li{ margin-bottom: 6px; }
+    li::marker{ color: var(--steel-dim); }
+
+    .aside{ color: var(--steel); }
+
+    code{
+      font-family: var(--mono);
+      font-size: .88em;
+      background: var(--ground-2);
+      border: 1px solid var(--rule);
+      padding: .1em .35em;
+      overflow-wrap: anywhere;
+    }
+    pre{
+      margin: 0 0 16px;
+      padding: 14px 16px;
+      background: var(--ground-2);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--rust);
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    pre code{
+      font-size: inherit;
+      background: none;
+      border: 0;
+      padding: 0;
+      overflow-wrap: normal;
+    }
+
+    /* code blocks with a copy button; the button sits above the block so long YAML can scroll under nothing */
+    .cmd{ margin: 0 0 16px; }
+    .cmd pre{ margin: 0; }
+    .cmd-bar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 4px 0 6px;
+    }
+    .cmd-file{
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--steel-dim);
+      overflow-wrap: anywhere;
+    }
+    .copy{
+      margin-left: auto;
+      min-height: 36px;
+      min-width: 44px;
+      padding: 0 12px;
+      font: 700 11px/1 var(--body);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--bone);
+      background: var(--ground);
+      border: 1px solid var(--rule);
+      cursor: pointer;
+    }
+    .copy:hover{ border-color: var(--hazard); color: var(--hazard); }
+    .copy:focus-visible{ outline: 2px solid var(--hazard); outline-offset: 2px; }
+    .copy.done{ color: var(--hazard); border-color: var(--hazard); }
+
+    .warn{
+      margin: 18px 0;
+      padding: 14px 16px;
+      background: var(--ground-2);
+      border-left: 3px solid var(--hazard);
+    }
+    .warn p:last-child{ margin-bottom: 0; }
+
+    .toc{ columns: 2 260px; column-gap: 32px; padding-left: 1.3rem; }
+    .toc li{ break-inside: avoid; }
+
+    footer{
+      margin-top: clamp(48px, 8vw, 80px);
+      border-top: 1px solid var(--rule);
+      padding: 24px 0 60px;
+      font-size: 14px;
+      color: var(--steel);
+    }
+    footer p{ margin: 0 0 6px; }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="shell">
+
+<header>
+  <a href="/" class="back">&larr; trivgar.com</a>
+  <h1>Tesla + Home Assistant</h1>
+  <p class="lede">
+    Our car warms itself up before I walk out to it: before the school run, before I leave work,
+    and half an hour before anything on the family calendar. At 9 at night it tells me if it's
+    unplugged or unlocked. None of that needs anyone to open the Tesla app. This is how I set
+    it up, and every automation, ready to copy.
+  </p>
+  <p class="checked">Last checked Nov 2026 &middot; Home Assistant 2026.10 &middot; Tesla HTTP Proxy 2.3.0 &middot; Tesla Custom Integration 3.24</p>
+</header>
+
+<main>
+
+<section>
+  <h2>What it does</h2>
+  <p>
+    <a href="https://www.home-assistant.io/">Home Assistant</a> is free software that runs the
+    smart stuff in a house: lights, locks, thermostats, vacuums. You give it rules like "when
+    this happens, do that", and it carries them out on its own. Ours runs on a
+    <a href="https://www.raspberrypi.com/">Raspberry Pi</a>, a cheap little computer that sits
+    on a shelf.
+  </p>
+  <p>
+    A Tesla can be one more thing it controls. Home Assistant can read the battery, where the
+    car is, the inside and outside temperature, and whether it's locked or plugged in. It can
+    also send it commands: turn on the heat, turn on the seat heaters, lock the doors, change
+    the charge limit.
+  </p>
+  <p>
+    Put those together and the car looks after itself. Some of what ours does:
+  </p>
+  <ul>
+    <li>Warms up on school mornings, and when I unplug my phone to leave for work.</li>
+    <li>Warms up 30 minutes before any family calendar event that has an address.</li>
+    <li>Asks me at 3:30 if I want it warm now, in 30 minutes or in 45.</li>
+    <li>Warms up when I've been in the grocery store for half an hour.</li>
+    <li>Picks the cabin temperature, seat heat and steering wheel heat from the weather.</li>
+    <li>At 9 PM, tells me if it's under 50% and not plugged in, or left unlocked, with a button to lock it.</li>
+    <li>Charges to 90% the night before a long drive on the calendar, then goes back to 80%.</li>
+  </ul>
+  <p>
+    The hard part is the setup. Tesla makes outside software prove who it is before the car
+    will take a command, so you need a small piece of extra software and a public web address
+    for the car to check. That's most of this page. Once it's done, the automations are the
+    easy part.
+  </p>
+</section>
+
+<section>
+  <h2>What you need</h2>
+  <ul>
+    <li>
+      Home Assistant running as Home Assistant OS, the version with add-ons (Home Assistant
+      now calls them apps). Mine is on a Raspberry Pi 5.
+    </li>
+    <li>
+      <a href="https://hacs.xyz/">HACS</a>, the community store for Home Assistant extras. The
+      Tesla integration comes from there.
+    </li>
+    <li>
+      A router where you can forward a port. The car has to reach your house from the internet
+      to check your key, every time you send it a command.
+    </li>
+    <li>A Tesla account and the Tesla app, already paired with the car as a phone key.</li>
+    <li>
+      A free <a href="https://developer.tesla.com/">Tesla developer</a> account. Tesla bills
+      its Fleet API by use, with a free allowance for personal use. Check
+      <a href="https://developer.tesla.com/docs/fleet-api/billing-and-limits">their billing
+      page</a> for the current numbers.
+    </li>
+  </ul>
+  <p class="aside">
+    You don't need your own website or a domain. Everything below runs on the Home Assistant
+    box, and the web address is a free one from DuckDNS.
+  </p>
+  <p class="aside">
+    If you have a Tesla Wall Connector, Home Assistant has a built-in integration for it that
+    talks to it over your own network. It's separate from all this and much easier.
+  </p>
+</section>
+
+<section>
+  <h2>How it fits together</h2>
+  <p>
+    Tesla's current system is called the Fleet API. Every command has to be signed with a key
+    the car has been told to trust, and Tesla checks your public key at a web address you
+    give them. Here's the path a command takes:
+  </p>
+  <pre><code>Home Assistant automation
+  → Tesla Custom Integration      the car's sensors and buttons in HA
+  → Tesla HTTP Proxy add-on       signs the command with your private key
+  → Tesla's servers → the car     the car checks the signature
+
+the internet → your router :443
+  → NGINX add-on                  hands out the public key, 404 for anything else
+  → DuckDNS add-on                keeps the web address pointed at your house, and the certificate valid</code></pre>
+</section>
+
+<section>
+  <h2><span class="n">1</span>Get a web address and a certificate</h2>
+  <p>
+    Install the <a href="https://github.com/home-assistant/addons/blob/master/duckdns/DOCS.md">DuckDNS</a>
+    add-on from the official add-on store. Sign in at <a href="https://www.duckdns.org/">duckdns.org</a>,
+    make a name for the Tesla key, and put it and your token in the add-on's config. If you
+    already use DuckDNS for Home Assistant itself, add the Tesla name as a second domain. One
+    certificate covers both.
+  </p>
+  <div class="cmd"><div class="cmd-bar"><span class="cmd-file">DuckDNS add-on config</span></div><pre><code>lets_encrypt:
+  accept_terms: true
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+token: your-duckdns-token
+domains:
+  - yourname-tesla.duckdns.org
+seconds: 300</code></pre></div>
+  <p>
+    On the router, forward TCP port 443 to the Home Assistant box. That's the port the car
+    will use to fetch your key.
+  </p>
+  <div class="warn">
+    <p>
+      Port 443 open to the internet is the one real risk here. The NGINX config in step 2
+      answers 404 to everything except the key file, so that name shows the world nothing
+      else. Don't point it at Home Assistant itself unless you mean to.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">2</span>Install the NGINX add-on</h2>
+  <p>
+    Install <a href="https://github.com/home-assistant/addons/blob/master/nginx_proxy/DOCS.md">NGINX
+    SSL proxy</a> from the official store. The important part is <code>customize</code>, which
+    tells it to load extra config files from the <code>/share</code> folder. The Tesla add-on
+    drops one in there in the next step.
+  </p>
+  <div class="cmd"><div class="cmd-bar"><span class="cmd-file">NGINX SSL proxy config</span></div><pre><code>domain: yourname.duckdns.org
+hsts: max-age=31536000; includeSubDomains
+certfile: fullchain.pem
+keyfile: privkey.pem
+cloudflare: false
+customize:
+  active: true
+  default: nginx_proxy_default*.conf
+  servers: nginx_proxy/*.conf</code></pre></div>
+  <p class="aside">
+    The <code>domain</code> here is for Home Assistant's own name. The Tesla name gets its own
+    server block from the Tesla add-on.
+  </p>
+</section>
+
+<section>
+  <h2><span class="n">3</span>Install the Tesla HTTP Proxy add-on</h2>
+  <p>
+    This one isn't in the official store. In Settings &rarr; Add-ons &rarr; Add-on store, open
+    the &#8942; menu, pick Repositories, and add:
+  </p>
+  <div class="cmd"><div class="cmd-bar"><span class="cmd-file">Add-on repository</span></div><pre><code>https://github.com/llamafilm/tesla-http-proxy-addon</code></pre></div>
+  <p>
+    Install Tesla HTTP Proxy. In its config, set the domain to your Tesla name
+    (<code>yourname-tesla.duckdns.org</code>) and the region (North America and Asia-Pacific
+    share one). Leave the client ID and secret empty for now and start it.
+  </p>
+  <p>
+    It makes your key pair, writes the public half to <code>/share/tesla</code>, writes an NGINX
+    config to <code>/share/nginx_proxy/nginx_tesla.conf</code>, then stops itself. That's
+    normal. Restart the NGINX add-on so it picks up the new config. Here's what that config
+    does, trimmed:
+  </p>
+  <pre><code>server {
+    server_name yourname-tesla.duckdns.org;
+    listen 443 ssl http2;
+    ssl_certificate /ssl/fullchain.pem;
+    ssl_certificate_key /ssl/privkey.pem;
+
+    location / {
+        return 404;
+    }
+
+    location /.well-known/appspecific/com.tesla.3p.public-key.pem {
+        root /share/tesla;
+        try_files /com.tesla.3p.public-key.pem =404;
+    }
+}</code></pre>
+  <p>Now check it from your phone on mobile data, so you're coming in from outside:</p>
+  <div class="cmd"><div class="cmd-bar"><span class="cmd-file">Should show a key starting with BEGIN PUBLIC KEY</span></div><pre><code>https://yourname-tesla.duckdns.org/.well-known/appspecific/com.tesla.3p.public-key.pem</code></pre></div>
+  <p>
+    If that shows a certificate error or doesn't load, stop and fix it. Nothing after this
+    works until it does.
+  </p>
+</section>
+
+<section>
+  <h2><span class="n">4</span>Register with Tesla</h2>
+  <p>
+    At <a href="https://developer.tesla.com/">developer.tesla.com</a>, request app access. Mine
+    went through right away. It asks for:
+  </p>
+  <ul>
+    <li>Your name as the legal entity, plus an app name, description and purpose. Anything honest works, like "Home Assistant for my own car".</li>
+    <li>Scopes: all of them.</li>
+    <li>OAuth grant type: authorization code and machine-to-machine.</li>
+    <li>Allowed origin: <code>https://yourname-tesla.duckdns.org</code>, all lowercase.</li>
+    <li>Redirect URI: the same with <code>/callback</code> on the end.</li>
+  </ul>
+  <p>
+    Tesla gives you a client ID and a client secret. Put both in the Tesla HTTP Proxy add-on's
+    config and start it again. This time it stays running.
+  </p>
+</section>
+
+<section>
+  <h2><span class="n">5</span>Log in and pair the key with the car</h2>
+  <ol>
+    <li>Open the add-on's web UI and tap <strong>Login to Tesla account</strong>. Sign in and allow every scope.</li>
+    <li>
+      It sends you to your <code>/callback</code> address, which doesn't exist, so you get a
+      404. That's expected. Copy the whole address from the browser bar, paste it into the
+      add-on's web UI and tap <strong>Generate token from URL</strong>.
+    </li>
+    <li>
+      On your phone, open the add-on's web UI again and tap <strong>Enroll public key in your
+      vehicle</strong>. The Tesla app opens and asks to allow third-party access. Say yes. Do
+      it for each car.
+    </li>
+  </ol>
+  <p class="aside">
+    After that the car shows your key under Locks in its own screen. Delete it there and
+    Home Assistant loses control of the car.
+  </p>
+</section>
+
+<section>
+  <h2><span class="n">6</span>Add the Tesla integration</h2>
+  <p>
+    In HACS, search for <strong>Tesla Custom Integration</strong>
+    (<a href="https://github.com/alandtse/tesla">alandtse/tesla</a>), download it and restart
+    Home Assistant. Then Settings &rarr; Devices &amp; services &rarr; Add integration &rarr;
+    Tesla Custom Integration. Tick the option to use the Fleet API proxy. It reads the client
+    ID, proxy address and certificate from the add-on, so you only paste in the refresh token
+    from step 5.
+  </p>
+  <p>Then open the integration's options. Mine are:</p>
+  <ul>
+    <li><strong>Seconds between polling:</strong> 660, which is 11 minutes.</li>
+    <li><strong>Wake cars on start:</strong> off.</li>
+  </ul>
+  <p>
+    Polling more often than that keeps the car awake, and an awake Tesla drains its battery
+    sitting in the driveway. The automations below wake it on purpose when they need fresh
+    numbers.
+  </p>
+  <p>
+    The integration names everything after the car. Mine is called TK-421, so everything below
+    says <code>tk_421</code>. Swap in your car's name.
+  </p>
+
+  <h3>Make the car a person</h3>
+  <p>
+    The integration gives you a location tracker for the car. In Settings &rarr; People, add a
+    person for the car and give it that tracker. Now the car shows up on the map like
+    everyone else, and you can write rules like "when the car enters the grocery store zone".
+    Add zones for the places you go in Settings &rarr; Areas, labels &amp; zones &rarr; Zones.
+  </p>
+  <p class="aside">
+    If you have automations that turn the house off when everyone leaves, leave the car's
+    person out of them. Otherwise the car parked in the driveway counts as somebody home.
+  </p>
+</section>
+
+<section>
+  <h2>The automations</h2>
+  <p>
+    Every one of these goes in <code>automations.yaml</code>, or paste it into a new automation
+    in the editor with Edit in YAML. Replace <code>notify.mobile_app_your_phone</code> with your
+    own phone's notify service.
+  </p>
+  <ul class="toc">
+    <li><a href="#preheat-script">The pre-heat script</a></li>
+    <li><a href="#stop-button">The Stop button</a></li>
+    <li><a href="#school">School mornings</a></li>
+    <li><a href="#phone">When the phone comes off the charger</a></li>
+    <li><a href="#calendar">Before a calendar event</a></li>
+    <li><a href="#errands">After half an hour at the store</a></li>
+    <li><a href="#leave-work">"Leaving work?" with buttons</a></li>
+    <li><a href="#short-long">Short stop or long stop</a></li>
+    <li><a href="#breaks">Lunch break</a></li>
+    <li><a href="#night">Night check</a></li>
+    <li><a href="#tires">Tire pressure</a></li>
+    <li><a href="#road-trip">Charge for a road trip</a></li>
+    <li><a href="#proxy-down">Proxy down alert</a></li>
+  </ul>
+
+  <h3 id="preheat-script">The pre-heat script</h3>
+  <p>
+    Everything that warms the car calls this one script, so the rules for how warm live in one
+    place. It wakes the car, gets fresh numbers, then skips if someone's already sitting in it
+    or the heat is already on. Then it sets the cabin from the outside temperature, turns on
+    the driver's seat and the steering wheel heat if it's cold, and sends a notification with a
+    Stop button.
+  </p>
+  <div class="cmd"><div class="cmd-bar"><span class="cmd-file">scripts.yaml</span></div><pre><code>tesla_pre_heat:
+  alias: Tesla Pre-Heat
+  mode: single
+  sequence:
+    # The car only reports every 11 minutes and not at all asleep, so wake it
+    # and ask again before trusting "nobody's in the car".
+    - action: button.press
+      target:
+        entity_id: button.tk_421_wake_up
+    - delay: "00:00:10"
+    - action: homeassistant.update_entity
+      target:
+        entity_id:
+          - binary_sensor.tk_421_user_present
+          - climate.tk_421_hvac_climate_system
+    - delay: "00:00:05"
+    # Test for 'on', not "not off": it reads unavailable while the car sleeps.
+    - if:
+        - condition: state
+          entity_id: binary_sensor.tk_421_user_present
+          state: "on"
+      then:
+        - stop: Someone is already in the car
+    - if:
+        - condition: template
+          value_template: >-
+            {{ states('climate.tk_421_hvac_climate_system')
+               not in ['off', 'unavailable', 'unknown'] }}
+      then:
+        - stop: Already heating
+    - action: climate.set_hvac_mode
+      target:
+        entity_id: climate.tk_421_hvac_climate_system
+      data:
+        hvac_mode: heat_cool
+    - delay: "00:00:25"
+    - variables:
+        t_out: "{{ states('sensor.tk_421_temperature_outside') | float(999) }}"
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.tk_421_hvac_climate_system
+      data:
+        temperature: >-
+          {{ 76 if t_out &lt; 50 else 72 if t_out &lt; 65 else 68 if t_out &lt; 75 else 66 }}
+    - delay: "00:00:08"
+    - action: select.select_option
+      target:
+        entity_id: select.tk_421_heated_seat_left
+      data:
+        option: "{{ 'High' if t_out &lt; 74 else 'Off' }}"
+    - delay: "00:00:04"
+    - action: "switch.turn_{{ 'on' if t_out &lt; 72 else 'off' }}"
+      continue_on_error: true
+      target:
+        entity_id: switch.tk_421_heated_steering
+    - action: notify.mobile_app_your_phone
+      data:
+        title: Tesla pre-heat on
+        message: >-
+          Outside {{ states('sensor.tk_421_temperature_outside') }}°F,
+          cabin {{ states('sensor.tk_421_temperature_inside') }}°F,
+          battery {{ states('sensor.tk_421_battery') }}%.
+        data:
+          tag: tesla_preheat
+          actions:
+            - action: TESLA_STOP_HVAC
+              title: Stop HVAC</code></pre></div>
+  <p>
+    The delays are there because the car takes a few seconds to take each command, and
+    sending them back to back loses some. The steering wheel uses the plain on/off switch
+    instead of picking a heat level, because the level setting was hit and miss on mine.
+  </p>
+  <p>
+    I have a second copy for when the family is riding along. It's the same except it sets
+    all five seats, High under 50°F, Medium under 60, Low under 74, and sends the
+    notification to both of our phones.
+  </p>
+  <div class="warn">
+    <p>
+      The wake-up at the top is there for a reason. Before I added it, the car would report
+      "nobody in the car" from whenever it last went to sleep. Someone was sitting in it in a
+      grocery store parking lot when the pre-heat kicked in and started changing her settings.
+    </p>
+  </div>
+
+  <h3 id="stop-button">The Stop button</h3>
+  <p>The notification's Stop HVAC button needs an automation to listen for it:</p>
+  <div class="cmd"><pre><code>- alias: Tesla Pre-Heat Stop from Notification
+  mode: single
+  triggers:
+    - trigger: event
+      event_type: mobile_app_notification_action
+      event_data:
+        action: TESLA_STOP_HVAC
+  actions:
+    - action: climate.set_hvac_mode
+      target:
+        entity_id: climate.tk_421_hvac_climate_system
+      data:
+        hvac_mode: "off"</code></pre></div>
+
+  <h3 id="school">School mornings</h3>
+  <p>
+    The simplest one. A set time on school days, only if the car is home. If one day of the
+    week starts later, make a second copy with that day and time.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Pre-Heat School
+  mode: single
+  triggers:
+    - trigger: time
+      at: "07:00:00"
+  conditions:
+    - condition: time
+      weekday: [mon, tue, wed, thu, fri]
+    - condition: zone
+      entity_id: person.tk_421
+      zone: zone.home
+  actions:
+    - action: script.turn_on
+      target:
+        entity_id: script.tesla_pre_heat</code></pre></div>
+
+  <h3 id="phone">When the phone comes off the charger</h3>
+  <p>
+    My work start time moves around, so a set time doesn't work. What does work: early in the
+    morning, my phone coming off the charger means I'm up. The
+    <a href="https://companion.home-assistant.io/">Home Assistant phone app</a> reports whether
+    the phone is charging. Thirty minutes after it unplugs, the car starts warming up. On
+    weekends it asks first, because unplugging on a Saturday usually doesn't mean work.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Pre-Heat for Work
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id: sensor.your_phone_battery_state
+      to: discharging
+      for: "00:03:00"
+  conditions:
+    - condition: time
+      after: "05:00:00"
+      before: "07:00:00"
+  actions:
+    - delay: "00:30:00"
+    - if:
+        - condition: time
+          weekday: [sat, sun]
+      then:
+        - action: notify.mobile_app_your_phone
+          data:
+            title: Heading to work?
+            message: It's the weekend, so the pre-heat hasn't started. Tap to start it.
+            data:
+              actions:
+                - action: heat_car
+                  title: Start pre-heat
+      else:
+        - action: script.tesla_pre_heat
+
+- alias: Tesla Pre-Heat from Notification
+  mode: single
+  triggers:
+    - trigger: event
+      event_type: mobile_app_notification_action
+      event_data:
+        action: heat_car
+  actions:
+    - action: script.turn_on
+      target:
+        entity_id: script.tesla_pre_heat</code></pre></div>
+  <p class="aside">
+    The 3 minutes keeps a quick unplug and replug from counting.
+  </p>
+
+  <h3 id="calendar">Before a calendar event</h3>
+  <p>
+    Thirty minutes before anything on the family calendar, as long as the event has an
+    address. "Pay the water bill" doesn't need a warm car. "Dentist, 123 Main St" does.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Pre-Heat Before Calendar Event
+  mode: single
+  triggers:
+    - trigger: calendar
+      entity_id: calendar.family
+      event: start
+      offset: "-00:30:00"
+  conditions:
+    - condition: template
+      value_template: >-
+        {{ trigger.calendar_event.location is not none
+           and trigger.calendar_event.location | trim != '' }}
+    - condition: zone
+      entity_id: person.tk_421
+      zone: zone.home
+  actions:
+    - action: script.turn_on
+      target:
+        entity_id: script.tesla_pre_heat</code></pre></div>
+  <p class="aside">
+    The car-at-home check is something I'd add if I were writing it again. Mine doesn't
+    have it, and an event while the car is across town warms it up for nobody.
+  </p>
+
+  <h3 id="errands">After half an hour at the store</h3>
+  <p>
+    Park at the gym or the grocery store and a 30-minute timer starts. Leave before it's up
+    and it's cancelled. If it runs out and the car's still there, it warms up. Make the timer
+    first in Settings &rarr; Devices &amp; services &rarr; Helpers &rarr; Timer, with a
+    duration of 30 minutes.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Zone Timer Start
+  mode: single
+  triggers:
+    - trigger: zone
+      entity_id: person.tk_421
+      zone: zone.gym
+      event: enter
+    - trigger: zone
+      entity_id: person.tk_421
+      zone: zone.grocery
+      event: enter
+  actions:
+    - action: timer.start
+      target:
+        entity_id: timer.tesla_zone_timer
+
+- alias: Tesla Zone Timer Cancel
+  mode: single
+  triggers:
+    - trigger: zone
+      entity_id: person.tk_421
+      zone: zone.gym
+      event: leave
+    - trigger: zone
+      entity_id: person.tk_421
+      zone: zone.grocery
+      event: leave
+  actions:
+    - action: timer.cancel
+      target:
+        entity_id: timer.tesla_zone_timer
+
+- alias: Tesla Pre-Heat After Zone Timer
+  mode: single
+  triggers:
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.tesla_zone_timer
+  conditions:
+    - condition: or
+      conditions:
+        - condition: zone
+          entity_id: person.tk_421
+          zone: zone.gym
+        - condition: zone
+          entity_id: person.tk_421
+          zone: zone.grocery
+  actions:
+    - action: script.turn_on
+      target:
+        entity_id: script.tesla_pre_heat</code></pre></div>
+  <p class="aside">
+    Every zone you add needs to go in all three. Miss it in the cancel one and the timer
+    keeps running after you drive off.
+  </p>
+
+  <h3 id="leave-work">"Leaving work?" with buttons</h3>
+  <p>
+    At 3:30, if the car is at work, my phone asks if I want it warm now, in 30 minutes or in
+    45. The notification stays until I answer, so I can tap Start now later. If I pick a
+    delay and the car leaves work before it's up, it doesn't bother.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Leaving Work Prompt
+  mode: single
+  triggers:
+    - trigger: time
+      at: "15:30:00"
+  conditions:
+    - condition: zone
+      entity_id: person.tk_421
+      zone: zone.work
+  actions:
+    - action: notify.mobile_app_your_phone
+      data:
+        title: Initiate ejection sequence from work?
+        message: Start the Tesla pre-heat now, in 30, or in 45?
+        data:
+          persistent: true
+          tag: tesla_leave_work
+          actions:
+            - action: TESLA_LEAVE_NOW
+              title: Start now
+            - action: TESLA_LEAVE_30
+              title: In 30 min
+            - action: TESLA_LEAVE_45
+              title: In 45 min
+
+- alias: Tesla Leaving Work Buttons
+  mode: queued
+  triggers:
+    - trigger: event
+      event_type: mobile_app_notification_action
+  conditions:
+    - condition: template
+      value_template: >-
+        {{ trigger.event.data.action in
+           ['TESLA_LEAVE_NOW', 'TESLA_LEAVE_30', 'TESLA_LEAVE_45'] }}
+  actions:
+    - variables:
+        mins: >-
+          {{ 0 if trigger.event.data.action == 'TESLA_LEAVE_NOW'
+             else trigger.event.data.action.split('_')[-1] | int }}
+    - action: notify.mobile_app_your_phone
+      data:
+        message: clear_notification
+        data:
+          tag: tesla_leave_work
+    - if:
+        - condition: template
+          value_template: "{{ mins > 0 }}"
+      then:
+        - action: notify.mobile_app_your_phone
+          data:
+            title: Pre-heat in {{ mins }} minutes
+            message: >-
+              Starting it at {{ (now() + timedelta(minutes=mins)).strftime('%-I:%M %p') }}.
+        - delay:
+            minutes: "{{ mins }}"
+        - condition: zone
+          entity_id: person.tk_421
+          zone: zone.work
+    - action: script.tesla_pre_heat</code></pre></div>
+  <p>
+    The first version offered Now or 15 minutes. I'd tap 15 at 3:33, the heat would start at
+    3:48, and I wouldn't get to the car until after 4:20. That's half an hour or more of
+    heating an empty car. Look at when you actually leave before you pick the choices.
+  </p>
+
+  <h3 id="short-long">Short stop or long stop</h3>
+  <p>
+    The union hall is a 15-minute stop most mornings and a two-and-a-half-hour meeting some
+    evenings. A single timer fits neither. Two triggers on the same place, with different
+    "for" times, handle both. The short one only counts in the morning. And if I leave before
+    either time is up, nothing happens, so there's nothing to cancel.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Pre-Heat Short or Long Stop
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id: person.tk_421
+      to: Hall
+      for: "00:08:00"
+      id: short
+    - trigger: state
+      entity_id: person.tk_421
+      to: Hall
+      for: "02:30:00"
+      id: long
+  conditions:
+    - condition: or
+      conditions:
+        - condition: and
+          conditions:
+            - condition: trigger
+              id: short
+            - condition: time
+              before: "12:00:00"
+        - condition: trigger
+          id: long
+  actions:
+    - action: script.turn_on
+      target:
+        entity_id: script.tesla_pre_heat</code></pre></div>
+  <p class="aside">
+    <code>to: Hall</code> is the zone's name as it shows on the person, not
+    <code>zone.hall</code>. Time the long one from when you arrive, not from when the meeting
+    starts. I get there half an hour early, so 2 hours would have warmed it up while I was
+    still inside.
+  </p>
+
+  <h3 id="breaks">Lunch break</h3>
+  <p>Same idea as school mornings: a set time, only if the car is at work.</p>
+  <div class="cmd"><pre><code>- alias: Tesla Pre-Heat Lunch Break
+  mode: single
+  triggers:
+    - trigger: time
+      at: "11:30:00"
+  conditions:
+    - condition: zone
+      entity_id: person.tk_421
+      zone: zone.work
+  actions:
+    - action: script.turn_on
+      target:
+        entity_id: script.tesla_pre_heat</code></pre></div>
+
+  <h3 id="night">Night check</h3>
+  <p>
+    At 9 PM, if the car is home: a reminder to plug it in if it's under 50% and not on the
+    charger, and an alert if it's unlocked or a window, the trunk or the frunk is open. The
+    alert has a Lock button that locks it and closes the windows. The trunk and frunk you
+    have to shut by hand.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Night Check
+  mode: single
+  triggers:
+    - trigger: time
+      at: "21:00:00"
+  conditions:
+    - condition: zone
+      entity_id: person.tk_421
+      zone: zone.home
+  actions:
+    - variables:
+        battery: "{{ states('sensor.tk_421_battery') | int(-1) }}"
+        problems: >-
+          {%- set n = namespace(p=[]) -%}
+          {%- if is_state('lock.tk_421_doors', 'unlocked') %}{% set n.p = n.p + ['unlocked'] %}{% endif -%}
+          {%- if is_state('cover.tk_421_windows', 'open') %}{% set n.p = n.p + ['windows open'] %}{% endif -%}
+          {%- if is_state('cover.tk_421_trunk', 'open') %}{% set n.p = n.p + ['trunk open'] %}{% endif -%}
+          {%- if is_state('cover.tk_421_frunk', 'open') %}{% set n.p = n.p + ['frunk open'] %}{% endif -%}
+          {{- n.p | join(', ') -}}
+    - if:
+        - condition: template
+          value_template: >-
+            {{ is_state('binary_sensor.tk_421_charger', 'off') and 0 &lt;= battery &lt; 50 }}
+      then:
+        - action: notify.mobile_app_your_phone
+          data:
+            title: Plug in the Tesla
+            message: "It's at {{ battery }}% and not plugged in."
+    - if:
+        - condition: template
+          value_template: "{{ problems | trim != '' }}"
+      then:
+        - action: notify.mobile_app_your_phone
+          data:
+            title: The Tesla is {{ problems }}
+            message: Parked at home at 9 PM.
+            data:
+              tag: tesla_night_check
+              actions:
+                - action: TESLA_NIGHT_LOCK
+                  title: Lock it
+
+- alias: Tesla Night Check Lock Button
+  mode: single
+  triggers:
+    - trigger: event
+      event_type: mobile_app_notification_action
+      event_data:
+        action: TESLA_NIGHT_LOCK
+  actions:
+    - action: lock.lock
+      target:
+        entity_id: lock.tk_421_doors
+    - if:
+        - condition: state
+          entity_id: cover.tk_421_windows
+          state: open
+      then:
+        - action: cover.close_cover
+          target:
+            entity_id: cover.tk_421_windows
+    - delay: "00:00:20"
+    - action: homeassistant.update_entity
+      target:
+        entity_id: [lock.tk_421_doors, cover.tk_421_windows]
+    - delay: "00:00:05"
+    - action: notify.mobile_app_your_phone
+      data:
+        title: Tesla {{ states('lock.tk_421_doors') }}
+        message: Windows {{ states('cover.tk_421_windows') }}.
+        data:
+          tag: tesla_night_check</code></pre></div>
+  <p class="aside">
+    This one works with the car asleep, because a parked car sends its last state before it
+    sleeps. The second notification reuses the first one's tag, so it replaces it instead of
+    stacking up.
+  </p>
+
+  <h3 id="tires">Tire pressure</h3>
+  <p>
+    One alert per tire when it stays under 38 psi for 10 minutes, with all four listed. Mine
+    run 41 to 42, so set yours a few under what you normally see.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Tire Pressure Low
+  mode: queued
+  triggers:
+    - trigger: numeric_state
+      entity_id:
+        - sensor.tk_421_tpms_front_left
+        - sensor.tk_421_tpms_front_right
+        - sensor.tk_421_tpms_rear_left
+        - sensor.tk_421_tpms_rear_right
+      below: 38
+      for: "00:10:00"
+  actions:
+    - action: notify.mobile_app_your_phone
+      data:
+        title: Tesla tire pressure low
+        message: >-
+          {{ trigger.to_state.name }} is at {{ trigger.to_state.state | float(0) | round(1) }} psi.
+          Front {{ states('sensor.tk_421_tpms_front_left') | float(0) | round(1) }} /
+          {{ states('sensor.tk_421_tpms_front_right') | float(0) | round(1) }},
+          rear {{ states('sensor.tk_421_tpms_rear_left') | float(0) | round(1) }} /
+          {{ states('sensor.tk_421_tpms_rear_right') | float(0) | round(1) }}.
+        data:
+          tag: tesla_tire_{{ trigger.entity_id.split('.')[1] }}</code></pre></div>
+
+  <h3 id="road-trip">Charge for a road trip</h3>
+  <p>
+    At 7 PM it looks at tomorrow's calendar. If anything is 100 miles or more away by road, it
+    raises the charge limit to 90% for the night. On the next evening with no long trip, it
+    puts it back to 80%. It only ever undoes a raise it made itself, never one I set by hand,
+    which is what the helper switch is for.
+  </p>
+  <p>
+    Distance comes from the built-in <a href="https://www.home-assistant.io/integrations/waze_travel_time/">Waze
+    Travel Time</a> integration, which you need to add first. Then make a toggle helper called
+    Tesla Trip Charge.
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla Charge to 90% Before a Long Trip
+  mode: single
+  triggers:
+    - trigger: time
+      at: "19:00:00"
+  actions:
+    - action: calendar.get_events
+      target:
+        entity_id: calendar.family
+      data:
+        start_date_time: "{{ (today_at('00:00') + timedelta(days=1)).isoformat() }}"
+        end_date_time: "{{ (today_at('23:59') + timedelta(days=1)).isoformat() }}"
+      response_variable: tomorrow
+      continue_on_error: true
+    - variables:
+        places: >-
+          {%- set n = namespace(p=[]) -%}
+          {%- for cal in ((tomorrow if tomorrow is defined else none) or {}).values() -%}
+            {%- for e in cal.events -%}
+              {%- if e.location and e.location | trim -%}
+                {%- set n.p = n.p + [{'what': e.summary, 'where': e.location | trim}] -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+          {{- n.p[:5] -}}
+    - repeat:
+        for_each: "{{ places }}"
+        sequence:
+          - action: waze_travel_time.get_travel_times
+            data:
+              origin: zone.home
+              destination: "{{ repeat.item.where }}"
+              region: us
+              units: imperial
+            response_variable: route
+            continue_on_error: true
+          - if:
+              - condition: template
+                value_template: >-
+                  {{ route is defined and route.routes | default([]) | count > 0
+                     and route.routes[0].distance >= 100 }}
+            then:
+              - if:
+                  - condition: numeric_state
+                    entity_id: number.tk_421_charge_limit
+                    below: 90
+                then:
+                  - action: number.set_value
+                    target:
+                      entity_id: number.tk_421_charge_limit
+                    data:
+                      value: 90
+                  - action: input_boolean.turn_on
+                    target:
+                      entity_id: input_boolean.tesla_trip_charge
+                  - action: notify.mobile_app_your_phone
+                    data:
+                      title: Charging the Tesla to 90%
+                      message: >-
+                        {{ repeat.item.what }} tomorrow is
+                        {{ route.routes[0].distance | round(0) | int }} miles away.
+              - stop: Long trip tomorrow
+    - if:
+        - condition: state
+          entity_id: input_boolean.tesla_trip_charge
+          state: "on"
+      then:
+        - action: number.set_value
+          target:
+            entity_id: number.tk_421_charge_limit
+          data:
+            value: 80
+        - action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.tesla_trip_charge</code></pre></div>
+  <p class="aside">
+    It checks up to five events with addresses, so a busy day doesn't turn into dozens of
+    Waze lookups.
+  </p>
+
+  <h3 id="proxy-down">Proxy down alert</h3>
+  <p>
+    If the Tesla HTTP Proxy add-on stops, every command from Home Assistant fails without a
+    word, and you find out when you get into a cold car. The add-on has a "running" sensor.
+    Turn it on in Settings &rarr; Devices &amp; services &rarr; Supervisor, under the add-on's
+    entities, then:
+  </p>
+  <div class="cmd"><pre><code>- alias: Tesla HTTP Proxy Down
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id: binary_sensor.tesla_http_proxy_running
+      to: "off"
+  actions:
+    - action: notify.mobile_app_your_phone
+      data:
+        title: Tesla HTTP Proxy down
+        message: Tesla commands from Home Assistant will fail until it's back.</code></pre></div>
+</section>
+
+<section>
+  <h2>When something breaks</h2>
+
+  <h3>The numbers are old</h3>
+  <p>
+    They usually are. At 11-minute polling, anything the car reports can be up to 11 minutes
+    old, and much older while the car is asleep, which is most of the time it's parked. That's
+    why the pre-heat script wakes the car and asks again before it decides anything. Check the
+    car's last-updated time in Home Assistant before you trust a reading.
+  </p>
+
+  <h3>"User present" says unavailable</h3>
+  <p>
+    That's the car being asleep, not broken. Anything that checks whether someone is in the
+    car should test for <code>on</code>. If you test for "not off", unavailable gets through
+    the wrong way.
+  </p>
+
+  <h3>Commands do nothing</h3>
+  <ul>
+    <li>Check the Tesla HTTP Proxy add-on is running. Its log usually says why if it isn't.</li>
+    <li>
+      Load the public key address from your phone on mobile data. If the certificate expired,
+      DuckDNS lost track of your home IP, or the router dropped the port forward, the car
+      can't check your key and refuses every command.
+    </li>
+    <li>Check your key is still listed under Locks on the car's screen.</li>
+  </ul>
+
+  <h3>The data stopped updating</h3>
+  <p>
+    The integration renews its login token by itself, so the expiry date on the token isn't
+    the thing to watch. Watch the last-updated time. If it stopped moving and the car isn't
+    just asleep, reload the integration, and if that doesn't help, generate a new refresh
+    token from the add-on's web UI the way you did in step 5.
+  </p>
+
+  <h3>The battery drops while parked</h3>
+  <p>
+    Something is keeping the car awake. Usually it's polling set too short, or an automation
+    that wakes it too often. Each wake also counts against your Fleet API allowance.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>Written by Travis Pellegrini in Tacoma.</p>
+  <p>
+    <a href="https://github.com/llamafilm/tesla-http-proxy-addon">Tesla HTTP Proxy add-on</a> &middot;
+    <a href="https://github.com/alandtse/tesla">Tesla Custom Integration</a> &middot;
+    <a href="https://developer.tesla.com/docs/fleet-api">Tesla Fleet API docs</a>
+  </p>
+</footer>
+
+</div>
+<script>
+  document.querySelectorAll('.cmd').forEach(function (box) {
+    var code = box.querySelector('code');
+    var bar = box.querySelector('.cmd-bar');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'cmd-bar';
+      box.insertBefore(bar, box.firstChild);
+    }
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy';
+    btn.textContent = 'Copy';
+    btn.setAttribute('aria-label', 'Copy this block');
+    btn.addEventListener('click', function () {
+      var text = code.textContent;
+      var done = function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('done');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1600);
+      };
+      var fallback = function () {
+        var t = document.createElement('textarea');
+        t.value = text;
+        t.setAttribute('readonly', '');
+        t.style.position = 'fixed';
+        t.style.opacity = '0';
+        document.body.appendChild(t);
+        t.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(t);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+    bar.appendChild(btn);
+  });
+</script>
+</body>
+</html>
