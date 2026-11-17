@@ -280,7 +280,8 @@
       color: var(--steel-dim);
     }
     .row-links a:not(.store):hover{ color: var(--rust-lt); }
-    .row-links span{ display: inline-flex; align-items: center; gap: 14px; margin-right: 10px; }
+    .row-links span{ display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-right: 10px; }
+    .store{ white-space: nowrap; }
     .store{
       font-size: 11px;
       font-weight: 700;
@@ -511,6 +512,7 @@
           <span>
             <a href="https://dispatchcompanion.com/" target="_blank" rel="noreferrer">dispatchcompanion.com</a>
             <a class="store" href="https://apps.apple.com/us/app/dispatch-companion/id6758360727" target="_blank" rel="noreferrer">App Store</a>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.dispatchcompanion.app" target="_blank" rel="noreferrer">Google Play</a>
           </span>
           <span>
             <a href="https://longshorecompanion.com/" target="_blank" rel="noreferrer">longshorecompanion.com</a>
@@ -521,7 +523,7 @@
           One app in two versions on the same backend. Dispatch Companion is for Local
           23 in Tacoma, and Longshore Companion is for every other longshoreman on the West
           Coast. Dispatch, spins, a timebook that works out your pay, and ship tracking at
-          the ports. Both are in the App Store.
+          the ports. Both are in the App Store, and Dispatch Companion is on Google Play.
         </p>
         <div class="tags">
           React Router <span class="sep">/</span> TypeScript <span class="sep">/</span> FastAPI <span class="sep">/</span> Supabase <span class="sep">/</span> TinyBase <span class="sep">/</span> Capacitor <span class="sep">/</span> RevenueCat <span class="sep">/</span> Fly.io <span class="sep">/</span> Cloudflare Pages
